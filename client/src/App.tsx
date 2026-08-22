@@ -4,13 +4,25 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import Games from "./pages/Games";
+import Diagnostic from "./pages/Diagnostic";
 import Home from "./pages/Home";
+import Learn from "./pages/Learn";
+import Practice from "./pages/Practice";
+import Profile from "./pages/Profile";
+import Vocabulary from "./pages/Vocabulary";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/learn"} component={Learn} />
+      <Route path={"/vocabulary"} component={Vocabulary} />
+      <Route path={"/practice"} component={Practice} />
+      <Route path={"/games"} component={Games} />
+      <Route path={"/diagnostic"} component={Diagnostic} />
+      <Route path={"/profile"} component={Profile} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
@@ -28,7 +40,6 @@ function App() {
     <ErrorBoundary>
       <ThemeProvider
         defaultTheme="light"
-        // switchable
       >
         <TooltipProvider>
           <Toaster />

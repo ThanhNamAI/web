@@ -1,6 +1,6 @@
-import { eq } from "drizzle-orm";
+import { and, desc, eq, lte } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users } from "../drizzle/schema";
+import { InsertUser, learnerProfiles, studySessions, users, vocabularyProgress } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -89,4 +89,98 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-// TODO: add feature queries here as your schema grows.
+export async function ensureLearnerProfile(userId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+
+  const existing = await db.select().from(learnerProfiles).where(eq(learnerProfiles.userId, userId)).limit(1);
+  if (existing[0]) return existing[0];
+
+  await db.insert(learnerProfiles).values({ userId });
+  const created = await db.select().from(learnerProfiles).where(eq(learnerProfiles.userId, userId)).limit(1);
+  if (!created[0]) throw new Error("Unable to create learner profile");
+  return created[0];
+}
+
+export async function getLearningSnapshot(userId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+
+  const profile = await ensureLearnerProfile(userId);
+  const now = new Date();
+  const dueCards = await db
+    .select()
+    .from(vocabularyProgress)
+    .where(and(eq(vocabularyProgress.userId, userId), lte(vocabularyProgress.dueAt, now)))
+    .orderBy(vocabularyProgress.dueAt)
+    .limit(24);
+  const recentSessions = await db.select().from(studySessions).where(eq(studySessions.userId, userId)).orderBy(desc(studySessions.completedAt)).limit(40);
+
+  return { profile, dueCards, recentSessions };
+}
+
+export async function saveVocabularyReview(input: {
+  userId: number;
+  vocabularyId: string;
+  repetitions: number;
+  easeFactor: number;
+  intervalDays: number;
+  quality: number;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+  const now = new Date();
+  const dueAt = new Date(now.getTime() + input.intervalDays * 86_400_000);
+  const existing = await db
+    .select()
+    .from(vocabularyProgress)
+    .where(and(eq(vocabularyProgress.userId, input.userId), eq(vocabularyProgress.vocabularyId, input.vocabularyId)))
+    .limit(1);
+  const values = {
+    repetitions: input.repetitions,
+    easeFactor: input.easeFactor,
+    intervalDays: input.intervalDays,
+    dueAt,
+    lastQuality: input.quality,
+    lastReviewedAt: now,
+  };
+
+  if (existing[0]) {
+    await db.update(vocabularyProgress).set(values).where(eq(vocabularyProgress.id, existing[0].id));
+  } else {
+    await db.insert(vocabularyProgress).values({ userId: input.userId, vocabularyId: input.vocabularyId, ...values });
+  }
+  return { dueAt };
+}
+
+export async function recordStudySession(input: {
+  userId: number;
+  activityType: string;
+  skill: string;
+  score: number;
+  xp: number;
+  durationSeconds: number;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+  const profile = await ensureLearnerProfile(input.userId);
+  const today = new Date().toISOString().slice(0, 10);
+  const yesterday = new Date(Date.now() - 86_400_000).toISOString().slice(0, 10);
+  const currentStreak = profile.lastStudyDate === today ? profile.currentStreak : profile.lastStudyDate === yesterday ? profile.currentStreak + 1 : 1;
+
+  await db.insert(studySessions).values(input);
+  await db.update(learnerProfiles).set({
+    totalXp: profile.totalXp + input.xp,
+    currentStreak,
+    longestStreak: Math.max(profile.longestStreak, currentStreak),
+    lastStudyDate: today,
+  }).where(eq(learnerProfiles.userId, input.userId));
+}
+
+export async function updateLearnerSettings(userId: number, values: { targetScore?: number; weeklyGoalMinutes?: number; diagnosticScore?: number; preferredAccent?: string }) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+  await ensureLearnerProfile(userId);
+  await db.update(learnerProfiles).set(values).where(eq(learnerProfiles.userId, userId));
+  return ensureLearnerProfile(userId);
+}

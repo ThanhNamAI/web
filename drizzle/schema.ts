@@ -1,4 +1,4 @@
-import { int, mysqlEnum, mysqlTable, text, timestamp, varchar } from "drizzle-orm/mysql-core";
+import { double, int, mysqlEnum, mysqlTable, text, timestamp, uniqueIndex, varchar } from "drizzle-orm/mysql-core";
 
 /**
  * Core user table backing auth flow.
@@ -25,4 +25,49 @@ export const users = mysqlTable("users", {
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
-// TODO: Add your tables here
+export const learnerProfiles = mysqlTable("learner_profiles", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull().unique().references(() => users.id, { onDelete: "cascade" }),
+  currentStage: varchar("currentStage", { length: 32 }).default("Foundation").notNull(),
+  targetScore: int("targetScore").default(800).notNull(),
+  weeklyGoalMinutes: int("weeklyGoalMinutes").default(180).notNull(),
+  totalXp: int("totalXp").default(0).notNull(),
+  currentStreak: int("currentStreak").default(0).notNull(),
+  longestStreak: int("longestStreak").default(0).notNull(),
+  lastStudyDate: varchar("lastStudyDate", { length: 10 }),
+  diagnosticScore: int("diagnosticScore").default(0).notNull(),
+  preferredAccent: varchar("preferredAccent", { length: 16 }).default("en-US").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export const vocabularyProgress = mysqlTable("vocabulary_progress", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
+  vocabularyId: varchar("vocabularyId", { length: 80 }).notNull(),
+  repetitions: int("repetitions").default(0).notNull(),
+  easeFactor: double("easeFactor").default(2.5).notNull(),
+  intervalDays: int("intervalDays").default(0).notNull(),
+  dueAt: timestamp("dueAt").defaultNow().notNull(),
+  lastQuality: int("lastQuality").default(0).notNull(),
+  lastReviewedAt: timestamp("lastReviewedAt"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+}, table => [
+  uniqueIndex("vocabulary_progress_user_vocab_unique").on(table.userId, table.vocabularyId),
+]);
+
+export const studySessions = mysqlTable("study_sessions", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
+  activityType: varchar("activityType", { length: 48 }).notNull(),
+  skill: varchar("skill", { length: 24 }).notNull(),
+  score: int("score").default(0).notNull(),
+  xp: int("xp").default(0).notNull(),
+  durationSeconds: int("durationSeconds").default(0).notNull(),
+  completedAt: timestamp("completedAt").defaultNow().notNull(),
+});
+
+export type LearnerProfile = typeof learnerProfiles.$inferSelect;
+export type VocabularyProgress = typeof vocabularyProgress.$inferSelect;
+export type StudySession = typeof studySessions.$inferSelect;

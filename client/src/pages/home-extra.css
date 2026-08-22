@@ -1,0 +1,1 @@
+.hero-actions{display:flex;align-items:center;gap:13px}.secondary-cta{color:#536b5a;font-size:12px;font-weight:600;text-decoration:underline;text-underline-offset:4px}@media(max-width:700px){.hero-actions{align-items:flex-start;flex-direction:column;gap:12px}}

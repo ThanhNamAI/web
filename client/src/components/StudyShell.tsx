@@ -1,0 +1,48 @@
+import { BookOpen, BrainCircuit, Gamepad2, House, LogIn, Sparkles, UserRound } from "lucide-react";
+import { Link, useLocation } from "wouter";
+import { useAuth } from "@/_core/hooks/useAuth";
+import { startLogin } from "@/const";
+import { cn } from "@/lib/utils";
+
+const nav = [
+  { href: "/", label: "Tổng quan", icon: House },
+  { href: "/learn", label: "Thẻ ôn SRS", icon: BrainCircuit },
+  { href: "/vocabulary", label: "Ngân hàng từ", icon: BookOpen },
+  { href: "/practice", label: "Luyện kỹ năng", icon: Sparkles },
+  { href: "/games", label: "Đấu trường", icon: Gamepad2 },
+  { href: "/profile", label: "Hồ sơ", icon: UserRound },
+];
+
+export function StudyShell({ children }: { children: React.ReactNode }) {
+  const [location] = useLocation();
+  const { user, isAuthenticated } = useAuth();
+  return (
+    <div className="app-shell">
+      <aside className="study-sidebar">
+        <Link href="/" className="brand-mark" aria-label="TOEIC Quest trang chủ">
+          <span className="brand-icon">TQ</span>
+          <span><strong>TOEIC</strong><em>Quest</em></span>
+        </Link>
+        <p className="sidebar-caption">Hành trình 0 → 800+</p>
+        <nav className="main-nav" aria-label="Điều hướng học tập">
+          {nav.map(item => {
+            const Icon = item.icon;
+            const active = location === item.href;
+            return <Link href={item.href} key={item.href} className={cn("nav-link", active && "nav-link-active")}><Icon /><span>{item.label}</span>{item.href === "/learn" && <b>12</b>}</Link>;
+          })}
+        </nav>
+        <div className="sidebar-bottom">
+          <div className="daily-dot"><span>07</span><p><strong>Chuỗi ngày</strong><small>Mỗi ngày một bước</small></p></div>
+          {isAuthenticated ? <div className="user-summary"><span>{user?.name?.slice(0, 1).toUpperCase() ?? "U"}</span><p><strong>{user?.name ?? "Học viên"}</strong><small>Đồng bộ tiến độ</small></p></div> : <button onClick={() => startLogin()} className="login-quiet"><LogIn /> Đăng nhập để lưu tiến độ</button>}
+        </div>
+      </aside>
+      <main className="study-main">{children}</main>
+      <nav className="mobile-nav" aria-label="Điều hướng di động">
+        {nav.slice(0, 5).map(item => {
+          const Icon = item.icon;
+          return <Link href={item.href} key={item.href} className={cn("mobile-nav-link", location === item.href && "mobile-nav-active")}><Icon /><span>{item.label.split(" ")[0]}</span></Link>;
+        })}
+      </nav>
+    </div>
+  );
+}

@@ -1,0 +1,16 @@
+import { useMemo, useState } from "react";
+import { Search, SlidersHorizontal, Sparkles } from "lucide-react";
+import { vocabulary } from "@shared/vocabulary.generated";
+import { AudioButton } from "@/components/AudioButton";
+import { StudyShell } from "@/components/StudyShell";
+import "./library-extra.css";
+
+const topics = ["Tất cả", ...Array.from(new Set(vocabulary.map(item => item.topic))).sort()];
+
+export default function Vocabulary() {
+  const [term, setTerm] = useState("");
+  const [topic, setTopic] = useState("Tất cả");
+  const [visible, setVisible] = useState(24);
+  const items = useMemo(() => vocabulary.filter(item => (topic === "Tất cả" || item.topic === topic) && `${item.term} ${item.meaning}`.toLowerCase().includes(term.toLowerCase())).slice(0, visible), [term, topic, visible]);
+  return <StudyShell><div className="page-wrap library-page"><header className="page-header"><div><span className="eyebrow">THƯ VIỆN THÔNG MINH</span><h1>Ngân hàng <i>1.250</i> từ TOEIC</h1><p>Từ PDF của bạn được chuẩn hóa cùng 250 mục bổ sung theo chủ đề công việc. Hãy nghe, đọc IPA và đưa mỗi từ vào ngữ cảnh.</p></div><div className="library-stat"><Sparkles /><b>8 chủ đề</b><span>Từ tài chính đến du lịch</span></div></header><details className="ipa-guide"><summary>Hướng dẫn đọc IPA nhanh <span>Nhấn để xem</span></summary><div><p><b>/iː/</b> như “see” · <b>/ɪ/</b> như “sit” · <b>/æ/</b> như “cat” · <b>/ə/</b> là âm schwa nhẹ trong “about”.</p><p><b>/θ/</b> đặt đầu lưỡi nhẹ giữa răng như “think” · <b>/ð/</b> như “this” · <b>/ŋ/</b> khép ở cuối như “sing”. Nghe mẫu trước, nói chậm từng cụm âm, rồi tăng dần tốc độ.</p></div></details><section className="search-toolbar"><div className="search-field"><Search /><input value={term} onChange={event => { setTerm(event.target.value); setVisible(24); }} placeholder="Tìm từ tiếng Anh hoặc nghĩa tiếng Việt" /></div><div className="topic-scroll">{topics.map(item => <button key={item} onClick={() => { setTopic(item); setVisible(24); }} className={topic === item ? "filter-active" : ""}>{item}</button>)}</div><button className="filter-icon" aria-label="Bộ lọc"><SlidersHorizontal /></button></section><p className="result-count">Hiển thị <b>{items.length}</b> trên {vocabulary.length.toLocaleString("vi-VN")} mục học</p><section className="word-grid">{items.map((word, index) => <article className="library-word" key={word.id}><div className="word-number">{String(index + 1).padStart(3, "0")}</div><div className="word-top"><div><h2>{word.term}</h2><p className="ipa">{word.ipa}</p></div><AudioButton text={word.term} compact /></div><div className="word-tags"><span>{word.partOfSpeech}</span><span>{word.topic}</span></div><p className="word-definition">{word.meaning}</p><p className="word-example">“{word.example}”</p></article>)}</section>{items.length === 0 && <div className="empty-state"><h2>Chưa tìm thấy từ phù hợp.</h2><p>Hãy thử từ khóa ngắn hơn hoặc đổi chủ đề.</p></div>}{items.length < vocabulary.filter(item => (topic === "Tất cả" || item.topic === topic) && `${item.term} ${item.meaning}`.toLowerCase().includes(term.toLowerCase())).length && <button className="load-more" onClick={() => setVisible(value => value + 24)}>Tải thêm 24 từ</button>}</div></StudyShell>;
+}
