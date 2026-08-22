@@ -19,3 +19,9 @@ The new achievement table uses a foreign key with cascade deletion from the user
 ## Follow-up
 
 For a future public launch, add rate limiting at the gateway and a privacy retention policy for learning-event history. These are operational hardening measures, not blockers for the current authenticated application.
+
+## Dark-mode regression verification
+
+The defect was reproduced with the browser theme set to dark: content cards changed theme but the root page background remained light because the global light custom properties could win in the CSS import cascade. The fix applies the dark background and semantic variables directly to `html`, `body`, the app shell, main area and page wrapper. Browser verification after the change showed a consistent dark canvas, readable text and dark cards on the dashboard. The mobile navigation was also changed from a hidden-theme control to an explicit “Thêm” menu that exposes all routes and the theme toggle.
+
+The dark vocabulary library was verified with high-contrast headings, input, filter strip, vocabulary cards and examples. The unauthenticated profile state was also verified against the dark canvas: the sign-in card, heading, supporting text and call to action are visually contained and readable.

@@ -1,4 +1,5 @@
 import json
+import re
 from pathlib import Path
 import eng_to_ipa as ipa
 
@@ -14,10 +15,14 @@ ipa_overrides = {
   "break-even": "ˌbreɪkˈiː.vən",
 }
 entries = []
-for filename in ["supplemental-vocabulary.tsv", "supplemental-replacements.tsv"]:
+for filename in ["supplemental-vocabulary.tsv", "supplemental-replacements.tsv", "advanced-toeic.tsv"]:
   for line in (root / "scripts" / filename).read_text(encoding="utf-8").splitlines():
     term, part_of_speech, meaning, topic = line.split("\t")
-    pronunciation = ipa_overrides.get(term, ipa.convert(term))
+    if term in ipa_overrides:
+        pronunciation = ipa_overrides[term]
+    else:
+        pieces = re.split(r"([\s-]+)", term)
+        pronunciation = "".join(piece if re.fullmatch(r"[\s-]+", piece) else ipa.convert(piece) for piece in pieces)
     if "*" in pronunciation or not pronunciation.strip():
         pronunciation = "Nghe mẫu"
     context = {

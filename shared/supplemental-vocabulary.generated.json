@@ -2044,7 +2044,7 @@
     "term": "follow-up",
     "meaning": "việc theo dõi tiếp",
     "partOfSpeech": "n",
-    "ipa": "/ˈfɑloʊˌəp/",
+    "ipa": "/ˈfɑloʊ-əp/",
     "example": "The manager discussed the follow-up before the Monday meeting.",
     "topic": "Văn phòng",
     "source": "Bổ sung theo chủ đề TOEIC"
@@ -2896,6 +2896,796 @@
     "partOfSpeech": "n",
     "ipa": "/wərk ˈpərˌmɪt/",
     "example": "The manager discussed the work permit with the HR department.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-291",
+    "term": "action plan",
+    "meaning": "kế hoạch hành động",
+    "partOfSpeech": "n",
+    "ipa": "/ˈækʃən plæn/",
+    "example": "The manager discussed the action plan at the office.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-292",
+    "term": "annual report",
+    "meaning": "báo cáo thường niên",
+    "partOfSpeech": "n",
+    "ipa": "/ˈænjuəl rɪˈpɔrt/",
+    "example": "The manager discussed the annual report in the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-293",
+    "term": "approval process",
+    "meaning": "quy trình phê duyệt",
+    "partOfSpeech": "n",
+    "ipa": "/əˈpruvəl ˈprɔˌsɛs/",
+    "example": "The manager discussed the approval process before the Monday meeting.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-294",
+    "term": "business proposal",
+    "meaning": "đề xuất kinh doanh",
+    "partOfSpeech": "n",
+    "ipa": "/ˈbɪznɪs prəˈpoʊzəl/",
+    "example": "The manager discussed the business proposal at the office.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-295",
+    "term": "cash flow",
+    "meaning": "dòng tiền",
+    "partOfSpeech": "n",
+    "ipa": "/kæʃ floʊ/",
+    "example": "The manager discussed the cash flow in the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-296",
+    "term": "client portfolio",
+    "meaning": "danh mục khách hàng",
+    "partOfSpeech": "n",
+    "ipa": "/klaɪənt pɔrtˈfoʊliˌoʊ/",
+    "example": "The manager discussed the client portfolio at the office.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-297",
+    "term": "competitive advantage",
+    "meaning": "lợi thế cạnh tranh",
+    "partOfSpeech": "n",
+    "ipa": "/kəmˈpɛtɪtɪv ædˈvæntɪʤ/",
+    "example": "The manager discussed the competitive advantage for the product campaign.",
+    "topic": "Tiếp thị",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-298",
+    "term": "contract renewal",
+    "meaning": "gia hạn hợp đồng",
+    "partOfSpeech": "n",
+    "ipa": "/ˈkɑnˌtrækt rɪˈnuəl/",
+    "example": "The manager discussed the contract renewal at the office.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-299",
+    "term": "cost estimate",
+    "meaning": "ước tính chi phí",
+    "partOfSpeech": "n",
+    "ipa": "/kɔst ˈɛstəˌmeɪt/",
+    "example": "The manager discussed the cost estimate in the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-300",
+    "term": "customer retention",
+    "meaning": "giữ chân khách hàng",
+    "partOfSpeech": "n",
+    "ipa": "/ˈkəstəmər riˈtɛnʃən/",
+    "example": "The manager discussed the customer retention at the office.",
+    "topic": "Dịch vụ khách hàng",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-301",
+    "term": "data breach",
+    "meaning": "sự cố rò rỉ dữ liệu",
+    "partOfSpeech": "n",
+    "ipa": "/ˈdætə briʧ/",
+    "example": "The manager discussed the data breach during system maintenance.",
+    "topic": "Công nghệ",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-302",
+    "term": "decision-making",
+    "meaning": "quá trình ra quyết định",
+    "partOfSpeech": "n",
+    "ipa": "/dɪˈsɪʒən-ˈmeɪkɪŋ/",
+    "example": "The manager discussed the decision-making at the office.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-303",
+    "term": "direct deposit",
+    "meaning": "chuyển khoản trực tiếp",
+    "partOfSpeech": "n",
+    "ipa": "/dɪˈrɛkt dɪˈpɑzət/",
+    "example": "The manager discussed the direct deposit in the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-304",
+    "term": "distribution channel",
+    "meaning": "kênh phân phối",
+    "partOfSpeech": "n",
+    "ipa": "/ˌdɪstrəˈbjuʃən ˈʧænəl/",
+    "example": "The manager discussed the distribution channel for the product campaign.",
+    "topic": "Tiếp thị",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-305",
+    "term": "employee handbook",
+    "meaning": "sổ tay nhân viên",
+    "partOfSpeech": "n",
+    "ipa": "/ɪmˈplɔɪi ˈhændˌbʊk/",
+    "example": "The manager discussed the employee handbook with the HR department.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-306",
+    "term": "end user",
+    "meaning": "người dùng cuối",
+    "partOfSpeech": "n",
+    "ipa": "/ɛnd ˈjuzər/",
+    "example": "The manager discussed the end user during system maintenance.",
+    "topic": "Công nghệ",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-307",
+    "term": "executive summary",
+    "meaning": "tóm tắt điều hành",
+    "partOfSpeech": "n",
+    "ipa": "/ɪgˈzɛkjətɪv ˈsəməri/",
+    "example": "The manager discussed the executive summary before the Monday meeting.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-308",
+    "term": "expense account",
+    "meaning": "tài khoản chi phí",
+    "partOfSpeech": "n",
+    "ipa": "/ɪkˈspɛns əˈkaʊnt/",
+    "example": "The manager discussed the expense account in the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-309",
+    "term": "financial statement",
+    "meaning": "báo cáo tài chính",
+    "partOfSpeech": "n",
+    "ipa": "/ˌfaɪˈnænʃəl ˈsteɪtmənt/",
+    "example": "The manager discussed the financial statement in the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-310",
+    "term": "fixed costs",
+    "meaning": "chi phí cố định",
+    "partOfSpeech": "n",
+    "ipa": "/fɪkst kɔsts/",
+    "example": "The manager discussed the fixed costs in the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-311",
+    "term": "growth strategy",
+    "meaning": "chiến lược tăng trưởng",
+    "partOfSpeech": "n",
+    "ipa": "/groʊθ ˈstrætəʤi/",
+    "example": "The manager discussed the growth strategy at the office.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-312",
+    "term": "human resources",
+    "meaning": "nguồn nhân lực",
+    "partOfSpeech": "n",
+    "ipa": "/ˈjumən ˈrisɔrsɪz/",
+    "example": "The manager discussed the human resources with the HR department.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-313",
+    "term": "key performance indicator",
+    "meaning": "chỉ số hiệu suất chính",
+    "partOfSpeech": "n",
+    "ipa": "/ki pərˈfɔrməns ˈɪndəˌkeɪtər/",
+    "example": "The manager discussed the key performance indicator at the office.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-314",
+    "term": "market research",
+    "meaning": "nghiên cứu thị trường",
+    "partOfSpeech": "n",
+    "ipa": "/ˈmɑrkɪt ˈrisərʧ/",
+    "example": "The manager discussed the market research for the product campaign.",
+    "topic": "Tiếp thị",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-315",
+    "term": "monthly installment",
+    "meaning": "khoản trả góp hàng tháng",
+    "partOfSpeech": "n",
+    "ipa": "/ˈmənθli ˌɪnˈstɔlmənt/",
+    "example": "The manager discussed the monthly installment in the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-316",
+    "term": "operating expenses",
+    "meaning": "chi phí vận hành",
+    "partOfSpeech": "n",
+    "ipa": "/ˈɔpərˌeɪtɪŋ ɪkˈspɛnsɪz/",
+    "example": "The manager discussed the operating expenses in the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-317",
+    "term": "order confirmation",
+    "meaning": "xác nhận đơn hàng",
+    "partOfSpeech": "n",
+    "ipa": "/ˈɔrdər ˌkɑnfərˈmeɪʃən/",
+    "example": "The manager discussed the order confirmation at the office.",
+    "topic": "Dịch vụ khách hàng",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-318",
+    "term": "payment gateway",
+    "meaning": "cổng thanh toán",
+    "partOfSpeech": "n",
+    "ipa": "/ˈpeɪmənt ˈgeɪtˌweɪ/",
+    "example": "The manager discussed the payment gateway during system maintenance.",
+    "topic": "Công nghệ",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-319",
+    "term": "performance bonus",
+    "meaning": "thưởng theo hiệu suất",
+    "partOfSpeech": "n",
+    "ipa": "/pərˈfɔrməns ˈboʊnəs/",
+    "example": "The manager discussed the performance bonus with the HR department.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-320",
+    "term": "project milestone",
+    "meaning": "mốc dự án",
+    "partOfSpeech": "n",
+    "ipa": "/ˈprɑʤɛkt ˈmaɪlˌstoʊn/",
+    "example": "The manager discussed the project milestone before the Monday meeting.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-321",
+    "term": "quality assurance",
+    "meaning": "đảm bảo chất lượng",
+    "partOfSpeech": "n",
+    "ipa": "/kˈwɑləti əˈʃʊrəns/",
+    "example": "The manager discussed the quality assurance before the shipment leaves the factory.",
+    "topic": "Sản xuất",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-322",
+    "term": "research and development",
+    "meaning": "nghiên cứu và phát triển",
+    "partOfSpeech": "n",
+    "ipa": "/ˈrisərʧ ənd dɪˈvɛləpmənt/",
+    "example": "The manager discussed the research and development during system maintenance.",
+    "topic": "Công nghệ",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-323",
+    "term": "return on investment",
+    "meaning": "lợi nhuận trên vốn đầu tư",
+    "partOfSpeech": "n",
+    "ipa": "/rɪˈtərn ɔn ˌɪnˈvɛstmənt/",
+    "example": "The manager discussed the return on investment in the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-324",
+    "term": "sales forecast",
+    "meaning": "dự báo doanh số",
+    "partOfSpeech": "n",
+    "ipa": "/seɪlz ˈfɔrˌkæst/",
+    "example": "The manager discussed the sales forecast for the product campaign.",
+    "topic": "Tiếp thị",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-325",
+    "term": "security clearance",
+    "meaning": "giấy phép an ninh",
+    "partOfSpeech": "n",
+    "ipa": "/sɪˈkjʊrəti ˈklɪrəns/",
+    "example": "The manager discussed the security clearance during system maintenance.",
+    "topic": "Công nghệ",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-326",
+    "term": "service agreement",
+    "meaning": "hợp đồng dịch vụ",
+    "partOfSpeech": "n",
+    "ipa": "/ˈsərvɪs əˈgrimənt/",
+    "example": "The manager discussed the service agreement at the office.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-327",
+    "term": "shipping label",
+    "meaning": "nhãn vận chuyển",
+    "partOfSpeech": "n",
+    "ipa": "/ˈʃɪpɪŋ ˈleɪbəl/",
+    "example": "The manager discussed the shipping label before the shipment leaves the factory.",
+    "topic": "Sản xuất",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-328",
+    "term": "stakeholder meeting",
+    "meaning": "cuộc họp các bên liên quan",
+    "partOfSpeech": "n",
+    "ipa": "/ˈsteɪˌkhoʊldər ˈmitɪŋ/",
+    "example": "The manager discussed the stakeholder meeting at the office.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-329",
+    "term": "strategic partnership",
+    "meaning": "quan hệ đối tác chiến lược",
+    "partOfSpeech": "n",
+    "ipa": "/strəˈtiʤɪk ˈpɑrtnərˌʃɪp/",
+    "example": "The manager discussed the strategic partnership at the office.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-330",
+    "term": "tax return",
+    "meaning": "tờ khai thuế",
+    "partOfSpeech": "n",
+    "ipa": "/tæks rɪˈtərn/",
+    "example": "The manager discussed the tax return in the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-331",
+    "term": "time management",
+    "meaning": "quản lý thời gian",
+    "partOfSpeech": "n",
+    "ipa": "/taɪm ˈmænɪʤmənt/",
+    "example": "The manager discussed the time management with the HR department.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-332",
+    "term": "training session",
+    "meaning": "buổi đào tạo",
+    "partOfSpeech": "n",
+    "ipa": "/ˈtreɪnɪŋ ˈsɛʃən/",
+    "example": "The manager discussed the training session with the HR department.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-333",
+    "term": "travel expenses",
+    "meaning": "chi phí đi lại",
+    "partOfSpeech": "n",
+    "ipa": "/ˈtrævəl ɪkˈspɛnsɪz/",
+    "example": "The manager discussed the travel expenses before the business trip.",
+    "topic": "Du lịch",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-334",
+    "term": "user experience",
+    "meaning": "trải nghiệm người dùng",
+    "partOfSpeech": "n",
+    "ipa": "/ˈjuzər ɪkˈspɪriəns/",
+    "example": "The manager discussed the user experience during system maintenance.",
+    "topic": "Công nghệ",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-335",
+    "term": "value proposition",
+    "meaning": "đề xuất giá trị",
+    "partOfSpeech": "n",
+    "ipa": "/ˈvælju ˌprɑpəˈzɪʃən/",
+    "example": "The manager discussed the value proposition for the product campaign.",
+    "topic": "Tiếp thị",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-336",
+    "term": "working capital",
+    "meaning": "vốn lưu động",
+    "partOfSpeech": "n",
+    "ipa": "/ˈwərkɪŋ ˈkæpɪtəl/",
+    "example": "The manager discussed the working capital in the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-337",
+    "term": "workplace safety",
+    "meaning": "an toàn nơi làm việc",
+    "partOfSpeech": "n",
+    "ipa": "/ˈwərkˌpleɪs ˈseɪfti/",
+    "example": "The manager discussed the workplace safety with the HR department.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-338",
+    "term": "account for",
+    "meaning": "giải thích; chiếm tỷ trọng",
+    "partOfSpeech": "v",
+    "ipa": "/əˈkaʊnt fər/",
+    "example": "The team will account for the request in the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-339",
+    "term": "adhere to",
+    "meaning": "tuân thủ",
+    "partOfSpeech": "v",
+    "ipa": "/əˈdhɪr tɪ/",
+    "example": "The team will adhere to the request at the office.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-340",
+    "term": "allocate resources",
+    "meaning": "phân bổ nguồn lực",
+    "partOfSpeech": "v",
+    "ipa": "/ˈæləˌkeɪt ˈrisɔrsɪz/",
+    "example": "The team will allocate resources the request at the office.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-341",
+    "term": "assess the risk",
+    "meaning": "đánh giá rủi ro",
+    "partOfSpeech": "v",
+    "ipa": "/əˈsɛs ðə rɪsk/",
+    "example": "The team will assess the risk the request at the office.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-342",
+    "term": "authorize payment",
+    "meaning": "cho phép thanh toán",
+    "partOfSpeech": "v",
+    "ipa": "/ˈɔθərˌaɪz ˈpeɪmənt/",
+    "example": "The team will authorize payment the request in the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-343",
+    "term": "boost productivity",
+    "meaning": "tăng năng suất",
+    "partOfSpeech": "v",
+    "ipa": "/bust ˌproʊdəkˈtɪvɪti/",
+    "example": "The team will boost productivity the request with the HR department.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-344",
+    "term": "build rapport",
+    "meaning": "xây dựng quan hệ tin cậy",
+    "partOfSpeech": "v",
+    "ipa": "/bɪld ræˈpɔr/",
+    "example": "The team will build rapport the request at the office.",
+    "topic": "Dịch vụ khách hàng",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-345",
+    "term": "comply with",
+    "meaning": "tuân thủ",
+    "partOfSpeech": "v",
+    "ipa": "/kəmˈplaɪ wɪθ/",
+    "example": "The team will comply with the request at the office.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-346",
+    "term": "conduct a survey",
+    "meaning": "tiến hành khảo sát",
+    "partOfSpeech": "v",
+    "ipa": "/ˈkɑndəkt ə ˈsərˌveɪ/",
+    "example": "The team will conduct a survey the request for the product campaign.",
+    "topic": "Tiếp thị",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-347",
+    "term": "confirm receipt",
+    "meaning": "xác nhận đã nhận",
+    "partOfSpeech": "v",
+    "ipa": "/kənˈfərm rɪˈsit/",
+    "example": "The team will confirm receipt the request before the Monday meeting.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-348",
+    "term": "coordinate with",
+    "meaning": "phối hợp với",
+    "partOfSpeech": "v",
+    "ipa": "/koʊˈɔrdəˌneɪt wɪθ/",
+    "example": "The team will coordinate with the request before the Monday meeting.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-349",
+    "term": "cut costs",
+    "meaning": "cắt giảm chi phí",
+    "partOfSpeech": "v",
+    "ipa": "/kət kɔsts/",
+    "example": "The team will cut costs the request in the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-350",
+    "term": "delegate tasks",
+    "meaning": "giao nhiệm vụ",
+    "partOfSpeech": "v",
+    "ipa": "/ˈdɛləˌgeɪt tæsks/",
+    "example": "The team will delegate tasks the request with the HR department.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-351",
+    "term": "disclose information",
+    "meaning": "công bố thông tin",
+    "partOfSpeech": "v",
+    "ipa": "/dɪˈskloʊz ˌɪnˌfɔrˈmeɪʃən/",
+    "example": "The team will disclose information the request at the office.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-352",
+    "term": "enhance efficiency",
+    "meaning": "nâng cao hiệu quả",
+    "partOfSpeech": "v",
+    "ipa": "/ɛnˈhæns ɪˈfɪʃənsi/",
+    "example": "The team will enhance efficiency the request at the office.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-353",
+    "term": "extend a deadline",
+    "meaning": "gia hạn thời hạn",
+    "partOfSpeech": "v",
+    "ipa": "/ɪkˈstɛnd ə ˈdɛˌdlaɪn/",
+    "example": "The team will extend a deadline the request before the Monday meeting.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-354",
+    "term": "file a complaint",
+    "meaning": "gửi khiếu nại",
+    "partOfSpeech": "v",
+    "ipa": "/faɪl ə kəmˈpleɪnt/",
+    "example": "The team will file a complaint the request at the office.",
+    "topic": "Dịch vụ khách hàng",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-355",
+    "term": "finalize a contract",
+    "meaning": "hoàn tất hợp đồng",
+    "partOfSpeech": "v",
+    "ipa": "/ˈfaɪnəˌlaɪz ə ˈkɑnˌtrækt/",
+    "example": "The team will finalize a contract the request at the office.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-356",
+    "term": "generate revenue",
+    "meaning": "tạo doanh thu",
+    "partOfSpeech": "v",
+    "ipa": "/ˈʤɛnərˌeɪt ˈrɛvəˌnu/",
+    "example": "The team will generate revenue the request in the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-357",
+    "term": "issue a refund",
+    "meaning": "hoàn tiền",
+    "partOfSpeech": "v",
+    "ipa": "/ˈɪʃu ə ˈriˌfənd/",
+    "example": "The team will issue a refund the request at the office.",
+    "topic": "Dịch vụ khách hàng",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-358",
+    "term": "meet a requirement",
+    "meaning": "đáp ứng yêu cầu",
+    "partOfSpeech": "v",
+    "ipa": "/mit ə rɪkˈwaɪrmənt/",
+    "example": "The team will meet a requirement the request at the office.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-359",
+    "term": "negotiate terms",
+    "meaning": "đàm phán điều khoản",
+    "partOfSpeech": "v",
+    "ipa": "/nɪˈgoʊʃiˌeɪt tərmz/",
+    "example": "The team will negotiate terms the request at the office.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-360",
+    "term": "obtain approval",
+    "meaning": "nhận phê duyệt",
+    "partOfSpeech": "v",
+    "ipa": "/əbˈteɪn əˈpruvəl/",
+    "example": "The team will obtain approval the request before the Monday meeting.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-361",
+    "term": "process an order",
+    "meaning": "xử lý đơn hàng",
+    "partOfSpeech": "v",
+    "ipa": "/ˈprɔˌsɛs ən ˈɔrdər/",
+    "example": "The team will process an order the request at the office.",
+    "topic": "Dịch vụ khách hàng",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-362",
+    "term": "reduce overhead",
+    "meaning": "giảm chi phí chung",
+    "partOfSpeech": "v",
+    "ipa": "/rɪˈdus ˈoʊvərˈhɛd/",
+    "example": "The team will reduce overhead the request in the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-363",
+    "term": "resolve a dispute",
+    "meaning": "giải quyết tranh chấp",
+    "partOfSpeech": "v",
+    "ipa": "/riˈzɑlv ə dɪˈspjut/",
+    "example": "The team will resolve a dispute the request at the office.",
+    "topic": "Dịch vụ khách hàng",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-364",
+    "term": "schedule an appointment",
+    "meaning": "đặt lịch hẹn",
+    "partOfSpeech": "v",
+    "ipa": "/ˈskɛʤʊl ən əˈpɔɪntmənt/",
+    "example": "The team will schedule an appointment the request before the Monday meeting.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-365",
+    "term": "submit a bid",
+    "meaning": "nộp hồ sơ dự thầu",
+    "partOfSpeech": "v",
+    "ipa": "/səbˈmɪt ə bɪd/",
+    "example": "The team will submit a bid the request at the office.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-366",
+    "term": "track inventory",
+    "meaning": "theo dõi tồn kho",
+    "partOfSpeech": "v",
+    "ipa": "/træk ˌɪnvənˈtɔri/",
+    "example": "The team will track inventory the request before the shipment leaves the factory.",
+    "topic": "Sản xuất",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-367",
+    "term": "update records",
+    "meaning": "cập nhật hồ sơ",
+    "partOfSpeech": "v",
+    "ipa": "/ˈəpˌdeɪt ˈrɛkərdz/",
+    "example": "The team will update records the request before the Monday meeting.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-368",
+    "term": "withdraw an application",
+    "meaning": "rút đơn đăng ký",
+    "partOfSpeech": "v",
+    "ipa": "/wɪθˈdrɔ ən ˌæpləˈkeɪʃən/",
+    "example": "The team will withdraw an application the request with the HR department.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC"
+  },
+  {
+    "id": "plus-369",
+    "term": "work overtime",
+    "meaning": "làm thêm giờ",
+    "partOfSpeech": "v",
+    "ipa": "/wərk ˈoʊvərˌtaɪm/",
+    "example": "The team will work overtime the request with the HR department.",
     "topic": "Nhân sự",
     "source": "Bổ sung theo chủ đề TOEIC"
   }

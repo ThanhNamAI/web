@@ -22,6 +22,12 @@ const topics = Object.entries(vocabulary.reduce((acc, item) => {
   acc[item.topic] = (acc[item.topic] ?? 0) + 1;
   return acc;
 }, {})).sort((a, b) => b[1] - a[1]);
+const partsOfSpeech = Object.entries(vocabulary.reduce((acc, item) => {
+  item.partOfSpeech.split(",").map(tag => tag.trim()).filter(Boolean).forEach(tag => {
+    acc[tag] = (acc[tag] ?? 0) + 1;
+  });
+  return acc;
+}, {})).sort((a, b) => b[1] - a[1]);
 const quality = {
   withoutIpa: vocabulary.filter(item => !item.ipa || item.ipa === "Nghe mẫu").length,
   missingIpaTerms: vocabulary.filter(item => !item.ipa || item.ipa === "Nghe mẫu").map(item => item.term),
@@ -33,6 +39,6 @@ const quality = {
   })(),
   multiWordTerms: vocabulary.filter(item => item.term.includes(" ")).length,
 };
-const report = { totalItems: vocabulary.length, uniqueTerms: normalized.size, duplicateTerms: duplicates.length, duplicates, topics, quality };
+const report = { totalItems: vocabulary.length, uniqueTerms: normalized.size, duplicateTerms: duplicates.length, duplicates, topics, partsOfSpeech, quality };
 fs.writeFileSync(path.join(root, "reports", "vocabulary-audit.json"), JSON.stringify(report, null, 2));
 console.log(JSON.stringify(report, null, 2));

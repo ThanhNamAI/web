@@ -1,44 +1,44 @@
 {
-  "totalItems": 1250,
-  "uniqueTerms": 1250,
+  "totalItems": 1324,
+  "uniqueTerms": 1324,
   "duplicateTerms": 0,
   "duplicates": [],
   "topics": [
     [
       "Tài chính",
-      194
+      209
     ],
     [
       "Nhân sự",
-      178
+      188
     ],
     [
       "Kinh doanh",
-      146
+      166
     ],
     [
       "Sản xuất",
-      146
+      148
     ],
     [
       "Du lịch",
-      145
+      146
     ],
     [
       "Văn phòng",
-      137
+      146
     ],
     [
       "Công nghệ",
-      125
+      130
     ],
     [
       "Dịch vụ khách hàng",
-      122
+      129
     ],
     [
       "Tiếp thị",
-      30
+      35
     ],
     [
       "Cụm động từ",
@@ -49,12 +49,34 @@
       12
     ]
   ],
+  "partsOfSpeech": [
+    [
+      "n",
+      800
+    ],
+    [
+      "v",
+      363
+    ],
+    [
+      "adj",
+      212
+    ],
+    [
+      "adv",
+      36
+    ],
+    [
+      "prep",
+      5
+    ]
+  ],
   "quality": {
     "withoutIpa": 0,
     "missingIpaTerms": [],
     "withoutExample": 0,
-    "totalExampleVariants": 3750,
+    "totalExampleVariants": 3972,
     "exactDuplicateExamples": 0,
-    "multiWordTerms": 137
+    "multiWordTerms": 210
   }
 }

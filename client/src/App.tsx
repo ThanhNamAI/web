@@ -5,6 +5,8 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import "./dark-mode.css";
+import "./dark-mode-fixes.css";
+import "./ux-fixes.css";
 import Games from "./pages/Games";
 import Diagnostic from "./pages/Diagnostic";
 import Home from "./pages/Home";

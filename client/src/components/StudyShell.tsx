@@ -1,4 +1,5 @@
-import { BookOpen, BrainCircuit, Gamepad2, House, Layers3, LogIn, Sparkles, UserRound } from "lucide-react";
+import { useState } from "react";
+import { BookOpen, BrainCircuit, Gamepad2, House, Layers3, LogIn, Menu, Sparkles, UserRound, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { startLogin } from "@/const";
@@ -18,6 +19,7 @@ const nav = [
 export function StudyShell({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
   const { user, isAuthenticated } = useAuth();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <div className="app-shell">
       <aside className="study-sidebar">
@@ -41,11 +43,13 @@ export function StudyShell({ children }: { children: React.ReactNode }) {
       </aside>
       <main className="study-main">{children}</main>
       <nav className="mobile-nav" aria-label="Điều hướng di động">
-        {nav.slice(0, 5).map(item => {
+        {nav.slice(0, 4).map(item => {
           const Icon = item.icon;
           return <Link href={item.href} key={item.href} className={cn("mobile-nav-link", location === item.href && "mobile-nav-active")}><Icon /><span>{item.label.split(" ")[0]}</span></Link>;
         })}
+        <button className="mobile-more-trigger" onClick={() => setMobileMenuOpen(value => !value)} aria-expanded={mobileMenuOpen} aria-controls="mobile-more-menu"><Menu /><span>Thêm</span></button>
       </nav>
+      {mobileMenuOpen && <div id="mobile-more-menu" className="mobile-more-menu"><div className="mobile-more-head"><b>Khám phá TOEIC Quest</b><button onClick={() => setMobileMenuOpen(false)} aria-label="Đóng menu"><X /></button></div>{nav.slice(4).map(item => { const Icon = item.icon; return <Link href={item.href} onClick={() => setMobileMenuOpen(false)} key={item.href}><Icon />{item.label}</Link>; })}<ThemeToggle /></div>}
     </div>
   );
 }

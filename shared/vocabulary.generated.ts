@@ -34,11 +34,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "ở nước ngoài",
     "partOfSpeech": "adv",
     "ipa": "/əˈbrɑːd/",
-    "example": "We need to abroad the document for the customer follow-up.",
+    "example": "The team worked abroad during the customer follow-up.",
     "examples": [
-      "We need to abroad the document for the customer follow-up.",
-      "The team will abroad the request before the deadline.",
-      "Could you abroad this item after the review?"
+      "The team worked abroad during the customer follow-up.",
+      "The staff responded abroad to the client email.",
+      "The task was completed abroad."
     ],
     "topic": "Dịch vụ khách hàng",
     "source": "PDF đính kèm"
@@ -79,10 +79,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "khả năng tiếp cận được",
     "partOfSpeech": "adj",
     "ipa": "/əkˈses.ə.bəl/",
-    "example": "The client chose a accessible option for the business trip.",
+    "example": "The client chose an accessible option for the business trip.",
     "examples": [
-      "The client chose a accessible option for the business trip.",
-      "We need a accessible response before the airport transfer.",
+      "The client chose an accessible option for the business trip.",
+      "We need an accessible response before the airport transfer.",
       "The report explains why the accessible approach matters."
     ],
     "topic": "Du lịch",
@@ -154,11 +154,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "theo như, dựa vào",
     "partOfSpeech": "prep",
     "ipa": "/əˈkɔːr.dɪŋ ˌtuː/",
-    "example": "The report was prepared according (to) company policy.",
+    "example": "The report was prepared according to company policy.",
     "examples": [
-      "The report was prepared according (to) company policy.",
-      "The request was handled according (to) the procedure.",
-      "The team acted according (to) the contract terms."
+      "The report was prepared according to company policy.",
+      "The request was handled according to the procedure.",
+      "The team acted according to the contract terms."
     ],
     "topic": "Dịch vụ khách hàng",
     "source": "PDF đính kèm"
@@ -169,11 +169,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "theo đó, vì vậy",
     "partOfSpeech": "adv",
     "ipa": "/əˈkɔːr.dɪŋ.li/",
-    "example": "The team will accordingly the request before the deadline.",
+    "example": "The staff responded accordingly to the client email.",
     "examples": [
-      "The team will accordingly the request before the deadline.",
-      "Could you accordingly this item after the review?",
-      "We need to accordingly the document for the HR meeting."
+      "The staff responded accordingly to the client email.",
+      "The task was completed accordingly.",
+      "The team worked accordingly during the HR meeting."
     ],
     "topic": "Nhân sự",
     "source": "PDF đính kèm"
@@ -199,10 +199,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "đúng đắn, chính xác",
     "partOfSpeech": "adj",
     "ipa": "/ˈæk.jɚ.ət/",
-    "example": "The client chose a accurate option for the Monday meeting.",
+    "example": "The client chose an accurate option for the Monday meeting.",
     "examples": [
-      "The client chose a accurate option for the Monday meeting.",
-      "We need a accurate response before the internal memo.",
+      "The client chose an accurate option for the Monday meeting.",
+      "We need an accurate response before the internal memo.",
       "The report explains why the accurate approach matters."
     ],
     "topic": "Văn phòng",
@@ -259,11 +259,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "thực sự, trên thực tế",
     "partOfSpeech": "adv",
     "ipa": "/ˈæk.tʃu.ə.li/",
-    "example": "We need to actually the document for the Monday meeting.",
+    "example": "The team worked actually during the Monday meeting.",
     "examples": [
-      "We need to actually the document for the Monday meeting.",
-      "The team will actually the request before the deadline.",
-      "Could you actually this item after the review?"
+      "The team worked actually during the Monday meeting.",
+      "The staff responded actually to the client email.",
+      "The task was completed actually."
     ],
     "topic": "Văn phòng",
     "source": "PDF đính kèm"
@@ -307,8 +307,8 @@ export const coreVocabulary: VocabularyItem[] = [
     "example": "The report explains why the additional approach matters.",
     "examples": [
       "The report explains why the additional approach matters.",
-      "The client chose a additional option for the business trip.",
-      "We need a additional response before the airport transfer."
+      "The client chose an additional option for the business trip.",
+      "We need an additional response before the airport transfer."
     ],
     "topic": "Du lịch",
     "source": "PDF đính kèm"
@@ -439,10 +439,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "tiến bộ, cấp tiến",
     "partOfSpeech": "adj",
     "ipa": "/ədˈvænst/",
-    "example": "The client chose a advanced option for the Monday meeting.",
+    "example": "The client chose an advanced option for the Monday meeting.",
     "examples": [
-      "The client chose a advanced option for the Monday meeting.",
-      "We need a advanced response before the internal memo.",
+      "The client chose an advanced option for the Monday meeting.",
+      "We need an advanced response before the internal memo.",
       "The report explains why the advanced approach matters."
     ],
     "topic": "Văn phòng",
@@ -469,11 +469,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "có lợi, thuận lợi",
     "partOfSpeech": "adj",
     "ipa": "/ˌæd.vænˈteɪ.dʒəs/",
-    "example": "We need a advantageous response before the software update.",
+    "example": "We need an advantageous response before the software update.",
     "examples": [
-      "We need a advantageous response before the software update.",
+      "We need an advantageous response before the software update.",
       "The report explains why the advantageous approach matters.",
-      "The client chose a advantageous option for system maintenance."
+      "The client chose an advantageous option for system maintenance."
     ],
     "topic": "Công nghệ",
     "source": "PDF đính kèm"
@@ -574,11 +574,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "có khả năng chi trả, vừa túi tiền",
     "partOfSpeech": "adj",
     "ipa": "/əˈfɔːr.də.bəl/",
-    "example": "We need a affordable response before the airport transfer.",
+    "example": "We need an affordable response before the airport transfer.",
     "examples": [
-      "We need a affordable response before the airport transfer.",
+      "We need an affordable response before the airport transfer.",
       "The report explains why the affordable approach matters.",
-      "The client chose a affordable option for the business trip."
+      "The client chose an affordable option for the business trip."
     ],
     "topic": "Du lịch",
     "source": "PDF đính kèm"
@@ -637,8 +637,8 @@ export const coreVocabulary: VocabularyItem[] = [
     "example": "The report explains why the agreeable approach matters.",
     "examples": [
       "The report explains why the agreeable approach matters.",
-      "The client chose a agreeable option for the quarterly financial report.",
-      "We need a agreeable response before the client invoice."
+      "The client chose an agreeable option for the quarterly financial report.",
+      "We need an agreeable response before the client invoice."
     ],
     "topic": "Tài chính",
     "source": "PDF đính kèm"
@@ -667,8 +667,8 @@ export const coreVocabulary: VocabularyItem[] = [
     "example": "The report explains why the agricultural approach matters.",
     "examples": [
       "The report explains why the agricultural approach matters.",
-      "The client chose a agricultural option for system maintenance.",
-      "We need a agricultural response before the software update."
+      "The client chose an agricultural option for system maintenance.",
+      "We need an agricultural response before the software update."
     ],
     "topic": "Công nghệ",
     "source": "PDF đính kèm"
@@ -769,11 +769,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "xen kẽ, luân phiên",
     "partOfSpeech": "adj",
     "ipa": "/ɑːlˈtɝː.nə.t̬ɪv/",
-    "example": "We need a alternative response before the onboarding process.",
+    "example": "We need an alternative response before the onboarding process.",
     "examples": [
-      "We need a alternative response before the onboarding process.",
+      "We need an alternative response before the onboarding process.",
       "The report explains why the alternative approach matters.",
-      "The client chose a alternative option for the HR meeting."
+      "The client chose an alternative option for the HR meeting."
     ],
     "topic": "Nhân sự",
     "source": "PDF đính kèm"
@@ -784,11 +784,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "tham vọng",
     "partOfSpeech": "adj",
     "ipa": "/æmˈbɪʃ.əs/",
-    "example": "We need a ambitious response before the client invoice.",
+    "example": "We need an ambitious response before the client invoice.",
     "examples": [
-      "We need a ambitious response before the client invoice.",
+      "We need an ambitious response before the client invoice.",
       "The report explains why the ambitious approach matters.",
-      "The client chose a ambitious option for the quarterly financial report."
+      "The client chose an ambitious option for the quarterly financial report."
     ],
     "topic": "Tài chính",
     "source": "PDF đính kèm"
@@ -829,10 +829,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "vui, có tính hài hước",
     "partOfSpeech": "adj",
     "ipa": "/əˈmjuː.zɪŋ/",
-    "example": "The client chose a amusing option for the strategy meeting.",
+    "example": "The client chose an amusing option for the strategy meeting.",
     "examples": [
-      "The client chose a amusing option for the strategy meeting.",
-      "We need a amusing response before the sales proposal.",
+      "The client chose an amusing option for the strategy meeting.",
+      "We need an amusing response before the sales proposal.",
       "The report explains why the amusing approach matters."
     ],
     "topic": "Kinh doanh",
@@ -874,10 +874,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "hằng năm",
     "partOfSpeech": "adj",
     "ipa": "/ˈæn.ju.əl/",
-    "example": "The client chose a annual option for the customer follow-up.",
+    "example": "The client chose an annual option for the customer follow-up.",
     "examples": [
-      "The client chose a annual option for the customer follow-up.",
-      "We need a annual response before the service desk.",
+      "The client chose an annual option for the customer follow-up.",
+      "We need an annual response before the service desk.",
       "The report explains why the annual approach matters."
     ],
     "topic": "Dịch vụ khách hàng",
@@ -904,11 +904,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "bồn chồn, lo lắng",
     "partOfSpeech": "adj",
     "ipa": "/ˈæŋk.ʃəs/",
-    "example": "We need a anxious response before the sales proposal.",
+    "example": "We need an anxious response before the sales proposal.",
     "examples": [
-      "We need a anxious response before the sales proposal.",
+      "We need an anxious response before the sales proposal.",
       "The report explains why the anxious approach matters.",
-      "The client chose a anxious option for the strategy meeting."
+      "The client chose an anxious option for the strategy meeting."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -1054,11 +1054,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "đáng kể",
     "partOfSpeech": "adj",
     "ipa": "/əˈpriː.ʃə.bəl/",
-    "example": "We need a appreciable response before the onboarding process.",
+    "example": "We need an appreciable response before the onboarding process.",
     "examples": [
-      "We need a appreciable response before the onboarding process.",
+      "We need an appreciable response before the onboarding process.",
       "The report explains why the appreciable approach matters.",
-      "The client chose a appreciable option for the HR meeting."
+      "The client chose an appreciable option for the HR meeting."
     ],
     "topic": "Nhân sự",
     "source": "PDF đính kèm"
@@ -1099,11 +1099,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "đánh giá cao, ghi nhận",
     "partOfSpeech": "adj",
     "ipa": "/əˈpriː.ʃə.t̬ɪv/",
-    "example": "We need a appreciative of response before the sales proposal.",
+    "example": "We need an appreciative of response before the sales proposal.",
     "examples": [
-      "We need a appreciative of response before the sales proposal.",
+      "We need an appreciative of response before the sales proposal.",
       "The report explains why the appreciative of approach matters.",
-      "The client chose a appreciative of option for the strategy meeting."
+      "The client chose an appreciative of option for the strategy meeting."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -1144,10 +1144,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "xấp xỉ, gần đúng",
     "partOfSpeech": "adj",
     "ipa": "/əˈprɑːk.sə.mət/",
-    "example": "The client chose a approximate option for the HR meeting.",
+    "example": "The client chose an approximate option for the HR meeting.",
     "examples": [
-      "The client chose a approximate option for the HR meeting.",
-      "We need a approximate response before the onboarding process.",
+      "The client chose an approximate option for the HR meeting.",
+      "We need an approximate response before the onboarding process.",
       "The report explains why the approximate approach matters."
     ],
     "topic": "Nhân sự",
@@ -1522,8 +1522,8 @@ export const coreVocabulary: VocabularyItem[] = [
     "example": "The report explains why the available approach matters.",
     "examples": [
       "The report explains why the available approach matters.",
-      "The client chose a available option for the quarterly financial report.",
-      "We need a available response before the client invoice."
+      "The client chose an available option for the quarterly financial report.",
+      "We need an available response before the client invoice."
     ],
     "topic": "Tài chính",
     "source": "PDF đính kèm"
@@ -1549,10 +1549,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "khao khát, thèm khát",
     "partOfSpeech": "adj",
     "ipa": "/ˈæv.ɪd/",
-    "example": "The client chose a avid option for system maintenance.",
+    "example": "The client chose an avid option for system maintenance.",
     "examples": [
-      "The client chose a avid option for system maintenance.",
-      "We need a avid response before the software update.",
+      "The client chose an avid option for system maintenance.",
+      "We need an avid response before the software update.",
       "The report explains why the avid approach matters."
     ],
     "topic": "Công nghệ",
@@ -1579,10 +1579,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "ngại ngùng, khó xử",
     "partOfSpeech": "adj",
     "ipa": "/ˈɑː.kwɚd/",
-    "example": "The client chose a awkward option for the strategy meeting.",
+    "example": "The client chose an awkward option for the strategy meeting.",
     "examples": [
-      "The client chose a awkward option for the strategy meeting.",
-      "We need a awkward response before the sales proposal.",
+      "The client chose an awkward option for the strategy meeting.",
+      "We need an awkward response before the sales proposal.",
       "The report explains why the awkward approach matters."
     ],
     "topic": "Kinh doanh",
@@ -2779,11 +2779,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "thông thường, bình thường",
     "partOfSpeech": "adv",
     "ipa": "/ˈkɑː.mən.li/",
-    "example": "We need to commonly the document for the business trip.",
+    "example": "The team worked commonly during the business trip.",
     "examples": [
-      "We need to commonly the document for the business trip.",
-      "The team will commonly the request before the deadline.",
-      "Could you commonly this item after the review?"
+      "The team worked commonly during the business trip.",
+      "The staff responded commonly to the client email.",
+      "The task was completed commonly."
     ],
     "topic": "Du lịch",
     "source": "PDF đính kèm"
@@ -3304,11 +3304,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "kiên định, trước sau như một, đồng nhất",
     "partOfSpeech": "adv",
     "ipa": "/kənˈsɪs.tənt.li/",
-    "example": "Could you consistently this item after the review?",
+    "example": "The task was completed consistently.",
     "examples": [
-      "Could you consistently this item after the review?",
-      "We need to consistently the document for the customer follow-up.",
-      "The team will consistently the request before the deadline."
+      "The task was completed consistently.",
+      "The team worked consistently during the customer follow-up.",
+      "The staff responded consistently to the client email."
     ],
     "topic": "Dịch vụ khách hàng",
     "source": "PDF đính kèm"
@@ -3454,11 +3454,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "thuận tiện, tiện lợi",
     "partOfSpeech": "adv",
     "ipa": "/kənˈviː.ni.ənt.li/",
-    "example": "We need to conveniently the document for the customer follow-up.",
+    "example": "The team worked conveniently during the customer follow-up.",
     "examples": [
-      "We need to conveniently the document for the customer follow-up.",
-      "The team will conveniently the request before the deadline.",
-      "Could you conveniently this item after the review?"
+      "The team worked conveniently during the customer follow-up.",
+      "The staff responded conveniently to the client email.",
+      "The task was completed conveniently."
     ],
     "topic": "Dịch vụ khách hàng",
     "source": "PDF đính kèm"
@@ -4024,11 +4024,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "rõ ràng, dứt khoát, chắc chắn",
     "partOfSpeech": "adv",
     "ipa": "/ˈdef.ən.ət.li/",
-    "example": "Could you definitely this item after the review?",
+    "example": "The task was completed definitely.",
     "examples": [
-      "Could you definitely this item after the review?",
-      "We need to definitely the document for the factory shipment.",
-      "The team will definitely the request before the deadline."
+      "The task was completed definitely.",
+      "The team worked definitely during the factory shipment.",
+      "The staff responded definitely to the client email."
     ],
     "topic": "Sản xuất",
     "source": "PDF đính kèm"
@@ -4879,11 +4879,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "nhân đôi, gấp dôi",
     "partOfSpeech": "n, adj, adv",
     "ipa": "/ˈdʌb.əl/",
-    "example": "We need to double the document for the quarterly financial report.",
+    "example": "The team worked double during the quarterly financial report.",
     "examples": [
-      "We need to double the document for the quarterly financial report.",
-      "The team will double the request before the deadline.",
-      "Could you double this item after the review?"
+      "The team worked double during the quarterly financial report.",
+      "The staff responded double to the client email.",
+      "The task was completed double."
     ],
     "topic": "Tài chính",
     "source": "PDF đính kèm"
@@ -4939,11 +4939,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "trở xuống, trở về sau",
     "partOfSpeech": "adv",
     "ipa": "/ˈdaʊn.wɚd/",
-    "example": "The team will downward the request before the deadline.",
+    "example": "The staff responded downward to the client email.",
     "examples": [
-      "The team will downward the request before the deadline.",
-      "Could you downward this item after the review?",
-      "We need to downward the document for the HR meeting."
+      "The staff responded downward to the client email.",
+      "The task was completed downward.",
+      "The team worked downward during the HR meeting."
     ],
     "topic": "Nhân sự",
     "source": "PDF đính kèm"
@@ -4954,11 +4954,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "mạnh mẽ, quyết liệt",
     "partOfSpeech": "adv",
     "ipa": "/ˈdræs.tɪ.kəl.i/",
-    "example": "Could you drastically this item after the review?",
+    "example": "The task was completed drastically.",
     "examples": [
-      "Could you drastically this item after the review?",
-      "We need to drastically the document for the customer follow-up.",
-      "The team will drastically the request before the deadline."
+      "The task was completed drastically.",
+      "The team worked drastically during the customer follow-up.",
+      "The staff responded drastically to the client email."
     ],
     "topic": "Dịch vụ khách hàng",
     "source": "PDF đính kèm"
@@ -5044,11 +5044,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "miễn thuế",
     "partOfSpeech": "adj, adv",
     "ipa": "/ˌduː.t̬iˈfriː/",
-    "example": "We need to duty-free the document for system maintenance.",
+    "example": "The team worked duty-free during system maintenance.",
     "examples": [
-      "We need to duty-free the document for system maintenance.",
-      "The team will duty-free the request before the deadline.",
-      "Could you duty-free this item after the review?"
+      "The team worked duty-free during system maintenance.",
+      "The staff responded duty-free to the client email.",
+      "The task was completed duty-free."
     ],
     "topic": "Công nghệ",
     "source": "PDF đính kèm"
@@ -5089,10 +5089,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "partOfSpeech": "adj",
     "ipa": "/ˌiː.kəˈnɑː.mɪ.kəl/",
     "meaning": "tiết kiệm, kinh tế",
-    "example": "The client chose a economical option for the customer follow-up.",
+    "example": "The client chose an economical option for the customer follow-up.",
     "examples": [
-      "The client chose a economical option for the customer follow-up.",
-      "We need a economical response before the service desk.",
+      "The client chose an economical option for the customer follow-up.",
+      "We need an economical response before the service desk.",
       "The report explains why the economical approach matters."
     ],
     "topic": "Dịch vụ khách hàng",
@@ -5134,10 +5134,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "hiệu quả, có hiệu lực",
     "partOfSpeech": "adj",
     "ipa": "/əˈfek.tɪv/",
-    "example": "The client chose a effective option for the factory shipment.",
+    "example": "The client chose an effective option for the factory shipment.",
     "examples": [
-      "The client chose a effective option for the factory shipment.",
-      "We need a effective response before the quality inspection.",
+      "The client chose an effective option for the factory shipment.",
+      "We need an effective response before the quality inspection.",
       "The report explains why the effective approach matters."
     ],
     "topic": "Sản xuất",
@@ -5149,11 +5149,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "có hiệu quả",
     "partOfSpeech": "adv",
     "ipa": "/əˈfek.tɪv.li/",
-    "example": "Could you effectively this item after the review?",
+    "example": "The task was completed effectively.",
     "examples": [
-      "Could you effectively this item after the review?",
-      "We need to effectively the document for the strategy meeting.",
-      "The team will effectively the request before the deadline."
+      "The task was completed effectively.",
+      "The team worked effectively during the strategy meeting.",
+      "The staff responded effectively to the client email."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -5197,8 +5197,8 @@ export const coreVocabulary: VocabularyItem[] = [
     "example": "The report explains why the efficient approach matters.",
     "examples": [
       "The report explains why the efficient approach matters.",
-      "The client chose a efficient option for the factory shipment.",
-      "We need a efficient response before the quality inspection."
+      "The client chose an efficient option for the factory shipment.",
+      "We need an efficient response before the quality inspection."
     ],
     "topic": "Sản xuất",
     "source": "PDF đính kèm"
@@ -5209,11 +5209,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "có hiệu nghiệm",
     "partOfSpeech": "adv",
     "ipa": "/ɪˈfɪʃ.ənt.li/",
-    "example": "The team will efficiently the request before the deadline.",
+    "example": "The staff responded efficiently to the client email.",
     "examples": [
-      "The team will efficiently the request before the deadline.",
-      "Could you efficiently this item after the review?",
-      "We need to efficiently the document for the strategy meeting."
+      "The staff responded efficiently to the client email.",
+      "The task was completed efficiently.",
+      "The team worked efficiently during the strategy meeting."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -5224,10 +5224,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "có tuổi, lớn tuổi",
     "partOfSpeech": "adj",
     "ipa": "/ˈel.dɚ.li/",
-    "example": "The client chose a elderly option for the HR meeting.",
+    "example": "The client chose an elderly option for the HR meeting.",
     "examples": [
-      "The client chose a elderly option for the HR meeting.",
-      "We need a elderly response before the onboarding process.",
+      "The client chose an elderly option for the HR meeting.",
+      "We need an elderly response before the onboarding process.",
       "The report explains why the elderly approach matters."
     ],
     "topic": "Nhân sự",
@@ -5494,11 +5494,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "nhiệt tình, hứng khởi",
     "partOfSpeech": "adj",
     "ipa": "/ɪnˌθuː.ziˈæs.tɪk/",
-    "example": "We need a enthusiastic response before the internal memo.",
+    "example": "We need an enthusiastic response before the internal memo.",
     "examples": [
-      "We need a enthusiastic response before the internal memo.",
+      "We need an enthusiastic response before the internal memo.",
       "The report explains why the enthusiastic approach matters.",
-      "The client chose a enthusiastic option for the Monday meeting."
+      "The client chose an enthusiastic option for the Monday meeting."
     ],
     "topic": "Văn phòng",
     "source": "PDF đính kèm"
@@ -5509,11 +5509,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "hăng say, nhiệt tình",
     "partOfSpeech": "adv",
     "ipa": "/ɪnˌθuː.ziˈæs.tɪ.kəl.i/",
-    "example": "The team will enthusiastically the request before the deadline.",
+    "example": "The staff responded enthusiastically to the client email.",
     "examples": [
-      "The team will enthusiastically the request before the deadline.",
-      "Could you enthusiastically this item after the review?",
-      "We need to enthusiastically the document for system maintenance."
+      "The staff responded enthusiastically to the client email.",
+      "The task was completed enthusiastically.",
+      "The team worked enthusiastically during system maintenance."
     ],
     "topic": "Công nghệ",
     "source": "PDF đính kèm"
@@ -5569,10 +5569,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "(thuộc) môi trường",
     "partOfSpeech": "adj",
     "ipa": "/ɪnˌvaɪ.rənˈmen.t̬əl/",
-    "example": "The client chose a environmental option for the quarterly financial report.",
+    "example": "The client chose an environmental option for the quarterly financial report.",
     "examples": [
-      "The client chose a environmental option for the quarterly financial report.",
-      "We need a environmental response before the client invoice.",
+      "The client chose an environmental option for the quarterly financial report.",
+      "We need an environmental response before the client invoice.",
       "The report explains why the environmental approach matters."
     ],
     "topic": "Tài chính",
@@ -5584,10 +5584,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "tương đương; vật tương đương",
     "partOfSpeech": "adj, n",
     "ipa": "/ɪˈkwɪv.əl.ənt/",
-    "example": "The client chose a equivalent option for the customer follow-up.",
+    "example": "The client chose an equivalent option for the customer follow-up.",
     "examples": [
-      "The client chose a equivalent option for the customer follow-up.",
-      "We need a equivalent response before the service desk.",
+      "The client chose an equivalent option for the customer follow-up.",
+      "We need an equivalent response before the service desk.",
       "The report explains why the equivalent approach matters."
     ],
     "topic": "Dịch vụ khách hàng",
@@ -5602,8 +5602,8 @@ export const coreVocabulary: VocabularyItem[] = [
     "example": "The report explains why the essential approach matters.",
     "examples": [
       "The report explains why the essential approach matters.",
-      "The client chose a essential option for the factory shipment.",
-      "We need a essential response before the quality inspection."
+      "The client chose an essential option for the factory shipment.",
+      "We need an essential response before the quality inspection."
     ],
     "topic": "Sản xuất",
     "source": "PDF đính kèm"
@@ -5692,8 +5692,8 @@ export const coreVocabulary: VocabularyItem[] = [
     "example": "The report explains why the exact approach matters.",
     "examples": [
       "The report explains why the exact approach matters.",
-      "The client chose a exact option for the quarterly financial report.",
-      "We need a exact response before the client invoice."
+      "The client chose an exact option for the quarterly financial report.",
+      "We need an exact response before the client invoice."
     ],
     "topic": "Tài chính",
     "source": "PDF đính kèm"
@@ -5749,11 +5749,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "xuất sắc, ưu tú",
     "partOfSpeech": "adj",
     "ipa": "/ˈek.səl.ənt/",
-    "example": "We need a excellent response before the quality inspection.",
+    "example": "We need an excellent response before the quality inspection.",
     "examples": [
-      "We need a excellent response before the quality inspection.",
+      "We need an excellent response before the quality inspection.",
       "The report explains why the excellent approach matters.",
-      "The client chose a excellent option for the factory shipment."
+      "The client chose an excellent option for the factory shipment."
     ],
     "topic": "Sản xuất",
     "source": "PDF đính kèm"
@@ -5764,10 +5764,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "(thuộc) chấp hành, sự thi hành; tổ chức hành pháp",
     "partOfSpeech": "adj, n",
     "ipa": "/ɪɡˈzek.jə.t̬ɪv/",
-    "example": "The client chose a executive option for the factory shipment.",
+    "example": "The client chose an executive option for the factory shipment.",
     "examples": [
-      "The client chose a executive option for the factory shipment.",
-      "We need a executive response before the quality inspection.",
+      "The client chose an executive option for the factory shipment.",
+      "We need an executive response before the quality inspection.",
       "The report explains why the executive approach matters."
     ],
     "topic": "Sản xuất",
@@ -5887,8 +5887,8 @@ export const coreVocabulary: VocabularyItem[] = [
     "example": "The report explains why the expensive approach matters.",
     "examples": [
       "The report explains why the expensive approach matters.",
-      "The client chose a expensive option for the factory shipment.",
-      "We need a expensive response before the quality inspection."
+      "The client chose an expensive option for the factory shipment.",
+      "We need an expensive response before the quality inspection."
     ],
     "topic": "Sản xuất",
     "source": "PDF đính kèm"
@@ -5914,10 +5914,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "người từng trải, người có kinh nghiệm",
     "partOfSpeech": "adj",
     "ipa": "/ɪkˈspɪə.ri.ənst/",
-    "example": "The client chose a experienced option for the strategy meeting.",
+    "example": "The client chose an experienced option for the strategy meeting.",
     "examples": [
-      "The client chose a experienced option for the strategy meeting.",
-      "We need a experienced response before the sales proposal.",
+      "The client chose an experienced option for the strategy meeting.",
+      "We need an experienced response before the sales proposal.",
       "The report explains why the experienced approach matters."
     ],
     "topic": "Kinh doanh",
@@ -6004,10 +6004,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "bên ngoài, đối ngoại",
     "partOfSpeech": "adj",
     "ipa": "/ɪkˈstɝː.nəl/",
-    "example": "The client chose a external option for system maintenance.",
+    "example": "The client chose an external option for system maintenance.",
     "examples": [
-      "The client chose a external option for system maintenance.",
-      "We need a external response before the software update.",
+      "The client chose an external option for system maintenance.",
+      "We need an external response before the software update.",
       "The report explains why the external approach matters."
     ],
     "topic": "Công nghệ",
@@ -6574,11 +6574,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "về phía trước, tiến lên",
     "partOfSpeech": "adv",
     "ipa": "/ˈfɔːr.wɚd/",
-    "example": "Could you forward this item after the review?",
+    "example": "The task was completed forward.",
     "examples": [
-      "Could you forward this item after the review?",
-      "We need to forward the document for system maintenance.",
-      "The team will forward the request before the deadline."
+      "The task was completed forward.",
+      "The team worked forward during system maintenance.",
+      "The staff responded forward to the client email."
     ],
     "topic": "Công nghệ",
     "source": "PDF đính kèm"
@@ -6604,11 +6604,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "thẳng thắn",
     "partOfSpeech": "adv",
     "ipa": "/ˈfræŋ.kli/",
-    "example": "The team will frankly the request before the deadline.",
+    "example": "The staff responded frankly to the client email.",
     "examples": [
-      "The team will frankly the request before the deadline.",
-      "Could you frankly this item after the review?",
-      "We need to frankly the document for system maintenance."
+      "The staff responded frankly to the client email.",
+      "The task was completed frankly.",
+      "The team worked frankly during system maintenance."
     ],
     "topic": "Công nghệ",
     "source": "PDF đính kèm"
@@ -6709,11 +6709,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "xa hơn, kỹ hơn",
     "partOfSpeech": "adj, adv",
     "ipa": "/ˈfɝː.ðɚ/",
-    "example": "The team will further the request before the deadline.",
+    "example": "The staff responded further to the client email.",
     "examples": [
-      "The team will further the request before the deadline.",
-      "Could you further this item after the review?",
-      "We need to further the document for system maintenance."
+      "The staff responded further to the client email.",
+      "The task was completed further.",
+      "The team worked further during system maintenance."
     ],
     "topic": "Công nghệ",
     "source": "PDF đính kèm"
@@ -6769,11 +6769,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "dần dần, từ từ",
     "partOfSpeech": "adv",
     "ipa": "/ˈɡrædʒ.u.ə.li/",
-    "example": "We need to gradually the document for the strategy meeting.",
+    "example": "The team worked gradually during the strategy meeting.",
     "examples": [
-      "We need to gradually the document for the strategy meeting.",
-      "The team will gradually the request before the deadline.",
-      "Could you gradually this item after the review?"
+      "The team worked gradually during the strategy meeting.",
+      "The staff responded gradually to the client email.",
+      "The task was completed gradually."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -7039,11 +7039,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "rất, lắm, tốt",
     "partOfSpeech": "adv",
     "ipa": "/ˈhaɪ.li/",
-    "example": "The team will highly the request before the deadline.",
+    "example": "The staff responded highly to the client email.",
     "examples": [
-      "The team will highly the request before the deadline.",
-      "Could you highly this item after the review?",
-      "We need to highly the document for the factory shipment."
+      "The staff responded highly to the client email.",
+      "The task was completed highly.",
+      "The team worked highly during the factory shipment."
     ],
     "topic": "Sản xuất",
     "source": "PDF đính kèm"
@@ -7147,8 +7147,8 @@ export const coreVocabulary: VocabularyItem[] = [
     "example": "The report explains why the imaginative approach matters.",
     "examples": [
       "The report explains why the imaginative approach matters.",
-      "The client chose a imaginative option for the HR meeting.",
-      "We need a imaginative response before the onboarding process."
+      "The client chose an imaginative option for the HR meeting.",
+      "We need an imaginative response before the onboarding process."
     ],
     "topic": "Nhân sự",
     "source": "PDF đính kèm"
@@ -7159,11 +7159,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "ngay lập tức, trực tiếp",
     "partOfSpeech": "adj",
     "ipa": "/ɪˈmiː.di.ət/",
-    "example": "We need a immediate response before the client invoice.",
+    "example": "We need an immediate response before the client invoice.",
     "examples": [
-      "We need a immediate response before the client invoice.",
+      "We need an immediate response before the client invoice.",
       "The report explains why the immediate approach matters.",
-      "The client chose a immediate option for the quarterly financial report."
+      "The client chose an immediate option for the quarterly financial report."
     ],
     "topic": "Tài chính",
     "source": "PDF đính kèm"
@@ -7174,11 +7174,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "ngay lập tức, tức thì",
     "partOfSpeech": "adv",
     "ipa": "/ɪˈmiː.di.ət.li/",
-    "example": "We need to immediately the document for the HR meeting.",
+    "example": "The team worked immediately during the HR meeting.",
     "examples": [
-      "We need to immediately the document for the HR meeting.",
-      "The team will immediately the request before the deadline.",
-      "Could you immediately this item after the review?"
+      "The team worked immediately during the HR meeting.",
+      "The staff responded immediately to the client email.",
+      "The task was completed immediately."
     ],
     "topic": "Nhân sự",
     "source": "PDF đính kèm"
@@ -7207,8 +7207,8 @@ export const coreVocabulary: VocabularyItem[] = [
     "example": "The report explains why the impatient approach matters.",
     "examples": [
       "The report explains why the impatient approach matters.",
-      "The client chose a impatient option for the quarterly financial report.",
-      "We need a impatient response before the client invoice."
+      "The client chose an impatient option for the quarterly financial report.",
+      "We need an impatient response before the client invoice."
     ],
     "topic": "Tài chính",
     "source": "PDF đính kèm"
@@ -7282,8 +7282,8 @@ export const coreVocabulary: VocabularyItem[] = [
     "example": "The report explains why the improper approach matters.",
     "examples": [
       "The report explains why the improper approach matters.",
-      "The client chose a improper option for the Monday meeting.",
-      "We need a improper response before the internal memo."
+      "The client chose an improper option for the Monday meeting.",
+      "We need an improper response before the internal memo."
     ],
     "topic": "Văn phòng",
     "source": "PDF đính kèm"
@@ -7327,8 +7327,8 @@ export const coreVocabulary: VocabularyItem[] = [
     "example": "The report explains why the incentive approach matters.",
     "examples": [
       "The report explains why the incentive approach matters.",
-      "The client chose a incentive option for the quarterly financial report.",
-      "We need a incentive response before the client invoice."
+      "The client chose an incentive option for the quarterly financial report.",
+      "We need an incentive response before the client invoice."
     ],
     "topic": "Tài chính",
     "source": "PDF đính kèm"
@@ -7339,11 +7339,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "có thiên hướng, khuynh hướng",
     "partOfSpeech": "adj",
     "ipa": "/ɪnˈklaɪnd/",
-    "example": "We need a inclined response before the internal memo.",
+    "example": "We need an inclined response before the internal memo.",
     "examples": [
-      "We need a inclined response before the internal memo.",
+      "We need an inclined response before the internal memo.",
       "The report explains why the inclined approach matters.",
-      "The client chose a inclined option for the Monday meeting."
+      "The client chose an inclined option for the Monday meeting."
     ],
     "topic": "Văn phòng",
     "source": "PDF đính kèm"
@@ -7474,11 +7474,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "riêng lẻ",
     "partOfSpeech": "adv",
     "ipa": "/ˌɪn.dəˈvɪdʒ.u.ə.li/",
-    "example": "Could you individually this item after the review?",
+    "example": "The task was completed individually.",
     "examples": [
-      "Could you individually this item after the review?",
-      "We need to individually the document for system maintenance.",
-      "The team will individually the request before the deadline."
+      "The task was completed individually.",
+      "The team worked individually during system maintenance.",
+      "The staff responded individually to the client email."
     ],
     "topic": "Công nghệ",
     "source": "PDF đính kèm"
@@ -7492,8 +7492,8 @@ export const coreVocabulary: VocabularyItem[] = [
     "example": "The report explains why the inexperienced approach matters.",
     "examples": [
       "The report explains why the inexperienced approach matters.",
-      "The client chose a inexperienced option for the factory shipment.",
-      "We need a inexperienced response before the quality inspection."
+      "The client chose an inexperienced option for the factory shipment.",
+      "We need an inexperienced response before the quality inspection."
     ],
     "topic": "Sản xuất",
     "source": "PDF đính kèm"
@@ -7564,10 +7564,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "có ảnh hưởng, có tác dụng",
     "partOfSpeech": "adj",
     "ipa": "/ˌɪn.fluˈen.ʃəl/",
-    "example": "The client chose a influential option for the HR meeting.",
+    "example": "The client chose an influential option for the HR meeting.",
     "examples": [
-      "The client chose a influential option for the HR meeting.",
-      "We need a influential response before the onboarding process.",
+      "The client chose an influential option for the HR meeting.",
+      "We need an influential response before the onboarding process.",
       "The report explains why the influential approach matters."
     ],
     "topic": "Nhân sự",
@@ -7714,11 +7714,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "chăm chú, chú ý",
     "partOfSpeech": "adv",
     "ipa": "/ɪnˈtent.li/",
-    "example": "We need to intently the document for the Monday meeting.",
+    "example": "The team worked intently during the Monday meeting.",
     "examples": [
-      "We need to intently the document for the Monday meeting.",
-      "The team will intently the request before the deadline.",
-      "Could you intently this item after the review?"
+      "The team worked intently during the Monday meeting.",
+      "The staff responded intently to the client email.",
+      "The task was completed intently."
     ],
     "topic": "Văn phòng",
     "source": "PDF đính kèm"
@@ -7744,10 +7744,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "bên trong, nội bộ",
     "partOfSpeech": "adj",
     "ipa": "/ɪnˈtɝː.nəl/",
-    "example": "The client chose a internal option for the Monday meeting.",
+    "example": "The client chose an internal option for the Monday meeting.",
     "examples": [
-      "The client chose a internal option for the Monday meeting.",
-      "We need a internal response before the internal memo.",
+      "The client chose an internal option for the Monday meeting.",
+      "We need an internal response before the internal memo.",
       "The report explains why the internal approach matters."
     ],
     "topic": "Văn phòng",
@@ -7762,8 +7762,8 @@ export const coreVocabulary: VocabularyItem[] = [
     "example": "The report explains why the international approach matters.",
     "examples": [
       "The report explains why the international approach matters.",
-      "The client chose a international option for the factory shipment.",
-      "We need a international response before the quality inspection."
+      "The client chose an international option for the factory shipment.",
+      "We need an international response before the quality inspection."
     ],
     "topic": "Sản xuất",
     "source": "PDF đính kèm"
@@ -7819,10 +7819,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "vô giá",
     "partOfSpeech": "adj",
     "ipa": "/ɪnˈvæl.jə.bəl/",
-    "example": "The client chose a invaluable option for the business trip.",
+    "example": "The client chose an invaluable option for the business trip.",
     "examples": [
-      "The client chose a invaluable option for the business trip.",
-      "We need a invaluable response before the airport transfer.",
+      "The client chose an invaluable option for the business trip.",
+      "We need an invaluable response before the airport transfer.",
       "The report explains why the invaluable approach matters."
     ],
     "topic": "Du lịch",
@@ -9364,11 +9364,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "khách quan",
     "partOfSpeech": "adj",
     "ipa": "/əb´dʒektiv/",
-    "example": "We need a objective response before the sales proposal.",
+    "example": "We need an objective response before the sales proposal.",
     "examples": [
-      "We need a objective response before the sales proposal.",
+      "We need an objective response before the sales proposal.",
       "The report explains why the objective approach matters.",
-      "The client chose a objective option for the strategy meeting."
+      "The client chose an objective option for the strategy meeting."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -9424,11 +9424,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "một cách rõ ràng; có thể thấy được",
     "partOfSpeech": "adv",
     "ipa": "/'ɔbviəsli/",
-    "example": "We need to obviously the document for the strategy meeting.",
+    "example": "The team worked obviously during the strategy meeting.",
     "examples": [
-      "We need to obviously the document for the strategy meeting.",
-      "The team will obviously the request before the deadline.",
-      "Could you obviously this item after the review?"
+      "The team worked obviously during the strategy meeting.",
+      "The staff responded obviously to the client email.",
+      "The task was completed obviously."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -9484,11 +9484,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "(thuộc) chính quyền; (thuộc) văn phòng",
     "partOfSpeech": "adj",
     "ipa": "/ə'fiʃəl/",
-    "example": "We need a official response before the service desk.",
+    "example": "We need an official response before the service desk.",
     "examples": [
-      "We need a official response before the service desk.",
+      "We need an official response before the service desk.",
       "The report explains why the official approach matters.",
-      "The client chose a official option for the customer follow-up."
+      "The client chose an official option for the customer follow-up."
     ],
     "topic": "Dịch vụ khách hàng",
     "source": "PDF đính kèm"
@@ -9499,10 +9499,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "về phía trước, tiến lên, hướng tới",
     "partOfSpeech": "adj",
     "ipa": "/'ɔnwəd/",
-    "example": "The client chose a onward option for system maintenance.",
+    "example": "The client chose an onward option for system maintenance.",
     "examples": [
-      "The client chose a onward option for system maintenance.",
-      "We need a onward response before the software update.",
+      "The client chose an onward option for system maintenance.",
+      "We need an onward response before the software update.",
       "The report explains why the onward approach matters."
     ],
     "topic": "Công nghệ",
@@ -9574,11 +9574,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "lạc quan, yêu đời",
     "partOfSpeech": "adj",
     "ipa": "/¸ɔpti´mistik/",
-    "example": "We need a optimistic response before the internal memo.",
+    "example": "We need an optimistic response before the internal memo.",
     "examples": [
-      "We need a optimistic response before the internal memo.",
+      "We need an optimistic response before the internal memo.",
       "The report explains why the optimistic approach matters.",
-      "The client chose a optimistic option for the Monday meeting."
+      "The client chose an optimistic option for the Monday meeting."
     ],
     "topic": "Văn phòng",
     "source": "PDF đính kèm"
@@ -9634,10 +9634,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "có trật tự, ngăn nắp, hữu hiệu",
     "partOfSpeech": "adj",
     "ipa": "/ˈɔːr.ɡən.aɪzd/",
-    "example": "The client chose a organized option for the strategy meeting.",
+    "example": "The client chose an organized option for the strategy meeting.",
     "examples": [
-      "The client chose a organized option for the strategy meeting.",
-      "We need a organized response before the sales proposal.",
+      "The client chose an organized option for the strategy meeting.",
+      "We need an organized response before the sales proposal.",
       "The report explains why the organized approach matters."
     ],
     "topic": "Kinh doanh",
@@ -9679,10 +9679,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "nổi bật, đáng chú ý; nổi tiếng, vượt trội",
     "partOfSpeech": "adj",
     "ipa": "/¸aut´stændiη/",
-    "example": "The client chose a outstanding option for the quarterly financial report.",
+    "example": "The client chose an outstanding option for the quarterly financial report.",
     "examples": [
-      "The client chose a outstanding option for the quarterly financial report.",
-      "We need a outstanding response before the client invoice.",
+      "The client chose an outstanding option for the quarterly financial report.",
+      "We need an outstanding response before the client invoice.",
       "The report explains why the outstanding approach matters."
     ],
     "topic": "Tài chính",
@@ -9694,11 +9694,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "toàn bộ, toàn thể, bao gồm mọi thứ",
     "partOfSpeech": "adj",
     "ipa": "/ˈoʊvərˌɔl/",
-    "example": "We need a overall response before the quality inspection.",
+    "example": "We need an overall response before the quality inspection.",
     "examples": [
-      "We need a overall response before the quality inspection.",
+      "We need an overall response before the quality inspection.",
       "The report explains why the overall approach matters.",
-      "The client chose a overall option for the factory shipment."
+      "The client chose an overall option for the factory shipment."
     ],
     "topic": "Sản xuất",
     "source": "PDF đính kèm"
@@ -9727,8 +9727,8 @@ export const coreVocabulary: VocabularyItem[] = [
     "example": "The report explains why the overtime approach matters.",
     "examples": [
       "The report explains why the overtime approach matters.",
-      "The client chose a overtime option for the customer follow-up.",
-      "We need a overtime response before the service desk."
+      "The client chose an overtime option for the customer follow-up.",
+      "We need an overtime response before the service desk."
     ],
     "topic": "Dịch vụ khách hàng",
     "source": "PDF đính kèm"
@@ -9844,11 +9844,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "đặc biệt, đặc thù; cá biệt, riêng biệt",
     "partOfSpeech": "adv",
     "ipa": "/pə´tikjuləli/",
-    "example": "The team will particularly the request before the deadline.",
+    "example": "The staff responded particularly to the client email.",
     "examples": [
-      "The team will particularly the request before the deadline.",
-      "Could you particularly this item after the review?",
-      "We need to particularly the document for the HR meeting."
+      "The staff responded particularly to the client email.",
+      "The task was completed particularly.",
+      "The team worked particularly during the HR meeting."
     ],
     "topic": "Nhân sự",
     "source": "PDF đính kèm"
@@ -10414,11 +10414,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "về mặt thực hành (đối với lý thuyết)",
     "partOfSpeech": "adv",
     "ipa": "/´præktikəli/",
-    "example": "The team will practically the request before the deadline.",
+    "example": "The staff responded practically to the client email.",
     "examples": [
-      "The team will practically the request before the deadline.",
-      "Could you practically this item after the review?",
-      "We need to practically the document for the business trip."
+      "The staff responded practically to the client email.",
+      "The task was completed practically.",
+      "The team worked practically during the business trip."
     ],
     "topic": "Du lịch",
     "source": "PDF đính kèm"
@@ -10639,11 +10639,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "có khả năng, có lẽ, có thể",
     "partOfSpeech": "adv",
     "ipa": "/´prɔbəbli/",
-    "example": "Could you probably this item after the review?",
+    "example": "The task was completed probably.",
     "examples": [
-      "Could you probably this item after the review?",
-      "We need to probably the document for the strategy meeting.",
-      "The team will probably the request before the deadline."
+      "The task was completed probably.",
+      "The team worked probably during the strategy meeting.",
+      "The staff responded probably to the client email."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -10849,11 +10849,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "mau lẹ, nhanh chóng; ngay lập tức",
     "partOfSpeech": "adv",
     "ipa": "/´prɔmptli/",
-    "example": "The team will promptly the request before the deadline.",
+    "example": "The staff responded promptly to the client email.",
     "examples": [
-      "The team will promptly the request before the deadline.",
-      "Could you promptly this item after the review?",
-      "We need to promptly the document for the strategy meeting."
+      "The staff responded promptly to the client email.",
+      "The task was completed promptly.",
+      "The team worked promptly during the strategy meeting."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -10864,11 +10864,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "đúng đắn, hợp thức, hợp lệ",
     "partOfSpeech": "adv",
     "ipa": "/´prɔpəli/",
-    "example": "We need to properly the document for the strategy meeting.",
+    "example": "The team worked properly during the strategy meeting.",
     "examples": [
-      "We need to properly the document for the strategy meeting.",
-      "The team will properly the request before the deadline.",
-      "Could you properly this item after the review?"
+      "The team worked properly during the strategy meeting.",
+      "The staff responded properly to the client email.",
+      "The task was completed properly."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -11224,11 +11224,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "hợp lý",
     "partOfSpeech": "adv",
     "ipa": "/ˈriː.zən.ə.bli/",
-    "example": "Could you reasonably this item after the review?",
+    "example": "The task was completed reasonably.",
     "examples": [
-      "Could you reasonably this item after the review?",
-      "We need to reasonably the document for the HR meeting.",
-      "The team will reasonably the request before the deadline."
+      "The task was completed reasonably.",
+      "The team worked reasonably during the HR meeting.",
+      "The staff responded reasonably to the client email."
     ],
     "topic": "Nhân sự",
     "source": "PDF đính kèm"
@@ -11539,11 +11539,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "bất chấp, không đếm xỉa tới, không chú ý tới",
     "partOfSpeech": "adv",
     "ipa": "/ri´ga:dlis/",
-    "example": "The team will regardless the request before the deadline.",
+    "example": "The staff responded regardless to the client email.",
     "examples": [
-      "The team will regardless the request before the deadline.",
-      "Could you regardless this item after the review?",
-      "We need to regardless the document for the HR meeting."
+      "The staff responded regardless to the client email.",
+      "The task was completed regardless.",
+      "The team worked regardless during the HR meeting."
     ],
     "topic": "Nhân sự",
     "source": "PDF đính kèm"
@@ -11614,11 +11614,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "đều đặn, thường xuyên",
     "partOfSpeech": "adv",
     "ipa": "/´regjuləli/",
-    "example": "We need to regularly the document for the business trip.",
+    "example": "The team worked regularly during the business trip.",
     "examples": [
-      "We need to regularly the document for the business trip.",
-      "The team will regularly the request before the deadline.",
-      "Could you regularly this item after the review?"
+      "The team worked regularly during the business trip.",
+      "The staff responded regularly to the client email.",
+      "The task was completed regularly."
     ],
     "topic": "Du lịch",
     "source": "PDF đính kèm"
@@ -12244,11 +12244,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "sự bán lẻ, việc bán lẻ",
     "partOfSpeech": "n, adv",
     "ipa": "/ˈriteɪl , rɪˈteɪl/",
-    "example": "We need to retail the document for the strategy meeting.",
+    "example": "The team worked retail during the strategy meeting.",
     "examples": [
-      "We need to retail the document for the strategy meeting.",
-      "The team will retail the request before the deadline.",
-      "Could you retail this item after the review?"
+      "The team worked retail during the strategy meeting.",
+      "The staff responded retail to the client email.",
+      "The task was completed retail."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -12379,11 +12379,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "ráp, xù xì, gồ ghề, không bằng phẳng",
     "partOfSpeech": "adv",
     "ipa": "/'rʌfli/",
-    "example": "Could you roughly this item after the review?",
+    "example": "The task was completed roughly.",
     "examples": [
-      "Could you roughly this item after the review?",
-      "We need to roughly the document for the Monday meeting.",
-      "The team will roughly the request before the deadline."
+      "The task was completed roughly.",
+      "The team worked roughly during the Monday meeting.",
+      "The staff responded roughly to the client email."
     ],
     "topic": "Văn phòng",
     "source": "PDF đính kèm"
@@ -14194,11 +14194,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "vô điều kiện",
     "partOfSpeech": "adj",
     "ipa": "/ˌʌn.kənˈdɪʃ.ən.əl/",
-    "example": "We need a unconditional response before the client invoice.",
+    "example": "We need an unconditional response before the client invoice.",
     "examples": [
-      "We need a unconditional response before the client invoice.",
+      "We need an unconditional response before the client invoice.",
       "The report explains why the unconditional approach matters.",
-      "The client chose a unconditional option for the quarterly financial report."
+      "The client chose an unconditional option for the quarterly financial report."
     ],
     "topic": "Tài chính",
     "source": "PDF đính kèm"
@@ -14224,10 +14224,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "không thuận lợi",
     "partOfSpeech": "adj",
     "ipa": "/ʌnˈfeɪ.vər.ə.bəl/",
-    "example": "The client chose a unfavorable option for the strategy meeting.",
+    "example": "The client chose an unfavorable option for the strategy meeting.",
     "examples": [
-      "The client chose a unfavorable option for the strategy meeting.",
-      "We need a unfavorable response before the sales proposal.",
+      "The client chose an unfavorable option for the strategy meeting.",
+      "We need an unfavorable response before the sales proposal.",
       "The report explains why the unfavorable approach matters."
     ],
     "topic": "Kinh doanh",
@@ -14239,10 +14239,10 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "không may mắn",
     "partOfSpeech": "adj",
     "ipa": "/ʌnˈfɔːr.tʃən.ət.li/",
-    "example": "The client chose a unfortunately option for the quarterly financial report.",
+    "example": "The client chose an unfortunately option for the quarterly financial report.",
     "examples": [
-      "The client chose a unfortunately option for the quarterly financial report.",
-      "We need a unfortunately response before the client invoice.",
+      "The client chose an unfortunately option for the quarterly financial report.",
+      "We need an unfortunately response before the client invoice.",
       "The report explains why the unfortunately approach matters."
     ],
     "topic": "Tài chính",
@@ -14269,11 +14269,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "hoang sơ",
     "partOfSpeech": "adj",
     "ipa": "/ʌnˈspɔɪld/",
-    "example": "We need a unspoiled response before the quality inspection.",
+    "example": "We need an unspoiled response before the quality inspection.",
     "examples": [
-      "We need a unspoiled response before the quality inspection.",
+      "We need an unspoiled response before the quality inspection.",
       "The report explains why the unspoiled approach matters.",
-      "The client chose a unspoiled option for the factory shipment."
+      "The client chose an unspoiled option for the factory shipment."
     ],
     "topic": "Sản xuất",
     "source": "PDF đính kèm"
@@ -14302,8 +14302,8 @@ export const coreVocabulary: VocabularyItem[] = [
     "example": "The report explains why the upcoming approach matters.",
     "examples": [
       "The report explains why the upcoming approach matters.",
-      "The client chose a upcoming option for system maintenance.",
-      "We need a upcoming response before the software update."
+      "The client chose an upcoming option for system maintenance.",
+      "We need an upcoming response before the software update."
     ],
     "topic": "Công nghệ",
     "source": "PDF đính kèm"
@@ -14344,11 +14344,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "buồn bã, lo lắng",
     "partOfSpeech": "v, adj",
     "ipa": "/ʌpˈset/",
-    "example": "The team will upset the request before the deadline.",
+    "example": "The client chose an upset option for the quarterly financial report.",
     "examples": [
-      "The team will upset the request before the deadline.",
-      "Could you upset this item after the review?",
-      "We need to upset the document for the quarterly financial report."
+      "The client chose an upset option for the quarterly financial report.",
+      "We need an upset response before the client invoice.",
+      "The report explains why the upset approach matters."
     ],
     "topic": "Tài chính",
     "source": "PDF đính kèm"
@@ -14944,11 +14944,11 @@ export const coreVocabulary: VocabularyItem[] = [
     "meaning": "hằng năm",
     "partOfSpeech": "adv",
     "ipa": "/ˈjɪr.li/",
-    "example": "We need to yearly the document for the customer follow-up.",
+    "example": "The team worked yearly during the customer follow-up.",
     "examples": [
-      "We need to yearly the document for the customer follow-up.",
-      "The team will yearly the request before the deadline.",
-      "Could you yearly this item after the review?"
+      "The team worked yearly during the customer follow-up.",
+      "The staff responded yearly to the client email.",
+      "The task was completed yearly."
     ],
     "topic": "Dịch vụ khách hàng",
     "source": "PDF đính kèm"
@@ -17526,7 +17526,7 @@ export const supplementalVocabulary: VocabularyItem[] = [
     "term": "follow-up",
     "meaning": "việc theo dõi tiếp",
     "partOfSpeech": "n",
-    "ipa": "/ˈfɑloʊˌəp/",
+    "ipa": "/ˈfɑloʊ-əp/",
     "example": "The team discussed the follow-up during the Monday meeting.",
     "topic": "Văn phòng",
     "source": "Bổ sung theo chủ đề TOEIC",
@@ -18052,13 +18052,13 @@ export const supplementalVocabulary: VocabularyItem[] = [
     "meaning": "trước; trước thời hạn",
     "partOfSpeech": "adv",
     "ipa": "/ɪn ədˈvæns/",
-    "example": "The team will in advance the request before the deadline.",
+    "example": "The staff responded in advance to the client email.",
     "topic": "Cụm từ",
     "source": "Bổ sung theo chủ đề TOEIC",
     "examples": [
-      "The team will in advance the request before the deadline.",
-      "Could you in advance this item after the review?",
-      "We need to in advance the document for the office meeting."
+      "The staff responded in advance to the client email.",
+      "The task was completed in advance.",
+      "The team worked in advance during the office meeting."
     ]
   },
   {
@@ -18067,12 +18067,12 @@ export const supplementalVocabulary: VocabularyItem[] = [
     "meaning": "phụ trách",
     "partOfSpeech": "adj",
     "ipa": "/ɪn ʧɑrʤ əv/",
-    "example": "The client chose a in charge of option for the office meeting.",
+    "example": "The client chose an in charge of option for the office meeting.",
     "topic": "Cụm từ",
     "source": "Bổ sung theo chủ đề TOEIC",
     "examples": [
-      "The client chose a in charge of option for the office meeting.",
-      "We need a in charge of response before the project update.",
+      "The client chose an in charge of option for the office meeting.",
+      "We need an in charge of response before the project update.",
       "The report explains why the in charge of approach matters."
     ]
   },
@@ -18112,13 +18112,13 @@ export const supplementalVocabulary: VocabularyItem[] = [
     "meaning": "đúng giờ",
     "partOfSpeech": "adv",
     "ipa": "/ɔn taɪm/",
-    "example": "The team will on time the request before the deadline.",
+    "example": "The staff responded on time to the client email.",
     "topic": "Cụm từ",
     "source": "Bổ sung theo chủ đề TOEIC",
     "examples": [
-      "The team will on time the request before the deadline.",
-      "Could you on time this item after the review?",
-      "We need to on time the document for the office meeting."
+      "The staff responded on time to the client email.",
+      "The task was completed on time.",
+      "The team worked on time during the office meeting."
     ]
   },
   {
@@ -18765,6 +18765,1116 @@ export const supplementalVocabulary: VocabularyItem[] = [
       "Please attach the work permit to the follow-up email.",
       "The manager asked for an update on the work permit."
     ]
+  },
+  {
+    "id": "plus-251",
+    "term": "action plan",
+    "meaning": "kế hoạch hành động",
+    "partOfSpeech": "n",
+    "ipa": "/ˈækʃən plæn/",
+    "example": "The manager asked for an update on the action plan.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the action plan.",
+      "The team discussed the action plan during the strategy meeting.",
+      "Please attach the action plan to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-252",
+    "term": "annual report",
+    "meaning": "báo cáo thường niên",
+    "partOfSpeech": "n",
+    "ipa": "/ˈænjuəl rɪˈpɔrt/",
+    "example": "Please attach the annual report to the follow-up email.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the annual report to the follow-up email.",
+      "The manager asked for an update on the annual report.",
+      "The team discussed the annual report during the quarterly financial report."
+    ]
+  },
+  {
+    "id": "plus-253",
+    "term": "approval process",
+    "meaning": "quy trình phê duyệt",
+    "partOfSpeech": "n",
+    "ipa": "/əˈpruvəl ˈprɔˌsɛs/",
+    "example": "The team discussed the approval process during the Monday meeting.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the approval process during the Monday meeting.",
+      "Please attach the approval process to the follow-up email.",
+      "The manager asked for an update on the approval process."
+    ]
+  },
+  {
+    "id": "plus-254",
+    "term": "business proposal",
+    "meaning": "đề xuất kinh doanh",
+    "partOfSpeech": "n",
+    "ipa": "/ˈbɪznɪs prəˈpoʊzəl/",
+    "example": "The team discussed the business proposal during the strategy meeting.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the business proposal during the strategy meeting.",
+      "Please attach the business proposal to the follow-up email.",
+      "The manager asked for an update on the business proposal."
+    ]
+  },
+  {
+    "id": "plus-255",
+    "term": "client portfolio",
+    "meaning": "danh mục khách hàng",
+    "partOfSpeech": "n",
+    "ipa": "/klaɪənt pɔrtˈfoʊliˌoʊ/",
+    "example": "The manager asked for an update on the client portfolio.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the client portfolio.",
+      "The team discussed the client portfolio during the strategy meeting.",
+      "Please attach the client portfolio to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-256",
+    "term": "competitive advantage",
+    "meaning": "lợi thế cạnh tranh",
+    "partOfSpeech": "n",
+    "ipa": "/kəmˈpɛtɪtɪv ædˈvæntɪʤ/",
+    "example": "Please attach the competitive advantage to the follow-up email.",
+    "topic": "Tiếp thị",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the competitive advantage to the follow-up email.",
+      "The manager asked for an update on the competitive advantage.",
+      "The team discussed the competitive advantage during the office meeting."
+    ]
+  },
+  {
+    "id": "plus-257",
+    "term": "contract renewal",
+    "meaning": "gia hạn hợp đồng",
+    "partOfSpeech": "n",
+    "ipa": "/ˈkɑnˌtrækt rɪˈnuəl/",
+    "example": "The team discussed the contract renewal during the strategy meeting.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the contract renewal during the strategy meeting.",
+      "Please attach the contract renewal to the follow-up email.",
+      "The manager asked for an update on the contract renewal."
+    ]
+  },
+  {
+    "id": "plus-258",
+    "term": "cost estimate",
+    "meaning": "ước tính chi phí",
+    "partOfSpeech": "n",
+    "ipa": "/kɔst ˈɛstəˌmeɪt/",
+    "example": "Please attach the cost estimate to the follow-up email.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the cost estimate to the follow-up email.",
+      "The manager asked for an update on the cost estimate.",
+      "The team discussed the cost estimate during the quarterly financial report."
+    ]
+  },
+  {
+    "id": "plus-259",
+    "term": "customer retention",
+    "meaning": "giữ chân khách hàng",
+    "partOfSpeech": "n",
+    "ipa": "/ˈkəstəmər riˈtɛnʃən/",
+    "example": "The manager asked for an update on the customer retention.",
+    "topic": "Dịch vụ khách hàng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the customer retention.",
+      "The team discussed the customer retention during the customer follow-up.",
+      "Please attach the customer retention to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-260",
+    "term": "decision-making",
+    "meaning": "quá trình ra quyết định",
+    "partOfSpeech": "n",
+    "ipa": "/dɪˈsɪʒən-ˈmeɪkɪŋ/",
+    "example": "Please attach the decision-making to the follow-up email.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the decision-making to the follow-up email.",
+      "The manager asked for an update on the decision-making.",
+      "The team discussed the decision-making during the strategy meeting."
+    ]
+  },
+  {
+    "id": "plus-261",
+    "term": "direct deposit",
+    "meaning": "chuyển khoản trực tiếp",
+    "partOfSpeech": "n",
+    "ipa": "/dɪˈrɛkt dɪˈpɑzət/",
+    "example": "The manager asked for an update on the direct deposit.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the direct deposit.",
+      "The team discussed the direct deposit during the quarterly financial report.",
+      "Please attach the direct deposit to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-262",
+    "term": "distribution channel",
+    "meaning": "kênh phân phối",
+    "partOfSpeech": "n",
+    "ipa": "/ˌdɪstrəˈbjuʃən ˈʧænəl/",
+    "example": "The team discussed the distribution channel during the office meeting.",
+    "topic": "Tiếp thị",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the distribution channel during the office meeting.",
+      "Please attach the distribution channel to the follow-up email.",
+      "The manager asked for an update on the distribution channel."
+    ]
+  },
+  {
+    "id": "plus-263",
+    "term": "employee handbook",
+    "meaning": "sổ tay nhân viên",
+    "partOfSpeech": "n",
+    "ipa": "/ɪmˈplɔɪi ˈhændˌbʊk/",
+    "example": "The team discussed the employee handbook during the HR meeting.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the employee handbook during the HR meeting.",
+      "Please attach the employee handbook to the follow-up email.",
+      "The manager asked for an update on the employee handbook."
+    ]
+  },
+  {
+    "id": "plus-264",
+    "term": "end user",
+    "meaning": "người dùng cuối",
+    "partOfSpeech": "n",
+    "ipa": "/ɛnd ˈjuzər/",
+    "example": "Please attach the end user to the follow-up email.",
+    "topic": "Công nghệ",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the end user to the follow-up email.",
+      "The manager asked for an update on the end user.",
+      "The team discussed the end user during system maintenance."
+    ]
+  },
+  {
+    "id": "plus-265",
+    "term": "executive summary",
+    "meaning": "tóm tắt điều hành",
+    "partOfSpeech": "n",
+    "ipa": "/ɪgˈzɛkjətɪv ˈsəməri/",
+    "example": "Please attach the executive summary to the follow-up email.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the executive summary to the follow-up email.",
+      "The manager asked for an update on the executive summary.",
+      "The team discussed the executive summary during the Monday meeting."
+    ]
+  },
+  {
+    "id": "plus-266",
+    "term": "expense account",
+    "meaning": "tài khoản chi phí",
+    "partOfSpeech": "n",
+    "ipa": "/ɪkˈspɛns əˈkaʊnt/",
+    "example": "The manager asked for an update on the expense account.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the expense account.",
+      "The team discussed the expense account during the quarterly financial report.",
+      "Please attach the expense account to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-267",
+    "term": "financial statement",
+    "meaning": "báo cáo tài chính",
+    "partOfSpeech": "n",
+    "ipa": "/ˌfaɪˈnænʃəl ˈsteɪtmənt/",
+    "example": "The manager asked for an update on the financial statement.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the financial statement.",
+      "The team discussed the financial statement during the quarterly financial report.",
+      "Please attach the financial statement to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-268",
+    "term": "fixed costs",
+    "meaning": "chi phí cố định",
+    "partOfSpeech": "n",
+    "ipa": "/fɪkst kɔsts/",
+    "example": "The team discussed the fixed costs during the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the fixed costs during the quarterly financial report.",
+      "Please attach the fixed costs to the follow-up email.",
+      "The manager asked for an update on the fixed costs."
+    ]
+  },
+  {
+    "id": "plus-269",
+    "term": "growth strategy",
+    "meaning": "chiến lược tăng trưởng",
+    "partOfSpeech": "n",
+    "ipa": "/groʊθ ˈstrætəʤi/",
+    "example": "Please attach the growth strategy to the follow-up email.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the growth strategy to the follow-up email.",
+      "The manager asked for an update on the growth strategy.",
+      "The team discussed the growth strategy during the strategy meeting."
+    ]
+  },
+  {
+    "id": "plus-270",
+    "term": "human resources",
+    "meaning": "nguồn nhân lực",
+    "partOfSpeech": "n",
+    "ipa": "/ˈjumən ˈrisɔrsɪz/",
+    "example": "The manager asked for an update on the human resources.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the human resources.",
+      "The team discussed the human resources during the HR meeting.",
+      "Please attach the human resources to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-271",
+    "term": "key performance indicator",
+    "meaning": "chỉ số hiệu suất chính",
+    "partOfSpeech": "n",
+    "ipa": "/ki pərˈfɔrməns ˈɪndəˌkeɪtər/",
+    "example": "The team discussed the key performance indicator during the strategy meeting.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the key performance indicator during the strategy meeting.",
+      "Please attach the key performance indicator to the follow-up email.",
+      "The manager asked for an update on the key performance indicator."
+    ]
+  },
+  {
+    "id": "plus-272",
+    "term": "monthly installment",
+    "meaning": "khoản trả góp hàng tháng",
+    "partOfSpeech": "n",
+    "ipa": "/ˈmənθli ˌɪnˈstɔlmənt/",
+    "example": "The manager asked for an update on the monthly installment.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the monthly installment.",
+      "The team discussed the monthly installment during the quarterly financial report.",
+      "Please attach the monthly installment to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-273",
+    "term": "operating expenses",
+    "meaning": "chi phí vận hành",
+    "partOfSpeech": "n",
+    "ipa": "/ˈɔpərˌeɪtɪŋ ɪkˈspɛnsɪz/",
+    "example": "Please attach the operating expenses to the follow-up email.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the operating expenses to the follow-up email.",
+      "The manager asked for an update on the operating expenses.",
+      "The team discussed the operating expenses during the quarterly financial report."
+    ]
+  },
+  {
+    "id": "plus-274",
+    "term": "order confirmation",
+    "meaning": "xác nhận đơn hàng",
+    "partOfSpeech": "n",
+    "ipa": "/ˈɔrdər ˌkɑnfərˈmeɪʃən/",
+    "example": "Please attach the order confirmation to the follow-up email.",
+    "topic": "Dịch vụ khách hàng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the order confirmation to the follow-up email.",
+      "The manager asked for an update on the order confirmation.",
+      "The team discussed the order confirmation during the customer follow-up."
+    ]
+  },
+  {
+    "id": "plus-275",
+    "term": "payment gateway",
+    "meaning": "cổng thanh toán",
+    "partOfSpeech": "n",
+    "ipa": "/ˈpeɪmənt ˈgeɪtˌweɪ/",
+    "example": "Please attach the payment gateway to the follow-up email.",
+    "topic": "Công nghệ",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the payment gateway to the follow-up email.",
+      "The manager asked for an update on the payment gateway.",
+      "The team discussed the payment gateway during system maintenance."
+    ]
+  },
+  {
+    "id": "plus-276",
+    "term": "performance bonus",
+    "meaning": "thưởng theo hiệu suất",
+    "partOfSpeech": "n",
+    "ipa": "/pərˈfɔrməns ˈboʊnəs/",
+    "example": "Please attach the performance bonus to the follow-up email.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the performance bonus to the follow-up email.",
+      "The manager asked for an update on the performance bonus.",
+      "The team discussed the performance bonus during the HR meeting."
+    ]
+  },
+  {
+    "id": "plus-277",
+    "term": "project milestone",
+    "meaning": "mốc dự án",
+    "partOfSpeech": "n",
+    "ipa": "/ˈprɑʤɛkt ˈmaɪlˌstoʊn/",
+    "example": "The team discussed the project milestone during the Monday meeting.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the project milestone during the Monday meeting.",
+      "Please attach the project milestone to the follow-up email.",
+      "The manager asked for an update on the project milestone."
+    ]
+  },
+  {
+    "id": "plus-278",
+    "term": "research and development",
+    "meaning": "nghiên cứu và phát triển",
+    "partOfSpeech": "n",
+    "ipa": "/ˈrisərʧ ənd dɪˈvɛləpmənt/",
+    "example": "The team discussed the research and development during system maintenance.",
+    "topic": "Công nghệ",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the research and development during system maintenance.",
+      "Please attach the research and development to the follow-up email.",
+      "The manager asked for an update on the research and development."
+    ]
+  },
+  {
+    "id": "plus-279",
+    "term": "sales forecast",
+    "meaning": "dự báo doanh số",
+    "partOfSpeech": "n",
+    "ipa": "/seɪlz ˈfɔrˌkæst/",
+    "example": "Please attach the sales forecast to the follow-up email.",
+    "topic": "Tiếp thị",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the sales forecast to the follow-up email.",
+      "The manager asked for an update on the sales forecast.",
+      "The team discussed the sales forecast during the office meeting."
+    ]
+  },
+  {
+    "id": "plus-280",
+    "term": "security clearance",
+    "meaning": "giấy phép an ninh",
+    "partOfSpeech": "n",
+    "ipa": "/sɪˈkjʊrəti ˈklɪrəns/",
+    "example": "Please attach the security clearance to the follow-up email.",
+    "topic": "Công nghệ",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the security clearance to the follow-up email.",
+      "The manager asked for an update on the security clearance.",
+      "The team discussed the security clearance during system maintenance."
+    ]
+  },
+  {
+    "id": "plus-281",
+    "term": "service agreement",
+    "meaning": "hợp đồng dịch vụ",
+    "partOfSpeech": "n",
+    "ipa": "/ˈsərvɪs əˈgrimənt/",
+    "example": "The team discussed the service agreement during the strategy meeting.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the service agreement during the strategy meeting.",
+      "Please attach the service agreement to the follow-up email.",
+      "The manager asked for an update on the service agreement."
+    ]
+  },
+  {
+    "id": "plus-282",
+    "term": "shipping label",
+    "meaning": "nhãn vận chuyển",
+    "partOfSpeech": "n",
+    "ipa": "/ˈʃɪpɪŋ ˈleɪbəl/",
+    "example": "The team discussed the shipping label during the factory shipment.",
+    "topic": "Sản xuất",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the shipping label during the factory shipment.",
+      "Please attach the shipping label to the follow-up email.",
+      "The manager asked for an update on the shipping label."
+    ]
+  },
+  {
+    "id": "plus-283",
+    "term": "stakeholder meeting",
+    "meaning": "cuộc họp các bên liên quan",
+    "partOfSpeech": "n",
+    "ipa": "/ˈsteɪˌkhoʊldər ˈmitɪŋ/",
+    "example": "Please attach the stakeholder meeting to the follow-up email.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the stakeholder meeting to the follow-up email.",
+      "The manager asked for an update on the stakeholder meeting.",
+      "The team discussed the stakeholder meeting during the strategy meeting."
+    ]
+  },
+  {
+    "id": "plus-284",
+    "term": "strategic partnership",
+    "meaning": "quan hệ đối tác chiến lược",
+    "partOfSpeech": "n",
+    "ipa": "/strəˈtiʤɪk ˈpɑrtnərˌʃɪp/",
+    "example": "The manager asked for an update on the strategic partnership.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the strategic partnership.",
+      "The team discussed the strategic partnership during the strategy meeting.",
+      "Please attach the strategic partnership to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-285",
+    "term": "tax return",
+    "meaning": "tờ khai thuế",
+    "partOfSpeech": "n",
+    "ipa": "/tæks rɪˈtərn/",
+    "example": "The manager asked for an update on the tax return.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the tax return.",
+      "The team discussed the tax return during the quarterly financial report.",
+      "Please attach the tax return to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-286",
+    "term": "time management",
+    "meaning": "quản lý thời gian",
+    "partOfSpeech": "n",
+    "ipa": "/taɪm ˈmænɪʤmənt/",
+    "example": "Please attach the time management to the follow-up email.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the time management to the follow-up email.",
+      "The manager asked for an update on the time management.",
+      "The team discussed the time management during the HR meeting."
+    ]
+  },
+  {
+    "id": "plus-287",
+    "term": "training session",
+    "meaning": "buổi đào tạo",
+    "partOfSpeech": "n",
+    "ipa": "/ˈtreɪnɪŋ ˈsɛʃən/",
+    "example": "The manager asked for an update on the training session.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the training session.",
+      "The team discussed the training session during the HR meeting.",
+      "Please attach the training session to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-288",
+    "term": "travel expenses",
+    "meaning": "chi phí đi lại",
+    "partOfSpeech": "n",
+    "ipa": "/ˈtrævəl ɪkˈspɛnsɪz/",
+    "example": "Please attach the travel expenses to the follow-up email.",
+    "topic": "Du lịch",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the travel expenses to the follow-up email.",
+      "The manager asked for an update on the travel expenses.",
+      "The team discussed the travel expenses during the business trip."
+    ]
+  },
+  {
+    "id": "plus-289",
+    "term": "user experience",
+    "meaning": "trải nghiệm người dùng",
+    "partOfSpeech": "n",
+    "ipa": "/ˈjuzər ɪkˈspɪriəns/",
+    "example": "Please attach the user experience to the follow-up email.",
+    "topic": "Công nghệ",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the user experience to the follow-up email.",
+      "The manager asked for an update on the user experience.",
+      "The team discussed the user experience during system maintenance."
+    ]
+  },
+  {
+    "id": "plus-290",
+    "term": "value proposition",
+    "meaning": "đề xuất giá trị",
+    "partOfSpeech": "n",
+    "ipa": "/ˈvælju ˌprɑpəˈzɪʃən/",
+    "example": "Please attach the value proposition to the follow-up email.",
+    "topic": "Tiếp thị",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the value proposition to the follow-up email.",
+      "The manager asked for an update on the value proposition.",
+      "The team discussed the value proposition during the office meeting."
+    ]
+  },
+  {
+    "id": "plus-291",
+    "term": "working capital",
+    "meaning": "vốn lưu động",
+    "partOfSpeech": "n",
+    "ipa": "/ˈwərkɪŋ ˈkæpɪtəl/",
+    "example": "The manager asked for an update on the working capital.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the working capital.",
+      "The team discussed the working capital during the quarterly financial report.",
+      "Please attach the working capital to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-292",
+    "term": "workplace safety",
+    "meaning": "an toàn nơi làm việc",
+    "partOfSpeech": "n",
+    "ipa": "/ˈwərkˌpleɪs ˈseɪfti/",
+    "example": "The manager asked for an update on the workplace safety.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the workplace safety.",
+      "The team discussed the workplace safety during the HR meeting.",
+      "Please attach the workplace safety to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-293",
+    "term": "account for",
+    "meaning": "giải thích; chiếm tỷ trọng",
+    "partOfSpeech": "v",
+    "ipa": "/əˈkaʊnt fər/",
+    "example": "Could you account for this item after the review?",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Could you account for this item after the review?",
+      "We need to account for the document for the quarterly financial report.",
+      "The team will account for the request before the deadline."
+    ]
+  },
+  {
+    "id": "plus-294",
+    "term": "adhere to",
+    "meaning": "tuân thủ",
+    "partOfSpeech": "v",
+    "ipa": "/əˈdhɪr tɪ/",
+    "example": "The team will adhere to the request before the deadline.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team will adhere to the request before the deadline.",
+      "Could you adhere to this item after the review?",
+      "We need to adhere to the document for the strategy meeting."
+    ]
+  },
+  {
+    "id": "plus-295",
+    "term": "allocate resources",
+    "meaning": "phân bổ nguồn lực",
+    "partOfSpeech": "v",
+    "ipa": "/ˈæləˌkeɪt ˈrisɔrsɪz/",
+    "example": "We need to allocate resources the document for the strategy meeting.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to allocate resources the document for the strategy meeting.",
+      "The team will allocate resources the request before the deadline.",
+      "Could you allocate resources this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-296",
+    "term": "assess the risk",
+    "meaning": "đánh giá rủi ro",
+    "partOfSpeech": "v",
+    "ipa": "/əˈsɛs ðə rɪsk/",
+    "example": "We need to assess the risk the document for the strategy meeting.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to assess the risk the document for the strategy meeting.",
+      "The team will assess the risk the request before the deadline.",
+      "Could you assess the risk this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-297",
+    "term": "authorize payment",
+    "meaning": "cho phép thanh toán",
+    "partOfSpeech": "v",
+    "ipa": "/ˈɔθərˌaɪz ˈpeɪmənt/",
+    "example": "The team will authorize payment the request before the deadline.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team will authorize payment the request before the deadline.",
+      "Could you authorize payment this item after the review?",
+      "We need to authorize payment the document for the quarterly financial report."
+    ]
+  },
+  {
+    "id": "plus-298",
+    "term": "boost productivity",
+    "meaning": "tăng năng suất",
+    "partOfSpeech": "v",
+    "ipa": "/bust ˌproʊdəkˈtɪvɪti/",
+    "example": "The team will boost productivity the request before the deadline.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team will boost productivity the request before the deadline.",
+      "Could you boost productivity this item after the review?",
+      "We need to boost productivity the document for the HR meeting."
+    ]
+  },
+  {
+    "id": "plus-299",
+    "term": "build rapport",
+    "meaning": "xây dựng quan hệ tin cậy",
+    "partOfSpeech": "v",
+    "ipa": "/bɪld ræˈpɔr/",
+    "example": "Could you build rapport this item after the review?",
+    "topic": "Dịch vụ khách hàng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Could you build rapport this item after the review?",
+      "We need to build rapport the document for the customer follow-up.",
+      "The team will build rapport the request before the deadline."
+    ]
+  },
+  {
+    "id": "plus-300",
+    "term": "comply with",
+    "meaning": "tuân thủ",
+    "partOfSpeech": "v",
+    "ipa": "/kəmˈplaɪ wɪθ/",
+    "example": "We need to comply with the document for the strategy meeting.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to comply with the document for the strategy meeting.",
+      "The team will comply with the request before the deadline.",
+      "Could you comply with this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-301",
+    "term": "conduct a survey",
+    "meaning": "tiến hành khảo sát",
+    "partOfSpeech": "v",
+    "ipa": "/ˈkɑndəkt ə ˈsərˌveɪ/",
+    "example": "The team will conduct a survey the request before the deadline.",
+    "topic": "Tiếp thị",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team will conduct a survey the request before the deadline.",
+      "Could you conduct a survey this item after the review?",
+      "We need to conduct a survey the document for the office meeting."
+    ]
+  },
+  {
+    "id": "plus-302",
+    "term": "confirm receipt",
+    "meaning": "xác nhận đã nhận",
+    "partOfSpeech": "v",
+    "ipa": "/kənˈfərm rɪˈsit/",
+    "example": "The team will confirm receipt the request before the deadline.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team will confirm receipt the request before the deadline.",
+      "Could you confirm receipt this item after the review?",
+      "We need to confirm receipt the document for the Monday meeting."
+    ]
+  },
+  {
+    "id": "plus-303",
+    "term": "coordinate with",
+    "meaning": "phối hợp với",
+    "partOfSpeech": "v",
+    "ipa": "/koʊˈɔrdəˌneɪt wɪθ/",
+    "example": "Could you coordinate with this item after the review?",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Could you coordinate with this item after the review?",
+      "We need to coordinate with the document for the Monday meeting.",
+      "The team will coordinate with the request before the deadline."
+    ]
+  },
+  {
+    "id": "plus-304",
+    "term": "cut costs",
+    "meaning": "cắt giảm chi phí",
+    "partOfSpeech": "v",
+    "ipa": "/kət kɔsts/",
+    "example": "We need to cut costs the document for the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to cut costs the document for the quarterly financial report.",
+      "The team will cut costs the request before the deadline.",
+      "Could you cut costs this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-305",
+    "term": "delegate tasks",
+    "meaning": "giao nhiệm vụ",
+    "partOfSpeech": "v",
+    "ipa": "/ˈdɛləˌgeɪt tæsks/",
+    "example": "We need to delegate tasks the document for the HR meeting.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to delegate tasks the document for the HR meeting.",
+      "The team will delegate tasks the request before the deadline.",
+      "Could you delegate tasks this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-306",
+    "term": "disclose information",
+    "meaning": "công bố thông tin",
+    "partOfSpeech": "v",
+    "ipa": "/dɪˈskloʊz ˌɪnˌfɔrˈmeɪʃən/",
+    "example": "The team will disclose information the request before the deadline.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team will disclose information the request before the deadline.",
+      "Could you disclose information this item after the review?",
+      "We need to disclose information the document for the strategy meeting."
+    ]
+  },
+  {
+    "id": "plus-307",
+    "term": "enhance efficiency",
+    "meaning": "nâng cao hiệu quả",
+    "partOfSpeech": "v",
+    "ipa": "/ɛnˈhæns ɪˈfɪʃənsi/",
+    "example": "We need to enhance efficiency the document for the strategy meeting.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to enhance efficiency the document for the strategy meeting.",
+      "The team will enhance efficiency the request before the deadline.",
+      "Could you enhance efficiency this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-308",
+    "term": "extend a deadline",
+    "meaning": "gia hạn thời hạn",
+    "partOfSpeech": "v",
+    "ipa": "/ɪkˈstɛnd ə ˈdɛˌdlaɪn/",
+    "example": "We need to extend a deadline the document for the Monday meeting.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to extend a deadline the document for the Monday meeting.",
+      "The team will extend a deadline the request before the deadline.",
+      "Could you extend a deadline this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-309",
+    "term": "file a complaint",
+    "meaning": "gửi khiếu nại",
+    "partOfSpeech": "v",
+    "ipa": "/faɪl ə kəmˈpleɪnt/",
+    "example": "We need to file a complaint the document for the customer follow-up.",
+    "topic": "Dịch vụ khách hàng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to file a complaint the document for the customer follow-up.",
+      "The team will file a complaint the request before the deadline.",
+      "Could you file a complaint this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-310",
+    "term": "finalize a contract",
+    "meaning": "hoàn tất hợp đồng",
+    "partOfSpeech": "v",
+    "ipa": "/ˈfaɪnəˌlaɪz ə ˈkɑnˌtrækt/",
+    "example": "Could you finalize a contract this item after the review?",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Could you finalize a contract this item after the review?",
+      "We need to finalize a contract the document for the strategy meeting.",
+      "The team will finalize a contract the request before the deadline."
+    ]
+  },
+  {
+    "id": "plus-311",
+    "term": "generate revenue",
+    "meaning": "tạo doanh thu",
+    "partOfSpeech": "v",
+    "ipa": "/ˈʤɛnərˌeɪt ˈrɛvəˌnu/",
+    "example": "We need to generate revenue the document for the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to generate revenue the document for the quarterly financial report.",
+      "The team will generate revenue the request before the deadline.",
+      "Could you generate revenue this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-312",
+    "term": "issue a refund",
+    "meaning": "hoàn tiền",
+    "partOfSpeech": "v",
+    "ipa": "/ˈɪʃu ə ˈriˌfənd/",
+    "example": "We need to issue a refund the document for the customer follow-up.",
+    "topic": "Dịch vụ khách hàng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to issue a refund the document for the customer follow-up.",
+      "The team will issue a refund the request before the deadline.",
+      "Could you issue a refund this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-313",
+    "term": "meet a requirement",
+    "meaning": "đáp ứng yêu cầu",
+    "partOfSpeech": "v",
+    "ipa": "/mit ə rɪkˈwaɪrmənt/",
+    "example": "Could you meet a requirement this item after the review?",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Could you meet a requirement this item after the review?",
+      "We need to meet a requirement the document for the strategy meeting.",
+      "The team will meet a requirement the request before the deadline."
+    ]
+  },
+  {
+    "id": "plus-314",
+    "term": "negotiate terms",
+    "meaning": "đàm phán điều khoản",
+    "partOfSpeech": "v",
+    "ipa": "/nɪˈgoʊʃiˌeɪt tərmz/",
+    "example": "We need to negotiate terms the document for the strategy meeting.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to negotiate terms the document for the strategy meeting.",
+      "The team will negotiate terms the request before the deadline.",
+      "Could you negotiate terms this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-315",
+    "term": "obtain approval",
+    "meaning": "nhận phê duyệt",
+    "partOfSpeech": "v",
+    "ipa": "/əbˈteɪn əˈpruvəl/",
+    "example": "We need to obtain approval the document for the Monday meeting.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to obtain approval the document for the Monday meeting.",
+      "The team will obtain approval the request before the deadline.",
+      "Could you obtain approval this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-316",
+    "term": "process an order",
+    "meaning": "xử lý đơn hàng",
+    "partOfSpeech": "v",
+    "ipa": "/ˈprɔˌsɛs ən ˈɔrdər/",
+    "example": "The team will process an order the request before the deadline.",
+    "topic": "Dịch vụ khách hàng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team will process an order the request before the deadline.",
+      "Could you process an order this item after the review?",
+      "We need to process an order the document for the customer follow-up."
+    ]
+  },
+  {
+    "id": "plus-317",
+    "term": "reduce overhead",
+    "meaning": "giảm chi phí chung",
+    "partOfSpeech": "v",
+    "ipa": "/rɪˈdus ˈoʊvərˈhɛd/",
+    "example": "Could you reduce overhead this item after the review?",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Could you reduce overhead this item after the review?",
+      "We need to reduce overhead the document for the quarterly financial report.",
+      "The team will reduce overhead the request before the deadline."
+    ]
+  },
+  {
+    "id": "plus-318",
+    "term": "resolve a dispute",
+    "meaning": "giải quyết tranh chấp",
+    "partOfSpeech": "v",
+    "ipa": "/riˈzɑlv ə dɪˈspjut/",
+    "example": "The team will resolve a dispute the request before the deadline.",
+    "topic": "Dịch vụ khách hàng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team will resolve a dispute the request before the deadline.",
+      "Could you resolve a dispute this item after the review?",
+      "We need to resolve a dispute the document for the customer follow-up."
+    ]
+  },
+  {
+    "id": "plus-319",
+    "term": "schedule an appointment",
+    "meaning": "đặt lịch hẹn",
+    "partOfSpeech": "v",
+    "ipa": "/ˈskɛʤʊl ən əˈpɔɪntmənt/",
+    "example": "We need to schedule an appointment the document for the Monday meeting.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to schedule an appointment the document for the Monday meeting.",
+      "The team will schedule an appointment the request before the deadline.",
+      "Could you schedule an appointment this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-320",
+    "term": "submit a bid",
+    "meaning": "nộp hồ sơ dự thầu",
+    "partOfSpeech": "v",
+    "ipa": "/səbˈmɪt ə bɪd/",
+    "example": "We need to submit a bid the document for the strategy meeting.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to submit a bid the document for the strategy meeting.",
+      "The team will submit a bid the request before the deadline.",
+      "Could you submit a bid this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-321",
+    "term": "track inventory",
+    "meaning": "theo dõi tồn kho",
+    "partOfSpeech": "v",
+    "ipa": "/træk ˌɪnvənˈtɔri/",
+    "example": "We need to track inventory the document for the factory shipment.",
+    "topic": "Sản xuất",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to track inventory the document for the factory shipment.",
+      "The team will track inventory the request before the deadline.",
+      "Could you track inventory this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-322",
+    "term": "update records",
+    "meaning": "cập nhật hồ sơ",
+    "partOfSpeech": "v",
+    "ipa": "/ˈəpˌdeɪt ˈrɛkərdz/",
+    "example": "Could you update records this item after the review?",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Could you update records this item after the review?",
+      "We need to update records the document for the Monday meeting.",
+      "The team will update records the request before the deadline."
+    ]
+  },
+  {
+    "id": "plus-323",
+    "term": "withdraw an application",
+    "meaning": "rút đơn đăng ký",
+    "partOfSpeech": "v",
+    "ipa": "/wɪθˈdrɔ ən ˌæpləˈkeɪʃən/",
+    "example": "Could you withdraw an application this item after the review?",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Could you withdraw an application this item after the review?",
+      "We need to withdraw an application the document for the HR meeting.",
+      "The team will withdraw an application the request before the deadline."
+    ]
+  },
+  {
+    "id": "plus-324",
+    "term": "work overtime",
+    "meaning": "làm thêm giờ",
+    "partOfSpeech": "v",
+    "ipa": "/wərk ˈoʊvərˌtaɪm/",
+    "example": "We need to work overtime the document for the HR meeting.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to work overtime the document for the HR meeting.",
+      "The team will work overtime the request before the deadline.",
+      "Could you work overtime this item after the review?"
+    ]
   }
 ];
 
@@ -18790,11 +19900,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "ở nước ngoài",
     "partOfSpeech": "adv",
     "ipa": "/əˈbrɑːd/",
-    "example": "We need to abroad the document for the customer follow-up.",
+    "example": "The team worked abroad during the customer follow-up.",
     "examples": [
-      "We need to abroad the document for the customer follow-up.",
-      "The team will abroad the request before the deadline.",
-      "Could you abroad this item after the review?"
+      "The team worked abroad during the customer follow-up.",
+      "The staff responded abroad to the client email.",
+      "The task was completed abroad."
     ],
     "topic": "Dịch vụ khách hàng",
     "source": "PDF đính kèm"
@@ -18835,10 +19945,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "khả năng tiếp cận được",
     "partOfSpeech": "adj",
     "ipa": "/əkˈses.ə.bəl/",
-    "example": "The client chose a accessible option for the business trip.",
+    "example": "The client chose an accessible option for the business trip.",
     "examples": [
-      "The client chose a accessible option for the business trip.",
-      "We need a accessible response before the airport transfer.",
+      "The client chose an accessible option for the business trip.",
+      "We need an accessible response before the airport transfer.",
       "The report explains why the accessible approach matters."
     ],
     "topic": "Du lịch",
@@ -18910,11 +20020,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "theo như, dựa vào",
     "partOfSpeech": "prep",
     "ipa": "/əˈkɔːr.dɪŋ ˌtuː/",
-    "example": "The report was prepared according (to) company policy.",
+    "example": "The report was prepared according to company policy.",
     "examples": [
-      "The report was prepared according (to) company policy.",
-      "The request was handled according (to) the procedure.",
-      "The team acted according (to) the contract terms."
+      "The report was prepared according to company policy.",
+      "The request was handled according to the procedure.",
+      "The team acted according to the contract terms."
     ],
     "topic": "Dịch vụ khách hàng",
     "source": "PDF đính kèm"
@@ -18925,11 +20035,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "theo đó, vì vậy",
     "partOfSpeech": "adv",
     "ipa": "/əˈkɔːr.dɪŋ.li/",
-    "example": "The team will accordingly the request before the deadline.",
+    "example": "The staff responded accordingly to the client email.",
     "examples": [
-      "The team will accordingly the request before the deadline.",
-      "Could you accordingly this item after the review?",
-      "We need to accordingly the document for the HR meeting."
+      "The staff responded accordingly to the client email.",
+      "The task was completed accordingly.",
+      "The team worked accordingly during the HR meeting."
     ],
     "topic": "Nhân sự",
     "source": "PDF đính kèm"
@@ -18955,10 +20065,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "đúng đắn, chính xác",
     "partOfSpeech": "adj",
     "ipa": "/ˈæk.jɚ.ət/",
-    "example": "The client chose a accurate option for the Monday meeting.",
+    "example": "The client chose an accurate option for the Monday meeting.",
     "examples": [
-      "The client chose a accurate option for the Monday meeting.",
-      "We need a accurate response before the internal memo.",
+      "The client chose an accurate option for the Monday meeting.",
+      "We need an accurate response before the internal memo.",
       "The report explains why the accurate approach matters."
     ],
     "topic": "Văn phòng",
@@ -19015,11 +20125,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "thực sự, trên thực tế",
     "partOfSpeech": "adv",
     "ipa": "/ˈæk.tʃu.ə.li/",
-    "example": "We need to actually the document for the Monday meeting.",
+    "example": "The team worked actually during the Monday meeting.",
     "examples": [
-      "We need to actually the document for the Monday meeting.",
-      "The team will actually the request before the deadline.",
-      "Could you actually this item after the review?"
+      "The team worked actually during the Monday meeting.",
+      "The staff responded actually to the client email.",
+      "The task was completed actually."
     ],
     "topic": "Văn phòng",
     "source": "PDF đính kèm"
@@ -19063,8 +20173,8 @@ export const vocabulary: VocabularyItem[] = [
     "example": "The report explains why the additional approach matters.",
     "examples": [
       "The report explains why the additional approach matters.",
-      "The client chose a additional option for the business trip.",
-      "We need a additional response before the airport transfer."
+      "The client chose an additional option for the business trip.",
+      "We need an additional response before the airport transfer."
     ],
     "topic": "Du lịch",
     "source": "PDF đính kèm"
@@ -19195,10 +20305,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "tiến bộ, cấp tiến",
     "partOfSpeech": "adj",
     "ipa": "/ədˈvænst/",
-    "example": "The client chose a advanced option for the Monday meeting.",
+    "example": "The client chose an advanced option for the Monday meeting.",
     "examples": [
-      "The client chose a advanced option for the Monday meeting.",
-      "We need a advanced response before the internal memo.",
+      "The client chose an advanced option for the Monday meeting.",
+      "We need an advanced response before the internal memo.",
       "The report explains why the advanced approach matters."
     ],
     "topic": "Văn phòng",
@@ -19225,11 +20335,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "có lợi, thuận lợi",
     "partOfSpeech": "adj",
     "ipa": "/ˌæd.vænˈteɪ.dʒəs/",
-    "example": "We need a advantageous response before the software update.",
+    "example": "We need an advantageous response before the software update.",
     "examples": [
-      "We need a advantageous response before the software update.",
+      "We need an advantageous response before the software update.",
       "The report explains why the advantageous approach matters.",
-      "The client chose a advantageous option for system maintenance."
+      "The client chose an advantageous option for system maintenance."
     ],
     "topic": "Công nghệ",
     "source": "PDF đính kèm"
@@ -19330,11 +20440,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "có khả năng chi trả, vừa túi tiền",
     "partOfSpeech": "adj",
     "ipa": "/əˈfɔːr.də.bəl/",
-    "example": "We need a affordable response before the airport transfer.",
+    "example": "We need an affordable response before the airport transfer.",
     "examples": [
-      "We need a affordable response before the airport transfer.",
+      "We need an affordable response before the airport transfer.",
       "The report explains why the affordable approach matters.",
-      "The client chose a affordable option for the business trip."
+      "The client chose an affordable option for the business trip."
     ],
     "topic": "Du lịch",
     "source": "PDF đính kèm"
@@ -19393,8 +20503,8 @@ export const vocabulary: VocabularyItem[] = [
     "example": "The report explains why the agreeable approach matters.",
     "examples": [
       "The report explains why the agreeable approach matters.",
-      "The client chose a agreeable option for the quarterly financial report.",
-      "We need a agreeable response before the client invoice."
+      "The client chose an agreeable option for the quarterly financial report.",
+      "We need an agreeable response before the client invoice."
     ],
     "topic": "Tài chính",
     "source": "PDF đính kèm"
@@ -19423,8 +20533,8 @@ export const vocabulary: VocabularyItem[] = [
     "example": "The report explains why the agricultural approach matters.",
     "examples": [
       "The report explains why the agricultural approach matters.",
-      "The client chose a agricultural option for system maintenance.",
-      "We need a agricultural response before the software update."
+      "The client chose an agricultural option for system maintenance.",
+      "We need an agricultural response before the software update."
     ],
     "topic": "Công nghệ",
     "source": "PDF đính kèm"
@@ -19525,11 +20635,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "xen kẽ, luân phiên",
     "partOfSpeech": "adj",
     "ipa": "/ɑːlˈtɝː.nə.t̬ɪv/",
-    "example": "We need a alternative response before the onboarding process.",
+    "example": "We need an alternative response before the onboarding process.",
     "examples": [
-      "We need a alternative response before the onboarding process.",
+      "We need an alternative response before the onboarding process.",
       "The report explains why the alternative approach matters.",
-      "The client chose a alternative option for the HR meeting."
+      "The client chose an alternative option for the HR meeting."
     ],
     "topic": "Nhân sự",
     "source": "PDF đính kèm"
@@ -19540,11 +20650,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "tham vọng",
     "partOfSpeech": "adj",
     "ipa": "/æmˈbɪʃ.əs/",
-    "example": "We need a ambitious response before the client invoice.",
+    "example": "We need an ambitious response before the client invoice.",
     "examples": [
-      "We need a ambitious response before the client invoice.",
+      "We need an ambitious response before the client invoice.",
       "The report explains why the ambitious approach matters.",
-      "The client chose a ambitious option for the quarterly financial report."
+      "The client chose an ambitious option for the quarterly financial report."
     ],
     "topic": "Tài chính",
     "source": "PDF đính kèm"
@@ -19585,10 +20695,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "vui, có tính hài hước",
     "partOfSpeech": "adj",
     "ipa": "/əˈmjuː.zɪŋ/",
-    "example": "The client chose a amusing option for the strategy meeting.",
+    "example": "The client chose an amusing option for the strategy meeting.",
     "examples": [
-      "The client chose a amusing option for the strategy meeting.",
-      "We need a amusing response before the sales proposal.",
+      "The client chose an amusing option for the strategy meeting.",
+      "We need an amusing response before the sales proposal.",
       "The report explains why the amusing approach matters."
     ],
     "topic": "Kinh doanh",
@@ -19630,10 +20740,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "hằng năm",
     "partOfSpeech": "adj",
     "ipa": "/ˈæn.ju.əl/",
-    "example": "The client chose a annual option for the customer follow-up.",
+    "example": "The client chose an annual option for the customer follow-up.",
     "examples": [
-      "The client chose a annual option for the customer follow-up.",
-      "We need a annual response before the service desk.",
+      "The client chose an annual option for the customer follow-up.",
+      "We need an annual response before the service desk.",
       "The report explains why the annual approach matters."
     ],
     "topic": "Dịch vụ khách hàng",
@@ -19660,11 +20770,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "bồn chồn, lo lắng",
     "partOfSpeech": "adj",
     "ipa": "/ˈæŋk.ʃəs/",
-    "example": "We need a anxious response before the sales proposal.",
+    "example": "We need an anxious response before the sales proposal.",
     "examples": [
-      "We need a anxious response before the sales proposal.",
+      "We need an anxious response before the sales proposal.",
       "The report explains why the anxious approach matters.",
-      "The client chose a anxious option for the strategy meeting."
+      "The client chose an anxious option for the strategy meeting."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -19810,11 +20920,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "đáng kể",
     "partOfSpeech": "adj",
     "ipa": "/əˈpriː.ʃə.bəl/",
-    "example": "We need a appreciable response before the onboarding process.",
+    "example": "We need an appreciable response before the onboarding process.",
     "examples": [
-      "We need a appreciable response before the onboarding process.",
+      "We need an appreciable response before the onboarding process.",
       "The report explains why the appreciable approach matters.",
-      "The client chose a appreciable option for the HR meeting."
+      "The client chose an appreciable option for the HR meeting."
     ],
     "topic": "Nhân sự",
     "source": "PDF đính kèm"
@@ -19855,11 +20965,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "đánh giá cao, ghi nhận",
     "partOfSpeech": "adj",
     "ipa": "/əˈpriː.ʃə.t̬ɪv/",
-    "example": "We need a appreciative of response before the sales proposal.",
+    "example": "We need an appreciative of response before the sales proposal.",
     "examples": [
-      "We need a appreciative of response before the sales proposal.",
+      "We need an appreciative of response before the sales proposal.",
       "The report explains why the appreciative of approach matters.",
-      "The client chose a appreciative of option for the strategy meeting."
+      "The client chose an appreciative of option for the strategy meeting."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -19900,10 +21010,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "xấp xỉ, gần đúng",
     "partOfSpeech": "adj",
     "ipa": "/əˈprɑːk.sə.mət/",
-    "example": "The client chose a approximate option for the HR meeting.",
+    "example": "The client chose an approximate option for the HR meeting.",
     "examples": [
-      "The client chose a approximate option for the HR meeting.",
-      "We need a approximate response before the onboarding process.",
+      "The client chose an approximate option for the HR meeting.",
+      "We need an approximate response before the onboarding process.",
       "The report explains why the approximate approach matters."
     ],
     "topic": "Nhân sự",
@@ -20278,8 +21388,8 @@ export const vocabulary: VocabularyItem[] = [
     "example": "The report explains why the available approach matters.",
     "examples": [
       "The report explains why the available approach matters.",
-      "The client chose a available option for the quarterly financial report.",
-      "We need a available response before the client invoice."
+      "The client chose an available option for the quarterly financial report.",
+      "We need an available response before the client invoice."
     ],
     "topic": "Tài chính",
     "source": "PDF đính kèm"
@@ -20305,10 +21415,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "khao khát, thèm khát",
     "partOfSpeech": "adj",
     "ipa": "/ˈæv.ɪd/",
-    "example": "The client chose a avid option for system maintenance.",
+    "example": "The client chose an avid option for system maintenance.",
     "examples": [
-      "The client chose a avid option for system maintenance.",
-      "We need a avid response before the software update.",
+      "The client chose an avid option for system maintenance.",
+      "We need an avid response before the software update.",
       "The report explains why the avid approach matters."
     ],
     "topic": "Công nghệ",
@@ -20335,10 +21445,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "ngại ngùng, khó xử",
     "partOfSpeech": "adj",
     "ipa": "/ˈɑː.kwɚd/",
-    "example": "The client chose a awkward option for the strategy meeting.",
+    "example": "The client chose an awkward option for the strategy meeting.",
     "examples": [
-      "The client chose a awkward option for the strategy meeting.",
-      "We need a awkward response before the sales proposal.",
+      "The client chose an awkward option for the strategy meeting.",
+      "We need an awkward response before the sales proposal.",
       "The report explains why the awkward approach matters."
     ],
     "topic": "Kinh doanh",
@@ -21535,11 +22645,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "thông thường, bình thường",
     "partOfSpeech": "adv",
     "ipa": "/ˈkɑː.mən.li/",
-    "example": "We need to commonly the document for the business trip.",
+    "example": "The team worked commonly during the business trip.",
     "examples": [
-      "We need to commonly the document for the business trip.",
-      "The team will commonly the request before the deadline.",
-      "Could you commonly this item after the review?"
+      "The team worked commonly during the business trip.",
+      "The staff responded commonly to the client email.",
+      "The task was completed commonly."
     ],
     "topic": "Du lịch",
     "source": "PDF đính kèm"
@@ -22060,11 +23170,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "kiên định, trước sau như một, đồng nhất",
     "partOfSpeech": "adv",
     "ipa": "/kənˈsɪs.tənt.li/",
-    "example": "Could you consistently this item after the review?",
+    "example": "The task was completed consistently.",
     "examples": [
-      "Could you consistently this item after the review?",
-      "We need to consistently the document for the customer follow-up.",
-      "The team will consistently the request before the deadline."
+      "The task was completed consistently.",
+      "The team worked consistently during the customer follow-up.",
+      "The staff responded consistently to the client email."
     ],
     "topic": "Dịch vụ khách hàng",
     "source": "PDF đính kèm"
@@ -22210,11 +23320,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "thuận tiện, tiện lợi",
     "partOfSpeech": "adv",
     "ipa": "/kənˈviː.ni.ənt.li/",
-    "example": "We need to conveniently the document for the customer follow-up.",
+    "example": "The team worked conveniently during the customer follow-up.",
     "examples": [
-      "We need to conveniently the document for the customer follow-up.",
-      "The team will conveniently the request before the deadline.",
-      "Could you conveniently this item after the review?"
+      "The team worked conveniently during the customer follow-up.",
+      "The staff responded conveniently to the client email.",
+      "The task was completed conveniently."
     ],
     "topic": "Dịch vụ khách hàng",
     "source": "PDF đính kèm"
@@ -22780,11 +23890,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "rõ ràng, dứt khoát, chắc chắn",
     "partOfSpeech": "adv",
     "ipa": "/ˈdef.ən.ət.li/",
-    "example": "Could you definitely this item after the review?",
+    "example": "The task was completed definitely.",
     "examples": [
-      "Could you definitely this item after the review?",
-      "We need to definitely the document for the factory shipment.",
-      "The team will definitely the request before the deadline."
+      "The task was completed definitely.",
+      "The team worked definitely during the factory shipment.",
+      "The staff responded definitely to the client email."
     ],
     "topic": "Sản xuất",
     "source": "PDF đính kèm"
@@ -23635,11 +24745,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "nhân đôi, gấp dôi",
     "partOfSpeech": "n, adj, adv",
     "ipa": "/ˈdʌb.əl/",
-    "example": "We need to double the document for the quarterly financial report.",
+    "example": "The team worked double during the quarterly financial report.",
     "examples": [
-      "We need to double the document for the quarterly financial report.",
-      "The team will double the request before the deadline.",
-      "Could you double this item after the review?"
+      "The team worked double during the quarterly financial report.",
+      "The staff responded double to the client email.",
+      "The task was completed double."
     ],
     "topic": "Tài chính",
     "source": "PDF đính kèm"
@@ -23695,11 +24805,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "trở xuống, trở về sau",
     "partOfSpeech": "adv",
     "ipa": "/ˈdaʊn.wɚd/",
-    "example": "The team will downward the request before the deadline.",
+    "example": "The staff responded downward to the client email.",
     "examples": [
-      "The team will downward the request before the deadline.",
-      "Could you downward this item after the review?",
-      "We need to downward the document for the HR meeting."
+      "The staff responded downward to the client email.",
+      "The task was completed downward.",
+      "The team worked downward during the HR meeting."
     ],
     "topic": "Nhân sự",
     "source": "PDF đính kèm"
@@ -23710,11 +24820,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "mạnh mẽ, quyết liệt",
     "partOfSpeech": "adv",
     "ipa": "/ˈdræs.tɪ.kəl.i/",
-    "example": "Could you drastically this item after the review?",
+    "example": "The task was completed drastically.",
     "examples": [
-      "Could you drastically this item after the review?",
-      "We need to drastically the document for the customer follow-up.",
-      "The team will drastically the request before the deadline."
+      "The task was completed drastically.",
+      "The team worked drastically during the customer follow-up.",
+      "The staff responded drastically to the client email."
     ],
     "topic": "Dịch vụ khách hàng",
     "source": "PDF đính kèm"
@@ -23800,11 +24910,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "miễn thuế",
     "partOfSpeech": "adj, adv",
     "ipa": "/ˌduː.t̬iˈfriː/",
-    "example": "We need to duty-free the document for system maintenance.",
+    "example": "The team worked duty-free during system maintenance.",
     "examples": [
-      "We need to duty-free the document for system maintenance.",
-      "The team will duty-free the request before the deadline.",
-      "Could you duty-free this item after the review?"
+      "The team worked duty-free during system maintenance.",
+      "The staff responded duty-free to the client email.",
+      "The task was completed duty-free."
     ],
     "topic": "Công nghệ",
     "source": "PDF đính kèm"
@@ -23845,10 +24955,10 @@ export const vocabulary: VocabularyItem[] = [
     "partOfSpeech": "adj",
     "ipa": "/ˌiː.kəˈnɑː.mɪ.kəl/",
     "meaning": "tiết kiệm, kinh tế",
-    "example": "The client chose a economical option for the customer follow-up.",
+    "example": "The client chose an economical option for the customer follow-up.",
     "examples": [
-      "The client chose a economical option for the customer follow-up.",
-      "We need a economical response before the service desk.",
+      "The client chose an economical option for the customer follow-up.",
+      "We need an economical response before the service desk.",
       "The report explains why the economical approach matters."
     ],
     "topic": "Dịch vụ khách hàng",
@@ -23890,10 +25000,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "hiệu quả, có hiệu lực",
     "partOfSpeech": "adj",
     "ipa": "/əˈfek.tɪv/",
-    "example": "The client chose a effective option for the factory shipment.",
+    "example": "The client chose an effective option for the factory shipment.",
     "examples": [
-      "The client chose a effective option for the factory shipment.",
-      "We need a effective response before the quality inspection.",
+      "The client chose an effective option for the factory shipment.",
+      "We need an effective response before the quality inspection.",
       "The report explains why the effective approach matters."
     ],
     "topic": "Sản xuất",
@@ -23905,11 +25015,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "có hiệu quả",
     "partOfSpeech": "adv",
     "ipa": "/əˈfek.tɪv.li/",
-    "example": "Could you effectively this item after the review?",
+    "example": "The task was completed effectively.",
     "examples": [
-      "Could you effectively this item after the review?",
-      "We need to effectively the document for the strategy meeting.",
-      "The team will effectively the request before the deadline."
+      "The task was completed effectively.",
+      "The team worked effectively during the strategy meeting.",
+      "The staff responded effectively to the client email."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -23953,8 +25063,8 @@ export const vocabulary: VocabularyItem[] = [
     "example": "The report explains why the efficient approach matters.",
     "examples": [
       "The report explains why the efficient approach matters.",
-      "The client chose a efficient option for the factory shipment.",
-      "We need a efficient response before the quality inspection."
+      "The client chose an efficient option for the factory shipment.",
+      "We need an efficient response before the quality inspection."
     ],
     "topic": "Sản xuất",
     "source": "PDF đính kèm"
@@ -23965,11 +25075,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "có hiệu nghiệm",
     "partOfSpeech": "adv",
     "ipa": "/ɪˈfɪʃ.ənt.li/",
-    "example": "The team will efficiently the request before the deadline.",
+    "example": "The staff responded efficiently to the client email.",
     "examples": [
-      "The team will efficiently the request before the deadline.",
-      "Could you efficiently this item after the review?",
-      "We need to efficiently the document for the strategy meeting."
+      "The staff responded efficiently to the client email.",
+      "The task was completed efficiently.",
+      "The team worked efficiently during the strategy meeting."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -23980,10 +25090,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "có tuổi, lớn tuổi",
     "partOfSpeech": "adj",
     "ipa": "/ˈel.dɚ.li/",
-    "example": "The client chose a elderly option for the HR meeting.",
+    "example": "The client chose an elderly option for the HR meeting.",
     "examples": [
-      "The client chose a elderly option for the HR meeting.",
-      "We need a elderly response before the onboarding process.",
+      "The client chose an elderly option for the HR meeting.",
+      "We need an elderly response before the onboarding process.",
       "The report explains why the elderly approach matters."
     ],
     "topic": "Nhân sự",
@@ -24250,11 +25360,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "nhiệt tình, hứng khởi",
     "partOfSpeech": "adj",
     "ipa": "/ɪnˌθuː.ziˈæs.tɪk/",
-    "example": "We need a enthusiastic response before the internal memo.",
+    "example": "We need an enthusiastic response before the internal memo.",
     "examples": [
-      "We need a enthusiastic response before the internal memo.",
+      "We need an enthusiastic response before the internal memo.",
       "The report explains why the enthusiastic approach matters.",
-      "The client chose a enthusiastic option for the Monday meeting."
+      "The client chose an enthusiastic option for the Monday meeting."
     ],
     "topic": "Văn phòng",
     "source": "PDF đính kèm"
@@ -24265,11 +25375,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "hăng say, nhiệt tình",
     "partOfSpeech": "adv",
     "ipa": "/ɪnˌθuː.ziˈæs.tɪ.kəl.i/",
-    "example": "The team will enthusiastically the request before the deadline.",
+    "example": "The staff responded enthusiastically to the client email.",
     "examples": [
-      "The team will enthusiastically the request before the deadline.",
-      "Could you enthusiastically this item after the review?",
-      "We need to enthusiastically the document for system maintenance."
+      "The staff responded enthusiastically to the client email.",
+      "The task was completed enthusiastically.",
+      "The team worked enthusiastically during system maintenance."
     ],
     "topic": "Công nghệ",
     "source": "PDF đính kèm"
@@ -24325,10 +25435,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "(thuộc) môi trường",
     "partOfSpeech": "adj",
     "ipa": "/ɪnˌvaɪ.rənˈmen.t̬əl/",
-    "example": "The client chose a environmental option for the quarterly financial report.",
+    "example": "The client chose an environmental option for the quarterly financial report.",
     "examples": [
-      "The client chose a environmental option for the quarterly financial report.",
-      "We need a environmental response before the client invoice.",
+      "The client chose an environmental option for the quarterly financial report.",
+      "We need an environmental response before the client invoice.",
       "The report explains why the environmental approach matters."
     ],
     "topic": "Tài chính",
@@ -24340,10 +25450,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "tương đương; vật tương đương",
     "partOfSpeech": "adj, n",
     "ipa": "/ɪˈkwɪv.əl.ənt/",
-    "example": "The client chose a equivalent option for the customer follow-up.",
+    "example": "The client chose an equivalent option for the customer follow-up.",
     "examples": [
-      "The client chose a equivalent option for the customer follow-up.",
-      "We need a equivalent response before the service desk.",
+      "The client chose an equivalent option for the customer follow-up.",
+      "We need an equivalent response before the service desk.",
       "The report explains why the equivalent approach matters."
     ],
     "topic": "Dịch vụ khách hàng",
@@ -24358,8 +25468,8 @@ export const vocabulary: VocabularyItem[] = [
     "example": "The report explains why the essential approach matters.",
     "examples": [
       "The report explains why the essential approach matters.",
-      "The client chose a essential option for the factory shipment.",
-      "We need a essential response before the quality inspection."
+      "The client chose an essential option for the factory shipment.",
+      "We need an essential response before the quality inspection."
     ],
     "topic": "Sản xuất",
     "source": "PDF đính kèm"
@@ -24448,8 +25558,8 @@ export const vocabulary: VocabularyItem[] = [
     "example": "The report explains why the exact approach matters.",
     "examples": [
       "The report explains why the exact approach matters.",
-      "The client chose a exact option for the quarterly financial report.",
-      "We need a exact response before the client invoice."
+      "The client chose an exact option for the quarterly financial report.",
+      "We need an exact response before the client invoice."
     ],
     "topic": "Tài chính",
     "source": "PDF đính kèm"
@@ -24505,11 +25615,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "xuất sắc, ưu tú",
     "partOfSpeech": "adj",
     "ipa": "/ˈek.səl.ənt/",
-    "example": "We need a excellent response before the quality inspection.",
+    "example": "We need an excellent response before the quality inspection.",
     "examples": [
-      "We need a excellent response before the quality inspection.",
+      "We need an excellent response before the quality inspection.",
       "The report explains why the excellent approach matters.",
-      "The client chose a excellent option for the factory shipment."
+      "The client chose an excellent option for the factory shipment."
     ],
     "topic": "Sản xuất",
     "source": "PDF đính kèm"
@@ -24520,10 +25630,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "(thuộc) chấp hành, sự thi hành; tổ chức hành pháp",
     "partOfSpeech": "adj, n",
     "ipa": "/ɪɡˈzek.jə.t̬ɪv/",
-    "example": "The client chose a executive option for the factory shipment.",
+    "example": "The client chose an executive option for the factory shipment.",
     "examples": [
-      "The client chose a executive option for the factory shipment.",
-      "We need a executive response before the quality inspection.",
+      "The client chose an executive option for the factory shipment.",
+      "We need an executive response before the quality inspection.",
       "The report explains why the executive approach matters."
     ],
     "topic": "Sản xuất",
@@ -24643,8 +25753,8 @@ export const vocabulary: VocabularyItem[] = [
     "example": "The report explains why the expensive approach matters.",
     "examples": [
       "The report explains why the expensive approach matters.",
-      "The client chose a expensive option for the factory shipment.",
-      "We need a expensive response before the quality inspection."
+      "The client chose an expensive option for the factory shipment.",
+      "We need an expensive response before the quality inspection."
     ],
     "topic": "Sản xuất",
     "source": "PDF đính kèm"
@@ -24670,10 +25780,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "người từng trải, người có kinh nghiệm",
     "partOfSpeech": "adj",
     "ipa": "/ɪkˈspɪə.ri.ənst/",
-    "example": "The client chose a experienced option for the strategy meeting.",
+    "example": "The client chose an experienced option for the strategy meeting.",
     "examples": [
-      "The client chose a experienced option for the strategy meeting.",
-      "We need a experienced response before the sales proposal.",
+      "The client chose an experienced option for the strategy meeting.",
+      "We need an experienced response before the sales proposal.",
       "The report explains why the experienced approach matters."
     ],
     "topic": "Kinh doanh",
@@ -24760,10 +25870,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "bên ngoài, đối ngoại",
     "partOfSpeech": "adj",
     "ipa": "/ɪkˈstɝː.nəl/",
-    "example": "The client chose a external option for system maintenance.",
+    "example": "The client chose an external option for system maintenance.",
     "examples": [
-      "The client chose a external option for system maintenance.",
-      "We need a external response before the software update.",
+      "The client chose an external option for system maintenance.",
+      "We need an external response before the software update.",
       "The report explains why the external approach matters."
     ],
     "topic": "Công nghệ",
@@ -25330,11 +26440,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "về phía trước, tiến lên",
     "partOfSpeech": "adv",
     "ipa": "/ˈfɔːr.wɚd/",
-    "example": "Could you forward this item after the review?",
+    "example": "The task was completed forward.",
     "examples": [
-      "Could you forward this item after the review?",
-      "We need to forward the document for system maintenance.",
-      "The team will forward the request before the deadline."
+      "The task was completed forward.",
+      "The team worked forward during system maintenance.",
+      "The staff responded forward to the client email."
     ],
     "topic": "Công nghệ",
     "source": "PDF đính kèm"
@@ -25360,11 +26470,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "thẳng thắn",
     "partOfSpeech": "adv",
     "ipa": "/ˈfræŋ.kli/",
-    "example": "The team will frankly the request before the deadline.",
+    "example": "The staff responded frankly to the client email.",
     "examples": [
-      "The team will frankly the request before the deadline.",
-      "Could you frankly this item after the review?",
-      "We need to frankly the document for system maintenance."
+      "The staff responded frankly to the client email.",
+      "The task was completed frankly.",
+      "The team worked frankly during system maintenance."
     ],
     "topic": "Công nghệ",
     "source": "PDF đính kèm"
@@ -25465,11 +26575,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "xa hơn, kỹ hơn",
     "partOfSpeech": "adj, adv",
     "ipa": "/ˈfɝː.ðɚ/",
-    "example": "The team will further the request before the deadline.",
+    "example": "The staff responded further to the client email.",
     "examples": [
-      "The team will further the request before the deadline.",
-      "Could you further this item after the review?",
-      "We need to further the document for system maintenance."
+      "The staff responded further to the client email.",
+      "The task was completed further.",
+      "The team worked further during system maintenance."
     ],
     "topic": "Công nghệ",
     "source": "PDF đính kèm"
@@ -25525,11 +26635,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "dần dần, từ từ",
     "partOfSpeech": "adv",
     "ipa": "/ˈɡrædʒ.u.ə.li/",
-    "example": "We need to gradually the document for the strategy meeting.",
+    "example": "The team worked gradually during the strategy meeting.",
     "examples": [
-      "We need to gradually the document for the strategy meeting.",
-      "The team will gradually the request before the deadline.",
-      "Could you gradually this item after the review?"
+      "The team worked gradually during the strategy meeting.",
+      "The staff responded gradually to the client email.",
+      "The task was completed gradually."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -25795,11 +26905,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "rất, lắm, tốt",
     "partOfSpeech": "adv",
     "ipa": "/ˈhaɪ.li/",
-    "example": "The team will highly the request before the deadline.",
+    "example": "The staff responded highly to the client email.",
     "examples": [
-      "The team will highly the request before the deadline.",
-      "Could you highly this item after the review?",
-      "We need to highly the document for the factory shipment."
+      "The staff responded highly to the client email.",
+      "The task was completed highly.",
+      "The team worked highly during the factory shipment."
     ],
     "topic": "Sản xuất",
     "source": "PDF đính kèm"
@@ -25903,8 +27013,8 @@ export const vocabulary: VocabularyItem[] = [
     "example": "The report explains why the imaginative approach matters.",
     "examples": [
       "The report explains why the imaginative approach matters.",
-      "The client chose a imaginative option for the HR meeting.",
-      "We need a imaginative response before the onboarding process."
+      "The client chose an imaginative option for the HR meeting.",
+      "We need an imaginative response before the onboarding process."
     ],
     "topic": "Nhân sự",
     "source": "PDF đính kèm"
@@ -25915,11 +27025,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "ngay lập tức, trực tiếp",
     "partOfSpeech": "adj",
     "ipa": "/ɪˈmiː.di.ət/",
-    "example": "We need a immediate response before the client invoice.",
+    "example": "We need an immediate response before the client invoice.",
     "examples": [
-      "We need a immediate response before the client invoice.",
+      "We need an immediate response before the client invoice.",
       "The report explains why the immediate approach matters.",
-      "The client chose a immediate option for the quarterly financial report."
+      "The client chose an immediate option for the quarterly financial report."
     ],
     "topic": "Tài chính",
     "source": "PDF đính kèm"
@@ -25930,11 +27040,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "ngay lập tức, tức thì",
     "partOfSpeech": "adv",
     "ipa": "/ɪˈmiː.di.ət.li/",
-    "example": "We need to immediately the document for the HR meeting.",
+    "example": "The team worked immediately during the HR meeting.",
     "examples": [
-      "We need to immediately the document for the HR meeting.",
-      "The team will immediately the request before the deadline.",
-      "Could you immediately this item after the review?"
+      "The team worked immediately during the HR meeting.",
+      "The staff responded immediately to the client email.",
+      "The task was completed immediately."
     ],
     "topic": "Nhân sự",
     "source": "PDF đính kèm"
@@ -25963,8 +27073,8 @@ export const vocabulary: VocabularyItem[] = [
     "example": "The report explains why the impatient approach matters.",
     "examples": [
       "The report explains why the impatient approach matters.",
-      "The client chose a impatient option for the quarterly financial report.",
-      "We need a impatient response before the client invoice."
+      "The client chose an impatient option for the quarterly financial report.",
+      "We need an impatient response before the client invoice."
     ],
     "topic": "Tài chính",
     "source": "PDF đính kèm"
@@ -26038,8 +27148,8 @@ export const vocabulary: VocabularyItem[] = [
     "example": "The report explains why the improper approach matters.",
     "examples": [
       "The report explains why the improper approach matters.",
-      "The client chose a improper option for the Monday meeting.",
-      "We need a improper response before the internal memo."
+      "The client chose an improper option for the Monday meeting.",
+      "We need an improper response before the internal memo."
     ],
     "topic": "Văn phòng",
     "source": "PDF đính kèm"
@@ -26083,8 +27193,8 @@ export const vocabulary: VocabularyItem[] = [
     "example": "The report explains why the incentive approach matters.",
     "examples": [
       "The report explains why the incentive approach matters.",
-      "The client chose a incentive option for the quarterly financial report.",
-      "We need a incentive response before the client invoice."
+      "The client chose an incentive option for the quarterly financial report.",
+      "We need an incentive response before the client invoice."
     ],
     "topic": "Tài chính",
     "source": "PDF đính kèm"
@@ -26095,11 +27205,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "có thiên hướng, khuynh hướng",
     "partOfSpeech": "adj",
     "ipa": "/ɪnˈklaɪnd/",
-    "example": "We need a inclined response before the internal memo.",
+    "example": "We need an inclined response before the internal memo.",
     "examples": [
-      "We need a inclined response before the internal memo.",
+      "We need an inclined response before the internal memo.",
       "The report explains why the inclined approach matters.",
-      "The client chose a inclined option for the Monday meeting."
+      "The client chose an inclined option for the Monday meeting."
     ],
     "topic": "Văn phòng",
     "source": "PDF đính kèm"
@@ -26230,11 +27340,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "riêng lẻ",
     "partOfSpeech": "adv",
     "ipa": "/ˌɪn.dəˈvɪdʒ.u.ə.li/",
-    "example": "Could you individually this item after the review?",
+    "example": "The task was completed individually.",
     "examples": [
-      "Could you individually this item after the review?",
-      "We need to individually the document for system maintenance.",
-      "The team will individually the request before the deadline."
+      "The task was completed individually.",
+      "The team worked individually during system maintenance.",
+      "The staff responded individually to the client email."
     ],
     "topic": "Công nghệ",
     "source": "PDF đính kèm"
@@ -26248,8 +27358,8 @@ export const vocabulary: VocabularyItem[] = [
     "example": "The report explains why the inexperienced approach matters.",
     "examples": [
       "The report explains why the inexperienced approach matters.",
-      "The client chose a inexperienced option for the factory shipment.",
-      "We need a inexperienced response before the quality inspection."
+      "The client chose an inexperienced option for the factory shipment.",
+      "We need an inexperienced response before the quality inspection."
     ],
     "topic": "Sản xuất",
     "source": "PDF đính kèm"
@@ -26320,10 +27430,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "có ảnh hưởng, có tác dụng",
     "partOfSpeech": "adj",
     "ipa": "/ˌɪn.fluˈen.ʃəl/",
-    "example": "The client chose a influential option for the HR meeting.",
+    "example": "The client chose an influential option for the HR meeting.",
     "examples": [
-      "The client chose a influential option for the HR meeting.",
-      "We need a influential response before the onboarding process.",
+      "The client chose an influential option for the HR meeting.",
+      "We need an influential response before the onboarding process.",
       "The report explains why the influential approach matters."
     ],
     "topic": "Nhân sự",
@@ -26470,11 +27580,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "chăm chú, chú ý",
     "partOfSpeech": "adv",
     "ipa": "/ɪnˈtent.li/",
-    "example": "We need to intently the document for the Monday meeting.",
+    "example": "The team worked intently during the Monday meeting.",
     "examples": [
-      "We need to intently the document for the Monday meeting.",
-      "The team will intently the request before the deadline.",
-      "Could you intently this item after the review?"
+      "The team worked intently during the Monday meeting.",
+      "The staff responded intently to the client email.",
+      "The task was completed intently."
     ],
     "topic": "Văn phòng",
     "source": "PDF đính kèm"
@@ -26500,10 +27610,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "bên trong, nội bộ",
     "partOfSpeech": "adj",
     "ipa": "/ɪnˈtɝː.nəl/",
-    "example": "The client chose a internal option for the Monday meeting.",
+    "example": "The client chose an internal option for the Monday meeting.",
     "examples": [
-      "The client chose a internal option for the Monday meeting.",
-      "We need a internal response before the internal memo.",
+      "The client chose an internal option for the Monday meeting.",
+      "We need an internal response before the internal memo.",
       "The report explains why the internal approach matters."
     ],
     "topic": "Văn phòng",
@@ -26518,8 +27628,8 @@ export const vocabulary: VocabularyItem[] = [
     "example": "The report explains why the international approach matters.",
     "examples": [
       "The report explains why the international approach matters.",
-      "The client chose a international option for the factory shipment.",
-      "We need a international response before the quality inspection."
+      "The client chose an international option for the factory shipment.",
+      "We need an international response before the quality inspection."
     ],
     "topic": "Sản xuất",
     "source": "PDF đính kèm"
@@ -26575,10 +27685,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "vô giá",
     "partOfSpeech": "adj",
     "ipa": "/ɪnˈvæl.jə.bəl/",
-    "example": "The client chose a invaluable option for the business trip.",
+    "example": "The client chose an invaluable option for the business trip.",
     "examples": [
-      "The client chose a invaluable option for the business trip.",
-      "We need a invaluable response before the airport transfer.",
+      "The client chose an invaluable option for the business trip.",
+      "We need an invaluable response before the airport transfer.",
       "The report explains why the invaluable approach matters."
     ],
     "topic": "Du lịch",
@@ -28120,11 +29230,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "khách quan",
     "partOfSpeech": "adj",
     "ipa": "/əb´dʒektiv/",
-    "example": "We need a objective response before the sales proposal.",
+    "example": "We need an objective response before the sales proposal.",
     "examples": [
-      "We need a objective response before the sales proposal.",
+      "We need an objective response before the sales proposal.",
       "The report explains why the objective approach matters.",
-      "The client chose a objective option for the strategy meeting."
+      "The client chose an objective option for the strategy meeting."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -28180,11 +29290,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "một cách rõ ràng; có thể thấy được",
     "partOfSpeech": "adv",
     "ipa": "/'ɔbviəsli/",
-    "example": "We need to obviously the document for the strategy meeting.",
+    "example": "The team worked obviously during the strategy meeting.",
     "examples": [
-      "We need to obviously the document for the strategy meeting.",
-      "The team will obviously the request before the deadline.",
-      "Could you obviously this item after the review?"
+      "The team worked obviously during the strategy meeting.",
+      "The staff responded obviously to the client email.",
+      "The task was completed obviously."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -28240,11 +29350,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "(thuộc) chính quyền; (thuộc) văn phòng",
     "partOfSpeech": "adj",
     "ipa": "/ə'fiʃəl/",
-    "example": "We need a official response before the service desk.",
+    "example": "We need an official response before the service desk.",
     "examples": [
-      "We need a official response before the service desk.",
+      "We need an official response before the service desk.",
       "The report explains why the official approach matters.",
-      "The client chose a official option for the customer follow-up."
+      "The client chose an official option for the customer follow-up."
     ],
     "topic": "Dịch vụ khách hàng",
     "source": "PDF đính kèm"
@@ -28255,10 +29365,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "về phía trước, tiến lên, hướng tới",
     "partOfSpeech": "adj",
     "ipa": "/'ɔnwəd/",
-    "example": "The client chose a onward option for system maintenance.",
+    "example": "The client chose an onward option for system maintenance.",
     "examples": [
-      "The client chose a onward option for system maintenance.",
-      "We need a onward response before the software update.",
+      "The client chose an onward option for system maintenance.",
+      "We need an onward response before the software update.",
       "The report explains why the onward approach matters."
     ],
     "topic": "Công nghệ",
@@ -28330,11 +29440,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "lạc quan, yêu đời",
     "partOfSpeech": "adj",
     "ipa": "/¸ɔpti´mistik/",
-    "example": "We need a optimistic response before the internal memo.",
+    "example": "We need an optimistic response before the internal memo.",
     "examples": [
-      "We need a optimistic response before the internal memo.",
+      "We need an optimistic response before the internal memo.",
       "The report explains why the optimistic approach matters.",
-      "The client chose a optimistic option for the Monday meeting."
+      "The client chose an optimistic option for the Monday meeting."
     ],
     "topic": "Văn phòng",
     "source": "PDF đính kèm"
@@ -28390,10 +29500,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "có trật tự, ngăn nắp, hữu hiệu",
     "partOfSpeech": "adj",
     "ipa": "/ˈɔːr.ɡən.aɪzd/",
-    "example": "The client chose a organized option for the strategy meeting.",
+    "example": "The client chose an organized option for the strategy meeting.",
     "examples": [
-      "The client chose a organized option for the strategy meeting.",
-      "We need a organized response before the sales proposal.",
+      "The client chose an organized option for the strategy meeting.",
+      "We need an organized response before the sales proposal.",
       "The report explains why the organized approach matters."
     ],
     "topic": "Kinh doanh",
@@ -28435,10 +29545,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "nổi bật, đáng chú ý; nổi tiếng, vượt trội",
     "partOfSpeech": "adj",
     "ipa": "/¸aut´stændiη/",
-    "example": "The client chose a outstanding option for the quarterly financial report.",
+    "example": "The client chose an outstanding option for the quarterly financial report.",
     "examples": [
-      "The client chose a outstanding option for the quarterly financial report.",
-      "We need a outstanding response before the client invoice.",
+      "The client chose an outstanding option for the quarterly financial report.",
+      "We need an outstanding response before the client invoice.",
       "The report explains why the outstanding approach matters."
     ],
     "topic": "Tài chính",
@@ -28450,11 +29560,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "toàn bộ, toàn thể, bao gồm mọi thứ",
     "partOfSpeech": "adj",
     "ipa": "/ˈoʊvərˌɔl/",
-    "example": "We need a overall response before the quality inspection.",
+    "example": "We need an overall response before the quality inspection.",
     "examples": [
-      "We need a overall response before the quality inspection.",
+      "We need an overall response before the quality inspection.",
       "The report explains why the overall approach matters.",
-      "The client chose a overall option for the factory shipment."
+      "The client chose an overall option for the factory shipment."
     ],
     "topic": "Sản xuất",
     "source": "PDF đính kèm"
@@ -28483,8 +29593,8 @@ export const vocabulary: VocabularyItem[] = [
     "example": "The report explains why the overtime approach matters.",
     "examples": [
       "The report explains why the overtime approach matters.",
-      "The client chose a overtime option for the customer follow-up.",
-      "We need a overtime response before the service desk."
+      "The client chose an overtime option for the customer follow-up.",
+      "We need an overtime response before the service desk."
     ],
     "topic": "Dịch vụ khách hàng",
     "source": "PDF đính kèm"
@@ -28600,11 +29710,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "đặc biệt, đặc thù; cá biệt, riêng biệt",
     "partOfSpeech": "adv",
     "ipa": "/pə´tikjuləli/",
-    "example": "The team will particularly the request before the deadline.",
+    "example": "The staff responded particularly to the client email.",
     "examples": [
-      "The team will particularly the request before the deadline.",
-      "Could you particularly this item after the review?",
-      "We need to particularly the document for the HR meeting."
+      "The staff responded particularly to the client email.",
+      "The task was completed particularly.",
+      "The team worked particularly during the HR meeting."
     ],
     "topic": "Nhân sự",
     "source": "PDF đính kèm"
@@ -29170,11 +30280,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "về mặt thực hành (đối với lý thuyết)",
     "partOfSpeech": "adv",
     "ipa": "/´præktikəli/",
-    "example": "The team will practically the request before the deadline.",
+    "example": "The staff responded practically to the client email.",
     "examples": [
-      "The team will practically the request before the deadline.",
-      "Could you practically this item after the review?",
-      "We need to practically the document for the business trip."
+      "The staff responded practically to the client email.",
+      "The task was completed practically.",
+      "The team worked practically during the business trip."
     ],
     "topic": "Du lịch",
     "source": "PDF đính kèm"
@@ -29395,11 +30505,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "có khả năng, có lẽ, có thể",
     "partOfSpeech": "adv",
     "ipa": "/´prɔbəbli/",
-    "example": "Could you probably this item after the review?",
+    "example": "The task was completed probably.",
     "examples": [
-      "Could you probably this item after the review?",
-      "We need to probably the document for the strategy meeting.",
-      "The team will probably the request before the deadline."
+      "The task was completed probably.",
+      "The team worked probably during the strategy meeting.",
+      "The staff responded probably to the client email."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -29605,11 +30715,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "mau lẹ, nhanh chóng; ngay lập tức",
     "partOfSpeech": "adv",
     "ipa": "/´prɔmptli/",
-    "example": "The team will promptly the request before the deadline.",
+    "example": "The staff responded promptly to the client email.",
     "examples": [
-      "The team will promptly the request before the deadline.",
-      "Could you promptly this item after the review?",
-      "We need to promptly the document for the strategy meeting."
+      "The staff responded promptly to the client email.",
+      "The task was completed promptly.",
+      "The team worked promptly during the strategy meeting."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -29620,11 +30730,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "đúng đắn, hợp thức, hợp lệ",
     "partOfSpeech": "adv",
     "ipa": "/´prɔpəli/",
-    "example": "We need to properly the document for the strategy meeting.",
+    "example": "The team worked properly during the strategy meeting.",
     "examples": [
-      "We need to properly the document for the strategy meeting.",
-      "The team will properly the request before the deadline.",
-      "Could you properly this item after the review?"
+      "The team worked properly during the strategy meeting.",
+      "The staff responded properly to the client email.",
+      "The task was completed properly."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -29980,11 +31090,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "hợp lý",
     "partOfSpeech": "adv",
     "ipa": "/ˈriː.zən.ə.bli/",
-    "example": "Could you reasonably this item after the review?",
+    "example": "The task was completed reasonably.",
     "examples": [
-      "Could you reasonably this item after the review?",
-      "We need to reasonably the document for the HR meeting.",
-      "The team will reasonably the request before the deadline."
+      "The task was completed reasonably.",
+      "The team worked reasonably during the HR meeting.",
+      "The staff responded reasonably to the client email."
     ],
     "topic": "Nhân sự",
     "source": "PDF đính kèm"
@@ -30295,11 +31405,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "bất chấp, không đếm xỉa tới, không chú ý tới",
     "partOfSpeech": "adv",
     "ipa": "/ri´ga:dlis/",
-    "example": "The team will regardless the request before the deadline.",
+    "example": "The staff responded regardless to the client email.",
     "examples": [
-      "The team will regardless the request before the deadline.",
-      "Could you regardless this item after the review?",
-      "We need to regardless the document for the HR meeting."
+      "The staff responded regardless to the client email.",
+      "The task was completed regardless.",
+      "The team worked regardless during the HR meeting."
     ],
     "topic": "Nhân sự",
     "source": "PDF đính kèm"
@@ -30370,11 +31480,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "đều đặn, thường xuyên",
     "partOfSpeech": "adv",
     "ipa": "/´regjuləli/",
-    "example": "We need to regularly the document for the business trip.",
+    "example": "The team worked regularly during the business trip.",
     "examples": [
-      "We need to regularly the document for the business trip.",
-      "The team will regularly the request before the deadline.",
-      "Could you regularly this item after the review?"
+      "The team worked regularly during the business trip.",
+      "The staff responded regularly to the client email.",
+      "The task was completed regularly."
     ],
     "topic": "Du lịch",
     "source": "PDF đính kèm"
@@ -31000,11 +32110,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "sự bán lẻ, việc bán lẻ",
     "partOfSpeech": "n, adv",
     "ipa": "/ˈriteɪl , rɪˈteɪl/",
-    "example": "We need to retail the document for the strategy meeting.",
+    "example": "The team worked retail during the strategy meeting.",
     "examples": [
-      "We need to retail the document for the strategy meeting.",
-      "The team will retail the request before the deadline.",
-      "Could you retail this item after the review?"
+      "The team worked retail during the strategy meeting.",
+      "The staff responded retail to the client email.",
+      "The task was completed retail."
     ],
     "topic": "Kinh doanh",
     "source": "PDF đính kèm"
@@ -31135,11 +32245,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "ráp, xù xì, gồ ghề, không bằng phẳng",
     "partOfSpeech": "adv",
     "ipa": "/'rʌfli/",
-    "example": "Could you roughly this item after the review?",
+    "example": "The task was completed roughly.",
     "examples": [
-      "Could you roughly this item after the review?",
-      "We need to roughly the document for the Monday meeting.",
-      "The team will roughly the request before the deadline."
+      "The task was completed roughly.",
+      "The team worked roughly during the Monday meeting.",
+      "The staff responded roughly to the client email."
     ],
     "topic": "Văn phòng",
     "source": "PDF đính kèm"
@@ -32950,11 +34060,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "vô điều kiện",
     "partOfSpeech": "adj",
     "ipa": "/ˌʌn.kənˈdɪʃ.ən.əl/",
-    "example": "We need a unconditional response before the client invoice.",
+    "example": "We need an unconditional response before the client invoice.",
     "examples": [
-      "We need a unconditional response before the client invoice.",
+      "We need an unconditional response before the client invoice.",
       "The report explains why the unconditional approach matters.",
-      "The client chose a unconditional option for the quarterly financial report."
+      "The client chose an unconditional option for the quarterly financial report."
     ],
     "topic": "Tài chính",
     "source": "PDF đính kèm"
@@ -32980,10 +34090,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "không thuận lợi",
     "partOfSpeech": "adj",
     "ipa": "/ʌnˈfeɪ.vər.ə.bəl/",
-    "example": "The client chose a unfavorable option for the strategy meeting.",
+    "example": "The client chose an unfavorable option for the strategy meeting.",
     "examples": [
-      "The client chose a unfavorable option for the strategy meeting.",
-      "We need a unfavorable response before the sales proposal.",
+      "The client chose an unfavorable option for the strategy meeting.",
+      "We need an unfavorable response before the sales proposal.",
       "The report explains why the unfavorable approach matters."
     ],
     "topic": "Kinh doanh",
@@ -32995,10 +34105,10 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "không may mắn",
     "partOfSpeech": "adj",
     "ipa": "/ʌnˈfɔːr.tʃən.ət.li/",
-    "example": "The client chose a unfortunately option for the quarterly financial report.",
+    "example": "The client chose an unfortunately option for the quarterly financial report.",
     "examples": [
-      "The client chose a unfortunately option for the quarterly financial report.",
-      "We need a unfortunately response before the client invoice.",
+      "The client chose an unfortunately option for the quarterly financial report.",
+      "We need an unfortunately response before the client invoice.",
       "The report explains why the unfortunately approach matters."
     ],
     "topic": "Tài chính",
@@ -33025,11 +34135,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "hoang sơ",
     "partOfSpeech": "adj",
     "ipa": "/ʌnˈspɔɪld/",
-    "example": "We need a unspoiled response before the quality inspection.",
+    "example": "We need an unspoiled response before the quality inspection.",
     "examples": [
-      "We need a unspoiled response before the quality inspection.",
+      "We need an unspoiled response before the quality inspection.",
       "The report explains why the unspoiled approach matters.",
-      "The client chose a unspoiled option for the factory shipment."
+      "The client chose an unspoiled option for the factory shipment."
     ],
     "topic": "Sản xuất",
     "source": "PDF đính kèm"
@@ -33058,8 +34168,8 @@ export const vocabulary: VocabularyItem[] = [
     "example": "The report explains why the upcoming approach matters.",
     "examples": [
       "The report explains why the upcoming approach matters.",
-      "The client chose a upcoming option for system maintenance.",
-      "We need a upcoming response before the software update."
+      "The client chose an upcoming option for system maintenance.",
+      "We need an upcoming response before the software update."
     ],
     "topic": "Công nghệ",
     "source": "PDF đính kèm"
@@ -33100,11 +34210,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "buồn bã, lo lắng",
     "partOfSpeech": "v, adj",
     "ipa": "/ʌpˈset/",
-    "example": "The team will upset the request before the deadline.",
+    "example": "The client chose an upset option for the quarterly financial report.",
     "examples": [
-      "The team will upset the request before the deadline.",
-      "Could you upset this item after the review?",
-      "We need to upset the document for the quarterly financial report."
+      "The client chose an upset option for the quarterly financial report.",
+      "We need an upset response before the client invoice.",
+      "The report explains why the upset approach matters."
     ],
     "topic": "Tài chính",
     "source": "PDF đính kèm"
@@ -33700,11 +34810,11 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "hằng năm",
     "partOfSpeech": "adv",
     "ipa": "/ˈjɪr.li/",
-    "example": "We need to yearly the document for the customer follow-up.",
+    "example": "The team worked yearly during the customer follow-up.",
     "examples": [
-      "We need to yearly the document for the customer follow-up.",
-      "The team will yearly the request before the deadline.",
-      "Could you yearly this item after the review?"
+      "The team worked yearly during the customer follow-up.",
+      "The staff responded yearly to the client email.",
+      "The task was completed yearly."
     ],
     "topic": "Dịch vụ khách hàng",
     "source": "PDF đính kèm"
@@ -36279,7 +37389,7 @@ export const vocabulary: VocabularyItem[] = [
     "term": "follow-up",
     "meaning": "việc theo dõi tiếp",
     "partOfSpeech": "n",
-    "ipa": "/ˈfɑloʊˌəp/",
+    "ipa": "/ˈfɑloʊ-əp/",
     "example": "The team discussed the follow-up during the Monday meeting.",
     "topic": "Văn phòng",
     "source": "Bổ sung theo chủ đề TOEIC",
@@ -36805,13 +37915,13 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "trước; trước thời hạn",
     "partOfSpeech": "adv",
     "ipa": "/ɪn ədˈvæns/",
-    "example": "The team will in advance the request before the deadline.",
+    "example": "The staff responded in advance to the client email.",
     "topic": "Cụm từ",
     "source": "Bổ sung theo chủ đề TOEIC",
     "examples": [
-      "The team will in advance the request before the deadline.",
-      "Could you in advance this item after the review?",
-      "We need to in advance the document for the office meeting."
+      "The staff responded in advance to the client email.",
+      "The task was completed in advance.",
+      "The team worked in advance during the office meeting."
     ]
   },
   {
@@ -36820,12 +37930,12 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "phụ trách",
     "partOfSpeech": "adj",
     "ipa": "/ɪn ʧɑrʤ əv/",
-    "example": "The client chose a in charge of option for the office meeting.",
+    "example": "The client chose an in charge of option for the office meeting.",
     "topic": "Cụm từ",
     "source": "Bổ sung theo chủ đề TOEIC",
     "examples": [
-      "The client chose a in charge of option for the office meeting.",
-      "We need a in charge of response before the project update.",
+      "The client chose an in charge of option for the office meeting.",
+      "We need an in charge of response before the project update.",
       "The report explains why the in charge of approach matters."
     ]
   },
@@ -36865,13 +37975,13 @@ export const vocabulary: VocabularyItem[] = [
     "meaning": "đúng giờ",
     "partOfSpeech": "adv",
     "ipa": "/ɔn taɪm/",
-    "example": "The team will on time the request before the deadline.",
+    "example": "The staff responded on time to the client email.",
     "topic": "Cụm từ",
     "source": "Bổ sung theo chủ đề TOEIC",
     "examples": [
-      "The team will on time the request before the deadline.",
-      "Could you on time this item after the review?",
-      "We need to on time the document for the office meeting."
+      "The staff responded on time to the client email.",
+      "The task was completed on time.",
+      "The team worked on time during the office meeting."
     ]
   },
   {
@@ -37518,12 +38628,1122 @@ export const vocabulary: VocabularyItem[] = [
       "Please attach the work permit to the follow-up email.",
       "The manager asked for an update on the work permit."
     ]
+  },
+  {
+    "id": "plus-251",
+    "term": "action plan",
+    "meaning": "kế hoạch hành động",
+    "partOfSpeech": "n",
+    "ipa": "/ˈækʃən plæn/",
+    "example": "The manager asked for an update on the action plan.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the action plan.",
+      "The team discussed the action plan during the strategy meeting.",
+      "Please attach the action plan to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-252",
+    "term": "annual report",
+    "meaning": "báo cáo thường niên",
+    "partOfSpeech": "n",
+    "ipa": "/ˈænjuəl rɪˈpɔrt/",
+    "example": "Please attach the annual report to the follow-up email.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the annual report to the follow-up email.",
+      "The manager asked for an update on the annual report.",
+      "The team discussed the annual report during the quarterly financial report."
+    ]
+  },
+  {
+    "id": "plus-253",
+    "term": "approval process",
+    "meaning": "quy trình phê duyệt",
+    "partOfSpeech": "n",
+    "ipa": "/əˈpruvəl ˈprɔˌsɛs/",
+    "example": "The team discussed the approval process during the Monday meeting.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the approval process during the Monday meeting.",
+      "Please attach the approval process to the follow-up email.",
+      "The manager asked for an update on the approval process."
+    ]
+  },
+  {
+    "id": "plus-254",
+    "term": "business proposal",
+    "meaning": "đề xuất kinh doanh",
+    "partOfSpeech": "n",
+    "ipa": "/ˈbɪznɪs prəˈpoʊzəl/",
+    "example": "The team discussed the business proposal during the strategy meeting.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the business proposal during the strategy meeting.",
+      "Please attach the business proposal to the follow-up email.",
+      "The manager asked for an update on the business proposal."
+    ]
+  },
+  {
+    "id": "plus-255",
+    "term": "client portfolio",
+    "meaning": "danh mục khách hàng",
+    "partOfSpeech": "n",
+    "ipa": "/klaɪənt pɔrtˈfoʊliˌoʊ/",
+    "example": "The manager asked for an update on the client portfolio.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the client portfolio.",
+      "The team discussed the client portfolio during the strategy meeting.",
+      "Please attach the client portfolio to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-256",
+    "term": "competitive advantage",
+    "meaning": "lợi thế cạnh tranh",
+    "partOfSpeech": "n",
+    "ipa": "/kəmˈpɛtɪtɪv ædˈvæntɪʤ/",
+    "example": "Please attach the competitive advantage to the follow-up email.",
+    "topic": "Tiếp thị",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the competitive advantage to the follow-up email.",
+      "The manager asked for an update on the competitive advantage.",
+      "The team discussed the competitive advantage during the office meeting."
+    ]
+  },
+  {
+    "id": "plus-257",
+    "term": "contract renewal",
+    "meaning": "gia hạn hợp đồng",
+    "partOfSpeech": "n",
+    "ipa": "/ˈkɑnˌtrækt rɪˈnuəl/",
+    "example": "The team discussed the contract renewal during the strategy meeting.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the contract renewal during the strategy meeting.",
+      "Please attach the contract renewal to the follow-up email.",
+      "The manager asked for an update on the contract renewal."
+    ]
+  },
+  {
+    "id": "plus-258",
+    "term": "cost estimate",
+    "meaning": "ước tính chi phí",
+    "partOfSpeech": "n",
+    "ipa": "/kɔst ˈɛstəˌmeɪt/",
+    "example": "Please attach the cost estimate to the follow-up email.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the cost estimate to the follow-up email.",
+      "The manager asked for an update on the cost estimate.",
+      "The team discussed the cost estimate during the quarterly financial report."
+    ]
+  },
+  {
+    "id": "plus-259",
+    "term": "customer retention",
+    "meaning": "giữ chân khách hàng",
+    "partOfSpeech": "n",
+    "ipa": "/ˈkəstəmər riˈtɛnʃən/",
+    "example": "The manager asked for an update on the customer retention.",
+    "topic": "Dịch vụ khách hàng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the customer retention.",
+      "The team discussed the customer retention during the customer follow-up.",
+      "Please attach the customer retention to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-260",
+    "term": "decision-making",
+    "meaning": "quá trình ra quyết định",
+    "partOfSpeech": "n",
+    "ipa": "/dɪˈsɪʒən-ˈmeɪkɪŋ/",
+    "example": "Please attach the decision-making to the follow-up email.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the decision-making to the follow-up email.",
+      "The manager asked for an update on the decision-making.",
+      "The team discussed the decision-making during the strategy meeting."
+    ]
+  },
+  {
+    "id": "plus-261",
+    "term": "direct deposit",
+    "meaning": "chuyển khoản trực tiếp",
+    "partOfSpeech": "n",
+    "ipa": "/dɪˈrɛkt dɪˈpɑzət/",
+    "example": "The manager asked for an update on the direct deposit.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the direct deposit.",
+      "The team discussed the direct deposit during the quarterly financial report.",
+      "Please attach the direct deposit to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-262",
+    "term": "distribution channel",
+    "meaning": "kênh phân phối",
+    "partOfSpeech": "n",
+    "ipa": "/ˌdɪstrəˈbjuʃən ˈʧænəl/",
+    "example": "The team discussed the distribution channel during the office meeting.",
+    "topic": "Tiếp thị",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the distribution channel during the office meeting.",
+      "Please attach the distribution channel to the follow-up email.",
+      "The manager asked for an update on the distribution channel."
+    ]
+  },
+  {
+    "id": "plus-263",
+    "term": "employee handbook",
+    "meaning": "sổ tay nhân viên",
+    "partOfSpeech": "n",
+    "ipa": "/ɪmˈplɔɪi ˈhændˌbʊk/",
+    "example": "The team discussed the employee handbook during the HR meeting.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the employee handbook during the HR meeting.",
+      "Please attach the employee handbook to the follow-up email.",
+      "The manager asked for an update on the employee handbook."
+    ]
+  },
+  {
+    "id": "plus-264",
+    "term": "end user",
+    "meaning": "người dùng cuối",
+    "partOfSpeech": "n",
+    "ipa": "/ɛnd ˈjuzər/",
+    "example": "Please attach the end user to the follow-up email.",
+    "topic": "Công nghệ",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the end user to the follow-up email.",
+      "The manager asked for an update on the end user.",
+      "The team discussed the end user during system maintenance."
+    ]
+  },
+  {
+    "id": "plus-265",
+    "term": "executive summary",
+    "meaning": "tóm tắt điều hành",
+    "partOfSpeech": "n",
+    "ipa": "/ɪgˈzɛkjətɪv ˈsəməri/",
+    "example": "Please attach the executive summary to the follow-up email.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the executive summary to the follow-up email.",
+      "The manager asked for an update on the executive summary.",
+      "The team discussed the executive summary during the Monday meeting."
+    ]
+  },
+  {
+    "id": "plus-266",
+    "term": "expense account",
+    "meaning": "tài khoản chi phí",
+    "partOfSpeech": "n",
+    "ipa": "/ɪkˈspɛns əˈkaʊnt/",
+    "example": "The manager asked for an update on the expense account.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the expense account.",
+      "The team discussed the expense account during the quarterly financial report.",
+      "Please attach the expense account to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-267",
+    "term": "financial statement",
+    "meaning": "báo cáo tài chính",
+    "partOfSpeech": "n",
+    "ipa": "/ˌfaɪˈnænʃəl ˈsteɪtmənt/",
+    "example": "The manager asked for an update on the financial statement.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the financial statement.",
+      "The team discussed the financial statement during the quarterly financial report.",
+      "Please attach the financial statement to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-268",
+    "term": "fixed costs",
+    "meaning": "chi phí cố định",
+    "partOfSpeech": "n",
+    "ipa": "/fɪkst kɔsts/",
+    "example": "The team discussed the fixed costs during the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the fixed costs during the quarterly financial report.",
+      "Please attach the fixed costs to the follow-up email.",
+      "The manager asked for an update on the fixed costs."
+    ]
+  },
+  {
+    "id": "plus-269",
+    "term": "growth strategy",
+    "meaning": "chiến lược tăng trưởng",
+    "partOfSpeech": "n",
+    "ipa": "/groʊθ ˈstrætəʤi/",
+    "example": "Please attach the growth strategy to the follow-up email.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the growth strategy to the follow-up email.",
+      "The manager asked for an update on the growth strategy.",
+      "The team discussed the growth strategy during the strategy meeting."
+    ]
+  },
+  {
+    "id": "plus-270",
+    "term": "human resources",
+    "meaning": "nguồn nhân lực",
+    "partOfSpeech": "n",
+    "ipa": "/ˈjumən ˈrisɔrsɪz/",
+    "example": "The manager asked for an update on the human resources.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the human resources.",
+      "The team discussed the human resources during the HR meeting.",
+      "Please attach the human resources to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-271",
+    "term": "key performance indicator",
+    "meaning": "chỉ số hiệu suất chính",
+    "partOfSpeech": "n",
+    "ipa": "/ki pərˈfɔrməns ˈɪndəˌkeɪtər/",
+    "example": "The team discussed the key performance indicator during the strategy meeting.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the key performance indicator during the strategy meeting.",
+      "Please attach the key performance indicator to the follow-up email.",
+      "The manager asked for an update on the key performance indicator."
+    ]
+  },
+  {
+    "id": "plus-272",
+    "term": "monthly installment",
+    "meaning": "khoản trả góp hàng tháng",
+    "partOfSpeech": "n",
+    "ipa": "/ˈmənθli ˌɪnˈstɔlmənt/",
+    "example": "The manager asked for an update on the monthly installment.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the monthly installment.",
+      "The team discussed the monthly installment during the quarterly financial report.",
+      "Please attach the monthly installment to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-273",
+    "term": "operating expenses",
+    "meaning": "chi phí vận hành",
+    "partOfSpeech": "n",
+    "ipa": "/ˈɔpərˌeɪtɪŋ ɪkˈspɛnsɪz/",
+    "example": "Please attach the operating expenses to the follow-up email.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the operating expenses to the follow-up email.",
+      "The manager asked for an update on the operating expenses.",
+      "The team discussed the operating expenses during the quarterly financial report."
+    ]
+  },
+  {
+    "id": "plus-274",
+    "term": "order confirmation",
+    "meaning": "xác nhận đơn hàng",
+    "partOfSpeech": "n",
+    "ipa": "/ˈɔrdər ˌkɑnfərˈmeɪʃən/",
+    "example": "Please attach the order confirmation to the follow-up email.",
+    "topic": "Dịch vụ khách hàng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the order confirmation to the follow-up email.",
+      "The manager asked for an update on the order confirmation.",
+      "The team discussed the order confirmation during the customer follow-up."
+    ]
+  },
+  {
+    "id": "plus-275",
+    "term": "payment gateway",
+    "meaning": "cổng thanh toán",
+    "partOfSpeech": "n",
+    "ipa": "/ˈpeɪmənt ˈgeɪtˌweɪ/",
+    "example": "Please attach the payment gateway to the follow-up email.",
+    "topic": "Công nghệ",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the payment gateway to the follow-up email.",
+      "The manager asked for an update on the payment gateway.",
+      "The team discussed the payment gateway during system maintenance."
+    ]
+  },
+  {
+    "id": "plus-276",
+    "term": "performance bonus",
+    "meaning": "thưởng theo hiệu suất",
+    "partOfSpeech": "n",
+    "ipa": "/pərˈfɔrməns ˈboʊnəs/",
+    "example": "Please attach the performance bonus to the follow-up email.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the performance bonus to the follow-up email.",
+      "The manager asked for an update on the performance bonus.",
+      "The team discussed the performance bonus during the HR meeting."
+    ]
+  },
+  {
+    "id": "plus-277",
+    "term": "project milestone",
+    "meaning": "mốc dự án",
+    "partOfSpeech": "n",
+    "ipa": "/ˈprɑʤɛkt ˈmaɪlˌstoʊn/",
+    "example": "The team discussed the project milestone during the Monday meeting.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the project milestone during the Monday meeting.",
+      "Please attach the project milestone to the follow-up email.",
+      "The manager asked for an update on the project milestone."
+    ]
+  },
+  {
+    "id": "plus-278",
+    "term": "research and development",
+    "meaning": "nghiên cứu và phát triển",
+    "partOfSpeech": "n",
+    "ipa": "/ˈrisərʧ ənd dɪˈvɛləpmənt/",
+    "example": "The team discussed the research and development during system maintenance.",
+    "topic": "Công nghệ",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the research and development during system maintenance.",
+      "Please attach the research and development to the follow-up email.",
+      "The manager asked for an update on the research and development."
+    ]
+  },
+  {
+    "id": "plus-279",
+    "term": "sales forecast",
+    "meaning": "dự báo doanh số",
+    "partOfSpeech": "n",
+    "ipa": "/seɪlz ˈfɔrˌkæst/",
+    "example": "Please attach the sales forecast to the follow-up email.",
+    "topic": "Tiếp thị",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the sales forecast to the follow-up email.",
+      "The manager asked for an update on the sales forecast.",
+      "The team discussed the sales forecast during the office meeting."
+    ]
+  },
+  {
+    "id": "plus-280",
+    "term": "security clearance",
+    "meaning": "giấy phép an ninh",
+    "partOfSpeech": "n",
+    "ipa": "/sɪˈkjʊrəti ˈklɪrəns/",
+    "example": "Please attach the security clearance to the follow-up email.",
+    "topic": "Công nghệ",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the security clearance to the follow-up email.",
+      "The manager asked for an update on the security clearance.",
+      "The team discussed the security clearance during system maintenance."
+    ]
+  },
+  {
+    "id": "plus-281",
+    "term": "service agreement",
+    "meaning": "hợp đồng dịch vụ",
+    "partOfSpeech": "n",
+    "ipa": "/ˈsərvɪs əˈgrimənt/",
+    "example": "The team discussed the service agreement during the strategy meeting.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the service agreement during the strategy meeting.",
+      "Please attach the service agreement to the follow-up email.",
+      "The manager asked for an update on the service agreement."
+    ]
+  },
+  {
+    "id": "plus-282",
+    "term": "shipping label",
+    "meaning": "nhãn vận chuyển",
+    "partOfSpeech": "n",
+    "ipa": "/ˈʃɪpɪŋ ˈleɪbəl/",
+    "example": "The team discussed the shipping label during the factory shipment.",
+    "topic": "Sản xuất",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team discussed the shipping label during the factory shipment.",
+      "Please attach the shipping label to the follow-up email.",
+      "The manager asked for an update on the shipping label."
+    ]
+  },
+  {
+    "id": "plus-283",
+    "term": "stakeholder meeting",
+    "meaning": "cuộc họp các bên liên quan",
+    "partOfSpeech": "n",
+    "ipa": "/ˈsteɪˌkhoʊldər ˈmitɪŋ/",
+    "example": "Please attach the stakeholder meeting to the follow-up email.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the stakeholder meeting to the follow-up email.",
+      "The manager asked for an update on the stakeholder meeting.",
+      "The team discussed the stakeholder meeting during the strategy meeting."
+    ]
+  },
+  {
+    "id": "plus-284",
+    "term": "strategic partnership",
+    "meaning": "quan hệ đối tác chiến lược",
+    "partOfSpeech": "n",
+    "ipa": "/strəˈtiʤɪk ˈpɑrtnərˌʃɪp/",
+    "example": "The manager asked for an update on the strategic partnership.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the strategic partnership.",
+      "The team discussed the strategic partnership during the strategy meeting.",
+      "Please attach the strategic partnership to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-285",
+    "term": "tax return",
+    "meaning": "tờ khai thuế",
+    "partOfSpeech": "n",
+    "ipa": "/tæks rɪˈtərn/",
+    "example": "The manager asked for an update on the tax return.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the tax return.",
+      "The team discussed the tax return during the quarterly financial report.",
+      "Please attach the tax return to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-286",
+    "term": "time management",
+    "meaning": "quản lý thời gian",
+    "partOfSpeech": "n",
+    "ipa": "/taɪm ˈmænɪʤmənt/",
+    "example": "Please attach the time management to the follow-up email.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the time management to the follow-up email.",
+      "The manager asked for an update on the time management.",
+      "The team discussed the time management during the HR meeting."
+    ]
+  },
+  {
+    "id": "plus-287",
+    "term": "training session",
+    "meaning": "buổi đào tạo",
+    "partOfSpeech": "n",
+    "ipa": "/ˈtreɪnɪŋ ˈsɛʃən/",
+    "example": "The manager asked for an update on the training session.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the training session.",
+      "The team discussed the training session during the HR meeting.",
+      "Please attach the training session to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-288",
+    "term": "travel expenses",
+    "meaning": "chi phí đi lại",
+    "partOfSpeech": "n",
+    "ipa": "/ˈtrævəl ɪkˈspɛnsɪz/",
+    "example": "Please attach the travel expenses to the follow-up email.",
+    "topic": "Du lịch",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the travel expenses to the follow-up email.",
+      "The manager asked for an update on the travel expenses.",
+      "The team discussed the travel expenses during the business trip."
+    ]
+  },
+  {
+    "id": "plus-289",
+    "term": "user experience",
+    "meaning": "trải nghiệm người dùng",
+    "partOfSpeech": "n",
+    "ipa": "/ˈjuzər ɪkˈspɪriəns/",
+    "example": "Please attach the user experience to the follow-up email.",
+    "topic": "Công nghệ",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the user experience to the follow-up email.",
+      "The manager asked for an update on the user experience.",
+      "The team discussed the user experience during system maintenance."
+    ]
+  },
+  {
+    "id": "plus-290",
+    "term": "value proposition",
+    "meaning": "đề xuất giá trị",
+    "partOfSpeech": "n",
+    "ipa": "/ˈvælju ˌprɑpəˈzɪʃən/",
+    "example": "Please attach the value proposition to the follow-up email.",
+    "topic": "Tiếp thị",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Please attach the value proposition to the follow-up email.",
+      "The manager asked for an update on the value proposition.",
+      "The team discussed the value proposition during the office meeting."
+    ]
+  },
+  {
+    "id": "plus-291",
+    "term": "working capital",
+    "meaning": "vốn lưu động",
+    "partOfSpeech": "n",
+    "ipa": "/ˈwərkɪŋ ˈkæpɪtəl/",
+    "example": "The manager asked for an update on the working capital.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the working capital.",
+      "The team discussed the working capital during the quarterly financial report.",
+      "Please attach the working capital to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-292",
+    "term": "workplace safety",
+    "meaning": "an toàn nơi làm việc",
+    "partOfSpeech": "n",
+    "ipa": "/ˈwərkˌpleɪs ˈseɪfti/",
+    "example": "The manager asked for an update on the workplace safety.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The manager asked for an update on the workplace safety.",
+      "The team discussed the workplace safety during the HR meeting.",
+      "Please attach the workplace safety to the follow-up email."
+    ]
+  },
+  {
+    "id": "plus-293",
+    "term": "account for",
+    "meaning": "giải thích; chiếm tỷ trọng",
+    "partOfSpeech": "v",
+    "ipa": "/əˈkaʊnt fər/",
+    "example": "Could you account for this item after the review?",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Could you account for this item after the review?",
+      "We need to account for the document for the quarterly financial report.",
+      "The team will account for the request before the deadline."
+    ]
+  },
+  {
+    "id": "plus-294",
+    "term": "adhere to",
+    "meaning": "tuân thủ",
+    "partOfSpeech": "v",
+    "ipa": "/əˈdhɪr tɪ/",
+    "example": "The team will adhere to the request before the deadline.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team will adhere to the request before the deadline.",
+      "Could you adhere to this item after the review?",
+      "We need to adhere to the document for the strategy meeting."
+    ]
+  },
+  {
+    "id": "plus-295",
+    "term": "allocate resources",
+    "meaning": "phân bổ nguồn lực",
+    "partOfSpeech": "v",
+    "ipa": "/ˈæləˌkeɪt ˈrisɔrsɪz/",
+    "example": "We need to allocate resources the document for the strategy meeting.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to allocate resources the document for the strategy meeting.",
+      "The team will allocate resources the request before the deadline.",
+      "Could you allocate resources this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-296",
+    "term": "assess the risk",
+    "meaning": "đánh giá rủi ro",
+    "partOfSpeech": "v",
+    "ipa": "/əˈsɛs ðə rɪsk/",
+    "example": "We need to assess the risk the document for the strategy meeting.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to assess the risk the document for the strategy meeting.",
+      "The team will assess the risk the request before the deadline.",
+      "Could you assess the risk this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-297",
+    "term": "authorize payment",
+    "meaning": "cho phép thanh toán",
+    "partOfSpeech": "v",
+    "ipa": "/ˈɔθərˌaɪz ˈpeɪmənt/",
+    "example": "The team will authorize payment the request before the deadline.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team will authorize payment the request before the deadline.",
+      "Could you authorize payment this item after the review?",
+      "We need to authorize payment the document for the quarterly financial report."
+    ]
+  },
+  {
+    "id": "plus-298",
+    "term": "boost productivity",
+    "meaning": "tăng năng suất",
+    "partOfSpeech": "v",
+    "ipa": "/bust ˌproʊdəkˈtɪvɪti/",
+    "example": "The team will boost productivity the request before the deadline.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team will boost productivity the request before the deadline.",
+      "Could you boost productivity this item after the review?",
+      "We need to boost productivity the document for the HR meeting."
+    ]
+  },
+  {
+    "id": "plus-299",
+    "term": "build rapport",
+    "meaning": "xây dựng quan hệ tin cậy",
+    "partOfSpeech": "v",
+    "ipa": "/bɪld ræˈpɔr/",
+    "example": "Could you build rapport this item after the review?",
+    "topic": "Dịch vụ khách hàng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Could you build rapport this item after the review?",
+      "We need to build rapport the document for the customer follow-up.",
+      "The team will build rapport the request before the deadline."
+    ]
+  },
+  {
+    "id": "plus-300",
+    "term": "comply with",
+    "meaning": "tuân thủ",
+    "partOfSpeech": "v",
+    "ipa": "/kəmˈplaɪ wɪθ/",
+    "example": "We need to comply with the document for the strategy meeting.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to comply with the document for the strategy meeting.",
+      "The team will comply with the request before the deadline.",
+      "Could you comply with this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-301",
+    "term": "conduct a survey",
+    "meaning": "tiến hành khảo sát",
+    "partOfSpeech": "v",
+    "ipa": "/ˈkɑndəkt ə ˈsərˌveɪ/",
+    "example": "The team will conduct a survey the request before the deadline.",
+    "topic": "Tiếp thị",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team will conduct a survey the request before the deadline.",
+      "Could you conduct a survey this item after the review?",
+      "We need to conduct a survey the document for the office meeting."
+    ]
+  },
+  {
+    "id": "plus-302",
+    "term": "confirm receipt",
+    "meaning": "xác nhận đã nhận",
+    "partOfSpeech": "v",
+    "ipa": "/kənˈfərm rɪˈsit/",
+    "example": "The team will confirm receipt the request before the deadline.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team will confirm receipt the request before the deadline.",
+      "Could you confirm receipt this item after the review?",
+      "We need to confirm receipt the document for the Monday meeting."
+    ]
+  },
+  {
+    "id": "plus-303",
+    "term": "coordinate with",
+    "meaning": "phối hợp với",
+    "partOfSpeech": "v",
+    "ipa": "/koʊˈɔrdəˌneɪt wɪθ/",
+    "example": "Could you coordinate with this item after the review?",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Could you coordinate with this item after the review?",
+      "We need to coordinate with the document for the Monday meeting.",
+      "The team will coordinate with the request before the deadline."
+    ]
+  },
+  {
+    "id": "plus-304",
+    "term": "cut costs",
+    "meaning": "cắt giảm chi phí",
+    "partOfSpeech": "v",
+    "ipa": "/kət kɔsts/",
+    "example": "We need to cut costs the document for the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to cut costs the document for the quarterly financial report.",
+      "The team will cut costs the request before the deadline.",
+      "Could you cut costs this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-305",
+    "term": "delegate tasks",
+    "meaning": "giao nhiệm vụ",
+    "partOfSpeech": "v",
+    "ipa": "/ˈdɛləˌgeɪt tæsks/",
+    "example": "We need to delegate tasks the document for the HR meeting.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to delegate tasks the document for the HR meeting.",
+      "The team will delegate tasks the request before the deadline.",
+      "Could you delegate tasks this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-306",
+    "term": "disclose information",
+    "meaning": "công bố thông tin",
+    "partOfSpeech": "v",
+    "ipa": "/dɪˈskloʊz ˌɪnˌfɔrˈmeɪʃən/",
+    "example": "The team will disclose information the request before the deadline.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team will disclose information the request before the deadline.",
+      "Could you disclose information this item after the review?",
+      "We need to disclose information the document for the strategy meeting."
+    ]
+  },
+  {
+    "id": "plus-307",
+    "term": "enhance efficiency",
+    "meaning": "nâng cao hiệu quả",
+    "partOfSpeech": "v",
+    "ipa": "/ɛnˈhæns ɪˈfɪʃənsi/",
+    "example": "We need to enhance efficiency the document for the strategy meeting.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to enhance efficiency the document for the strategy meeting.",
+      "The team will enhance efficiency the request before the deadline.",
+      "Could you enhance efficiency this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-308",
+    "term": "extend a deadline",
+    "meaning": "gia hạn thời hạn",
+    "partOfSpeech": "v",
+    "ipa": "/ɪkˈstɛnd ə ˈdɛˌdlaɪn/",
+    "example": "We need to extend a deadline the document for the Monday meeting.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to extend a deadline the document for the Monday meeting.",
+      "The team will extend a deadline the request before the deadline.",
+      "Could you extend a deadline this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-309",
+    "term": "file a complaint",
+    "meaning": "gửi khiếu nại",
+    "partOfSpeech": "v",
+    "ipa": "/faɪl ə kəmˈpleɪnt/",
+    "example": "We need to file a complaint the document for the customer follow-up.",
+    "topic": "Dịch vụ khách hàng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to file a complaint the document for the customer follow-up.",
+      "The team will file a complaint the request before the deadline.",
+      "Could you file a complaint this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-310",
+    "term": "finalize a contract",
+    "meaning": "hoàn tất hợp đồng",
+    "partOfSpeech": "v",
+    "ipa": "/ˈfaɪnəˌlaɪz ə ˈkɑnˌtrækt/",
+    "example": "Could you finalize a contract this item after the review?",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Could you finalize a contract this item after the review?",
+      "We need to finalize a contract the document for the strategy meeting.",
+      "The team will finalize a contract the request before the deadline."
+    ]
+  },
+  {
+    "id": "plus-311",
+    "term": "generate revenue",
+    "meaning": "tạo doanh thu",
+    "partOfSpeech": "v",
+    "ipa": "/ˈʤɛnərˌeɪt ˈrɛvəˌnu/",
+    "example": "We need to generate revenue the document for the quarterly financial report.",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to generate revenue the document for the quarterly financial report.",
+      "The team will generate revenue the request before the deadline.",
+      "Could you generate revenue this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-312",
+    "term": "issue a refund",
+    "meaning": "hoàn tiền",
+    "partOfSpeech": "v",
+    "ipa": "/ˈɪʃu ə ˈriˌfənd/",
+    "example": "We need to issue a refund the document for the customer follow-up.",
+    "topic": "Dịch vụ khách hàng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to issue a refund the document for the customer follow-up.",
+      "The team will issue a refund the request before the deadline.",
+      "Could you issue a refund this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-313",
+    "term": "meet a requirement",
+    "meaning": "đáp ứng yêu cầu",
+    "partOfSpeech": "v",
+    "ipa": "/mit ə rɪkˈwaɪrmənt/",
+    "example": "Could you meet a requirement this item after the review?",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Could you meet a requirement this item after the review?",
+      "We need to meet a requirement the document for the strategy meeting.",
+      "The team will meet a requirement the request before the deadline."
+    ]
+  },
+  {
+    "id": "plus-314",
+    "term": "negotiate terms",
+    "meaning": "đàm phán điều khoản",
+    "partOfSpeech": "v",
+    "ipa": "/nɪˈgoʊʃiˌeɪt tərmz/",
+    "example": "We need to negotiate terms the document for the strategy meeting.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to negotiate terms the document for the strategy meeting.",
+      "The team will negotiate terms the request before the deadline.",
+      "Could you negotiate terms this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-315",
+    "term": "obtain approval",
+    "meaning": "nhận phê duyệt",
+    "partOfSpeech": "v",
+    "ipa": "/əbˈteɪn əˈpruvəl/",
+    "example": "We need to obtain approval the document for the Monday meeting.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to obtain approval the document for the Monday meeting.",
+      "The team will obtain approval the request before the deadline.",
+      "Could you obtain approval this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-316",
+    "term": "process an order",
+    "meaning": "xử lý đơn hàng",
+    "partOfSpeech": "v",
+    "ipa": "/ˈprɔˌsɛs ən ˈɔrdər/",
+    "example": "The team will process an order the request before the deadline.",
+    "topic": "Dịch vụ khách hàng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team will process an order the request before the deadline.",
+      "Could you process an order this item after the review?",
+      "We need to process an order the document for the customer follow-up."
+    ]
+  },
+  {
+    "id": "plus-317",
+    "term": "reduce overhead",
+    "meaning": "giảm chi phí chung",
+    "partOfSpeech": "v",
+    "ipa": "/rɪˈdus ˈoʊvərˈhɛd/",
+    "example": "Could you reduce overhead this item after the review?",
+    "topic": "Tài chính",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Could you reduce overhead this item after the review?",
+      "We need to reduce overhead the document for the quarterly financial report.",
+      "The team will reduce overhead the request before the deadline."
+    ]
+  },
+  {
+    "id": "plus-318",
+    "term": "resolve a dispute",
+    "meaning": "giải quyết tranh chấp",
+    "partOfSpeech": "v",
+    "ipa": "/riˈzɑlv ə dɪˈspjut/",
+    "example": "The team will resolve a dispute the request before the deadline.",
+    "topic": "Dịch vụ khách hàng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "The team will resolve a dispute the request before the deadline.",
+      "Could you resolve a dispute this item after the review?",
+      "We need to resolve a dispute the document for the customer follow-up."
+    ]
+  },
+  {
+    "id": "plus-319",
+    "term": "schedule an appointment",
+    "meaning": "đặt lịch hẹn",
+    "partOfSpeech": "v",
+    "ipa": "/ˈskɛʤʊl ən əˈpɔɪntmənt/",
+    "example": "We need to schedule an appointment the document for the Monday meeting.",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to schedule an appointment the document for the Monday meeting.",
+      "The team will schedule an appointment the request before the deadline.",
+      "Could you schedule an appointment this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-320",
+    "term": "submit a bid",
+    "meaning": "nộp hồ sơ dự thầu",
+    "partOfSpeech": "v",
+    "ipa": "/səbˈmɪt ə bɪd/",
+    "example": "We need to submit a bid the document for the strategy meeting.",
+    "topic": "Kinh doanh",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to submit a bid the document for the strategy meeting.",
+      "The team will submit a bid the request before the deadline.",
+      "Could you submit a bid this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-321",
+    "term": "track inventory",
+    "meaning": "theo dõi tồn kho",
+    "partOfSpeech": "v",
+    "ipa": "/træk ˌɪnvənˈtɔri/",
+    "example": "We need to track inventory the document for the factory shipment.",
+    "topic": "Sản xuất",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to track inventory the document for the factory shipment.",
+      "The team will track inventory the request before the deadline.",
+      "Could you track inventory this item after the review?"
+    ]
+  },
+  {
+    "id": "plus-322",
+    "term": "update records",
+    "meaning": "cập nhật hồ sơ",
+    "partOfSpeech": "v",
+    "ipa": "/ˈəpˌdeɪt ˈrɛkərdz/",
+    "example": "Could you update records this item after the review?",
+    "topic": "Văn phòng",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Could you update records this item after the review?",
+      "We need to update records the document for the Monday meeting.",
+      "The team will update records the request before the deadline."
+    ]
+  },
+  {
+    "id": "plus-323",
+    "term": "withdraw an application",
+    "meaning": "rút đơn đăng ký",
+    "partOfSpeech": "v",
+    "ipa": "/wɪθˈdrɔ ən ˌæpləˈkeɪʃən/",
+    "example": "Could you withdraw an application this item after the review?",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "Could you withdraw an application this item after the review?",
+      "We need to withdraw an application the document for the HR meeting.",
+      "The team will withdraw an application the request before the deadline."
+    ]
+  },
+  {
+    "id": "plus-324",
+    "term": "work overtime",
+    "meaning": "làm thêm giờ",
+    "partOfSpeech": "v",
+    "ipa": "/wərk ˈoʊvərˌtaɪm/",
+    "example": "We need to work overtime the document for the HR meeting.",
+    "topic": "Nhân sự",
+    "source": "Bổ sung theo chủ đề TOEIC",
+    "examples": [
+      "We need to work overtime the document for the HR meeting.",
+      "The team will work overtime the request before the deadline.",
+      "Could you work overtime this item after the review?"
+    ]
   }
 ];
 
 export const vocabularyExtractionReport = {
   "coreRows": 1000,
-  "supplementalRows": 250,
-  "totalRows": 1250,
+  "supplementalRows": 324,
+  "totalRows": 1324,
   "missingNumberedRows": []
 } as const;

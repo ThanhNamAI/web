@@ -21,3 +21,8 @@
 - [x] Xây dựng huy hiệu streak, thành tích học tập và cơ chế động lực dựa trên hành vi học đã ghi nhận.
 - [x] Nâng cấp bảng tiến trình, thống kê kỹ năng và gợi ý cải thiện theo điểm yếu/sự thay đổi kết quả của từng người học.
 - [x] Nghiên cứu, kiểm thử hồi quy, rà soát OWASP/phân quyền và tạo bản lưu bàn giao cho đợt nâng cấp.
+- [x] Tái hiện dark mode trên các trang và kích thước màn hình chính, xác định chính xác các lớp màu/khối hiển thị sai.
+- [x] Sửa dark mode theo semantic tokens, kiểm tra độ tương phản và bảo đảm thao tác chuyển theme ổn định.
+- [x] Kiểm toán độ bao phủ từ vựng theo nhóm chủ đề, từ loại và phạm vi TOEIC 800+; bổ sung nội dung thiếu dựa trên ma trận có kiểm chứng.
+- [x] Rút gọn luồng điều hướng, ưu tiên việc học kế tiếp và cải thiện nhãn/hành động để UX dễ tiếp cận hơn.
+- [x] Chạy kiểm thử hồi quy, rà soát desktop/mobile ở cả light/dark mode và tạo bản lưu bàn giao bản sửa.

@@ -26,7 +26,8 @@ function inferTopic(term) {
 }
 
 function makeExamples(term, partOfSpeech, topic = inferTopic(term)) {
-  const lower = term.toLowerCase();
+  const lower = term.toLowerCase().replace(" (to)", " to");
+  const tags = partOfSpeech.split(",").map(tag => tag.trim());
   const context = {
     "Tài chính": ["the quarterly financial report", "the client invoice", "the budget review"],
     "Du lịch": ["the business trip", "the airport transfer", "the travel itinerary"],
@@ -37,14 +38,15 @@ function makeExamples(term, partOfSpeech, topic = inferTopic(term)) {
     "Văn phòng": ["the Monday meeting", "the internal memo", "the project agenda"],
     "Kinh doanh": ["the strategy meeting", "the sales proposal", "the contract review"],
   }[topic] ?? ["the office meeting", "the project update", "the client email"];
-  const templates = partOfSpeech.includes("v")
-    ? [`The team will ${lower} the request before the deadline.`, `Could you ${lower} this item after the review?`, `We need to ${lower} the document for ${context[0]}.`]
-    : partOfSpeech.includes("adj")
-      ? [`The client chose a ${lower} option for ${context[0]}.`, `We need a ${lower} response before ${context[1]}.`, `The report explains why the ${lower} approach matters.`]
-      : partOfSpeech.includes("adv")
-        ? [`Please respond ${lower} to the client email.`, `The staff completed the request ${lower}.`, `The team worked ${lower} during ${context[0]}.`]
-        : partOfSpeech.includes("prep")
-          ? [`The report was prepared ${lower} company policy.`, `The request was handled ${lower} the procedure.`, `The team acted ${lower} the contract terms.`]
+  const article = /^[aeiou]/.test(lower) ? "an" : "a";
+  const templates = tags.includes("adv")
+    ? [`The staff responded ${lower} to the client email.`, `The task was completed ${lower}.`, `The team worked ${lower} during ${context[0]}.`]
+    : tags.includes("prep")
+      ? [`The report was prepared ${lower} company policy.`, `The request was handled ${lower} the procedure.`, `The team acted ${lower} the contract terms.`]
+      : tags.includes("adj")
+        ? [`The client chose ${article} ${lower} option for ${context[0]}.`, `We need ${article} ${lower} response before ${context[1]}.`, `The report explains why the ${lower} approach matters.`]
+        : tags.includes("v")
+          ? [`The team will ${lower} the request before the deadline.`, `Could you ${lower} this item after the review?`, `We need to ${lower} the document for ${context[0]}.`]
           : [`The team discussed the ${lower} during ${context[0]}.`, `Please attach the ${lower} to the follow-up email.`, `The manager asked for an update on the ${lower}.`];
   const offset = [...lower].reduce((sum, char) => sum + char.charCodeAt(0), 0) % templates.length;
   return templates.map((_, index) => templates[(index + offset) % templates.length]);
@@ -126,8 +128,13 @@ const supplementalVocabulary = fs.existsSync(supplementalPath)
   : [];
 const normalizedTerm = value => value.trim().toLowerCase().replace(/\s+/g, " ");
 const coreTerms = new Set(rows.map(item => normalizedTerm(item.term)));
-const nonDuplicateSupplemental = supplementalVocabulary.filter(item => !coreTerms.has(normalizedTerm(item.term))).slice(0, 250);
-const finalizedSupplemental = nonDuplicateSupplemental.map((item, index) => {
+const uniqueSupplemental = supplementalVocabulary.filter(item => {
+  const term = normalizedTerm(item.term);
+  if (coreTerms.has(term)) return false;
+  coreTerms.add(term);
+  return true;
+});
+const finalizedSupplemental = uniqueSupplemental.map((item, index) => {
   const examples = makeExamples(item.term, item.partOfSpeech, item.topic);
   return { ...item, id: `plus-${index + 1}`, example: examples[0], examples };
 });
