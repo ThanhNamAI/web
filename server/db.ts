@@ -1,6 +1,6 @@
 import { and, desc, eq, lte } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, learnerProfiles, learningAchievements, studySessions, users, vocabularyProgress } from "../drizzle/schema";
+import { InsertUser, learnerProfiles, learningAchievements, mockTestAttempts, studySessions, users, vocabularyProgress } from "../drizzle/schema";
 import { ENV } from './_core/env';
 import { getEarnedAchievementDefinitions } from "./achievementLogic";
 import { getSkillAnalytics } from "./analyticsLogic";
@@ -118,9 +118,10 @@ export async function getLearningSnapshot(userId: number) {
     .limit(24);
   const recentSessions = await db.select().from(studySessions).where(eq(studySessions.userId, userId)).orderBy(desc(studySessions.completedAt)).limit(40);
   const achievements = await db.select().from(learningAchievements).where(eq(learningAchievements.userId, userId)).orderBy(desc(learningAchievements.awardedAt));
+  const recentMockTests = await db.select().from(mockTestAttempts).where(eq(mockTestAttempts.userId, userId)).orderBy(desc(mockTestAttempts.completedAt)).limit(5);
 
   const analytics = getSkillAnalytics(recentSessions);
-  return { profile, dueCards, recentSessions, achievements, analytics };
+  return { profile, dueCards, recentSessions, achievements, recentMockTests, analytics };
 }
 
 async function syncLearningAchievements(userId: number) {
@@ -198,6 +199,31 @@ export async function recordStudySession(input: {
     lastStudyDate: today,
   }).where(eq(learnerProfiles.userId, input.userId));
   await syncLearningAchievements(input.userId);
+}
+
+export async function recordMockTestAttempt(input: {
+  userId: number;
+  totalQuestions: number;
+  correctAnswers: number;
+  rawScore: number;
+  durationSeconds: number;
+  partScores: Array<{ part: number; correct: number; total: number; accuracy: number }>;
+  listeningScore: number;
+  readingScore: number;
+  xp: number;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+  await db.insert(mockTestAttempts).values({
+    userId: input.userId,
+    totalQuestions: input.totalQuestions,
+    correctAnswers: input.correctAnswers,
+    rawScore: input.rawScore,
+    durationSeconds: input.durationSeconds,
+    partScoresJson: JSON.stringify(input.partScores),
+  });
+  await recordStudySession({ userId: input.userId, activityType: "mock-listening", skill: "listening", score: input.listeningScore, xp: Math.floor(input.xp / 2), durationSeconds: Math.floor(input.durationSeconds / 2) });
+  await recordStudySession({ userId: input.userId, activityType: "mock-reading", skill: "reading", score: input.readingScore, xp: Math.ceil(input.xp / 2), durationSeconds: Math.ceil(input.durationSeconds / 2) });
 }
 
 export async function updateLearnerSettings(userId: number, values: { targetScore?: number; weeklyGoalMinutes?: number; diagnosticScore?: number; preferredAccent?: string }) {

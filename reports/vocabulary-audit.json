@@ -77,6 +77,8 @@
     "withoutExample": 0,
     "totalExampleVariants": 3972,
     "exactDuplicateExamples": 0,
-    "multiWordTerms": 210
+    "multiWordTerms": 210,
+    "audioMetadataComplete": 1324,
+    "configuredHumanRecordingUrls": 0
   }
 }

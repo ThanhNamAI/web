@@ -38,6 +38,8 @@ const quality = {
     return examples.length - new Set(examples).size;
   })(),
   multiWordTerms: vocabulary.filter(item => item.term.includes(" ")).length,
+  audioMetadataComplete: vocabulary.filter(item => item.audio?.word?.transcript && item.audio.examples?.length === item.examples.length).length,
+  configuredHumanRecordingUrls: vocabulary.reduce((sum, item) => sum + (item.audio?.word?.audioUrl ? 1 : 0) + (item.audio?.examples?.filter(clip => clip.audioUrl).length ?? 0), 0),
 };
 const report = { totalItems: vocabulary.length, uniqueTerms: normalized.size, duplicateTerms: duplicates.length, duplicates, topics, partsOfSpeech, quality };
 fs.writeFileSync(path.join(root, "reports", "vocabulary-audit.json"), JSON.stringify(report, null, 2));

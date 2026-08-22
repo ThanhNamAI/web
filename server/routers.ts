@@ -1,11 +1,14 @@
 import { COOKIE_NAME } from "@shared/const";
 import { vocabulary } from "../shared/vocabulary.generated";
+import { mockQuestions } from "../shared/mockTestContent";
 import { z } from "zod";
-import { getLearningSnapshot, recordStudySession, saveVocabularyReview, updateLearnerSettings } from "./db";
+import { getLearningSnapshot, recordMockTestAttempt, recordStudySession, saveVocabularyReview, updateLearnerSettings } from "./db";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { protectedProcedure, publicProcedure, router } from "./_core/trpc";
 import { calculateSrsUpdate, calculateXp, getNextSessionRecommendation } from "./learningLogic";
+import { buildDailyPlan } from "./dailyPlanLogic";
+import { getMockScore } from "./mockTestLogic";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -34,6 +37,30 @@ export const appRouter = router({
         readingScore: skillScores[2],
       });
       return { ...snapshot, cards, skillScores, recommendation, vocabularyCount: vocabulary.length };
+    }),
+    dailyPlan: protectedProcedure.query(async ({ ctx }) => {
+      const snapshot = await getLearningSnapshot(ctx.user.id);
+      const focus = snapshot.analytics.skills.find(item => item.skill === snapshot.analytics.focusSkill);
+      const plan = buildDailyPlan({ focusSkill: snapshot.analytics.focusSkill, focusAccuracy: focus?.accuracy, dueCards: snapshot.dueCards.length });
+      const dueIds = new Set(snapshot.dueCards.map(card => card.vocabularyId));
+      const plannedCards = vocabulary.filter(item => dueIds.has(item.id)).slice(0, 8);
+      return { ...plan, plannedCards: (plannedCards.length ? plannedCards : vocabulary.slice(0, 8)).map(item => ({ id: item.id, term: item.term, meaning: item.meaning, topic: item.topic })), targetScore: snapshot.profile.targetScore };
+    }),
+    mockTest: protectedProcedure.query(() => mockQuestions.map(({ answer: _answer, ...question }) => question)),
+    submitMockTest: protectedProcedure.input(z.object({
+      answers: z.array(z.object({ questionId: z.string().min(1).max(32), selected: z.number().int().min(0).max(3) })).min(1).max(mockQuestions.length),
+      elapsedSeconds: z.number().int().min(1).max(7_200),
+    })).mutation(async ({ ctx, input }) => {
+      const answerMap = new Map(mockQuestions.map(question => [question.id, question]));
+      const uniqueAnswers = Array.from(new Map(input.answers.filter(answer => answerMap.has(answer.questionId)).map(answer => [answer.questionId, answer])).values());
+      const scored = uniqueAnswers.map(answer => ({ part: answerMap.get(answer.questionId)!.part, correct: answerMap.get(answer.questionId)!.answer === answer.selected }));
+      const result = getMockScore(scored, input.elapsedSeconds);
+      const listening = result.partStats.filter(item => item.part <= 4);
+      const reading = result.partStats.filter(item => item.part >= 5);
+      const average = (items: typeof result.partStats) => items.reduce((sum, item) => sum + item.correct, 0) / Math.max(1, items.reduce((sum, item) => sum + item.total, 0)) * 100;
+      const xp = calculateXp(result.rawScore, input.elapsedSeconds, result.rawScore >= 80 ? 20 : 0);
+      await recordMockTestAttempt({ userId: ctx.user.id, totalQuestions: result.total, correctAnswers: result.correct, rawScore: result.rawScore, durationSeconds: result.elapsedSeconds, partScores: result.partStats, listeningScore: Math.round(average(listening)), readingScore: Math.round(average(reading)), xp });
+      return { ...result, xp };
     }),
     review: protectedProcedure.input(z.object({ vocabularyId: z.string().min(1), quality: z.number().int().min(0).max(3) })).mutation(async ({ ctx, input }) => {
       const snapshot = await getLearningSnapshot(ctx.user.id);

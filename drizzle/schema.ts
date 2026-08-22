@@ -78,7 +78,20 @@ export const learningAchievements = mysqlTable("learning_achievements", {
   uniqueIndex("learning_achievements_user_code_unique").on(table.userId, table.code),
 ]);
 
+export const mockTestAttempts = mysqlTable("mock_test_attempts", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
+  mode: varchar("mode", { length: 24 }).default("simulation").notNull(),
+  totalQuestions: int("totalQuestions").notNull(),
+  correctAnswers: int("correctAnswers").notNull(),
+  rawScore: int("rawScore").notNull(),
+  durationSeconds: int("durationSeconds").notNull(),
+  partScoresJson: text("partScoresJson").notNull(),
+  completedAt: timestamp("completedAt").defaultNow().notNull(),
+});
+
 export type LearnerProfile = typeof learnerProfiles.$inferSelect;
 export type VocabularyProgress = typeof vocabularyProgress.$inferSelect;
 export type StudySession = typeof studySessions.$inferSelect;
 export type LearningAchievement = typeof learningAchievements.$inferSelect;
+export type MockTestAttempt = typeof mockTestAttempts.$inferSelect;

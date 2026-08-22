@@ -26,3 +26,9 @@
 - [x] Kiểm toán độ bao phủ từ vựng theo nhóm chủ đề, từ loại và phạm vi TOEIC 800+; bổ sung nội dung thiếu dựa trên ma trận có kiểm chứng.
 - [x] Rút gọn luồng điều hướng, ưu tiên việc học kế tiếp và cải thiện nhãn/hành động để UX dễ tiếp cận hơn.
 - [x] Chạy kiểm thử hồi quy, rà soát desktop/mobile ở cả light/dark mode và tạo bản lưu bàn giao bản sửa.
+- [x] Kiểm toán nội dung học, analytics và cơ chế audio hiện có để xác định điểm tích hợp an toàn.
+- [x] Xây dựng kế hoạch học 15 phút mỗi ngày tự phân bổ SRS, kỹ năng yếu và nội dung 800+ theo dữ liệu người dùng.
+- [x] Xây dựng thi thử TOEIC Part 1–7 theo phiên có đếm giờ, lưu kết quả từng phần và gợi ý cải thiện.
+- [x] Chuẩn bị dữ liệu audio–transcript có cấu trúc cho từ vựng/ví dụ và tích hợp phát âm có điều khiển tốc độ, transcript đồng bộ.
+- [x] Kiểm thử thời gian, lưu tiến độ, analytics và giao diện desktop/mobile; tạo bản lưu bàn giao mở rộng.
+- [x] Dùng giọng tổng hợp chất lượng cao làm audio tạm thời, đồng thời giữ cấu trúc audio URL/metadata để thay bằng bản ghi người thật sau này.

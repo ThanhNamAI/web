@@ -138,7 +138,14 @@ const finalizedSupplemental = uniqueSupplemental.map((item, index) => {
   const examples = makeExamples(item.term, item.partOfSpeech, item.topic);
   return { ...item, id: `plus-${index + 1}`, example: examples[0], examples };
 });
-const allVocabulary = [...rows.sort((a, b) => Number(a.id.replace("core-", "")) - Number(b.id.replace("core-", ""))), ...finalizedSupplemental];
+const withAudioMetadata = item => ({
+  ...item,
+  audio: {
+    word: { audioUrl: null, transcript: item.term, source: "device-synthetic", defaultRate: 0.88 },
+    examples: item.examples.map((transcript, index) => ({ id: `${item.id}-example-${index + 1}`, audioUrl: null, transcript, source: "device-synthetic", defaultRate: 0.88 })),
+  },
+});
+const allVocabulary = [...rows.sort((a, b) => Number(a.id.replace("core-", "")) - Number(b.id.replace("core-", ""))), ...finalizedSupplemental].map(withAudioMetadata);
 
 const missing = [];
 for (let id = 1; id <= 1000; id += 1) {
@@ -148,5 +155,6 @@ for (let id = 1; id <= 1000; id += 1) {
 
 const generated = `// Tự động tạo từ tài liệu người dùng cung cấp và danh sách TOEIC bổ sung. Không chỉnh sửa trực tiếp.\n\nexport type VocabularyItem = {\n  id: string;\n  term: string;\n  meaning: string;\n  partOfSpeech: string;\n  ipa: string;\n  example: string;\n  examples: string[];\n  topic: string;\n  source: string;\n};\n\nexport const coreVocabulary: VocabularyItem[] = ${JSON.stringify(rows, null, 2)};\n\nexport const supplementalVocabulary: VocabularyItem[] = ${JSON.stringify(finalizedSupplemental, null, 2)};\n\nexport const vocabulary: VocabularyItem[] = ${JSON.stringify(allVocabulary, null, 2)};\n\nexport const vocabularyExtractionReport = ${JSON.stringify({ coreRows: rows.length, supplementalRows: finalizedSupplemental.length, totalRows: allVocabulary.length, missingNumberedRows: missing }, null, 2)} as const;\n`;
 
-fs.writeFileSync(outputPath, generated, "utf8");
+const generatedWithAudioType = generated.replace(/  source: string;\n};/, "  source: string;\n  audio?: {\n    word: { audioUrl: string | null; transcript: string; source: string; defaultRate: number };\n    examples: Array<{ id: string; audioUrl: string | null; transcript: string; source: string; defaultRate: number }>;\n  };\n};");
+fs.writeFileSync(outputPath, generatedWithAudioType, "utf8");
 console.log(JSON.stringify({ coreRows: rows.length, supplementalRows: finalizedSupplemental.length, totalRows: allVocabulary.length, missingNumberedRows: missing }, null, 2));
