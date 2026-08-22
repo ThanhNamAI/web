@@ -23,10 +23,7 @@ export const appRouter = router({
   learning: router({
     dashboard: protectedProcedure.query(async ({ ctx }) => {
       const snapshot = await getLearningSnapshot(ctx.user.id);
-      const skillScores = ["grammar", "listening", "reading"].map(skill => {
-        const sessions = snapshot.recentSessions.filter(session => session.skill === skill);
-        return sessions.length ? Math.round(sessions.reduce((sum, session) => sum + session.score, 0) / sessions.length) : 0;
-      });
+      const skillScores = ["grammar", "listening", "reading"].map(skill => snapshot.analytics.skills.find(item => item.skill === skill)?.accuracy ?? 0);
       const dueIds = new Set(snapshot.dueCards.map(card => card.vocabularyId));
       const reviewCards = vocabulary.filter(item => dueIds.has(item.id));
       const cards = reviewCards.length ? reviewCards : vocabulary.slice(0, 20);

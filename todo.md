@@ -15,3 +15,9 @@
 - [x] Hoàn thiện thiết kế “A elegant and perfect style” với giao diện đáp ứng, khả năng truy cập tốt và chuyển động tinh tế.
 - [x] Viết và chạy kiểm thử Vitest cho logic SRS, chấm điểm và gợi ý học.
 - [x] Kiểm thử các luồng học, kiểm tra giao diện máy tính/điện thoại, sửa lỗi và tạo bản lưu bàn giao.
+- [x] Kiểm toán độ bao phủ của ngân hàng 1.250 từ, phát hiện trùng lặp/khoảng trống và bổ sung các từ TOEIC ưu tiên có ngữ cảnh thực tế.
+- [x] Mở rộng số lượng ví dụ ngữ cảnh, bài học kỹ năng và chế độ ôn để giảm lặp lại, bảo đảm nội dung có giá trị học tập.
+- [x] Thêm dark mode có thể chuyển đổi, bảo toàn độ tương phản và tùy chọn giảm chuyển động.
+- [x] Xây dựng huy hiệu streak, thành tích học tập và cơ chế động lực dựa trên hành vi học đã ghi nhận.
+- [x] Nâng cấp bảng tiến trình, thống kê kỹ năng và gợi ý cải thiện theo điểm yếu/sự thay đổi kết quả của từng người học.
+- [x] Nghiên cứu, kiểm thử hồi quy, rà soát OWASP/phân quyền và tạo bản lưu bàn giao cho đợt nâng cấp.

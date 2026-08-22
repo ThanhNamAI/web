@@ -1,7 +1,9 @@
 import { and, desc, eq, lte } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, learnerProfiles, studySessions, users, vocabularyProgress } from "../drizzle/schema";
+import { InsertUser, learnerProfiles, learningAchievements, studySessions, users, vocabularyProgress } from "../drizzle/schema";
 import { ENV } from './_core/env';
+import { getEarnedAchievementDefinitions } from "./achievementLogic";
+import { getSkillAnalytics } from "./analyticsLogic";
 
 let _db: ReturnType<typeof drizzle> | null = null;
 
@@ -115,8 +117,28 @@ export async function getLearningSnapshot(userId: number) {
     .orderBy(vocabularyProgress.dueAt)
     .limit(24);
   const recentSessions = await db.select().from(studySessions).where(eq(studySessions.userId, userId)).orderBy(desc(studySessions.completedAt)).limit(40);
+  const achievements = await db.select().from(learningAchievements).where(eq(learningAchievements.userId, userId)).orderBy(desc(learningAchievements.awardedAt));
 
-  return { profile, dueCards, recentSessions };
+  const analytics = getSkillAnalytics(recentSessions);
+  return { profile, dueCards, recentSessions, achievements, analytics };
+}
+
+async function syncLearningAchievements(userId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+  const profile = await ensureLearnerProfile(userId);
+  const sessions = await db.select().from(studySessions).where(eq(studySessions.userId, userId));
+  const progress = await db.select().from(vocabularyProgress).where(eq(vocabularyProgress.userId, userId));
+  const existing = await db.select().from(learningAchievements).where(eq(learningAchievements.userId, userId));
+  const existingCodes = new Set(existing.map(item => item.code));
+  const eligible = getEarnedAchievementDefinitions({
+    totalSessions: sessions.length,
+    totalReviews: progress.reduce((sum, item) => sum + item.repetitions, 0),
+    totalXp: profile.totalXp,
+    currentStreak: profile.currentStreak,
+  }).filter(item => !existingCodes.has(item.code));
+
+  if (eligible.length) await db.insert(learningAchievements).values(eligible.map(item => ({ userId, ...item })));
 }
 
 export async function saveVocabularyReview(input: {
@@ -175,6 +197,7 @@ export async function recordStudySession(input: {
     longestStreak: Math.max(profile.longestStreak, currentStreak),
     lastStudyDate: today,
   }).where(eq(learnerProfiles.userId, input.userId));
+  await syncLearningAchievements(input.userId);
 }
 
 export async function updateLearnerSettings(userId: number, values: { targetScore?: number; weeklyGoalMinutes?: number; diagnosticScore?: number; preferredAccent?: string }) {

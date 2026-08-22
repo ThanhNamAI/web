@@ -1,14 +1,16 @@
-import { BookOpen, BrainCircuit, Gamepad2, House, LogIn, Sparkles, UserRound } from "lucide-react";
+import { BookOpen, BrainCircuit, Gamepad2, House, Layers3, LogIn, Sparkles, UserRound } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { startLogin } from "@/const";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "./ThemeToggle";
 
 const nav = [
   { href: "/", label: "Tổng quan", icon: House },
   { href: "/learn", label: "Thẻ ôn SRS", icon: BrainCircuit },
   { href: "/vocabulary", label: "Ngân hàng từ", icon: BookOpen },
   { href: "/practice", label: "Luyện kỹ năng", icon: Sparkles },
+  { href: "/modes", label: "Phòng học", icon: Layers3 },
   { href: "/games", label: "Đấu trường", icon: Gamepad2 },
   { href: "/profile", label: "Hồ sơ", icon: UserRound },
 ];
@@ -32,6 +34,7 @@ export function StudyShell({ children }: { children: React.ReactNode }) {
           })}
         </nav>
         <div className="sidebar-bottom">
+          <ThemeToggle />
           <div className="daily-dot"><span>07</span><p><strong>Chuỗi ngày</strong><small>Mỗi ngày một bước</small></p></div>
           {isAuthenticated ? <div className="user-summary"><span>{user?.name?.slice(0, 1).toUpperCase() ?? "U"}</span><p><strong>{user?.name ?? "Học viên"}</strong><small>Đồng bộ tiến độ</small></p></div> : <button onClick={() => startLogin()} className="login-quiet"><LogIn /> Đăng nhập để lưu tiến độ</button>}
         </div>

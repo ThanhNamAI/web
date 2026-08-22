@@ -4,10 +4,12 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import "./dark-mode.css";
 import Games from "./pages/Games";
 import Diagnostic from "./pages/Diagnostic";
 import Home from "./pages/Home";
 import Learn from "./pages/Learn";
+import Modes from "./pages/Modes";
 import Practice from "./pages/Practice";
 import Profile from "./pages/Profile";
 import Vocabulary from "./pages/Vocabulary";
@@ -18,6 +20,7 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/learn"} component={Learn} />
+      <Route path={"/modes"} component={Modes} />
       <Route path={"/vocabulary"} component={Vocabulary} />
       <Route path={"/practice"} component={Practice} />
       <Route path={"/games"} component={Games} />
@@ -40,6 +43,7 @@ function App() {
     <ErrorBoundary>
       <ThemeProvider
         defaultTheme="light"
+        switchable
       >
         <TooltipProvider>
           <Toaster />

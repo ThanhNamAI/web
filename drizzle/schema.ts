@@ -68,6 +68,17 @@ export const studySessions = mysqlTable("study_sessions", {
   completedAt: timestamp("completedAt").defaultNow().notNull(),
 });
 
+export const learningAchievements = mysqlTable("learning_achievements", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
+  code: varchar("code", { length: 48 }).notNull(),
+  evidence: varchar("evidence", { length: 120 }).notNull(),
+  awardedAt: timestamp("awardedAt").defaultNow().notNull(),
+}, table => [
+  uniqueIndex("learning_achievements_user_code_unique").on(table.userId, table.code),
+]);
+
 export type LearnerProfile = typeof learnerProfiles.$inferSelect;
 export type VocabularyProgress = typeof vocabularyProgress.$inferSelect;
 export type StudySession = typeof studySessions.$inferSelect;
+export type LearningAchievement = typeof learningAchievements.$inferSelect;

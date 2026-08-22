@@ -1,0 +1,60 @@
+{
+  "totalItems": 1250,
+  "uniqueTerms": 1250,
+  "duplicateTerms": 0,
+  "duplicates": [],
+  "topics": [
+    [
+      "Tài chính",
+      194
+    ],
+    [
+      "Nhân sự",
+      178
+    ],
+    [
+      "Kinh doanh",
+      146
+    ],
+    [
+      "Sản xuất",
+      146
+    ],
+    [
+      "Du lịch",
+      145
+    ],
+    [
+      "Văn phòng",
+      137
+    ],
+    [
+      "Công nghệ",
+      125
+    ],
+    [
+      "Dịch vụ khách hàng",
+      122
+    ],
+    [
+      "Tiếp thị",
+      30
+    ],
+    [
+      "Cụm động từ",
+      15
+    ],
+    [
+      "Cụm từ",
+      12
+    ]
+  ],
+  "quality": {
+    "withoutIpa": 0,
+    "missingIpaTerms": [],
+    "withoutExample": 0,
+    "totalExampleVariants": 3750,
+    "exactDuplicateExamples": 0,
+    "multiWordTerms": 137
+  }
+}
