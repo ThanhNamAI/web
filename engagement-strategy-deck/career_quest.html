@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container { width: 1280px; min-height: 720px; background: #F3E5F5; color: #12122A; font-family: Arial, Helvetica, sans-serif; display: grid; grid-template-columns: 1fr 430px; gap: 34px; padding-top: 56px; }
+    .content { margin-left: 82px; min-height: 608px; display: flex; flex-direction: column; }
+    .eyebrow { font-size: 14px; font-weight: 900; letter-spacing: 2px; color: #5D4B74; }
+    h1 { margin-top: 15px; max-width: 680px; font-size: 48px; line-height: 1.04; letter-spacing: -1.8px; font-weight: 900; }
+    .highlight { background: #FFEB3B; padding: 0 8px 3px; }
+    .intro { margin-top: 21px; max-width: 650px; font-size: 21px; line-height: 1.35; color: #4A4A4A; font-weight: 500; }
+    .rule { margin-top: 28px; width: 690px; min-height: 5px; background: #12122A; }
+    .journey { margin-top: 42px; width: 710px; display: grid; grid-template-columns: repeat(5, 1fr); column-gap: 10px; position: relative; }
+    .journey::before { content: ''; position: absolute; top: 21px; left: 28px; width: 640px; min-height: 7px; background: #12122A; z-index: 0; }
+    .step { position: relative; z-index: 1; min-height: 142px; }
+    .node { width: 50px; min-height: 50px; border-radius: 50%; border: 3px solid #12122A; background: #F3E5F5; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 17px; }
+    .step:nth-child(1) .node, .step:nth-child(3) .node, .step:nth-child(5) .node { background: #FFEB3B; }
+    .stage { margin-top: 16px; width: 118px; font-size: 15px; line-height: 1.12; font-weight: 900; }
+    .stage small { display: block; margin-top: 7px; font-size: 12px; line-height: 1.2; color: #5D4B74; font-weight: 700; }
+    .mastery { margin-top: auto; width: 690px; border-top: 2px solid #12122A; padding-top: 18px; display: flex; gap: 22px; align-items: flex-start; }
+    .mastery-label { min-width: 146px; font-size: 14px; letter-spacing: 1.1px; font-weight: 900; color: #5D4B74; }
+    .mastery-copy { max-width: 500px; font-size: 18px; line-height: 1.35; font-weight: 700; }
+    .mastery-copy b { background: #FFEB3B; padding: 2px 5px; }
+    .visual { min-height: 608px; margin-right: 72px; border-left: 3px solid #12122A; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .visual-label { width: 330px; margin-bottom: 18px; font-size: 13px; font-weight: 900; letter-spacing: 1.6px; color: #5D4B74; }
+    .app-image { width: 390px; height: 390px; object-fit: contain; display: block; }
+    .caption { width: 330px; margin-top: 10px; font-size: 16px; line-height: 1.3; color: #4A4A4A; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <section class="content">
+      <div class="eyebrow">P1 · PROGRESSION DESIGN</div>
+      <h1>Career Quest biến <span class="highlight">0–800+</span><br>thành câu chuyện công sở.</h1>
+      <p class="intro">Điểm TOEIC là đích đến. Người học cần nhìn thấy các năng lực nghề nghiệp nhỏ hơn mà họ đang mở khóa trên đường đi.</p>
+      <div class="rule"></div>
+      <div class="journey">
+        <div class="step"><div class="node">01</div><div class="stage">Onboarding<small>từ nền tảng</small></div></div>
+        <div class="step"><div class="node">02</div><div class="stage">Họp nhóm<small>nghe & phản hồi</small></div></div>
+        <div class="step"><div class="node">03</div><div class="stage">Khách hàng<small>dịch vụ & email</small></div></div>
+        <div class="step"><div class="node">04</div><div class="stage">Dự án<small>đọc & suy luận</small></div></div>
+        <div class="step"><div class="node">05</div><div class="stage">Điều phối<small>mục tiêu 800+</small></div></div>
+      </div>
+      <div class="mastery">
+        <div class="mastery-label">LUẬT MỞ KHÓA</div>
+        <div class="mastery-copy">Mỗi chặng mở khi người học đạt <b>mastery theo bối cảnh</b> — không chỉ tích lũy XP hoặc làm đủ số câu.</div>
+      </div>
+    </section>
+    <aside class="visual">
+      <div class="visual-label">TRẢI NGHIỆM TRỰC QUAN</div>
+      <img class="app-image" src="/home/ubuntu/upload/search_images/IyDogvT2ECuR.jpg" alt="Minh họa giao diện ứng dụng học ngôn ngữ trên di động" />
+      <div class="caption">Một bản đồ hành trình tốt cho người học biết: “Mình đang đi đâu, và điều gì mở khóa chặng tiếp theo?”</div>
+    </aside>
+  </div>
+</body>
+</html>

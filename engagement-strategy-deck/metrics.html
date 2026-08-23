@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container { width: 1280px; min-height: 720px; background: #F3E5F5; color: #12122A; font-family: Arial, Helvetica, sans-serif; padding-top: 54px; }
+    .header { margin: 0 84px; display: flex; justify-content: space-between; align-items: flex-end; }
+    .eyebrow { font-size: 14px; letter-spacing: 2px; font-weight: 900; color: #5D4B74; }
+    h1 { margin-top: 13px; font-size: 48px; line-height: 1.02; letter-spacing: -1.8px; font-weight: 900; }
+    .statement { width: 352px; font-size: 19px; line-height: 1.3; font-weight: 700; color: #4A4A4A; }
+    .statement b { background: #FFEB3B; padding: 2px 6px; color: #12122A; }
+    .rule { margin: 24px 84px 0; min-height: 8px; background: #12122A; }
+    .matrix { margin: 34px 84px 0; display: grid; grid-template-columns: 1fr 1fr; min-height: 398px; border-top: 3px solid #12122A; border-bottom: 3px solid #12122A; }
+    .cell { padding: 24px 28px 0; min-height: 199px; position: relative; }
+    .cell:nth-child(odd) { border-right: 3px solid #12122A; }
+    .cell:nth-child(-n+2) { border-bottom: 3px solid #12122A; }
+    .cell:nth-child(2) { background: #FFEB3B; }
+    .cell:nth-child(3) { background: #12122A; color: #F3E5F5; }
+    .cell-head { display: flex; align-items: center; gap: 15px; }
+    .marker { width: 43px; min-height: 43px; border-radius: 50%; background: #12122A; color: #FFEB3B; display: flex; align-items: center; justify-content: center; font-size: 16px; letter-spacing: 1px; font-weight: 900; }
+    .cell:nth-child(3) .marker { background: #FFEB3B; color: #12122A; }
+    .kind { font-size: 13px; letter-spacing: 1.8px; font-weight: 900; color: #5D4B74; }
+    .cell:nth-child(3) .kind { color: #D9CCE6; }
+    h2 { margin-top: 9px; font-size: 28px; line-height: 1; font-weight: 900; }
+    .cell p { margin-top: 15px; max-width: 420px; font-size: 17px; line-height: 1.35; color: #4A4A4A; font-weight: 600; }
+    .cell:nth-child(3) p { color: #F3E5F5; }
+    .metric-line { margin-top: 15px; font-size: 15px; letter-spacing: 0.2px; font-weight: 900; }
+    .metric-line span { color: #5D4B74; }
+    .cell:nth-child(3) .metric-line span { color: #FFEB3B; }
+    .decision { margin: 22px 84px 0; display: flex; align-items: center; gap: 20px; }
+    .decision-label { min-width: 172px; min-height: 50px; background: #FFEB3B; border: 3px solid #12122A; border-radius: 17px; display: flex; align-items: center; justify-content: center; font-size: 13px; letter-spacing: 1.3px; font-weight: 900; }
+    .decision-text { font-size: 19px; line-height: 1.3; font-weight: 700; }
+    .decision-text b { text-decoration: underline; text-decoration-thickness: 4px; text-decoration-color: #FFEB3B; }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="header">
+      <div>
+        <div class="eyebrow">HỆ ĐO LƯỜNG SẢN PHẨM</div>
+        <h1>Gắn kết phải tạo <span style="background:#FFEB3B; padding:1px 8px 4px;">tiến bộ.</span></h1>
+      </div>
+      <div class="statement">Không xem retention là thành công nếu người học không <b>nhớ tốt hơn</b> và sẵn sàng hơn cho bài thi.</div>
+    </div>
+    <div class="rule"></div>
+    <section class="matrix">
+      <div class="cell">
+        <div class="cell-head"><div class="marker">01</div><div class="kind">KHỞI ĐỘNG</div></div>
+        <h2>Activation</h2>
+        <p>Người học có hoàn thành quest đầu tiên trong 24 giờ và hiểu rõ bước tiếp theo hay không?</p>
+        <div class="metric-line"><span>THEO DÕI:</span> first quest completion · CTA-to-start</div>
+      </div>
+      <div class="cell">
+        <div class="cell-head"><div class="marker">02</div><div class="kind">NHỊP HỌC</div></div>
+        <h2>Habit</h2>
+        <p>Người học có quay lại sau ngày nghỉ, duy trì buổi học tuần và không bị áp lực vì streak?</p>
+        <div class="metric-line"><span>THEO DÕI:</span> D1/D7 retention · sessions/week</div>
+      </div>
+      <div class="cell">
+        <div class="cell-head"><div class="marker">03</div><div class="kind">NĂNG LỰC</div></div>
+        <h2>Learning</h2>
+        <p>Kiến thức có được gọi lại đúng sau khi giãn cách, và lỗi lặp lại có giảm theo từng kỹ năng không?</p>
+        <div class="metric-line"><span>THEO DÕI:</span> 7/30-day recall · repeated errors</div>
+      </div>
+      <div class="cell">
+        <div class="cell-head"><div class="marker">04</div><div class="kind">SẴN SÀNG THI</div></div>
+        <h2>Exam readiness</h2>
+        <p>Điểm, độ chính xác theo Part và thời gian mock test có chuyển biến theo hướng ổn định hơn không?</p>
+        <div class="metric-line"><span>THEO DÕI:</span> Part accuracy · time · mock trend</div>
+      </div>
+    </section>
+    <div class="decision"><div class="decision-label">DECISION GATE</div><div class="decision-text">Chỉ mở rộng tính năng khi <b>Habit + Learning</b> cùng cải thiện; nếu chỉ có lượt mở app, quay lại chẩn đoán trải nghiệm học.</div></div>
+  </div>
+</body>
+</html>

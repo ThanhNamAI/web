@@ -1,4 +1,4 @@
-import { double, int, mysqlEnum, mysqlTable, text, timestamp, uniqueIndex, varchar } from "drizzle-orm/mysql-core";
+import { double, index, int, mysqlEnum, mysqlTable, text, timestamp, uniqueIndex, varchar } from "drizzle-orm/mysql-core";
 
 /**
  * Core user table backing auth flow.
@@ -90,8 +90,62 @@ export const mockTestAttempts = mysqlTable("mock_test_attempts", {
   completedAt: timestamp("completedAt").defaultNow().notNull(),
 });
 
+export const lessons = mysqlTable("lessons", {
+  id: int("id").autoincrement().primaryKey(),
+  slug: varchar("slug", { length: 120 }).notNull(),
+  title: varchar("title", { length: 160 }).notNull(),
+  summary: text("summary").notNull(),
+  skill: mysqlEnum("skill", ["grammar", "listening", "reading", "speaking", "mixed"]).default("mixed").notNull(),
+  level: varchar("level", { length: 32 }).default("Foundation").notNull(),
+  estimatedMinutes: int("estimatedMinutes").default(15).notNull(),
+  status: mysqlEnum("status", ["draft", "published"]).default("draft").notNull(),
+  authorId: int("authorId").notNull().references(() => users.id),
+  publishedAt: timestamp("publishedAt"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+}, table => [
+  uniqueIndex("lessons_slug_unique").on(table.slug),
+  index("lessons_status_created_idx").on(table.status, table.createdAt),
+]);
+
+export const lessonSteps = mysqlTable("lesson_steps", {
+  id: int("id").autoincrement().primaryKey(),
+  lessonId: int("lessonId").notNull().references(() => lessons.id, { onDelete: "cascade" }),
+  position: int("position").notNull(),
+  stepType: mysqlEnum("stepType", ["warmup", "explain", "quiz", "listen", "recap"]).notNull(),
+  title: varchar("title", { length: 160 }).notNull(),
+  body: text("body").notNull(),
+  prompt: text("prompt"),
+  optionsJson: text("optionsJson"),
+  answerIndex: int("answerIndex"),
+  explanation: text("explanation"),
+  audioText: text("audioText"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+}, table => [
+  uniqueIndex("lesson_steps_lesson_position_unique").on(table.lessonId, table.position),
+  index("lesson_steps_lesson_idx").on(table.lessonId),
+]);
+
+export const lessonProgress = mysqlTable("lesson_progress", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
+  lessonId: int("lessonId").notNull().references(() => lessons.id, { onDelete: "cascade" }),
+  currentStep: int("currentStep").default(0).notNull(),
+  score: int("score").default(0).notNull(),
+  status: mysqlEnum("status", ["in_progress", "completed"]).default("in_progress").notNull(),
+  completedAt: timestamp("completedAt"),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+}, table => [
+  uniqueIndex("lesson_progress_user_lesson_unique").on(table.userId, table.lessonId),
+  index("lesson_progress_lesson_idx").on(table.lessonId),
+]);
+
 export type LearnerProfile = typeof learnerProfiles.$inferSelect;
 export type VocabularyProgress = typeof vocabularyProgress.$inferSelect;
 export type StudySession = typeof studySessions.$inferSelect;
 export type LearningAchievement = typeof learningAchievements.$inferSelect;
 export type MockTestAttempt = typeof mockTestAttempts.$inferSelect;
+export type Lesson = typeof lessons.$inferSelect;
+export type LessonStep = typeof lessonSteps.$inferSelect;
+export type LessonProgress = typeof lessonProgress.$inferSelect;

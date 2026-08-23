@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BookOpen, BrainCircuit, ClipboardCheck, Gamepad2, House, Layers3, LogIn, Menu, Sparkles, TimerReset, UserRound, X } from "lucide-react";
+import { BookOpen, BrainCircuit, ClipboardCheck, FilePenLine, Gamepad2, House, Layers3, LogIn, Menu, Sparkles, TimerReset, UserRound, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { startLogin } from "@/const";
@@ -11,6 +11,7 @@ const nav = [
   { href: "/learn", label: "Thẻ ôn SRS", icon: BrainCircuit },
   { href: "/vocabulary", label: "Ngân hàng từ", icon: BookOpen },
   { href: "/practice", label: "Luyện kỹ năng", icon: Sparkles },
+  { href: "/lessons", label: "Bài học dẫn dắt", icon: BookOpen },
   { href: "/modes", label: "Phòng học", icon: Layers3 },
   { href: "/daily-plan", label: "Kế hoạch 15 phút", icon: TimerReset },
   { href: "/mock-test", label: "Thi thử 7 Part", icon: ClipboardCheck },
@@ -38,6 +39,7 @@ export function StudyShell({ children }: { children: React.ReactNode }) {
           })}
         </nav>
         <div className="sidebar-bottom">
+          {user?.role === "admin" && <Link href="/admin/lessons" className="nav-link admin-nav-link"><FilePenLine /><span>Studio bài học</span></Link>}
           <ThemeToggle />
           <div className="daily-dot"><span>07</span><p><strong>Chuỗi ngày</strong><small>Mỗi ngày một bước</small></p></div>
           {isAuthenticated ? <div className="user-summary"><span>{user?.name?.slice(0, 1).toUpperCase() ?? "U"}</span><p><strong>{user?.name ?? "Học viên"}</strong><small>Đồng bộ tiến độ</small></p></div> : <button onClick={() => startLogin()} className="login-quiet"><LogIn /> Đăng nhập để lưu tiến độ</button>}

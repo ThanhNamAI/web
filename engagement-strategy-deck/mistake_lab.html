@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container { width: 1280px; min-height: 720px; background: #F3E5F5; color: #12122A; font-family: Arial, Helvetica, sans-serif; padding-top: 56px; }
+    .header { margin: 0 86px; display: flex; align-items: flex-end; justify-content: space-between; }
+    .eyebrow { font-size: 14px; letter-spacing: 2px; font-weight: 900; color: #5D4B74; }
+    h1 { margin-top: 13px; max-width: 820px; font-size: 48px; line-height: 1.02; letter-spacing: -1.8px; font-weight: 900; }
+    .tag { width: 176px; min-height: 62px; display: flex; align-items: center; justify-content: center; background: #FFEB3B; border: 3px solid #12122A; border-radius: 18px; box-shadow: 5px 5px 0 #12122A; font-size: 14px; letter-spacing: 1px; font-weight: 900; text-align: center; }
+    .insight { margin: 24px 86px 0; max-width: 940px; font-size: 22px; line-height: 1.35; color: #4A4A4A; font-weight: 600; }
+    .insight b { color: #12122A; }
+    .flow { margin: 64px 86px 0; position: relative; display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; }
+    .rail { position: absolute; top: 54px; left: 77px; right: 78px; min-height: 12px; background: #12122A; z-index: 0; }
+    .stage { min-height: 287px; position: relative; z-index: 1; }
+    .node { width: 112px; min-height: 112px; border-radius: 56px; border: 4px solid #12122A; background: #F3E5F5; display: flex; align-items: center; justify-content: center; font-size: 38px; font-weight: 900; }
+    .stage:nth-child(2) .node { background: #FFEB3B; }
+    .stage:nth-child(4) .node { background: #FFFFFF; }
+    .stage:nth-child(5) .node { background: #6A5C85; color: #FFFFFF; }
+    .step { margin-top: 23px; font-size: 13px; font-weight: 900; letter-spacing: 1.7px; color: #5D4B74; }
+    h2 { margin-top: 9px; font-size: 28px; line-height: 1; font-weight: 900; }
+    .stage p { margin-top: 12px; max-width: 238px; font-size: 18px; line-height: 1.32; color: #4A4A4A; font-weight: 500; }
+    .metric { margin: 0 86px; border-top: 3px solid #12122A; display: flex; align-items: center; justify-content: space-between; padding-top: 20px; }
+    .metric span { font-size: 18px; font-weight: 700; color: #4A4A4A; }
+    .metric strong { font-size: 24px; font-weight: 900; }
+    .metric b { background: #FFEB3B; padding: 2px 8px; }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="header">
+      <div>
+        <div class="eyebrow">CƠ CHẾ HỌC TỪ LỖI</div>
+        <h1>Mistake Lab biến lỗi thành kế hoạch ôn</h1>
+      </div>
+      <div class="tag">KHÔNG CHỈ<br>ĐÚNG / SAI</div>
+    </div>
+    <p class="insight">Mỗi lỗi phải dẫn đến một hành động kế tiếp: <b>hiểu nguyên nhân, làm lại trong ngữ cảnh mới và kiểm tra khả năng nhớ lâu.</b></p>
+    <div class="flow">
+      <div class="rail"></div>
+      <section class="stage"><div class="node">1</div><div class="step">PHÁT HIỆN</div><h2>Sai ở đâu?</h2><p>Nhóm lỗi theo từ loại, thì, nối âm, suy luận Part 7 hoặc paraphrase.</p></section>
+      <section class="stage"><div class="node">2</div><div class="step">GIẢI THÍCH</div><h2>Vì sao sai?</h2><p>Một giải thích ngắn, chỉ đúng bẫy và khoảng cách đến đáp án đúng.</p></section>
+      <section class="stage"><div class="node">3</div><div class="step">CỦNG CỐ</div><h2>Làm lại ngay</h2><p>Một câu phản hồi tức thì, sau đó một câu mới để tránh học thuộc đáp án.</p></section>
+      <section class="stage"><div class="node">4</div><div class="step">CHỨNG MINH</div><h2>Gặp lại sau</h2><p>SRS đưa lỗi quay lại theo ngữ cảnh khác để xác minh mastery thực sự.</p></section>
+    </div>
+    <div class="metric"><span>Chỉ số quyết định: <strong>tỷ lệ sửa đúng khi gặp lại</strong></span><b>7 NGÀY · 30 NGÀY</b></div>
+  </div>
+</body>
+</html>

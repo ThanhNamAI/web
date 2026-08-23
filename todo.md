@@ -52,3 +52,14 @@
 - [ ] Đồng bộ toàn bộ mã nguồn TOEIC Quest tại checkpoint hiện tại lên repository GitHub do người dùng chỉ định.
 - [x] Nghiên cứu và xếp hạng các tính năng tăng mức độ gắn kết học TOEIC, có lộ trình triển khai phù hợp sản phẩm.
 - [ ] Xác minh và đẩy commit toàn bộ mã nguồn TOEIC Quest lên repository ThanhNamAI/web trên nhánh main.
+- [x] Đóng gói toàn bộ mã nguồn TOEIC Quest thành tệp ZIP tải trực tiếp, loại trừ tệp bí mật và phụ thuộc tái tạo được.
+- [x] Rà soát lỗi còn lại, nợ kỹ thuật và cơ hội nâng cấp trải nghiệm học để đề xuất ưu tiên triển khai tiếp theo.
+- [x] Lập báo cáo QA phân biệt rõ lỗi đã tái hiện, nợ kỹ thuật và giới hạn chưa kiểm chứng bằng OAuth session thực.
+- [x] Chuẩn bị và tạo slide trình bày chiến lược cải tiến TOEIC Quest, ưu tiên chất lượng học tập và mức độ gắn kết người học.
+- [x] Kiểm toán luồng học, mô hình dữ liệu, OAuth và phân quyền hiện có trước khi mở rộng hệ thống bài học.
+- [x] Thiết kế và xây dựng chế độ quản trị nội dung OAuth-only để quản lý bài học an toàn theo vai trò.
+- [x] Bổ sung trải nghiệm bài học đa chặng, hấp dẫn và có theo dõi tiến độ; xác nhận hồi quy SRS/mock trước khi hoàn tất.
+- [x] Cập nhật README với ma trận vai trò/quyền OAuth và hướng dẫn cấp admin an toàn, không lưu tài khoản hoặc mật khẩu thật.
+- [x] Viết kiểm thử và rà soát bảo mật/UI cho đợt nâng cấp quản trị–bài học.
+- [x] Lưu checkpoint bàn giao cho đợt nâng cấp quản trị–bài học.
+- [x] Rà soát trực quan desktop/mobile các route SRS, kế hoạch 15 phút và mock test sau khi thêm navigation/route bài học.

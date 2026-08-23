@@ -2,13 +2,42 @@ import { COOKIE_NAME } from "@shared/const";
 import { vocabulary } from "../shared/vocabulary.generated";
 import { mockQuestions } from "../shared/mockTestContent";
 import { z } from "zod";
-import { getLearningSnapshot, recordMockTestAttempt, recordStudySession, saveVocabularyReview, updateLearnerSettings } from "./db";
+import { checkLessonStepAnswer, createLesson, deleteLesson, getAdminLesson, getAdminLessons, getLearningSnapshot, getLessonBySlug, getPublishedLessons, recordMockTestAttempt, recordStudySession, saveLessonProgress, saveVocabularyReview, updateLearnerSettings, updateLesson } from "./db";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
-import { protectedProcedure, publicProcedure, router } from "./_core/trpc";
+import { adminProcedure, protectedProcedure, publicProcedure, router } from "./_core/trpc";
 import { calculateSrsUpdate, calculateXp, getNextSessionRecommendation } from "./learningLogic";
 import { buildDailyPlan } from "./dailyPlanLogic";
 import { getMockScore } from "./mockTestLogic";
+
+const lessonStepInput = z.object({
+  stepType: z.enum(["warmup", "explain", "quiz", "listen", "recap"]),
+  title: z.string().trim().min(2).max(160),
+  body: z.string().trim().min(2).max(4_000),
+  prompt: z.string().trim().max(2_000).optional().nullable(),
+  options: z.array(z.string().trim().min(1).max(280)).min(2).max(4).optional(),
+  answerIndex: z.number().int().min(0).max(3).optional().nullable(),
+  explanation: z.string().trim().max(2_000).optional().nullable(),
+  audioText: z.string().trim().max(2_000).optional().nullable(),
+}).superRefine((step, context) => {
+  if ((step.stepType === "quiz" || step.stepType === "listen") && (!step.options || step.answerIndex === null || step.answerIndex === undefined)) {
+    context.addIssue({ code: "custom", message: "Bước quiz/nghe cần lựa chọn và đáp án đúng.", path: ["options"] });
+  }
+  if (step.options && step.answerIndex !== null && step.answerIndex !== undefined && step.answerIndex >= step.options.length) {
+    context.addIssue({ code: "custom", message: "Đáp án đúng phải nằm trong danh sách lựa chọn.", path: ["answerIndex"] });
+  }
+});
+
+const lessonInput = z.object({
+  slug: z.string().trim().min(3).max(120).regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "Slug chỉ dùng chữ thường, số và dấu gạch ngang."),
+  title: z.string().trim().min(4).max(160),
+  summary: z.string().trim().min(12).max(1_200),
+  skill: z.enum(["grammar", "listening", "reading", "speaking", "mixed"]),
+  level: z.string().trim().min(2).max(32),
+  estimatedMinutes: z.number().int().min(3).max(90),
+  status: z.enum(["draft", "published"]),
+  steps: z.array(lessonStepInput).min(1).max(12),
+});
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -77,6 +106,29 @@ export const appRouter = router({
       return { xp };
     }),
     updateSettings: protectedProcedure.input(z.object({ targetScore: z.number().int().min(100).max(990).optional(), weeklyGoalMinutes: z.number().int().min(30).max(1_000).optional(), diagnosticScore: z.number().int().min(0).max(990).optional(), preferredAccent: z.enum(["en-US", "en-GB"]).optional() })).mutation(({ ctx, input }) => updateLearnerSettings(ctx.user.id, input)),
+  }),
+  lessons: router({
+    list: publicProcedure.query(() => getPublishedLessons()),
+    bySlug: publicProcedure.input(z.object({ slug: z.string().trim().min(3).max(120) })).query(async ({ ctx, input }) => {
+      const result = await getLessonBySlug(input.slug, { userId: ctx.user?.id });
+      if (!result) return undefined;
+      return { ...result, steps: result.steps.map(({ answerIndex: _answerIndex, ...step }) => step) };
+    }),
+    checkAnswer: protectedProcedure.input(z.object({ stepId: z.number().int().positive(), selected: z.number().int().min(0).max(3) })).mutation(({ input }) => checkLessonStepAnswer(input.stepId, input.selected)),
+    saveProgress: protectedProcedure.input(z.object({ lessonId: z.number().int().positive(), currentStep: z.number().int().min(0).max(12), score: z.number().int().min(0).max(100), completed: z.boolean() })).mutation(async ({ ctx, input }) => {
+      const result = await saveLessonProgress({ userId: ctx.user.id, ...input });
+      if (input.completed && !result.wasCompleted) await recordStudySession({ userId: ctx.user.id, activityType: "guided-lesson", skill: "mixed", score: input.score, xp: calculateXp(input.score, 900, 15), durationSeconds: 900 });
+      return result;
+    }),
+  }),
+  admin: router({
+    lessons: router({
+      list: adminProcedure.query(() => getAdminLessons()),
+      detail: adminProcedure.input(z.object({ id: z.number().int().positive() })).query(({ input }) => getAdminLesson(input.id)),
+      create: adminProcedure.input(lessonInput).mutation(({ ctx, input }) => createLesson(ctx.user.id, input)),
+      update: adminProcedure.input(z.object({ id: z.number().int().positive(), lesson: lessonInput })).mutation(({ input }) => updateLesson(input.id, input.lesson)),
+      delete: adminProcedure.input(z.object({ id: z.number().int().positive() })).mutation(({ input }) => deleteLesson(input.id)),
+    }),
   }),
 });
 

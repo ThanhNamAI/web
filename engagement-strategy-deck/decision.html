@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container { width: 1280px; min-height: 720px; background: #12122A; color: #F3E5F5; font-family: Arial, Helvetica, sans-serif; padding-top: 64px; display: flex; flex-direction: column; }
+    .top { margin: 0 86px; display: flex; justify-content: space-between; align-items: flex-start; }
+    .eyebrow { font-size: 14px; letter-spacing: 2.2px; font-weight: 900; color: #FFEB3B; }
+    h1 { margin-top: 17px; max-width: 840px; font-size: 58px; line-height: 0.98; letter-spacing: -2.5px; font-weight: 900; }
+    .stamp { width: 178px; min-height: 178px; border-radius: 50%; background: #FFEB3B; color: #12122A; display: flex; flex-direction: column; align-items: center; justify-content: center; transform: rotate(6deg); }
+    .stamp strong { font-size: 46px; line-height: 0.85; font-weight: 900; }
+    .stamp span { margin-top: 10px; width: 118px; text-align: center; font-size: 13px; line-height: 1.12; letter-spacing: 1.1px; font-weight: 900; }
+    .decisions { margin: 64px 86px 0; display: grid; grid-template-columns: 1fr 1fr 1fr; border-top: 3px solid #F3E5F5; }
+    .decision { min-height: 212px; padding-top: 22px; }
+    .decision + .decision { border-left: 3px solid #F3E5F5; padding-left: 28px; }
+    .decision:first-child { padding-right: 28px; }
+    .number { font-size: 16px; letter-spacing: 2px; font-weight: 900; color: #FFEB3B; }
+    .decision h2 { margin-top: 15px; max-width: 260px; font-size: 29px; line-height: 1.03; font-weight: 900; }
+    .decision p { margin-top: 13px; max-width: 295px; font-size: 17px; line-height: 1.34; color: #D8D2E4; font-weight: 600; }
+    .cta { margin: auto 86px 54px; min-height: 80px; background: #FFEB3B; color: #12122A; display: flex; align-items: center; justify-content: space-between; padding: 0 29px; }
+    .cta strong { font-size: 25px; line-height: 1; font-weight: 900; }
+    .cta span { max-width: 430px; text-align: right; font-size: 17px; line-height: 1.25; font-weight: 800; }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="top">
+      <div>
+        <div class="eyebrow">QUYẾT ĐỊNH ĐỀ XUẤT</div>
+        <h1>Bắt đầu từ niềm tin.<br>Giữ chân bằng <span style="color:#FFEB3B;">tiến bộ thật.</span></h1>
+      </div>
+      <div class="stamp"><strong>90</strong><span>NGÀY ƯU TIÊN</span></div>
+    </div>
+    <section class="decisions">
+      <article class="decision"><div class="number">THÁNG 01</div><h2>P0: Chất lượng & niềm tin</h2><p>E2E, OAuth QA, dark-mode maintainability và trải nghiệm tải mobile rõ ràng.</p></article>
+      <article class="decision"><div class="number">THÁNG 02</div><h2>Quest Loop & Career Quest</h2><p>Biến SRS, lỗi sai và bối cảnh công sở thành nhịp học hằng ngày có câu chuyện.</p></article>
+      <article class="decision"><div class="number">THÁNG 03</div><h2>Nghe–nói, rồi thử nghiệm</h2><p>Shadowing Sprint trước; Social/AI chỉ mở rộng khi đo được learning và retention cùng tích cực.</p></article>
+    </section>
+    <div class="cta"><strong>HÀNH ĐỘNG NGAY</strong><span>Chốt P0 + Quest Loop là phạm vi sprint kế tiếp, kèm các KPI học tập ngay từ ngày đầu.</span></div>
+  </div>
+</body>
+</html>

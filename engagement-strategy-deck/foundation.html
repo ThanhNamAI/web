@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container { width: 1280px; min-height: 720px; background: #F3E5F5; color: #12122A; font-family: Arial, Helvetica, sans-serif; padding-top: 58px; }
+    .top { margin: 0 86px; display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 3px solid #12122A; padding-top: 0; }
+    .kicker { font-size: 14px; font-weight: 900; letter-spacing: 2px; color: #5D4B74; }
+    h1 { margin-top: 14px; max-width: 700px; font-size: 47px; line-height: 1.04; letter-spacing: -1.7px; font-weight: 900; }
+    .number { width: 214px; min-height: 132px; background: #FFEB3B; border: 3px solid #12122A; border-radius: 26px; box-shadow: 6px 6px 0 #12122A; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 28px; }
+    .number strong { font-size: 53px; line-height: 0.9; font-weight: 900; }
+    .number span { margin-top: 8px; font-size: 14px; font-weight: 900; }
+    .pivot { margin: 34px 86px 0; font-size: 22px; line-height: 1.35; font-weight: 700; color: #4A4A4A; }
+    .pivot b { color: #12122A; background: #FFEB3B; padding: 2px 7px; }
+    .columns { margin: 50px 86px 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+    .pillar { min-height: 250px; border-top: 12px solid #12122A; padding-top: 22px; }
+    .pillar:nth-child(2) { border-top-color: #FFEB3B; }
+    .pillar:nth-child(3) { border-top-color: #6A5C85; }
+    .pillar .index { font-size: 16px; font-weight: 900; letter-spacing: 1px; color: #5D4B74; }
+    .pillar h2 { margin-top: 12px; font-size: 32px; line-height: 1; font-weight: 900; }
+    .pillar p { margin-top: 16px; max-width: 310px; font-size: 19px; line-height: 1.35; color: #4A4A4A; }
+    .arrow { font-size: 28px; font-weight: 900; color: #12122A; }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="top">
+      <div>
+        <div class="kicker">BỨC TRANH HIỆN TẠI</div>
+        <h1>Nền tảng đã sẵn sàng — cần biến thành <span class="arrow">nhịp học</span></h1>
+      </div>
+      <div class="number"><strong>1.324</strong><span>MỤC TỪ VỰNG</span></div>
+    </div>
+    <p class="pivot">TOEIC Quest đã có nội dung, SRS, mock test và analytics. Bước tiếp theo là giúp người học <b>quay lại đúng lúc</b> và biết rõ mình đang tiến bộ ở đâu.</p>
+    <div class="columns">
+      <section class="pillar"><div class="index">01 · NỘI DUNG</div><h2>Học đủ sâu</h2><p>Từ vựng, IPA, audio–transcript, luyện kỹ năng và thi thử 200 câu tạo nền cho hành trình 0–800+.</p></section>
+      <section class="pillar"><div class="index">02 · LUYỆN TẬP</div><h2>Học có nhịp</h2><p>SRS, game và kế hoạch 15 phút đã có khả năng biến kiến thức thành hành động nhỏ hằng ngày.</p></section>
+      <section class="pillar"><div class="index">03 · PHẢN HỒI</div><h2>Học có hướng</h2><p>Tiến độ kỹ năng, streak và mock history là nền để cá nhân hóa “việc cần học tiếp theo”.</p></section>
+    </div>
+  </div>
+</body>
+</html>

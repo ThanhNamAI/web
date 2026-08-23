@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container { width: 1280px; min-height: 720px; background: #F3E5F5; color: #12122A; font-family: Arial, Helvetica, sans-serif; padding-top: 56px; }
+    .header { margin: 0 86px; display: flex; align-items: flex-end; justify-content: space-between; }
+    .eyebrow { font-size: 14px; font-weight: 900; letter-spacing: 2px; color: #5D4B74; }
+    h1 { margin-top: 13px; max-width: 760px; font-size: 48px; line-height: 1.02; letter-spacing: -1.8px; font-weight: 900; }
+    .principle { width: 300px; border-top: 8px solid #FFEB3B; padding-top: 11px; font-size: 17px; line-height: 1.3; color: #4A4A4A; font-weight: 700; }
+    .principle b { color: #12122A; }
+    /* Reduced top spacing by 9px to remove overflow */
+    .top-rule { margin: 18px 86px 0; min-height: 6px; background: #12122A; }
+    .timeline { margin: 50px 86px 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 3px solid #12122A; border-bottom: 3px solid #12122A; }
+    .phase { min-height: 318px; padding: 28px 28px 0; position: relative; }
+    .phase + .phase { border-left: 3px solid #12122A; }
+    .phase.one { background: #FFFFFF; }
+    .phase.two { background: #FFEB3B; }
+    .phase.three { background: #6A5C85; color: #FFFFFF; }
+    .range { font-size: 15px; font-weight: 900; letter-spacing: 1.6px; }
+    .phase.three .range { color: #FFEB3B; }
+    .day { margin-top: 8px; font-size: 56px; line-height: 0.9; letter-spacing: -2px; font-weight: 900; }
+    .phase h2 { margin-top: 25px; max-width: 300px; font-size: 26px; line-height: 1.04; font-weight: 900; }
+    .phase ul { margin-top: 18px; padding-left: 19px; max-width: 300px; font-size: 17px; line-height: 1.42; font-weight: 600; }
+    .phase li + li { margin-top: 7px; }
+    .marker { position: absolute; top: -18px; right: 24px; width: 34px; min-height: 34px; border-radius: 50%; background: #12122A; color: #FFEB3B; border: 2px solid #12122A; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 900; }
+    .phase.three .marker { background: #FFEB3B; color: #12122A; }
+    .gate { margin: 33px 86px 0; min-height: 88px; background: #12122A; color: #FFFFFF; display: grid; grid-template-columns: 235px 1fr 190px; align-items: center; padding: 0 28px; }
+    .gate-label { font-size: 14px; font-weight: 900; letter-spacing: 1.8px; color: #FFEB3B; }
+    .gate-copy { font-size: 19px; line-height: 1.28; font-weight: 700; }
+    .gate-chip { justify-self: end; min-height: 42px; background: #FFEB3B; color: #12122A; display: flex; align-items: center; justify-content: center; padding: 0 13px; font-size: 13px; font-weight: 900; letter-spacing: 0.8px; }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="header">
+      <div>
+        <div class="eyebrow">KẾ HOẠCH THỰC THI</div>
+        <h1>90 ngày: xây vòng lặp trước,<br>mở rộng sau.</h1>
+      </div>
+      <div class="principle">Không chạy song song mọi ý tưởng. <b>Mỗi giai đoạn phải chứng minh được chất lượng học</b> trước khi tăng độ phức tạp.</div>
+    </div>
+    <div class="top-rule"></div>
+    <section class="timeline">
+      <article class="phase one">
+        <div class="marker">1</div>
+        <div class="range">GIAI ĐOẠN 01</div>
+        <div class="day">0–30</div>
+        <h2>Niềm tin & vòng lặp hằng ngày</h2>
+        <ul>
+          <li>E2E test và OAuth QA</li>
+          <li>Quest 15 phút theo điểm yếu</li>
+          <li>Mistake Lab + dashboard một ưu tiên</li>
+        </ul>
+      </article>
+      <article class="phase two">
+        <div class="marker">2</div>
+        <div class="range">GIAI ĐOẠN 02</div>
+        <div class="day">31–60</div>
+        <h2>Tiến trình có câu chuyện</h2>
+        <ul>
+          <li>Career Quest theo bối cảnh công sở</li>
+          <li>Boss cuối tuần 10 phút</li>
+          <li>A/B reward theo mastery, không theo XP thuần</li>
+        </ul>
+      </article>
+      <article class="phase three">
+        <div class="marker">3</div>
+        <div class="range">GIAI ĐOẠN 03</div>
+        <div class="day">61–90</div>
+        <h2>Nghe–nói giàu phản hồi</h2>
+        <ul>
+          <li>Shadowing Sprint 60 giây</li>
+          <li>Thử nghiệm email feedback opt-in</li>
+          <li>Rà soát riêng tư, chi phí và chất lượng trước mở rộng</li>
+        </ul>
+      </article>
+    </section>
+    <div class="gate">
+      <div class="gate-label">CỔNG RA QUYẾT ĐỊNH</div>
+      <div class="gate-copy">Chỉ mở rộng tính năng khi <strong>retention</strong> và <strong>kết quả học</strong> cùng tích cực — không đánh đổi mastery để lấy lượt dùng.</div>
+      <div class="gate-chip">LEARN · THEN SCALE</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -9,6 +9,8 @@ import "./dark-mode-fixes.css";
 import "./dark-mode-unified.css";
 import "./ux-fixes.css";
 import "./pages/plan-test-fixes.css";
+import "./pages/lessons.css";
+import AdminLessons from "./pages/AdminLessons";
 import Games from "./pages/Games";
 import Diagnostic from "./pages/Diagnostic";
 import Home from "./pages/Home";
@@ -19,6 +21,8 @@ import Profile from "./pages/Profile";
 import Vocabulary from "./pages/Vocabulary";
 import DailyPlan from "./pages/DailyPlan";
 import MockTest from "./pages/MockTest";
+import LessonPlayer from "./pages/LessonPlayer";
+import Lessons from "./pages/Lessons";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -34,6 +38,9 @@ function Router() {
       <Route path={"/profile"} component={Profile} />
       <Route path={"/daily-plan"} component={DailyPlan} />
       <Route path={"/mock-test"} component={MockTest} />
+      <Route path={"/lessons"} component={Lessons} />
+      <Route path={"/lessons/:slug"} component={LessonPlayer} />
+      <Route path={"/admin/lessons"} component={AdminLessons} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

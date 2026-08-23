@@ -1,6 +1,6 @@
-import { and, desc, eq, lte } from "drizzle-orm";
+import { and, asc, desc, eq, lte } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, learnerProfiles, learningAchievements, mockTestAttempts, studySessions, users, vocabularyProgress } from "../drizzle/schema";
+import { InsertUser, learnerProfiles, learningAchievements, lessonProgress, lessons, lessonSteps, mockTestAttempts, studySessions, users, vocabularyProgress } from "../drizzle/schema";
 import { ENV } from './_core/env';
 import { getEarnedAchievementDefinitions } from "./achievementLogic";
 import { getSkillAnalytics } from "./analyticsLogic";
@@ -232,4 +232,155 @@ export async function updateLearnerSettings(userId: number, values: { targetScor
   await ensureLearnerProfile(userId);
   await db.update(learnerProfiles).set(values).where(eq(learnerProfiles.userId, userId));
   return ensureLearnerProfile(userId);
+}
+
+export type LessonStepInput = {
+  stepType: "warmup" | "explain" | "quiz" | "listen" | "recap";
+  title: string;
+  body: string;
+  prompt?: string | null;
+  options?: string[];
+  answerIndex?: number | null;
+  explanation?: string | null;
+  audioText?: string | null;
+};
+
+export type LessonInput = {
+  slug: string;
+  title: string;
+  summary: string;
+  skill: "grammar" | "listening" | "reading" | "speaking" | "mixed";
+  level: string;
+  estimatedMinutes: number;
+  status: "draft" | "published";
+  steps: LessonStepInput[];
+};
+
+function serializeLessonSteps(lessonId: number, steps: LessonStepInput[]) {
+  return steps.map((step, position) => ({
+    lessonId,
+    position,
+    stepType: step.stepType,
+    title: step.title,
+    body: step.body,
+    prompt: step.prompt ?? null,
+    optionsJson: step.options?.length ? JSON.stringify(step.options) : null,
+    answerIndex: step.answerIndex ?? null,
+    explanation: step.explanation ?? null,
+    audioText: step.audioText ?? null,
+  }));
+}
+
+export async function getPublishedLessons() {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+  return db.select().from(lessons).where(eq(lessons.status, "published")).orderBy(desc(lessons.publishedAt), desc(lessons.createdAt));
+}
+
+export async function getLessonBySlug(slug: string, options: { userId?: number; includeDraft?: boolean } = {}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+  const lesson = (await db.select().from(lessons).where(eq(lessons.slug, slug)).limit(1))[0];
+  if (!lesson || (lesson.status !== "published" && !options.includeDraft)) return undefined;
+  const steps = await db.select().from(lessonSteps).where(eq(lessonSteps.lessonId, lesson.id)).orderBy(asc(lessonSteps.position));
+  const progress = options.userId
+    ? (await db.select().from(lessonProgress).where(and(eq(lessonProgress.lessonId, lesson.id), eq(lessonProgress.userId, options.userId))).limit(1))[0]
+    : undefined;
+  return { lesson, steps, progress };
+}
+
+export async function getAdminLessons() {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+  return db.select().from(lessons).orderBy(desc(lessons.updatedAt));
+}
+
+export async function getAdminLesson(id: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+  const lesson = (await db.select().from(lessons).where(eq(lessons.id, id)).limit(1))[0];
+  if (!lesson) return undefined;
+  const steps = await db.select().from(lessonSteps).where(eq(lessonSteps.lessonId, id)).orderBy(asc(lessonSteps.position));
+  return { lesson, steps };
+}
+
+export async function createLesson(authorId: number, input: LessonInput) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+  await db.insert(lessons).values({
+    slug: input.slug,
+    title: input.title,
+    summary: input.summary,
+    skill: input.skill,
+    level: input.level,
+    estimatedMinutes: input.estimatedMinutes,
+    status: input.status,
+    authorId,
+    publishedAt: input.status === "published" ? new Date() : null,
+  });
+  const created = (await db.select().from(lessons).where(eq(lessons.slug, input.slug)).limit(1))[0];
+  if (!created) throw new Error("Unable to create lesson");
+  if (input.steps.length) await db.insert(lessonSteps).values(serializeLessonSteps(created.id, input.steps));
+  return getAdminLesson(created.id);
+}
+
+export async function updateLesson(id: number, input: LessonInput) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+  const existing = (await db.select().from(lessons).where(eq(lessons.id, id)).limit(1))[0];
+  if (!existing) return undefined;
+  await db.transaction(async tx => {
+    await tx.update(lessons).set({
+      slug: input.slug,
+      title: input.title,
+      summary: input.summary,
+      skill: input.skill,
+      level: input.level,
+      estimatedMinutes: input.estimatedMinutes,
+      status: input.status,
+      publishedAt: input.status === "published" ? existing.publishedAt ?? new Date() : null,
+    }).where(eq(lessons.id, id));
+    await tx.delete(lessonSteps).where(eq(lessonSteps.lessonId, id));
+    if (input.steps.length) await tx.insert(lessonSteps).values(serializeLessonSteps(id, input.steps));
+  });
+  return getAdminLesson(id);
+}
+
+export async function deleteLesson(id: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+  const existing = (await db.select().from(lessons).where(eq(lessons.id, id)).limit(1))[0];
+  if (!existing) return false;
+  await db.delete(lessons).where(eq(lessons.id, id));
+  return true;
+}
+
+export async function saveLessonProgress(input: { userId: number; lessonId: number; currentStep: number; score: number; completed: boolean }) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+  const lesson = (await db.select().from(lessons).where(and(eq(lessons.id, input.lessonId), eq(lessons.status, "published"))).limit(1))[0];
+  if (!lesson) throw new Error("Lesson is unavailable");
+  const existing = (await db.select().from(lessonProgress).where(and(eq(lessonProgress.userId, input.userId), eq(lessonProgress.lessonId, input.lessonId))).limit(1))[0];
+  const values = {
+    currentStep: input.currentStep,
+    score: input.score,
+    status: input.completed ? "completed" as const : "in_progress" as const,
+    completedAt: input.completed ? existing?.completedAt ?? new Date() : null,
+  };
+  if (existing) {
+    await db.update(lessonProgress).set(values).where(eq(lessonProgress.id, existing.id));
+  } else {
+    await db.insert(lessonProgress).values({ userId: input.userId, lessonId: input.lessonId, ...values });
+  }
+  return { ...values, wasCompleted: existing?.status === "completed" };
+}
+
+export async function checkLessonStepAnswer(stepId: number, selected: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+  const step = (await db.select().from(lessonSteps).where(eq(lessonSteps.id, stepId)).limit(1))[0];
+  if (!step || step.answerIndex === null) throw new Error("This step cannot be graded");
+  const lesson = (await db.select().from(lessons).where(and(eq(lessons.id, step.lessonId), eq(lessons.status, "published"))).limit(1))[0];
+  if (!lesson) throw new Error("Lesson is unavailable");
+  return { correct: step.answerIndex === selected, explanation: step.explanation ?? "Hãy xem lại trọng tâm của bước này.", lessonId: lesson.id };
 }

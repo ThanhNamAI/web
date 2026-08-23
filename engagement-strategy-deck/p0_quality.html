@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container { width: 1280px; min-height: 720px; background: #F3E5F5; color: #12122A; font-family: Arial, Helvetica, sans-serif; padding-top: 58px; }
+    .header { margin: 0 86px; display: flex; justify-content: space-between; align-items: flex-start; }
+    .eyebrow { font-size: 14px; font-weight: 900; letter-spacing: 2px; color: #5D4B74; }
+    h1 { margin-top: 12px; font-size: 50px; line-height: 1.02; letter-spacing: -2px; font-weight: 900; }
+    .promise { width: 332px; min-height: 82px; margin-top: 8px; border-top: 8px solid #FFEB3B; font-size: 19px; line-height: 1.25; font-weight: 700; padding-top: 13px; }
+    /* Reduced top margin to pull frame upward (saves vertical space) */
+    .frame { margin: 20px 86px 0; display: grid; grid-template-columns: 242px 1fr; gap: 56px; align-items: start; }
+    /* Shrink priority block height (keeps typography) */
+    .priority { min-height: 320px; background: #12122A; color: #F3E5F5; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 28px; }
+    .priority .p { font-size: 22px; font-weight: 900; letter-spacing: 2px; color: #FFEB3B; }
+    .priority strong { margin-top: 8px; font-size: 116px; line-height: 0.75; font-weight: 900; }
+    .priority span { margin-top: 20px; width: 164px; text-align: center; font-size: 18px; line-height: 1.25; font-weight: 700; }
+    /* Tighten items spacing and item heights */
+    .items { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; border-top: 3px solid #12122A; padding-top: 4px; }
+    .item { min-height: 80px; display: grid; grid-template-columns: 82px 220px 1fr; align-items: center; border-bottom: 3px solid #12122A; }
+    .item .no { font-size: 29px; font-weight: 900; color: #5D4B74; }
+    .item h2 { font-size: 25px; line-height: 1; font-weight: 900; }
+    .item p { font-size: 18px; line-height: 1.25; color: #4A4A4A; max-width: 430px; }
+    .item:nth-child(1) .no, .item:nth-child(3) .no { color: #12122A; background: #FFEB3B; width: 48px; min-height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .bottom-note { margin: 18px 86px 0 384px; font-size: 20px; line-height: 1.3; font-weight: 700; }
+    .bottom-note b { background: #FFEB3B; padding: 2px 8px; }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="header">
+      <div>
+        <div class="eyebrow">ƯU TIÊN PHÁT HÀNH</div>
+        <h1>Độ tin cậy trước<br>sự mới lạ.</h1>
+      </div>
+      <div class="promise">Mọi cơ chế gắn kết chỉ có giá trị khi người học tin rằng tiến độ của họ được lưu đúng và giao diện luôn dễ dùng.</div>
+    </div>
+    <div class="frame">
+      <div class="priority"><div class="p">PRIORITY</div><strong>P0</strong><span>Xây niềm tin trước khi xây thêm tính năng</span></div>
+      <div class="items">
+        <div class="item"><div class="no">01</div><h2>E2E cho luồng học</h2><p>Kiểm tra SRS, chọn đáp án, audio rate, timer mock test và đổi theme trước mỗi release.</p></div>
+        <div class="item"><div class="no">02</div><h2>OAuth QA thật</h2><p>Xác nhận lưu–đọc tiến độ, streak, lịch sử mock và biểu đồ theo đúng từng người học.</p></div>
+        <div class="item"><div class="no">03</div><h2>Một nguồn dark mode</h2><p>Gom dần ba lớp CSS về token semantic duy nhất để giảm hồi quy khi thêm route mới.</p></div>
+        <div class="item"><div class="no">04</div><h2>Skeleton mobile rõ ràng</h2><p>Thay trạng thái chờ mơ hồ bằng khung nội dung có cấu trúc ở màn thi thử và tải dữ liệu.</p></div>
+      </div>
+    </div>
+    <div class="bottom-note">Kết quả cần đạt: <b>ít lỗi thao tác hơn</b>, niềm tin cao hơn và nền tảng an toàn cho Quest Loop.</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container { width: 1280px; min-height: 720px; background: #F3E5F5; color: #12122A; font-family: Arial, Helvetica, sans-serif; padding-top: 52px; }
+    .header { margin: 0 86px; display: flex; justify-content: space-between; align-items: flex-end; }
+    .eyebrow { font-size: 14px; font-weight: 900; letter-spacing: 2px; color: #5D4B74; }
+    h1 { margin-top: 13px; font-size: 48px; line-height: 1.02; letter-spacing: -1.8px; font-weight: 900; }
+    .statement { width: 328px; font-size: 18px; line-height: 1.3; font-weight: 700; color: #4A4A4A; }
+    .body { margin: 34px 86px 0; display: grid; grid-template-columns: 470px 1fr; gap: 54px; }
+    .listen { min-height: 412px; background: #12122A; padding-top: 28px; display: flex; flex-direction: column; align-items: center; }
+    .listen-label { width: 382px; color: #FFEB3B; font-size: 13px; font-weight: 900; letter-spacing: 1.5px; }
+    .photo { margin-top: 20px; width: 382px; height: 224px; object-fit: cover; display: block; }
+    .listen-foot { width: 382px; margin-top: 20px; display: flex; align-items: center; justify-content: space-between; color: #FFFFFF; }
+    .listen-foot strong { font-size: 27px; line-height: 1; font-weight: 900; }
+    .listen-foot span { max-width: 210px; font-size: 15px; line-height: 1.25; color: #D8D2E4; font-weight: 700; }
+    .rituals { min-height: 412px; border-top: 10px solid #FFEB3B; padding-top: 20px; }
+    .ritual { min-height: 154px; border-bottom: 3px solid #12122A; display: grid; grid-template-columns: 110px 1fr; gap: 22px; align-items: center; }
+    .time { width: 94px; min-height: 94px; border-radius: 50%; border: 3px solid #12122A; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #FFFFFF; }
+    .time strong { font-size: 29px; line-height: 0.85; font-weight: 900; }
+    .time span { margin-top: 7px; font-size: 11px; font-weight: 900; letter-spacing: 0.9px; }
+    .ritual:nth-child(2) .time { background: #FFEB3B; }
+    .ritual h2 { font-size: 29px; line-height: 1; font-weight: 900; }
+    .ritual p { margin-top: 10px; max-width: 465px; font-size: 17px; line-height: 1.32; color: #4A4A4A; }
+    .weekly { margin: 12px 86px 0; min-height: 72px; border-top: 3px solid #12122A; display: flex; align-items: center; justify-content: space-between; padding-top: 10px; }
+    .weekly strong { font-size: 21px; font-weight: 900; }
+    .weekly p { width: 690px; font-size: 17px; line-height: 1.28; color: #4A4A4A; font-weight: 600; }
+    .weekly b { background: #FFEB3B; padding: 1px 5px; }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="header">
+      <div>
+        <div class="eyebrow">RITUAL DESIGN</div>
+        <h1>Nghi thức ngắn tạo<br>động lực dài hạn.</h1>
+      </div>
+      <div class="statement">Một nhịp học tốt phải đủ nhẹ để bắt đầu mỗi ngày, nhưng đủ sắc để người học thấy mình giỏi lên theo tuần.</div>
+    </div>
+    <div class="body">
+      <section class="listen">
+        <div class="listen-label">MỖI NGÀY · NGHE & NÓI</div>
+        <img class="photo" src="/home/ubuntu/upload/search_images/XPAsAGoyJDf8.jpg" alt="Người học luyện nghe với tai nghe" />
+        <div class="listen-foot"><strong>60s</strong><span>Shadowing Sprint: nghe 0,75× → bắt chước → transcript theo cụm → nghe chuẩn.</span></div>
+      </section>
+      <section class="rituals">
+        <div class="ritual"><div class="time"><strong>60</strong><span>GIÂY</span></div><div><h2>Shadowing Sprint</h2><p>Tạo một lượt nghe–nói chủ động, không để audio chỉ là nút bấm thụ động.</p></div></div>
+        <div class="ritual"><div class="time"><strong>10</strong><span>PHÚT</span></div><div><h2>Boss cuối tuần</h2><p>10 câu trộn Part 2/3/5/7 từ nội dung vừa học để xác nhận năng lực trước khi bước sang tuần mới.</p></div></div>
+      </section>
+    </div>
+    <div class="weekly"><strong>QUY TẮC BỀN VỮNG</strong><p>So sánh người học với <b>chính họ tuần trước</b>. Có ngày nghỉ và lối quay lại nhẹ nhàng — không biến streak thành áp lực.</p></div>
+  </div>
+</body>
+</html>

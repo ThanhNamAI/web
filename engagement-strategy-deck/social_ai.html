@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container { width: 1280px; min-height: 720px; background: #F3E5F5; color: #12122A; font-family: Arial, Helvetica, sans-serif; padding-top: 54px; }
+    .header { margin: 0 86px; display: flex; justify-content: space-between; align-items: flex-start; }
+    .eyebrow { font-size: 14px; letter-spacing: 2px; font-weight: 900; color: #5D4B74; }
+    h1 { margin-top: 14px; font-size: 47px; line-height: 1.03; letter-spacing: -1.8px; font-weight: 900; }
+    .gate { width: 220px; min-height: 80px; border: 3px solid #12122A; background: #FFEB3B; border-radius: 20px; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 15px; line-height: 1.18; letter-spacing: 0.7px; font-weight: 900; }
+    .sub { margin: 22px 86px 0; max-width: 860px; font-size: 21px; line-height: 1.35; color: #4A4A4A; font-weight: 600; }
+    .sub b { color: #12122A; }
+    .split { margin: 42px 86px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .lane { min-height: 326px; border-top: 11px solid #12122A; padding-top: 23px; }
+    .lane.ai { border-top-color: #FFEB3B; }
+    .lane-head { display: flex; align-items: center; gap: 18px; }
+    .symbol { width: 66px; min-height: 66px; border-radius: 50%; background: #12122A; color: #FFEB3B; display: flex; align-items: center; justify-content: center; font-size: 29px; font-weight: 900; }
+    .ai .symbol { background: #FFEB3B; color: #12122A; border: 3px solid #12122A; }
+    .lane-label { font-size: 13px; letter-spacing: 1.9px; font-weight: 900; color: #5D4B74; }
+    .lane h2 { margin-top: 5px; font-size: 31px; line-height: 1; font-weight: 900; }
+    .lane p { margin-top: 19px; max-width: 454px; font-size: 18px; line-height: 1.35; color: #4A4A4A; }
+    .checks { margin-top: 21px; display: grid; gap: 8px; }
+    .check { display: flex; align-items: flex-start; gap: 11px; font-size: 16px; line-height: 1.28; font-weight: 700; }
+    .mark { width: 22px; min-height: 22px; border-radius: 50%; background: #FFEB3B; border: 2px solid #12122A; display: flex; align-items: center; justify-content: center; font-size: 13px; flex: 0 0 auto; }
+    .ai .mark { background: #12122A; color: #FFEB3B; }
+    .control { margin: 24px 86px 0; min-height: 76px; background: #12122A; color: #FFFFFF; display: grid; grid-template-columns: 210px 1fr 1fr 1fr; align-items: center; column-gap: 23px; padding: 0 25px; }
+    .control-title { color: #FFEB3B; font-size: 15px; letter-spacing: 1.5px; line-height: 1.15; font-weight: 900; }
+    .control-item { font-size: 16px; line-height: 1.2; font-weight: 700; }
+    .control-item b { display: block; color: #FFEB3B; font-size: 13px; letter-spacing: 1px; margin-bottom: 5px; }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="header">
+      <div>
+        <div class="eyebrow">P2 · MỞ RỘNG CÓ KIỂM SOÁT</div>
+        <h1>Social & AI chỉ mở khi có niềm tin.</h1>
+      </div>
+      <div class="gate">OPT-IN · RIÊNG TƯ<br>· CÓ THỂ TẮT</div>
+    </div>
+    <p class="sub">Đây là <b>tầng hỗ trợ</b> sau khi vòng lặp học cốt lõi đã đáng tin cậy — không dùng áp lực xã hội hay AI để che giấu trải nghiệm chưa tốt.</p>
+    <div class="split">
+      <section class="lane social">
+        <div class="lane-head"><div class="symbol">3–5</div><div><div class="lane-label">SOCIAL</div><h2>Nhóm đồng hành</h2></div></div>
+        <p>Ghép nhóm nhỏ cùng mục tiêu tuần để khích lệ tính đều đặn, không biến việc học thành cuộc đua công khai.</p>
+        <div class="checks">
+          <div class="check"><div class="mark">✓</div><span>Chỉ chia sẻ mục tiêu tuần và quest hoàn thành khi người học đồng ý.</span></div>
+          <div class="check"><div class="mark">✓</div><span>Không công khai đáp án, lịch sử chi tiết hoặc leaderboard toàn cục mặc định.</span></div>
+        </div>
+      </section>
+      <section class="lane ai">
+        <div class="lane-head"><div class="symbol">AI</div><div><div class="lane-label">COACHING</div><h2>Email feedback</h2></div></div>
+        <p>Người học viết email công sở, nhận ba sửa đổi ưu tiên, rồi tự viết lại để chuyển feedback thành kỹ năng.</p>
+        <div class="checks">
+          <div class="check"><div class="mark">✓</div><span>Rõ nghĩa, ngữ pháp, giọng điệu: tập trung vào thay đổi có tác động nhất.</span></div>
+          <div class="check"><div class="mark">✓</div><span>Không tự nhận là điểm TOEIC chính thức hoặc thay thế đánh giá của con người.</span></div>
+        </div>
+      </section>
+    </div>
+    <div class="control">
+      <div class="control-title">ĐIỀU KIỆN<br>PHÁT HÀNH</div>
+      <div class="control-item"><b>RIÊNG TƯ</b>Consent, chặn và báo cáo</div>
+      <div class="control-item"><b>CHẤT LƯỢNG</b>Thử nghiệm nhỏ trước mở rộng</div>
+      <div class="control-item"><b>CHI PHÍ</b>Quota rõ ràng và theo dõi sử dụng</div>
+    </div>
+  </div>
+</body>
+</html>

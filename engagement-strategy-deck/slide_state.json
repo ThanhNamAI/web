@@ -1,0 +1,136 @@
+{
+  "project_info": {
+    "title": "TOEIC Quest — Chiến lược tăng gắn kết 90 ngày",
+    "created": 1787461740.143,
+    "last_updated": 1787461995.455,
+    "total_slides": 12
+  },
+  "slides": [
+    {
+      "id": "cover",
+      "state": "edited",
+      "pageNum": 1
+    },
+    {
+      "id": "foundation",
+      "state": "edited",
+      "pageNum": 2
+    },
+    {
+      "id": "principles",
+      "state": "edited",
+      "pageNum": 3
+    },
+    {
+      "id": "p0_quality",
+      "state": "edited",
+      "pageNum": 4
+    },
+    {
+      "id": "daily_quest",
+      "state": "edited",
+      "pageNum": 5
+    },
+    {
+      "id": "career_quest",
+      "state": "edited",
+      "pageNum": 6
+    },
+    {
+      "id": "mistake_lab",
+      "state": "edited",
+      "pageNum": 7
+    },
+    {
+      "id": "rituals",
+      "state": "edited",
+      "pageNum": 8
+    },
+    {
+      "id": "social_ai",
+      "state": "edited",
+      "pageNum": 9
+    },
+    {
+      "id": "roadmap",
+      "state": "edited",
+      "pageNum": 10
+    },
+    {
+      "id": "metrics",
+      "state": "edited",
+      "pageNum": 11
+    },
+    {
+      "id": "decision",
+      "state": "edited",
+      "pageNum": 12
+    }
+  ],
+  "outline": [
+    {
+      "id": "cover",
+      "title": "TOEIC Quest — Chiến lược tăng gắn kết 90 ngày",
+      "summary": "Trang bìa tối giản, giới thiệu hướng tiếp cận từ học đều đến tiến bộ TOEIC đo được."
+    },
+    {
+      "id": "foundation",
+      "title": "Nền tảng đã sẵn sàng",
+      "summary": "Tóm tắt tài sản sản phẩm hiện có và chuyển trọng tâm sang xây nhịp học bền vững."
+    },
+    {
+      "id": "principles",
+      "title": "Gắn kết phải đi cùng tiến bộ",
+      "summary": "Bốn nguyên tắc: ôn cách quãng, truy xuất, phản hồi hành động và game hóa theo mastery.",
+      "image_plan": "/home/ubuntu/upload/search_images/4vDXTVFeWoHK.png - Slide 2 discusses gamification and memory concepts, perfectly matching gamification framework diagram"
+    },
+    {
+      "id": "p0_quality",
+      "title": "P0: Độ tin cậy trước sự mới lạ",
+      "summary": "Đề xuất E2E, OAuth QA, hợp nhất CSS dark mode và skeleton mobile trước khi thêm tính năng."
+    },
+    {
+      "id": "daily_quest",
+      "title": "Quest 15 phút theo điểm yếu",
+      "summary": "Trình bày vòng lặp hằng ngày từ SRS đến câu lỗi gần đây và mục tiêu mastery.",
+      "image_plan": "/home/ubuntu/upload/search_images/qHFXQ2PoZUV0.jpg - Slide 4 discusses 15-minute quest journeys, milestones and mastery, matching the progress path illustration"
+    },
+    {
+      "id": "career_quest",
+      "title": "Career Quest biến 0–800+ thành câu chuyện",
+      "summary": "Bản đồ bối cảnh công sở với các chặng mở khóa theo mastery, không chỉ XP.",
+      "image_plan": "/home/ubuntu/upload/search_images/IyDogvT2ECuR.jpg - Slide 5 discusses UI/UX app screens and career quest journeys, matching mobile app mockups"
+    },
+    {
+      "id": "mistake_lab",
+      "title": "Mistake Lab biến lỗi thành kế hoạch ôn",
+      "summary": "Mô tả cơ chế nhóm lỗi, giải thích nguyên nhân, làm lại và đánh giá sau 7/30 ngày."
+    },
+    {
+      "id": "rituals",
+      "title": "Nghi thức ngắn tạo động lực dài hạn",
+      "summary": "Shadowing Sprint 60 giây và Boss cuối tuần 10 phút tạo nhịp nghe–nói–kiểm tra.",
+      "image_plan": "/home/ubuntu/upload/search_images/XPAsAGoyJDf8.jpg - Slide 7 discusses listening and shadowing with headphones, matching student studying with headphones"
+    },
+    {
+      "id": "social_ai",
+      "title": "Social và AI chỉ mở khi có niềm tin",
+      "summary": "Nhóm đồng hành tùy chọn và feedback email có kiểm soát riêng tư, chi phí và chất lượng."
+    },
+    {
+      "id": "roadmap",
+      "title": "Lộ trình 90 ngày: xây vòng lặp trước",
+      "summary": "Roadmap ba giai đoạn 0–30, 31–60 và 61–90 ngày với điều kiện mở rộng."
+    },
+    {
+      "id": "metrics",
+      "title": "Đo đúng: gắn kết phải tạo tiến bộ",
+      "summary": "KPI activation, habit, learning và exam readiness làm cổng ra quyết định."
+    },
+    {
+      "id": "decision",
+      "title": "Quyết định đề xuất",
+      "summary": "Kết luận: khởi động P0 và Quest Loop, sau đó mở rộng khả năng nghe–nói và thử nghiệm có kiểm soát."
+    }
+  ]
+}

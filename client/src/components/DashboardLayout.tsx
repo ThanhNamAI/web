@@ -21,16 +21,18 @@ import {
 } from "@/components/ui/sidebar";
 import { startLogin } from "@/const";
 import { useIsMobile } from "@/hooks/useMobile";
-import { LayoutDashboard, LogOut, PanelLeft, Users } from "lucide-react";
+import { LayoutDashboard, LogOut, PanelLeft, type LucideIcon, Users } from "lucide-react";
 import { CSSProperties, useEffect, useRef, useState } from "react";
 import { useLocation } from "wouter";
 import { DashboardLayoutSkeleton } from './DashboardLayoutSkeleton';
 import { Button } from "./ui/button";
 
-const menuItems = [
+const defaultMenuItems = [
   { icon: LayoutDashboard, label: "Page 1", path: "/" },
   { icon: Users, label: "Page 2", path: "/some-path" },
 ];
+
+export type DashboardMenuItem = { icon: LucideIcon; label: string; path: string };
 
 const SIDEBAR_WIDTH_KEY = "sidebar-width";
 const DEFAULT_WIDTH = 280;
@@ -39,8 +41,14 @@ const MAX_WIDTH = 480;
 
 export default function DashboardLayout({
   children,
+  menuItems = defaultMenuItems,
+  title = "Navigation",
+  requireAdmin = false,
 }: {
   children: React.ReactNode;
+  menuItems?: DashboardMenuItem[];
+  title?: string;
+  requireAdmin?: boolean;
 }) {
   const [sidebarWidth, setSidebarWidth] = useState(() => {
     const saved = localStorage.getItem(SIDEBAR_WIDTH_KEY);
@@ -80,6 +88,18 @@ export default function DashboardLayout({
     );
   }
 
+  if (requireAdmin && user.role !== "admin") {
+    return (
+      <div className="flex items-center justify-center min-h-screen p-6">
+        <div className="max-w-md text-center space-y-3">
+          <h1 className="text-2xl font-semibold tracking-tight">Khu vực quản trị</h1>
+          <p className="text-muted-foreground">Tài khoản OAuth hiện tại không có quyền quản trị nội dung.</p>
+          <Button onClick={() => window.location.assign("/")}>Về trang học</Button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <SidebarProvider
       style={
@@ -88,7 +108,7 @@ export default function DashboardLayout({
         } as CSSProperties
       }
     >
-      <DashboardLayoutContent setSidebarWidth={setSidebarWidth}>
+      <DashboardLayoutContent setSidebarWidth={setSidebarWidth} menuItems={menuItems} title={title}>
         {children}
       </DashboardLayoutContent>
     </SidebarProvider>
@@ -98,11 +118,15 @@ export default function DashboardLayout({
 type DashboardLayoutContentProps = {
   children: React.ReactNode;
   setSidebarWidth: (width: number) => void;
+  menuItems: DashboardMenuItem[];
+  title: string;
 };
 
 function DashboardLayoutContent({
   children,
   setSidebarWidth,
+  menuItems,
+  title,
 }: DashboardLayoutContentProps) {
   const { user, logout } = useAuth();
   const [location, setLocation] = useLocation();
@@ -169,7 +193,7 @@ function DashboardLayoutContent({
               {!isCollapsed ? (
                 <div className="flex items-center gap-2 min-w-0">
                   <span className="font-semibold tracking-tight truncate">
-                    Navigation
+                    {title}
                   </span>
                 </div>
               ) : null}
