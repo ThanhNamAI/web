@@ -98,4 +98,4 @@
 - [x] Hoàn tất và xác minh README/báo cáo QA về skeleton trang chủ và OAuth e2e.
 - [x] Bổ sung e2e cho khởi tạo đăng nhập client: nonce cookie, state/redirectUri và điều hướng OAuth portal.
 - [x] Thêm integration test cho side effect thực của `startLogin`: document.cookie và window.location.href.
-- [ ] Lưu checkpoint bàn giao skeleton trang chủ và OAuth e2e.
+- [x] Lưu checkpoint bàn giao skeleton trang chủ và OAuth e2e.
