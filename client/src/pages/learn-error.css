@@ -1,0 +1,14 @@
+.learn-error-state { min-height: 520px; display: grid; place-items: center; padding-top: 48px; }
+.learn-error-card { width: min(100%, 620px); text-align: center; padding: 56px 48px; border: 1px solid rgba(66, 85, 72, .16); border-radius: 28px; background: var(--card, #fffdfa); box-shadow: 0 18px 45px rgba(47, 61, 48, .08); }
+.learn-error-icon { width: 52px; height: 52px; display: grid; place-items: center; margin: 0 auto 20px; border-radius: 50%; color: #b65b36; background: rgba(194, 96, 54, .12); }
+.learn-error-card h1 { margin: 0; font-size: clamp(1.75rem, 3vw, 2.35rem); color: var(--foreground, #20342a); }
+.learn-error-card > p { max-width: 460px; margin: 14px auto 20px; line-height: 1.7; color: var(--muted-foreground, #68736b); }
+.learn-trace { display: inline-flex; gap: 8px; align-items: center; margin: 0 0 28px; padding: 8px 11px; border-radius: 9px; background: rgba(69, 97, 77, .08); color: var(--muted-foreground, #68736b); font-size: .78rem; }
+.learn-trace code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--foreground, #20342a); }
+.learn-retry-button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 46px; padding: 0 19px; border: 0; border-radius: 12px; color: #fff; background: #284837; font-weight: 700; cursor: pointer; }
+.learn-retry-button:disabled { opacity: .66; cursor: wait; }
+.learn-retry-button:not(:disabled):active { transform: scale(.97); }
+.learn-retry-spin { animation: learn-retry-spin .8s linear infinite; }
+@keyframes learn-retry-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .learn-retry-spin { animation: none; } .learn-retry-button:not(:disabled):active { transform: none; } }
+@media (max-width: 600px) { .learn-error-state { min-height: 430px; padding-top: 24px; }.learn-error-card { padding: 38px 24px; border-radius: 22px; } }

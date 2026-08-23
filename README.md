@@ -80,4 +80,6 @@ Mọi thay đổi dữ liệu phải đi theo quy trình schema-first: sửa `dr
 
 API có một JSON fallback sau tRPC và trước SPA fallback. Vì vậy API/tRPC path không khớp trả 404 JSON rõ ràng thay vì `index.html`; route trang như `/learn` vẫn được Vite/static fallback phục vụ bình thường. Regression và nguyên nhân gốc của lỗi Learn được ghi tại [`reports/learn-trpc-fallback-qa.md`](reports/learn-trpc-fallback-qa.md).
 
+Khi một query/mutation tải dữ liệu lỗi, giao diện hiển thị toast tiếng Việt kèm **mã hỗ trợ**. Mã này dùng header `x-trace-id` của server khi có; nếu lỗi xảy ra trước khi nhận response, app sinh mã client ổn định theo phiên lỗi. Trang `/learn` có empty state accessible và nút **Thử lại** cho lỗi dashboard; retry chỉ gọi lại query đọc, không tự phát lại thao tác ghi dữ liệu.
+
 Tài liệu thiết kế chi tiết nằm ở [`reports/admin-lesson-design.md`](reports/admin-lesson-design.md); audit chất lượng và roadmap sản phẩm nằm trong thư mục `reports/`.

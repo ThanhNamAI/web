@@ -107,3 +107,10 @@
 - [x] Chạy regression đúng failure mode Learn và cập nhật báo cáo root-cause theo bằng chứng.
 - [x] Xác minh báo cáo `reports/learn-trpc-fallback-qa.md` đã lưu failure mode HTML→JSON, retry GET-only, no-retry mutation và 28/57 regression.
 - [x] Lưu checkpoint bàn giao bản sửa tRPC Learn.
+- [x] Kiểm toán metadata trace ID tRPC, toast lỗi hiện tại và trạng thái query trên Learn.
+- [x] Thiết kế thông báo lỗi thân thiện, hiển thị trace ID và cơ chế retry chỉ cho thao tác an toàn.
+- [x] Triển khai empty state/nút Thử lại trang Learn cùng regression tests.
+- [x] Xác nhận accessibility và cập nhật tài liệu cho toast/empty state Learn.
+- [x] Xác minh README và báo cáo QA toast/empty state Learn đã được lưu đầy đủ.
+- [x] Thêm QA render riêng cho empty state Learn, trace ID và nút Thử lại.
+- [ ] Lưu checkpoint bàn giao toast trace ID và retry Learn.

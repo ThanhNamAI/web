@@ -6,10 +6,13 @@ import { createRoot } from "react-dom/client";
 import superjson from "superjson";
 import App from "./App";
 import { startLogin } from "./const";
+import { getFriendlyApiError } from "./lib/apiErrorPresentation";
 import { fetchTrpc } from "./lib/trpcFetch";
+import { toast } from "sonner";
 import "./index.css";
 
 const queryClient = new QueryClient();
+const announcedErrors = new WeakSet<object>();
 
 const redirectToLoginIfUnauthorized = (error: unknown) => {
   if (!(error instanceof TRPCClientError)) return;
@@ -22,10 +25,20 @@ const redirectToLoginIfUnauthorized = (error: unknown) => {
   startLogin();
 };
 
+const announceApiError = (error: unknown) => {
+  if (typeof error === "object" && error !== null) {
+    if (announcedErrors.has(error)) return;
+    announcedErrors.add(error);
+  }
+  const presentation = getFriendlyApiError(error);
+  toast.error(presentation.title, { description: `${presentation.message} Mã hỗ trợ: ${presentation.traceId}`, duration: 10000 });
+};
+
 queryClient.getQueryCache().subscribe(event => {
   if (event.type === "updated" && event.action.type === "error") {
     const error = event.query.state.error;
     redirectToLoginIfUnauthorized(error);
+    announceApiError(error);
     console.error("[API Query Error]", error);
   }
 });
@@ -34,6 +47,7 @@ queryClient.getMutationCache().subscribe(event => {
   if (event.type === "updated" && event.action.type === "error") {
     const error = event.mutation.state.error;
     redirectToLoginIfUnauthorized(error);
+    announceApiError(error);
     console.error("[API Mutation Error]", error);
   }
 });
