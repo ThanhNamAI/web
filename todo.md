@@ -40,7 +40,7 @@
 - [x] Sửa dark mode cho màn thi thử 7 Part, kiểm thử desktop/mobile, hồi quy logic và tạo bản lưu bàn giao.
 - [x] Xác minh biểu đồ thi thử hiển thị xu hướng điểm, thời gian và độ chính xác Listening/Reading từ lịch sử phiên đã lưu.
 - [x] Hoàn tất visual regression desktop/mobile cho trang thi thử 200 câu và hồ sơ có biểu đồ tiến bộ.
-- [ ] Tạo bản lưu bàn giao sau khi xác minh đầy đủ mock test, biểu đồ, phát âm chậm và dark mode.
+- [x] Tạo bản lưu bàn giao sau khi xác minh đầy đủ mock test, biểu đồ, phát âm chậm và dark mode.
 - [x] Bảo toàn OAuth hiện có, không tạo tài khoản/mật khẩu cục bộ và kiểm thử đầy đủ các trạng thái không cần đăng nhập.
 - [x] Rà soát guest flows trên trang chủ, thư viện, phòng học, kế hoạch 15 phút, thi thử và hồ sơ ở desktop/mobile; xác nhận CTA OAuth, empty state và điều hướng không tạo đường dẫn mật khẩu cục bộ.
 - [x] Hoàn thiện ma trận bằng chứng guest flow theo từng route, phân biệt rõ trang public, CTA OAuth và empty state trên desktop/mobile.
