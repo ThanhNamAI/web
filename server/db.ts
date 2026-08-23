@@ -6,6 +6,9 @@ import { getEarnedAchievementDefinitions } from "./achievementLogic";
 import { getSkillAnalytics } from "./analyticsLogic";
 import { starterLessons } from "./starterLessons";
 import { getMistakeReviewUpdate } from "./mistakeLabLogic";
+import { getOwnedActiveMistake } from "./mistakeLabAccess";
+import { buildMistakeLabDashboard } from "./mistakeLabProjection";
+import { checkMistakeAnswerWithStore } from "./mistakeLabService";
 
 let _db: ReturnType<typeof drizzle> | null = null;
 
@@ -480,29 +483,16 @@ export async function getMistakeLab(userId: number) {
   const db = await getDb();
   if (!db) throw new Error("Database is not available");
   const all = await db.select().from(mistakeItems).where(eq(mistakeItems.userId, userId)).orderBy(asc(mistakeItems.dueAt));
-  const now = new Date();
-  const active = all.filter(item => item.status === "active");
-  return {
-    items: active.map(({ correctIndex: _correctIndex, optionsJson, ...item }) => ({ ...item, options: JSON.parse(optionsJson) as string[] })),
-    summary: { active: active.length, due: active.filter(item => item.dueAt <= now).length, mastered: all.filter(item => item.status === "mastered").length },
-  };
+  return buildMistakeLabDashboard(all, userId);
 }
 
 export async function checkMistakeAnswer(input: { userId: number; mistakeId: number; selected: number }) {
   const db = await getDb();
   if (!db) throw new Error("Database is not available");
-  const item = (await db.select().from(mistakeItems).where(and(eq(mistakeItems.id, input.mistakeId), eq(mistakeItems.userId, input.userId))).limit(1))[0];
-  if (!item || item.status !== "active") throw new Error("Mistake item is unavailable");
-  const correct = item.correctIndex === input.selected;
-  const now = new Date();
-  const review = getMistakeReviewUpdate({ correct, previousCorrect: item.timesCorrect, now });
-  await db.update(mistakeItems).set({
-    selectedIndex: input.selected,
-    status: review.status,
-    timesSeen: item.timesSeen + 1,
-    timesCorrect: review.timesCorrect,
-    dueAt: review.dueAt,
-    lastAttemptedAt: now,
-  }).where(eq(mistakeItems.id, item.id));
-  return { correct, mastered: review.mastered, explanation: item.explanation, remainingRepairs: Math.max(0, 2 - review.timesCorrect) };
+  return checkMistakeAnswerWithStore({
+    findItem: async ({ userId, mistakeId }) => (await db.select().from(mistakeItems).where(and(eq(mistakeItems.id, mistakeId), eq(mistakeItems.userId, userId))).limit(1))[0],
+    saveReview: async ({ item, selected, status, timesSeen, timesCorrect, dueAt, attemptedAt }) => {
+      await db.update(mistakeItems).set({ selectedIndex: selected, status, timesSeen, timesCorrect, dueAt, lastAttemptedAt: attemptedAt }).where(eq(mistakeItems.id, item.id));
+    },
+  }, input);
 }
