@@ -91,3 +91,11 @@
 - [x] Hoàn tất regression và báo cáo QA kiểm toán production-focused.
 - [x] Tạo và lưu đầy đủ báo cáo QA `reports/production-audit-2026-08-23.md` với lỗi đã sửa, regression, logs, visual audit và số liệu bundle.
 - [x] Lưu checkpoint bàn giao kiểm toán production-focused.
+- [x] Kiểm toán trạng thái tải trang chủ, entry points OAuth và hạ tầng kiểm thử hiện có.
+- [x] Thiết kế skeleton dữ liệu cá nhân cùng chiến lược e2e OAuth không dùng tài khoản/mật khẩu cục bộ.
+- [x] Triển khai skeleton loading trang chủ và kiểm thử e2e OAuth.
+- [x] Kiểm thử hồi quy, rà soát UI và cập nhật tài liệu.
+- [x] Hoàn tất và xác minh README/báo cáo QA về skeleton trang chủ và OAuth e2e.
+- [x] Bổ sung e2e cho khởi tạo đăng nhập client: nonce cookie, state/redirectUri và điều hướng OAuth portal.
+- [x] Thêm integration test cho side effect thực của `startLogin`: document.cookie và window.location.href.
+- [ ] Lưu checkpoint bàn giao skeleton trang chủ và OAuth e2e.

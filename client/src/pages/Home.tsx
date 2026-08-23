@@ -5,6 +5,7 @@ import { AudioButton } from "@/components/AudioButton";
 import { roadmapStages } from "@/lib/learningContent";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { trpc } from "@/lib/trpc";
+import { shouldShowHomeSkeleton } from "@shared/homeLoading";
 import "./home-extra.css";
 
 const skillDisplay = [
@@ -15,14 +16,16 @@ const skillDisplay = [
 ] as const;
 
 export default function Home() {
-  const { user, isAuthenticated } = useAuth();
+  const { user, isAuthenticated, loading: authLoading } = useAuth();
   const dashboard = trpc.learning.dashboard.useQuery(undefined, { enabled: isAuthenticated });
+  const isPersonalDataLoading = shouldShowHomeSkeleton(authLoading, isAuthenticated, dashboard.isLoading);
   const word = dashboard.data?.cards[0];
   const skills = skillDisplay.map(item => ({ ...item, value: dashboard.data?.analytics.skills.find(skill => skill.skill === item.skill)?.accuracy ?? 0 }));
   const displayName = user?.name?.split(" ")[0];
   const studyNote = isAuthenticated
     ? (dashboard.data?.analytics.recommendation ?? "Hoàn thành hoạt động đầu tiên để TOEIC Quest nhận diện điểm cần ưu tiên.")
     : "Đăng nhập để TOEIC Quest sắp xếp thẻ đến hạn và kỹ năng cần cải thiện cho riêng bạn.";
+  if (isPersonalDataLoading) return <StudyShell><HomeLoadingSkeleton /></StudyShell>;
   return <StudyShell>
     <div className="page-wrap overview-page">
       <header className="topline"><div><span className="eyebrow">HÀNH TRÌNH TOEIC CÁ NHÂN</span><h1>{displayName ? `Chào ${displayName}.` : "Chào mừng bạn đến TOEIC Quest."}</h1><p>{isAuthenticated ? "Hôm nay mình cùng học đủ sâu, nhưng không học quá sức." : "Đăng nhập để lưu nhịp học và nhận gợi ý phù hợp với mục tiêu của bạn."}</p></div><div className="topline-actions"><Link href="/progress-dashboard" className="round-action" aria-label="Xem tiến độ"><BarChart3 /></Link><div className="level-chip"><Sparkles /><span>{isAuthenticated ? `${dashboard.data?.profile.currentStage ?? "Foundation"}` : "0 → 800+"}</span></div></div></header>
@@ -38,4 +41,14 @@ export default function Home() {
       </section>
     </div>
   </StudyShell>;
+}
+
+function HomeLoadingSkeleton() {
+  return <div className="page-wrap overview-page home-skeleton" aria-busy="true" aria-live="polite" aria-label="Đang tải dữ liệu học tập cá nhân">
+    <header className="topline skeleton-topline"><div><i className="skeleton-line skeleton-kicker" /><i className="skeleton-line skeleton-heading" /><i className="skeleton-line skeleton-copy" /></div><div className="skeleton-actions"><i /><i /></div></header>
+    <section className="hero-panel skeleton-hero"><div className="hero-copy"><i className="skeleton-line skeleton-kicker" /><i className="skeleton-line skeleton-hero-heading" /><i className="skeleton-line skeleton-hero-heading short" /><i className="skeleton-line skeleton-copy wide" /><i className="skeleton-line skeleton-copy" /><i className="skeleton-button" /></div><div className="hero-visual"><i className="skeleton-orbit" /></div></section>
+    <section className="section-heading"><div><i className="skeleton-line skeleton-kicker" /><i className="skeleton-line skeleton-section-heading" /></div><i className="skeleton-link" /></section>
+    <section className="roadmap-grid">{Array.from({ length: 4 }, (_, index) => <article className="roadmap-card skeleton-card" key={index}><i className="skeleton-line skeleton-small" /><i className="skeleton-line skeleton-card-heading" /><i className="skeleton-line skeleton-copy" /><i className="skeleton-track" /></article>)}</section>
+    <section className="dashboard-grid"><article className="panel skeleton-panel"><i className="skeleton-line skeleton-kicker" /><i className="skeleton-line skeleton-section-heading" /><div className="skeleton-rings">{Array.from({ length: 4 }, (_, index) => <i key={index} />)}</div><i className="skeleton-note" /></article><article className="panel word-card skeleton-panel"><i className="skeleton-line skeleton-kicker" /><i className="skeleton-line skeleton-section-heading" /><i className="skeleton-line skeleton-copy wide" /><i className="skeleton-line skeleton-copy" /></article></section>
+  </div>;
 }

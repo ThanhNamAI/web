@@ -12,20 +12,27 @@ export { COOKIE_NAME, ONE_YEAR_MS } from "@shared/const";
 // call would desync it from an in-flight login and the callback would reject it
 // with "invalid oauth state". It returns void by design, so there is no URL to
 // stash across renders.
-export const startLogin = () => {
-  const oauthPortalUrl = import.meta.env.VITE_OAUTH_PORTAL_URL;
-  const appId = import.meta.env.VITE_APP_ID;
-  const redirectUri = `${window.location.origin}/api/oauth/callback`;
-
-  const nonce = crypto.randomUUID();
-  document.cookie = `${OAUTH_STATE_COOKIE}=${nonce}; Path=/; Max-Age=600; SameSite=None; Secure`;
+export function createLoginInitiation(input: { oauthPortalUrl: string; appId: string; origin: string; nonce?: string }) {
+  const redirectUri = `${input.origin}/api/oauth/callback`;
+  const nonce = input.nonce ?? crypto.randomUUID();
   const state = encodeOAuthState({ redirectUri, nonce });
-
-  const url = new URL(`${oauthPortalUrl}/app-auth`);
-  url.searchParams.set("appId", appId);
+  const url = new URL("/app-auth", input.oauthPortalUrl);
+  url.searchParams.set("appId", input.appId);
   url.searchParams.set("redirectUri", redirectUri);
   url.searchParams.set("state", state);
   url.searchParams.set("type", "signIn");
+  return {
+    cookie: `${OAUTH_STATE_COOKIE}=${nonce}; Path=/; Max-Age=600; SameSite=None; Secure`,
+    url: url.toString(),
+  };
+}
 
-  window.location.href = url.toString();
+export const startLogin = () => {
+  const initiation = createLoginInitiation({
+    oauthPortalUrl: import.meta.env.VITE_OAUTH_PORTAL_URL,
+    appId: import.meta.env.VITE_APP_ID,
+    origin: window.location.origin,
+  });
+  document.cookie = initiation.cookie;
+  window.location.href = initiation.url;
 };

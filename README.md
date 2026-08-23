@@ -68,6 +68,12 @@ Nghiên cứu format và ràng buộc thiết kế được lưu trong [`reports
 
 Toàn bộ dữ liệu được lấy server-side từ các bản ghi đã lưu theo `ctx.user.id`. Không có dữ liệu mẫu hoặc dữ liệu học của tài khoản khác trong dashboard. Endpoint protected không nhận `userId` từ client; khi người học chưa có lịch sử, UI hiển thị empty state có hướng dẫn thay vì biểu đồ giả. Bằng chứng QA nằm tại [`reports/progress-dashboard-qa.md`](reports/progress-dashboard-qa.md).
 
+## Trạng thái tải OAuth và kiểm thử callback
+
+Trang chủ hiển thị **skeleton có aria-live** trong khi nhận diện OAuth hoặc `learning.dashboard` đang tải. Khi xác thực đã ổn định, người học thấy dữ liệu thật; khi là guest, UI chuyển thẳng sang lời mời đăng nhập, không nhấp nháy số liệu mặc định.
+
+Chạy `pnpm test:e2e` để kiểm thử luồng OAuth tại hai boundary không cần tài khoản/mật khẩu thật: khởi tạo ở client tạo cookie nonce, `state` và `redirectUri` theo `window.location.origin`; callback Express kiểm tra thiếu tham số (400), nonce/cookie không khớp (403), hoặc tạo session cookie rồi redirect `/` khi hợp lệ. Provider ngoài chỉ được mock trong test; cookie, HTTP route, redirect và state encoding đều chạy bằng implementation thực.
+
 ## Quy tắc an toàn trước khi sửa hệ thống
 
 Mọi thay đổi dữ liệu phải đi theo quy trình schema-first: sửa `drizzle/schema.ts`, sinh SQL, đọc SQL, rồi mới áp dụng migration. Mọi endpoint thay đổi dữ liệu phải dùng Zod để kiểm tra input; endpoint quản trị phải dùng `adminProcedure`; endpoint tiến độ học phải lấy người dùng từ OAuth context.
