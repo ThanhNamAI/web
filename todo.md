@@ -90,4 +90,4 @@
 - [x] Sửa các lỗi được xác nhận, tăng cường kiểm thử và tối ưu ổn định không phá tính năng hiện hữu.
 - [x] Hoàn tất regression và báo cáo QA kiểm toán production-focused.
 - [x] Tạo và lưu đầy đủ báo cáo QA `reports/production-audit-2026-08-23.md` với lỗi đã sửa, regression, logs, visual audit và số liệu bundle.
-- [ ] Lưu checkpoint bàn giao kiểm toán production-focused.
+- [x] Lưu checkpoint bàn giao kiểm toán production-focused.
