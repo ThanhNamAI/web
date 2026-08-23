@@ -31,12 +31,13 @@ export function AudioButton({ text, accent = "en-US", compact = false, audioUrl,
   const [showTranscript, setShowTranscript] = useState(false);
   const [speedIndex, setSpeedIndex] = useState(1);
   const audio = useRef<HTMLAudioElement | null>(null);
-  const playbackRate = [0.75, rate, 1][speedIndex] ?? rate;
+  const playbackRate = [rate, 0.75, 0.5][speedIndex] ?? rate;
   useEffect(() => () => { audio.current?.pause(); window.speechSynthesis?.cancel(); }, []);
   const play = () => {
     if (audioUrl) {
       audio.current?.pause();
       audio.current = new Audio(audioUrl);
+      audio.current.playbackRate = playbackRate;
       audio.current.onended = () => setSpeaking(false);
       void audio.current.play().catch(() => setSpeaking(false));
     } else if (!speakText(text, accent, playbackRate)) return;

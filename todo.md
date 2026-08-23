@@ -32,3 +32,15 @@
 - [x] Chuẩn bị dữ liệu audio–transcript có cấu trúc cho từ vựng/ví dụ và tích hợp phát âm có điều khiển tốc độ, transcript đồng bộ.
 - [x] Kiểm thử thời gian, lưu tiến độ, analytics và giao diện desktop/mobile; tạo bản lưu bàn giao mở rộng.
 - [x] Dùng giọng tổng hợp chất lượng cao làm audio tạm thời, đồng thời giữ cấu trúc audio URL/metadata để thay bằng bản ghi người thật sau này.
+- [x] Đóng gói quy trình xây dựng TOEIC Quest thành kỹ năng tái sử dụng, có hướng dẫn kiểm toán nội dung, data model, kiểm thử và bàn giao.
+- [x] Kiểm toán cấu trúc ngân hàng thi thử, xác nhận ma trận 200 câu Part 1–7 và tái hiện lỗi dark mode tại màn thi thử.
+- [x] Mở rộng ngân hàng mô phỏng lên 200 câu theo cấu trúc TOEIC Listening & Reading, chấm đáp án phía máy chủ và lưu kết quả theo Part.
+- [x] Thêm biểu đồ trực quan về xu hướng điểm, thời gian và độ chính xác theo kỹ năng từ các phiên thi thử đã lưu.
+- [x] Bổ sung điều khiển tốc độ 0,5× và 0,75× cho phát âm từ/câu, giữ transcript và khả năng thay thế audio người thật.
+- [x] Sửa dark mode cho màn thi thử 7 Part, kiểm thử desktop/mobile, hồi quy logic và tạo bản lưu bàn giao.
+- [x] Xác minh biểu đồ thi thử hiển thị xu hướng điểm, thời gian và độ chính xác Listening/Reading từ lịch sử phiên đã lưu.
+- [x] Hoàn tất visual regression desktop/mobile cho trang thi thử 200 câu và hồ sơ có biểu đồ tiến bộ.
+- [ ] Tạo bản lưu bàn giao sau khi xác minh đầy đủ mock test, biểu đồ, phát âm chậm và dark mode.
+- [x] Bảo toàn OAuth hiện có, không tạo tài khoản/mật khẩu cục bộ và kiểm thử đầy đủ các trạng thái không cần đăng nhập.
+- [x] Rà soát guest flows trên trang chủ, thư viện, phòng học, kế hoạch 15 phút, thi thử và hồ sơ ở desktop/mobile; xác nhận CTA OAuth, empty state và điều hướng không tạo đường dẫn mật khẩu cục bộ.
+- [x] Hoàn thiện ma trận bằng chứng guest flow theo từng route, phân biệt rõ trang public, CTA OAuth và empty state trên desktop/mobile.
