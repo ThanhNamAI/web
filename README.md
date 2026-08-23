@@ -78,4 +78,6 @@ Chạy `pnpm test:e2e` để kiểm thử luồng OAuth tại hai boundary khôn
 
 Mọi thay đổi dữ liệu phải đi theo quy trình schema-first: sửa `drizzle/schema.ts`, sinh SQL, đọc SQL, rồi mới áp dụng migration. Mọi endpoint thay đổi dữ liệu phải dùng Zod để kiểm tra input; endpoint quản trị phải dùng `adminProcedure`; endpoint tiến độ học phải lấy người dùng từ OAuth context.
 
+API có một JSON fallback sau tRPC và trước SPA fallback. Vì vậy API/tRPC path không khớp trả 404 JSON rõ ràng thay vì `index.html`; route trang như `/learn` vẫn được Vite/static fallback phục vụ bình thường. Regression và nguyên nhân gốc của lỗi Learn được ghi tại [`reports/learn-trpc-fallback-qa.md`](reports/learn-trpc-fallback-qa.md).
+
 Tài liệu thiết kế chi tiết nằm ở [`reports/admin-lesson-design.md`](reports/admin-lesson-design.md); audit chất lượng và roadmap sản phẩm nằm trong thư mục `reports/`.

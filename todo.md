@@ -99,3 +99,11 @@
 - [x] Bổ sung e2e cho khởi tạo đăng nhập client: nonce cookie, state/redirectUri và điều hướng OAuth portal.
 - [x] Thêm integration test cho side effect thực của `startLogin`: document.cookie và window.location.href.
 - [x] Lưu checkpoint bàn giao skeleton trang chủ và OAuth e2e.
+- [x] Tái hiện lỗi tRPC tại `/learn` và thu thập request/response runtime liên quan.
+- [x] Xác định và sửa nguyên nhân client nhận HTML thay vì JSON từ API tRPC.
+- [x] Bổ sung regression test và xác nhận UI/runtime bản sửa Learn.
+- [x] Tái hiện failure mode tRPC read query nhận HTML rồi recovery JSON trong kiểm thử integration.
+- [x] Thêm client guard chỉ retry GET khi tRPC nhận HTML SPA; mutation không được retry để tránh double write.
+- [x] Chạy regression đúng failure mode Learn và cập nhật báo cáo root-cause theo bằng chứng.
+- [x] Xác minh báo cáo `reports/learn-trpc-fallback-qa.md` đã lưu failure mode HTML→JSON, retry GET-only, no-retry mutation và 28/57 regression.
+- [ ] Lưu checkpoint bàn giao bản sửa tRPC Learn.
