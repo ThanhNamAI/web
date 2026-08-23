@@ -49,3 +49,6 @@
 - [x] Thực hiện visual regression light/dark desktop/mobile cho các route chính và lưu bản sửa sau khi kiểm thử hồi quy.
 - [x] Ghi nhận bằng chứng visual riêng cho light và dark mode ở desktop/mobile trên các route chính sau lớp token cuối.
 - [x] Tạo checkpoint bàn giao mới sau khi hoàn tất kiểm chứng dark mode cuối.
+- [ ] Đồng bộ toàn bộ mã nguồn TOEIC Quest tại checkpoint hiện tại lên repository GitHub do người dùng chỉ định.
+- [x] Nghiên cứu và xếp hạng các tính năng tăng mức độ gắn kết học TOEIC, có lộ trình triển khai phù hợp sản phẩm.
+- [ ] Xác minh và đẩy commit toàn bộ mã nguồn TOEIC Quest lên repository ThanhNamAI/web trên nhánh main.
