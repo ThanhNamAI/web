@@ -84,4 +84,4 @@
 - [x] Thiết kế dashboard lịch sử, KPI và biểu đồ tiến bộ chỉ dùng dữ liệu thực của OAuth user.
 - [x] Triển khai API protected, giao diện dashboard và biểu đồ responsive light/dark.
 - [x] Kiểm thử bảo mật user-scope, hồi quy UI và cập nhật tài liệu dashboard.
-- [ ] Lưu checkpoint bàn giao dashboard lịch sử và biểu đồ tiến bộ.
+- [x] Lưu checkpoint bàn giao dashboard lịch sử và biểu đồ tiến bộ.
