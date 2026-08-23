@@ -75,3 +75,8 @@
 - [x] Triển khai seed bài học, Boss Challenge, chấm điểm và tiến độ user-scoped.
 - [x] Hoàn tất kiểm thử, kiểm tra bảo mật/UI desktop/mobile cho mở rộng nội dung.
 - [x] Lưu checkpoint bàn giao mở rộng Part 2/3/7 và Boss Challenge.
+- [x] Kiểm toán ngân hàng đề hiện có và nghiên cứu tình huống giao tiếp doanh nghiệp phù hợp Part 3/7.
+- [x] Thiết kế các bộ đề chuyên sâu Part 3/7 với hội thoại, transcript, đoạn đọc và đáp án chấm phía server.
+- [x] Triển khai bộ đề mới, liên kết trải nghiệm luyện tập và bảo toàn OAuth user-scope.
+- [x] Kiểm thử nội dung, hồi quy dark mode/mobile và cập nhật tài liệu cho bộ đề doanh nghiệp.
+- [ ] Lưu checkpoint bàn giao các bộ đề Part 3/7 doanh nghiệp.

@@ -1,6 +1,8 @@
 import { COOKIE_NAME } from "@shared/const";
 import { vocabulary } from "../shared/vocabulary.generated";
 import { mockQuestions } from "../shared/mockTestContent";
+import { businessPracticeSets, getBusinessPracticeSet } from "../shared/businessPracticeContent";
+import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 import { checkLessonStepAnswer, checkMistakeAnswer, createLesson, deleteLesson, getAdminLesson, getAdminLessons, getBossChallenge, getLearningSnapshot, getLessonBySlug, getMistakeLab, getPublishedLessons, recordMistake, recordMockTestAttempt, recordStudySession, saveLessonProgress, saveVocabularyReview, submitBossChallenge, updateLearnerSettings, updateLesson } from "./db";
 import { getSessionCookieOptions } from "./_core/cookies";
@@ -9,6 +11,7 @@ import { adminProcedure, protectedProcedure, publicProcedure, router } from "./_
 import { calculateSrsUpdate, calculateXp, getNextSessionRecommendation } from "./learningLogic";
 import { buildDailyPlan } from "./dailyPlanLogic";
 import { getMockScore } from "./mockTestLogic";
+import { scoreBusinessPractice } from "./businessPracticeLogic";
 
 const lessonStepInput = z.object({
   stepType: z.enum(["warmup", "explain", "quiz", "listen", "recap"]),
@@ -105,6 +108,75 @@ export const appRouter = router({
         })];
       }));
       return { ...result, xp };
+    }),
+    businessPracticeCatalog: protectedProcedure.query(() => businessPracticeSets.map(set => ({
+      id: set.id,
+      title: set.title,
+      summary: set.summary,
+      estimatedMinutes: set.estimatedMinutes,
+      tags: set.tags,
+      questionCount: set.questions.length,
+      partCounts: { part3: set.questions.filter(question => question.part === 3).length, part7: set.questions.filter(question => question.part === 7).length },
+    }))),
+    businessPracticeSet: protectedProcedure.input(z.object({ setId: z.string().min(3).max(80) })).query(({ input }) => {
+      const set = getBusinessPracticeSet(input.setId);
+      if (!set) throw new TRPCError({ code: "NOT_FOUND", message: "Không tìm thấy bộ đề này." });
+      return { ...set, questions: set.questions.map(({ answer: _answer, explanation: _explanation, ...question }) => question) };
+    }),
+    submitBusinessPractice: protectedProcedure.input(z.object({
+      setId: z.string().min(3).max(80),
+      answers: z.array(z.object({ questionId: z.string().min(1).max(64), selected: z.number().int().min(0).max(3) })).min(1).max(20),
+      elapsedSeconds: z.number().int().min(1).max(1_800),
+    })).mutation(async ({ ctx, input }) => {
+      const set = getBusinessPracticeSet(input.setId);
+      if (!set) throw new TRPCError({ code: "NOT_FOUND", message: "Không tìm thấy bộ đề này." });
+      let scored;
+      try {
+        scored = scoreBusinessPractice(set, input.answers);
+      } catch (error) {
+        throw new TRPCError({ code: "BAD_REQUEST", message: error instanceof Error ? error.message : "Không thể chấm bộ đề." });
+      }
+      const xp = calculateXp(scored.score, input.elapsedSeconds, scored.score >= 80 ? 10 : 0);
+      const part3 = scored.byPart.find(item => item.part === 3)!;
+      const part7 = scored.byPart.find(item => item.part === 7)!;
+      await recordMockTestAttempt({
+        userId: ctx.user.id,
+        totalQuestions: scored.totalQuestions,
+        correctAnswers: scored.correctAnswers,
+        rawScore: scored.score,
+        durationSeconds: input.elapsedSeconds,
+        partScores: scored.byPart,
+        listeningScore: part3.accuracy,
+        readingScore: part7.accuracy,
+        xp,
+      });
+      await Promise.all(scored.results.flatMap(result => result.correct ? [] : [recordMistake({
+        userId: ctx.user.id,
+        source: "mock",
+        sourceRef: `business-${set.id}-${result.question.id}`,
+        skill: result.question.skill,
+        prompt: `${set.title}\n${result.question.contextLabel}\n${result.question.transcript ?? result.question.passage ?? result.question.prompt}`,
+        options: result.question.choices,
+        correctIndex: result.question.answer,
+        selectedIndex: result.selected,
+        explanation: result.question.explanation,
+      })]));
+      return {
+        setId: set.id,
+        setTitle: set.title,
+        correctAnswers: scored.correctAnswers,
+        totalQuestions: scored.totalQuestions,
+        score: scored.score,
+        byPart: scored.byPart,
+        xp,
+        results: scored.results.map(result => ({
+          questionId: result.question.id,
+          selected: result.selected,
+          correct: result.correct,
+          correctChoice: result.question.choices[result.question.answer],
+          explanation: result.question.explanation,
+        })),
+      };
     }),
     review: protectedProcedure.input(z.object({ vocabularyId: z.string().min(1), quality: z.number().int().min(0).max(3) })).mutation(async ({ ctx, input }) => {
       const snapshot = await getLearningSnapshot(ctx.user.id);

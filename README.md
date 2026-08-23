@@ -54,6 +54,14 @@ Thiết kế và cơ sở học tập của cơ chế này được ghi tại [`
 
 Boss tuần được tính khi người học mở trang, không dùng `setInterval` phía server, cron hoặc tác vụ nền. Đây là lựa chọn phù hợp với autoscale và giữ thử thách nhất quán dù instance ngủ/thức.
 
+## Business Context Lab — Part 3 & Part 7
+
+`/business-practice` có ba bộ đề gốc, mỗi bộ 12 câu: 6 Part 3 và 6 Part 7. Nội dung mô phỏng các tài liệu và cuộc trao đổi công việc như khởi động dự án–nhà cung cấp, quản lý tài khoản–dịch vụ khách hàng, nhân sự–vận hành. Part 3 có audio tổng hợp Web Speech tạm thời; Part 7 dùng email, memo, notice và timetable có nhiều chi tiết để đối chiếu.
+
+Danh mục và đề chỉ truy cập sau Manus OAuth. API đọc không trả `answer` hoặc `explanation`; `submitBusinessPractice` kiểm tra đủ câu, chặn trùng/ID lạ, chấm tại server và ghi kết quả theo `ctx.user.id`. Câu sai được chuyển vào Mistake Lab với nguồn thi thử, trong khi kết quả Listening/Reading dùng lại analytics mock test hiện có.
+
+Nghiên cứu format và ràng buộc thiết kế được lưu trong [`reports/part37-business-design.md`](reports/part37-business-design.md).
+
 ## Quy tắc an toàn trước khi sửa hệ thống
 
 Mọi thay đổi dữ liệu phải đi theo quy trình schema-first: sửa `drizzle/schema.ts`, sinh SQL, đọc SQL, rồi mới áp dụng migration. Mọi endpoint thay đổi dữ liệu phải dùng Zod để kiểm tra input; endpoint quản trị phải dùng `adminProcedure`; endpoint tiến độ học phải lấy người dùng từ OAuth context.
