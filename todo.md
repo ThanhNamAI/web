@@ -79,4 +79,4 @@
 - [x] Thiết kế các bộ đề chuyên sâu Part 3/7 với hội thoại, transcript, đoạn đọc và đáp án chấm phía server.
 - [x] Triển khai bộ đề mới, liên kết trải nghiệm luyện tập và bảo toàn OAuth user-scope.
 - [x] Kiểm thử nội dung, hồi quy dark mode/mobile và cập nhật tài liệu cho bộ đề doanh nghiệp.
-- [ ] Lưu checkpoint bàn giao các bộ đề Part 3/7 doanh nghiệp.
+- [x] Lưu checkpoint bàn giao các bộ đề Part 3/7 doanh nghiệp.
