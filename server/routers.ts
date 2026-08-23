@@ -4,7 +4,7 @@ import { mockQuestions } from "../shared/mockTestContent";
 import { businessPracticeSets, getBusinessPracticeSet } from "../shared/businessPracticeContent";
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
-import { checkLessonStepAnswer, checkMistakeAnswer, createLesson, deleteLesson, getAdminLesson, getAdminLessons, getBossChallenge, getLearningSnapshot, getLessonBySlug, getMistakeLab, getPublishedLessons, recordMistake, recordMockTestAttempt, recordStudySession, saveLessonProgress, saveVocabularyReview, submitBossChallenge, updateLearnerSettings, updateLesson } from "./db";
+import { checkLessonStepAnswer, checkMistakeAnswer, createLesson, deleteLesson, getAdminLesson, getAdminLessons, getBossChallenge, getLearningSnapshot, getLessonBySlug, getMistakeLab, getProgressDashboard, getPublishedLessons, recordMistake, recordMockTestAttempt, recordStudySession, saveLessonProgress, saveVocabularyReview, submitBossChallenge, updateLearnerSettings, updateLesson } from "./db";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { adminProcedure, protectedProcedure, publicProcedure, router } from "./_core/trpc";
@@ -78,6 +78,7 @@ export const appRouter = router({
       const plannedCards = vocabulary.filter(item => dueIds.has(item.id)).slice(0, 8);
       return { ...plan, plannedCards: (plannedCards.length ? plannedCards : vocabulary.slice(0, 8)).map(item => ({ id: item.id, term: item.term, meaning: item.meaning, topic: item.topic })), targetScore: snapshot.profile.targetScore };
     }),
+    progressDashboard: protectedProcedure.query(({ ctx }) => getProgressDashboard(ctx.user.id)),
     mockTest: protectedProcedure.query(() => mockQuestions.map(({ answer: _answer, ...question }) => question)),
     submitMockTest: protectedProcedure.input(z.object({
       answers: z.array(z.object({ questionId: z.string().min(1).max(32), selected: z.number().int().min(0).max(3) })).min(1).max(mockQuestions.length),
@@ -141,6 +142,7 @@ export const appRouter = router({
       const part7 = scored.byPart.find(item => item.part === 7)!;
       await recordMockTestAttempt({
         userId: ctx.user.id,
+        mode: "business",
         totalQuestions: scored.totalQuestions,
         correctAnswers: scored.correctAnswers,
         rawScore: scored.score,

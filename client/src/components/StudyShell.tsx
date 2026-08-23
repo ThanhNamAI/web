@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BookOpen, BrainCircuit, BriefcaseBusiness, ClipboardCheck, Crown, FilePenLine, FlaskConical, Gamepad2, House, Layers3, LogIn, Menu, Sparkles, TimerReset, UserRound, X } from "lucide-react";
+import { BookOpen, BrainCircuit, BriefcaseBusiness, ChartNoAxesCombined, ClipboardCheck, Crown, FilePenLine, FlaskConical, Gamepad2, House, Layers3, LogIn, Menu, Sparkles, TimerReset, UserRound, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { startLogin } from "@/const";
@@ -20,6 +20,7 @@ const nav = [
   { href: "/business-practice", label: "Đề doanh nghiệp", icon: BriefcaseBusiness },
   { href: "/games", label: "Đấu trường", icon: Gamepad2 },
   { href: "/profile", label: "Hồ sơ", icon: UserRound },
+  { href: "/progress-dashboard", label: "Tiến độ chi tiết", icon: ChartNoAxesCombined },
 ];
 
 export function StudyShell({ children }: { children: React.ReactNode }) {

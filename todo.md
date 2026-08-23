@@ -80,3 +80,8 @@
 - [x] Triển khai bộ đề mới, liên kết trải nghiệm luyện tập và bảo toàn OAuth user-scope.
 - [x] Kiểm thử nội dung, hồi quy dark mode/mobile và cập nhật tài liệu cho bộ đề doanh nghiệp.
 - [x] Lưu checkpoint bàn giao các bộ đề Part 3/7 doanh nghiệp.
+- [x] Kiểm toán bảng lịch sử làm bài, analytics và dữ liệu tiến bộ đã lưu theo người dùng.
+- [x] Thiết kế dashboard lịch sử, KPI và biểu đồ tiến bộ chỉ dùng dữ liệu thực của OAuth user.
+- [x] Triển khai API protected, giao diện dashboard và biểu đồ responsive light/dark.
+- [x] Kiểm thử bảo mật user-scope, hồi quy UI và cập nhật tài liệu dashboard.
+- [ ] Lưu checkpoint bàn giao dashboard lịch sử và biểu đồ tiến bộ.

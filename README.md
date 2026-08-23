@@ -62,6 +62,12 @@ Danh mục và đề chỉ truy cập sau Manus OAuth. API đọc không trả `
 
 Nghiên cứu format và ràng buộc thiết kế được lưu trong [`reports/part37-business-design.md`](reports/part37-business-design.md).
 
+## Dashboard lịch sử & tiến bộ
+
+`/progress-dashboard` là dashboard chi tiết theo từng tài khoản OAuth. Trang hiển thị KPI về điểm đánh giá, lần làm bài, thời gian học và streak; biểu đồ độ chính xác theo lần làm đề; nhịp học và XP trong 14 ngày; cùng bảng lịch sử cho thi thử 7 Part, Boss tuần, bộ đề doanh nghiệp và từng phiên học.
+
+Toàn bộ dữ liệu được lấy server-side từ các bản ghi đã lưu theo `ctx.user.id`. Không có dữ liệu mẫu hoặc dữ liệu học của tài khoản khác trong dashboard. Endpoint protected không nhận `userId` từ client; khi người học chưa có lịch sử, UI hiển thị empty state có hướng dẫn thay vì biểu đồ giả. Bằng chứng QA nằm tại [`reports/progress-dashboard-qa.md`](reports/progress-dashboard-qa.md).
+
 ## Quy tắc an toàn trước khi sửa hệ thống
 
 Mọi thay đổi dữ liệu phải đi theo quy trình schema-first: sửa `drizzle/schema.ts`, sinh SQL, đọc SQL, rồi mới áp dụng migration. Mọi endpoint thay đổi dữ liệu phải dùng Zod để kiểm tra input; endpoint quản trị phải dùng `adminProcedure`; endpoint tiến độ học phải lấy người dùng từ OAuth context.

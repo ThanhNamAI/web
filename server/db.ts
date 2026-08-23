@@ -12,6 +12,7 @@ import { buildMistakeLabDashboard } from "./mistakeLabProjection";
 import { checkMistakeAnswerWithStore } from "./mistakeLabService";
 import { getWeeklyBossQuestions } from "./bossChallengeContent";
 import { getIsoWeekKey, scoreBossChallenge } from "./bossChallengeLogic";
+import { buildProgressDashboardData } from "./progressDashboardLogic";
 
 let _db: ReturnType<typeof drizzle> | null = null;
 
@@ -132,6 +133,18 @@ export async function getLearningSnapshot(userId: number) {
   return { profile, dueCards, recentSessions, achievements, recentMockTests, analytics };
 }
 
+export async function getProgressDashboard(userId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+  const [profile, sessions, mockAttempts, bossAttempts] = await Promise.all([
+    ensureLearnerProfile(userId),
+    db.select().from(studySessions).where(eq(studySessions.userId, userId)).orderBy(desc(studySessions.completedAt)).limit(120),
+    db.select().from(mockTestAttempts).where(eq(mockTestAttempts.userId, userId)).orderBy(desc(mockTestAttempts.completedAt)).limit(60),
+    db.select().from(weeklyBossAttempts).where(eq(weeklyBossAttempts.userId, userId)).orderBy(desc(weeklyBossAttempts.completedAt)).limit(24),
+  ]);
+  return { profile, ...buildProgressDashboardData({ sessions, mockAttempts, bossAttempts }) };
+}
+
 async function syncLearningAchievements(userId: number) {
   const db = await getDb();
   if (!db) throw new Error("Database is not available");
@@ -211,6 +224,7 @@ export async function recordStudySession(input: {
 
 export async function recordMockTestAttempt(input: {
   userId: number;
+  mode?: string;
   totalQuestions: number;
   correctAnswers: number;
   rawScore: number;
@@ -224,6 +238,7 @@ export async function recordMockTestAttempt(input: {
   if (!db) throw new Error("Database is not available");
   await db.insert(mockTestAttempts).values({
     userId: input.userId,
+    mode: input.mode ?? "simulation",
     totalQuestions: input.totalQuestions,
     correctAnswers: input.correctAnswers,
     rawScore: input.rawScore,
