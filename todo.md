@@ -117,6 +117,6 @@
 - [x] Kiểm tra deployment public, health hiện tại và trạng thái Git remote/working tree.
 - [x] Rà soát diff đã kiểm thử, tạo commit chuyên nghiệp và đồng bộ remote.
 - [x] Xác nhận commit/deployment sau đồng bộ và cập nhật checklist bàn giao.
-- [ ] Tạo commit Git chuyên nghiệp cho thay đổi checklist deployment/GitHub còn chưa commit.
-- [ ] Xác minh lại deployment public sau GitHub sync và đối chiếu commit đã push.
+- [x] Tạo commit Git chuyên nghiệp cho thay đổi checklist deployment/GitHub còn chưa commit.
+- [x] Xác minh lại deployment public sau GitHub sync và đối chiếu commit đã push.
 - [ ] Lưu checkpoint bàn giao kiểm tra deployment và đồng bộ GitHub.
