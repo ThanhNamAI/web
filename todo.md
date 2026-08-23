@@ -74,4 +74,4 @@
 - [x] Thiết kế 20 bài học đa chặng cho Part 2/3/7 và Boss Challenge 10 phút theo tuần.
 - [x] Triển khai seed bài học, Boss Challenge, chấm điểm và tiến độ user-scoped.
 - [x] Hoàn tất kiểm thử, kiểm tra bảo mật/UI desktop/mobile cho mở rộng nội dung.
-- [ ] Lưu checkpoint bàn giao mở rộng Part 2/3/7 và Boss Challenge.
+- [x] Lưu checkpoint bàn giao mở rộng Part 2/3/7 và Boss Challenge.
