@@ -70,3 +70,8 @@
 - [x] Xác minh workbench Mistake Lab authenticated ở viewport mobile và từ chối truy cập/chấm item chéo user trong test tích hợp.
 - [x] Hoàn tất tự động kiểm thử responsive Mistake Lab và lưu kết quả thay cho thao tác mobile thủ công của người dùng.
 - [x] Lưu checkpoint bàn giao cho 10 bài học mẫu và Mistake Lab.
+- [x] Kiểm toán nội dung Part 2/3/7 và mô hình dữ liệu hiện có trước khi bổ sung 20 bài mới cùng Boss Challenge.
+- [x] Thiết kế 20 bài học đa chặng cho Part 2/3/7 và Boss Challenge 10 phút theo tuần.
+- [x] Triển khai seed bài học, Boss Challenge, chấm điểm và tiến độ user-scoped.
+- [x] Hoàn tất kiểm thử, kiểm tra bảo mật/UI desktop/mobile cho mở rộng nội dung.
+- [ ] Lưu checkpoint bàn giao mở rộng Part 2/3/7 và Boss Challenge.

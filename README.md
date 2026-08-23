@@ -40,13 +40,19 @@ Thư viện `/lessons` hiển thị **chỉ các bài đã xuất bản**. Mỗi
 
 Quản trị viên tạo nội dung tại `/admin/lessons`. Nội dung bài học được lưu dạng plain text, không render HTML trực tiếp. Điều này giúp giảm rủi ro XSS khi nhiều admin cùng biên soạn.
 
-Lần khởi tạo thư viện sẽ xuất bản sẵn **10 bài học mẫu** để kiểm tra trải nghiệm, bao phủ ngữ pháp công sở, nghe Part 2, số/ngày/giờ, đọc email–notice, shadowing, tự sửa báo cáo và suy luận Part 7. Các bài mẫu có thể được chỉnh sửa, ẩn hoặc xóa từ Studio như mọi bài học khác.
+Lần khởi tạo thư viện sẽ xuất bản sẵn **30 bài học mẫu**. Ngoài 10 bài nền tảng, có 7 bài Part 2 về ý định câu hỏi–đáp lời, 7 bài Part 3 về hội thoại–chi tiết–suy luận và 6 bài Part 7 về email, notice và multiple passages. Mỗi bài có bốn chặng: gợi nhớ, hiểu nhanh, áp dụng và chốt lại. Các bài mẫu có thể được chỉnh sửa, ẩn hoặc xóa từ Studio như mọi bài học khác.
 
 ## Mistake Lab
 
-`/mistake-lab` chỉ nhận lỗi thật của chính học viên từ quiz bài học và thi thử. Một lỗi được ôn lại theo hai lượt khắc phục: trả lời đúng lần đầu sẽ được hẹn lại sau một ngày; trả lời đúng lần hai chuyển lỗi sang `mastered`. API danh sách không trả `correctIndex`; việc chấm và truy vấn lỗi đều ràng buộc bằng `ctx.user.id` ở server. Vì vậy người học không thể xem đáp án trước hoặc đọc dữ liệu lỗi của người khác.
+`/mistake-lab` chỉ nhận lỗi thật của chính học viên từ quiz bài học, thi thử và Boss Challenge. Một lỗi được ôn lại theo hai lượt khắc phục: trả lời đúng lần đầu sẽ được hẹn lại sau một ngày; trả lời đúng lần hai chuyển lỗi sang `mastered`. API danh sách không trả `correctIndex`; việc chấm và truy vấn lỗi đều ràng buộc bằng `ctx.user.id` ở server. Vì vậy người học không thể xem đáp án trước hoặc đọc dữ liệu lỗi của người khác.
 
 Thiết kế và cơ sở học tập của cơ chế này được ghi tại [`reports/mistake-lab-design.md`](reports/mistake-lab-design.md).
+
+## Boss Challenge 10 phút mỗi tuần
+
+`/boss-challenge` tạo một đề luyện gốc theo ISO week gồm 10 câu: 4 Part 2, 3 Part 3 và 3 Part 7. Timer chỉ bắt đầu khi học viên chủ động mở thử thách. Backend tự chọn đề theo tuần, nhận đúng 10 lựa chọn, kiểm tra thời lượng tối đa 600 giây và chấm đáp án phía server; do đó answer key không có trong dashboard API. Mỗi user có đúng một lượt được chấm mỗi tuần, lưu trong `weekly_boss_attempts` với unique `(userId, weekKey)`. Câu sai đi vào Mistake Lab và lượt hoàn tất tạo XP/study session một lần.
+
+Boss tuần được tính khi người học mở trang, không dùng `setInterval` phía server, cron hoặc tác vụ nền. Đây là lựa chọn phù hợp với autoscale và giữ thử thách nhất quán dù instance ngủ/thức.
 
 ## Quy tắc an toàn trước khi sửa hệ thống
 

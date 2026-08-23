@@ -1,11 +1,14 @@
 import { describe, expect, it } from "vitest";
 import { starterLessons } from "./starterLessons";
+import { partLessons } from "./partLessons";
 
 describe("starter lessons", () => {
-  it("provides ten unique, published lessons with a guided learning arc", () => {
+  it("provides thirty unique, published lessons with a guided learning arc", () => {
+    const lessons = [...starterLessons, ...partLessons];
     expect(starterLessons).toHaveLength(10);
-    expect(new Set(starterLessons.map(lesson => lesson.slug)).size).toBe(10);
-    starterLessons.forEach(lesson => {
+    expect(partLessons).toHaveLength(20);
+    expect(new Set(lessons.map(lesson => lesson.slug)).size).toBe(30);
+    lessons.forEach(lesson => {
       expect(lesson.status).toBe("published");
       expect(lesson.steps).toHaveLength(4);
       expect(lesson.steps[0]?.stepType).toBe("warmup");

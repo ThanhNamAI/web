@@ -1,0 +1,1 @@
+ALTER TABLE `mistake_items` MODIFY COLUMN `source` enum('lesson','mock','boss') NOT NULL;

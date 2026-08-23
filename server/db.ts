@@ -1,14 +1,17 @@
 import { and, asc, desc, eq, lte } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, learnerProfiles, learningAchievements, lessonProgress, lessons, lessonSteps, mistakeItems, mockTestAttempts, studySessions, users, vocabularyProgress } from "../drizzle/schema";
+import { InsertUser, learnerProfiles, learningAchievements, lessonProgress, lessons, lessonSteps, mistakeItems, mockTestAttempts, studySessions, users, vocabularyProgress, weeklyBossAttempts } from "../drizzle/schema";
 import { ENV } from './_core/env';
 import { getEarnedAchievementDefinitions } from "./achievementLogic";
 import { getSkillAnalytics } from "./analyticsLogic";
 import { starterLessons } from "./starterLessons";
+import { partLessons } from "./partLessons";
 import { getMistakeReviewUpdate } from "./mistakeLabLogic";
 import { getOwnedActiveMistake } from "./mistakeLabAccess";
 import { buildMistakeLabDashboard } from "./mistakeLabProjection";
 import { checkMistakeAnswerWithStore } from "./mistakeLabService";
+import { getWeeklyBossQuestions } from "./bossChallengeContent";
+import { getIsoWeekKey, scoreBossChallenge } from "./bossChallengeLogic";
 
 let _db: ReturnType<typeof drizzle> | null = null;
 
@@ -231,6 +234,54 @@ export async function recordMockTestAttempt(input: {
   await recordStudySession({ userId: input.userId, activityType: "mock-reading", skill: "reading", score: input.readingScore, xp: Math.ceil(input.xp / 2), durationSeconds: Math.ceil(input.durationSeconds / 2) });
 }
 
+export async function getBossChallenge(userId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+  const weekKey = getIsoWeekKey();
+  const attempt = (await db.select().from(weeklyBossAttempts).where(and(eq(weeklyBossAttempts.userId, userId), eq(weeklyBossAttempts.weekKey, weekKey))).limit(1))[0];
+  const questions = getWeeklyBossQuestions(weekKey);
+  return {
+    weekKey,
+    durationLimitSeconds: 600,
+    attempt: attempt ? { correctAnswers: attempt.correctAnswers, totalQuestions: attempt.totalQuestions, score: attempt.score, durationSeconds: attempt.durationSeconds, completedAt: attempt.completedAt } : undefined,
+    questions: attempt ? [] : questions.map(({ answer: _answer, ...question }) => question),
+  };
+}
+
+export async function submitBossChallenge(input: { userId: number; answers: Array<{ questionId: string; selected: number }>; elapsedSeconds: number }) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+  const weekKey = getIsoWeekKey();
+  const existing = (await db.select().from(weeklyBossAttempts).where(and(eq(weeklyBossAttempts.userId, input.userId), eq(weeklyBossAttempts.weekKey, weekKey))).limit(1))[0];
+  if (existing) return { alreadySubmitted: true, correctAnswers: existing.correctAnswers, totalQuestions: existing.totalQuestions, score: existing.score, durationSeconds: existing.durationSeconds };
+
+  const questions = getWeeklyBossQuestions(weekKey);
+  const scored = scoreBossChallenge(questions, input.answers);
+  await db.insert(weeklyBossAttempts).values({
+    userId: input.userId,
+    weekKey,
+    totalQuestions: questions.length,
+    correctAnswers: scored.correctAnswers,
+    durationSeconds: input.elapsedSeconds,
+    score: scored.score,
+    answersJson: JSON.stringify(input.answers),
+  });
+  await Promise.all(scored.results.filter(result => !result.correct).map(result => recordMistake({
+    userId: input.userId,
+    source: "boss",
+    sourceRef: `${weekKey}-${result.question.id}`,
+    skill: result.question.skill,
+    prompt: `${result.question.contextLabel}\n${result.question.audioText ?? result.question.prompt}`,
+    options: result.question.choices,
+    correctIndex: result.question.answer,
+    selectedIndex: result.selected,
+    explanation: result.question.explanation,
+  })));
+  const xp = 30 + scored.correctAnswers * 5;
+  await recordStudySession({ userId: input.userId, activityType: "weekly-boss", skill: "mixed", score: scored.score, xp, durationSeconds: input.elapsedSeconds });
+  return { alreadySubmitted: false, correctAnswers: scored.correctAnswers, totalQuestions: questions.length, score: scored.score, durationSeconds: input.elapsedSeconds, xp };
+}
+
 export async function updateLearnerSettings(userId: number, values: { targetScore?: number; weeklyGoalMinutes?: number; diagnosticScore?: number; preferredAccent?: string }) {
   const db = await getDb();
   if (!db) throw new Error("Database is not available");
@@ -263,7 +314,7 @@ export type LessonInput = {
 
 export type MistakeInput = {
   userId: number;
-  source: "lesson" | "mock";
+  source: "lesson" | "mock" | "boss";
   sourceRef: string;
   skill: string;
   prompt: string;
@@ -300,7 +351,7 @@ async function ensureStarterLessons() {
   if (!db) return;
   const author = (await db.select().from(users).where(eq(users.openId, ENV.ownerOpenId)).limit(1))[0];
   if (!author) return;
-  for (const lesson of starterLessons) {
+  for (const lesson of [...starterLessons, ...partLessons]) {
     const existing = (await db.select().from(lessons).where(eq(lessons.slug, lesson.slug)).limit(1))[0];
     if (existing) continue;
     await db.insert(lessons).values({

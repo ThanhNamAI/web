@@ -144,7 +144,7 @@ export const lessonProgress = mysqlTable("lesson_progress", {
 export const mistakeItems = mysqlTable("mistake_items", {
   id: int("id").autoincrement().primaryKey(),
   userId: int("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
-  source: mysqlEnum("source", ["lesson", "mock"]).notNull(),
+  source: mysqlEnum("source", ["lesson", "mock", "boss"]).notNull(),
   sourceRef: varchar("sourceRef", { length: 80 }).notNull(),
   skill: varchar("skill", { length: 24 }).notNull(),
   prompt: text("prompt").notNull(),
@@ -164,6 +164,21 @@ export const mistakeItems = mysqlTable("mistake_items", {
   index("mistake_items_user_status_due_idx").on(table.userId, table.status, table.dueAt),
 ]);
 
+export const weeklyBossAttempts = mysqlTable("weekly_boss_attempts", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
+  weekKey: varchar("weekKey", { length: 16 }).notNull(),
+  totalQuestions: int("totalQuestions").notNull(),
+  correctAnswers: int("correctAnswers").notNull(),
+  durationSeconds: int("durationSeconds").notNull(),
+  score: int("score").notNull(),
+  answersJson: text("answersJson").notNull(),
+  completedAt: timestamp("completedAt").defaultNow().notNull(),
+}, table => [
+  uniqueIndex("weekly_boss_attempts_user_week_unique").on(table.userId, table.weekKey),
+  index("weekly_boss_attempts_user_completed_idx").on(table.userId, table.completedAt),
+]);
+
 export type LearnerProfile = typeof learnerProfiles.$inferSelect;
 export type VocabularyProgress = typeof vocabularyProgress.$inferSelect;
 export type StudySession = typeof studySessions.$inferSelect;
@@ -173,3 +188,4 @@ export type Lesson = typeof lessons.$inferSelect;
 export type LessonStep = typeof lessonSteps.$inferSelect;
 export type LessonProgress = typeof lessonProgress.$inferSelect;
 export type MistakeItem = typeof mistakeItems.$inferSelect;
+export type WeeklyBossAttempt = typeof weeklyBossAttempts.$inferSelect;

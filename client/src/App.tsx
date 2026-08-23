@@ -24,6 +24,7 @@ import MockTest from "./pages/MockTest";
 import LessonPlayer from "./pages/LessonPlayer";
 import Lessons from "./pages/Lessons";
 import MistakeLab from "./pages/MistakeLab";
+import BossChallenge from "./pages/BossChallenge";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -42,6 +43,7 @@ function Router() {
       <Route path={"/lessons"} component={Lessons} />
       <Route path={"/lessons/:slug"} component={LessonPlayer} />
       <Route path={"/mistake-lab"} component={MistakeLab} />
+      <Route path={"/boss-challenge"} component={BossChallenge} />
       <Route path={"/admin/lessons"} component={AdminLessons} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

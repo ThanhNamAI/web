@@ -2,7 +2,7 @@ import { COOKIE_NAME } from "@shared/const";
 import { vocabulary } from "../shared/vocabulary.generated";
 import { mockQuestions } from "../shared/mockTestContent";
 import { z } from "zod";
-import { checkLessonStepAnswer, checkMistakeAnswer, createLesson, deleteLesson, getAdminLesson, getAdminLessons, getLearningSnapshot, getLessonBySlug, getMistakeLab, getPublishedLessons, recordMistake, recordMockTestAttempt, recordStudySession, saveLessonProgress, saveVocabularyReview, updateLearnerSettings, updateLesson } from "./db";
+import { checkLessonStepAnswer, checkMistakeAnswer, createLesson, deleteLesson, getAdminLesson, getAdminLessons, getBossChallenge, getLearningSnapshot, getLessonBySlug, getMistakeLab, getPublishedLessons, recordMistake, recordMockTestAttempt, recordStudySession, saveLessonProgress, saveVocabularyReview, submitBossChallenge, updateLearnerSettings, updateLesson } from "./db";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { adminProcedure, protectedProcedure, publicProcedure, router } from "./_core/trpc";
@@ -143,6 +143,13 @@ export const appRouter = router({
       if (result.mastered) await recordStudySession({ userId: ctx.user.id, activityType: "mistake-lab-repair", skill: "mixed", score: 100, xp: calculateXp(100, 120, 5), durationSeconds: 120 });
       return result;
     }),
+  }),
+  boss: router({
+    dashboard: protectedProcedure.query(({ ctx }) => getBossChallenge(ctx.user.id)),
+    submit: protectedProcedure.input(z.object({
+      answers: z.array(z.object({ questionId: z.string().min(1).max(48), selected: z.number().int().min(0).max(3) })).length(10),
+      elapsedSeconds: z.number().int().min(1).max(600),
+    })).mutation(({ ctx, input }) => submitBossChallenge({ userId: ctx.user.id, ...input })),
   }),
   admin: router({
     lessons: router({
