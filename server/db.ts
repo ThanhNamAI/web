@@ -1,4 +1,4 @@
-import { and, asc, desc, eq, lte } from "drizzle-orm";
+import { and, asc, desc, eq, inArray, lte } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import { InsertUser, learnerProfiles, learningAchievements, lessonProgress, lessons, lessonSteps, mistakeItems, mockTestAttempts, studySessions, users, vocabularyProgress, weeklyBossAttempts } from "../drizzle/schema";
 import { ENV } from './_core/env';
@@ -13,6 +13,7 @@ import { checkMistakeAnswerWithStore } from "./mistakeLabService";
 import { getWeeklyBossQuestions } from "./bossChallengeContent";
 import { getIsoWeekKey, scoreBossChallenge } from "./bossChallengeLogic";
 import { buildProgressDashboardData } from "./progressDashboardLogic";
+import { getMissingSeedLessons } from "./lessonSeedLogic";
 
 let _db: ReturnType<typeof drizzle> | null = null;
 
@@ -366,9 +367,9 @@ async function ensureStarterLessons() {
   if (!db) return;
   const author = (await db.select().from(users).where(eq(users.openId, ENV.ownerOpenId)).limit(1))[0];
   if (!author) return;
-  for (const lesson of [...starterLessons, ...partLessons]) {
-    const existing = (await db.select().from(lessons).where(eq(lessons.slug, lesson.slug)).limit(1))[0];
-    if (existing) continue;
+  const seedLessons = [...starterLessons, ...partLessons];
+  const existing = await db.select({ slug: lessons.slug }).from(lessons).where(inArray(lessons.slug, seedLessons.map(lesson => lesson.slug)));
+  for (const lesson of getMissingSeedLessons(seedLessons, existing.map(item => item.slug))) {
     await db.insert(lessons).values({
       slug: lesson.slug,
       title: lesson.title,

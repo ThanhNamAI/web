@@ -85,3 +85,9 @@
 - [x] Triển khai API protected, giao diện dashboard và biểu đồ responsive light/dark.
 - [x] Kiểm thử bảo mật user-scope, hồi quy UI và cập nhật tài liệu dashboard.
 - [x] Lưu checkpoint bàn giao dashboard lịch sử và biểu đồ tiến bộ.
+- [x] Kiểm toán TypeScript, Vitest, runtime logs, phân quyền OAuth và truy vấn dữ liệu cho toàn bộ luồng chính.
+- [x] Rà soát trực quan desktop/mobile các route trọng yếu và tái hiện lỗi UX/runtime nếu có.
+- [x] Sửa các lỗi được xác nhận, tăng cường kiểm thử và tối ưu ổn định không phá tính năng hiện hữu.
+- [x] Hoàn tất regression và báo cáo QA kiểm toán production-focused.
+- [x] Tạo và lưu đầy đủ báo cáo QA `reports/production-audit-2026-08-23.md` với lỗi đã sửa, regression, logs, visual audit và số liệu bundle.
+- [ ] Lưu checkpoint bàn giao kiểm toán production-focused.

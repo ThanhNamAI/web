@@ -1,6 +1,6 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/NotFound";
+import { lazy, Suspense } from "react";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
@@ -10,30 +10,31 @@ import "./dark-mode-unified.css";
 import "./ux-fixes.css";
 import "./pages/plan-test-fixes.css";
 import "./pages/lessons.css";
-import AdminLessons from "./pages/AdminLessons";
-import Games from "./pages/Games";
-import Diagnostic from "./pages/Diagnostic";
 import Home from "./pages/Home";
-import Learn from "./pages/Learn";
-import Modes from "./pages/Modes";
-import Practice from "./pages/Practice";
-import Profile from "./pages/Profile";
-import Vocabulary from "./pages/Vocabulary";
-import DailyPlan from "./pages/DailyPlan";
-import MockTest from "./pages/MockTest";
-import LessonPlayer from "./pages/LessonPlayer";
-import Lessons from "./pages/Lessons";
-import MistakeLab from "./pages/MistakeLab";
-import BossChallenge from "./pages/BossChallenge";
-import BusinessPractice from "./pages/BusinessPractice";
-import ProgressDashboard from "./pages/ProgressDashboard";
-import "./pages/business-practice.css";
-import "./pages/progress-dashboard.css";
+
+const AdminLessons = lazy(() => import("./pages/AdminLessons"));
+const BossChallenge = lazy(() => import("./pages/BossChallenge"));
+const BusinessPractice = lazy(() => import("./pages/BusinessPractice"));
+const DailyPlan = lazy(() => import("./pages/DailyPlan"));
+const Diagnostic = lazy(() => import("./pages/Diagnostic"));
+const Games = lazy(() => import("./pages/Games"));
+const Learn = lazy(() => import("./pages/Learn"));
+const LessonPlayer = lazy(() => import("./pages/LessonPlayer"));
+const Lessons = lazy(() => import("./pages/Lessons"));
+const MistakeLab = lazy(() => import("./pages/MistakeLab"));
+const MockTest = lazy(() => import("./pages/MockTest"));
+const Modes = lazy(() => import("./pages/Modes"));
+const NotFound = lazy(() => import("@/pages/NotFound"));
+const Practice = lazy(() => import("./pages/Practice"));
+const Profile = lazy(() => import("./pages/Profile"));
+const ProgressDashboard = lazy(() => import("./pages/ProgressDashboard"));
+const Vocabulary = lazy(() => import("./pages/Vocabulary"));
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
-    <Switch>
+    <Suspense fallback={<div className="app-route-loading" role="status" aria-live="polite">Đang chuẩn bị trải nghiệm học tập…</div>}>
+      <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/learn"} component={Learn} />
       <Route path={"/modes"} component={Modes} />
@@ -53,8 +54,9 @@ function Router() {
       <Route path={"/admin/lessons"} component={AdminLessons} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+        <Route component={NotFound} />
+      </Switch>
+    </Suspense>
   );
 }
 
