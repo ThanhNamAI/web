@@ -106,4 +106,4 @@
 - [x] Thêm client guard chỉ retry GET khi tRPC nhận HTML SPA; mutation không được retry để tránh double write.
 - [x] Chạy regression đúng failure mode Learn và cập nhật báo cáo root-cause theo bằng chứng.
 - [x] Xác minh báo cáo `reports/learn-trpc-fallback-qa.md` đã lưu failure mode HTML→JSON, retry GET-only, no-retry mutation và 28/57 regression.
-- [ ] Lưu checkpoint bàn giao bản sửa tRPC Learn.
+- [x] Lưu checkpoint bàn giao bản sửa tRPC Learn.
