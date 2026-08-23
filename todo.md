@@ -113,4 +113,4 @@
 - [x] Xác nhận accessibility và cập nhật tài liệu cho toast/empty state Learn.
 - [x] Xác minh README và báo cáo QA toast/empty state Learn đã được lưu đầy đủ.
 - [x] Thêm QA render riêng cho empty state Learn, trace ID và nút Thử lại.
-- [ ] Lưu checkpoint bàn giao toast trace ID và retry Learn.
+- [x] Lưu checkpoint bàn giao toast trace ID và retry Learn.
