@@ -69,4 +69,4 @@
 - [x] Hoàn tất kiểm thử Mistake Lab có hàng đợi lỗi thật, bao gồm cách ly dữ liệu theo userId và workbench desktop/mobile.
 - [x] Xác minh workbench Mistake Lab authenticated ở viewport mobile và từ chối truy cập/chấm item chéo user trong test tích hợp.
 - [x] Hoàn tất tự động kiểm thử responsive Mistake Lab và lưu kết quả thay cho thao tác mobile thủ công của người dùng.
-- [ ] Lưu checkpoint bàn giao cho 10 bài học mẫu và Mistake Lab.
+- [x] Lưu checkpoint bàn giao cho 10 bài học mẫu và Mistake Lab.
