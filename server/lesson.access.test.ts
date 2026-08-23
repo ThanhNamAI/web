@@ -31,3 +31,10 @@ describe("admin.lessons authorization", () => {
     await expect(caller.admin.lessons.list()).rejects.toMatchObject({ code: "FORBIDDEN" });
   });
 });
+
+describe("mistakeLab authorization", () => {
+  it("requires an OAuth user before returning a personal error queue", async () => {
+    const caller = appRouter.createCaller(createContext(null));
+    await expect(caller.mistakeLab.dashboard()).rejects.toMatchObject({ code: "UNAUTHORIZED" });
+  });
+});

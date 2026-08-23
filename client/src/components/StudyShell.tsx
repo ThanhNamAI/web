@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BookOpen, BrainCircuit, ClipboardCheck, FilePenLine, Gamepad2, House, Layers3, LogIn, Menu, Sparkles, TimerReset, UserRound, X } from "lucide-react";
+import { BookOpen, BrainCircuit, ClipboardCheck, FilePenLine, FlaskConical, Gamepad2, House, Layers3, LogIn, Menu, Sparkles, TimerReset, UserRound, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { startLogin } from "@/const";
@@ -12,6 +12,7 @@ const nav = [
   { href: "/vocabulary", label: "Ngân hàng từ", icon: BookOpen },
   { href: "/practice", label: "Luyện kỹ năng", icon: Sparkles },
   { href: "/lessons", label: "Bài học dẫn dắt", icon: BookOpen },
+  { href: "/mistake-lab", label: "Mistake Lab", icon: FlaskConical },
   { href: "/modes", label: "Phòng học", icon: Layers3 },
   { href: "/daily-plan", label: "Kế hoạch 15 phút", icon: TimerReset },
   { href: "/mock-test", label: "Thi thử 7 Part", icon: ClipboardCheck },

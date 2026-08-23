@@ -1,9 +1,11 @@
 import { and, asc, desc, eq, lte } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, learnerProfiles, learningAchievements, lessonProgress, lessons, lessonSteps, mockTestAttempts, studySessions, users, vocabularyProgress } from "../drizzle/schema";
+import { InsertUser, learnerProfiles, learningAchievements, lessonProgress, lessons, lessonSteps, mistakeItems, mockTestAttempts, studySessions, users, vocabularyProgress } from "../drizzle/schema";
 import { ENV } from './_core/env';
 import { getEarnedAchievementDefinitions } from "./achievementLogic";
 import { getSkillAnalytics } from "./analyticsLogic";
+import { starterLessons } from "./starterLessons";
+import { getMistakeReviewUpdate } from "./mistakeLabLogic";
 
 let _db: ReturnType<typeof drizzle> | null = null;
 
@@ -256,6 +258,18 @@ export type LessonInput = {
   steps: LessonStepInput[];
 };
 
+export type MistakeInput = {
+  userId: number;
+  source: "lesson" | "mock";
+  sourceRef: string;
+  skill: string;
+  prompt: string;
+  options: string[];
+  correctIndex: number;
+  selectedIndex: number;
+  explanation: string;
+};
+
 function serializeLessonSteps(lessonId: number, steps: LessonStepInput[]) {
   return steps.map((step, position) => ({
     lessonId,
@@ -274,7 +288,32 @@ function serializeLessonSteps(lessonId: number, steps: LessonStepInput[]) {
 export async function getPublishedLessons() {
   const db = await getDb();
   if (!db) throw new Error("Database is not available");
+  await ensureStarterLessons();
   return db.select().from(lessons).where(eq(lessons.status, "published")).orderBy(desc(lessons.publishedAt), desc(lessons.createdAt));
+}
+
+async function ensureStarterLessons() {
+  const db = await getDb();
+  if (!db) return;
+  const author = (await db.select().from(users).where(eq(users.openId, ENV.ownerOpenId)).limit(1))[0];
+  if (!author) return;
+  for (const lesson of starterLessons) {
+    const existing = (await db.select().from(lessons).where(eq(lessons.slug, lesson.slug)).limit(1))[0];
+    if (existing) continue;
+    await db.insert(lessons).values({
+      slug: lesson.slug,
+      title: lesson.title,
+      summary: lesson.summary,
+      skill: lesson.skill,
+      level: lesson.level,
+      estimatedMinutes: lesson.estimatedMinutes,
+      status: lesson.status,
+      authorId: author.id,
+      publishedAt: new Date(),
+    });
+    const created = (await db.select().from(lessons).where(eq(lessons.slug, lesson.slug)).limit(1))[0];
+    if (created) await db.insert(lessonSteps).values(serializeLessonSteps(created.id, lesson.steps));
+  }
 }
 
 export async function getLessonBySlug(slug: string, options: { userId?: number; includeDraft?: boolean } = {}) {
@@ -375,12 +414,95 @@ export async function saveLessonProgress(input: { userId: number; lessonId: numb
   return { ...values, wasCompleted: existing?.status === "completed" };
 }
 
-export async function checkLessonStepAnswer(stepId: number, selected: number) {
+export async function checkLessonStepAnswer(input: { userId: number; stepId: number; selected: number }) {
   const db = await getDb();
   if (!db) throw new Error("Database is not available");
-  const step = (await db.select().from(lessonSteps).where(eq(lessonSteps.id, stepId)).limit(1))[0];
+  const step = (await db.select().from(lessonSteps).where(eq(lessonSteps.id, input.stepId)).limit(1))[0];
   if (!step || step.answerIndex === null) throw new Error("This step cannot be graded");
   const lesson = (await db.select().from(lessons).where(and(eq(lessons.id, step.lessonId), eq(lessons.status, "published"))).limit(1))[0];
   if (!lesson) throw new Error("Lesson is unavailable");
-  return { correct: step.answerIndex === selected, explanation: step.explanation ?? "Hãy xem lại trọng tâm của bước này.", lessonId: lesson.id };
+  const correct = step.answerIndex === input.selected;
+  if (!correct) await recordMistake({
+    userId: input.userId,
+    source: "lesson",
+    sourceRef: `step-${step.id}`,
+    skill: lesson.skill,
+    prompt: step.prompt ?? step.title,
+    options: JSON.parse(step.optionsJson ?? "[]") as string[],
+    correctIndex: step.answerIndex,
+    selectedIndex: input.selected,
+    explanation: step.explanation ?? "Hãy xem lại trọng tâm của bước này.",
+  });
+  return { correct, explanation: step.explanation ?? "Hãy xem lại trọng tâm của bước này.", lessonId: lesson.id };
+}
+
+export async function recordMistake(input: MistakeInput) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+  const existing = (await db.select().from(mistakeItems).where(and(
+    eq(mistakeItems.userId, input.userId), eq(mistakeItems.source, input.source), eq(mistakeItems.sourceRef, input.sourceRef),
+  )).limit(1))[0];
+  const now = new Date();
+  if (existing) {
+    await db.update(mistakeItems).set({
+      skill: input.skill,
+      prompt: input.prompt,
+      optionsJson: JSON.stringify(input.options),
+      correctIndex: input.correctIndex,
+      selectedIndex: input.selectedIndex,
+      explanation: input.explanation,
+      status: "active",
+      timesSeen: existing.timesSeen + 1,
+      timesCorrect: 0,
+      dueAt: now,
+      lastAttemptedAt: now,
+    }).where(eq(mistakeItems.id, existing.id));
+    return existing.id;
+  }
+  await db.insert(mistakeItems).values({
+    userId: input.userId,
+    source: input.source,
+    sourceRef: input.sourceRef,
+    skill: input.skill,
+    prompt: input.prompt,
+    optionsJson: JSON.stringify(input.options),
+    correctIndex: input.correctIndex,
+    selectedIndex: input.selectedIndex,
+    explanation: input.explanation,
+  });
+  const created = (await db.select().from(mistakeItems).where(and(
+    eq(mistakeItems.userId, input.userId), eq(mistakeItems.source, input.source), eq(mistakeItems.sourceRef, input.sourceRef),
+  )).limit(1))[0];
+  return created?.id;
+}
+
+export async function getMistakeLab(userId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+  const all = await db.select().from(mistakeItems).where(eq(mistakeItems.userId, userId)).orderBy(asc(mistakeItems.dueAt));
+  const now = new Date();
+  const active = all.filter(item => item.status === "active");
+  return {
+    items: active.map(({ correctIndex: _correctIndex, optionsJson, ...item }) => ({ ...item, options: JSON.parse(optionsJson) as string[] })),
+    summary: { active: active.length, due: active.filter(item => item.dueAt <= now).length, mastered: all.filter(item => item.status === "mastered").length },
+  };
+}
+
+export async function checkMistakeAnswer(input: { userId: number; mistakeId: number; selected: number }) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+  const item = (await db.select().from(mistakeItems).where(and(eq(mistakeItems.id, input.mistakeId), eq(mistakeItems.userId, input.userId))).limit(1))[0];
+  if (!item || item.status !== "active") throw new Error("Mistake item is unavailable");
+  const correct = item.correctIndex === input.selected;
+  const now = new Date();
+  const review = getMistakeReviewUpdate({ correct, previousCorrect: item.timesCorrect, now });
+  await db.update(mistakeItems).set({
+    selectedIndex: input.selected,
+    status: review.status,
+    timesSeen: item.timesSeen + 1,
+    timesCorrect: review.timesCorrect,
+    dueAt: review.dueAt,
+    lastAttemptedAt: now,
+  }).where(eq(mistakeItems.id, item.id));
+  return { correct, mastered: review.mastered, explanation: item.explanation, remainingRepairs: Math.max(0, 2 - review.timesCorrect) };
 }

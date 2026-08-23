@@ -2,7 +2,7 @@ import { COOKIE_NAME } from "@shared/const";
 import { vocabulary } from "../shared/vocabulary.generated";
 import { mockQuestions } from "../shared/mockTestContent";
 import { z } from "zod";
-import { checkLessonStepAnswer, createLesson, deleteLesson, getAdminLesson, getAdminLessons, getLearningSnapshot, getLessonBySlug, getPublishedLessons, recordMockTestAttempt, recordStudySession, saveLessonProgress, saveVocabularyReview, updateLearnerSettings, updateLesson } from "./db";
+import { checkLessonStepAnswer, checkMistakeAnswer, createLesson, deleteLesson, getAdminLesson, getAdminLessons, getLearningSnapshot, getLessonBySlug, getMistakeLab, getPublishedLessons, recordMistake, recordMockTestAttempt, recordStudySession, saveLessonProgress, saveVocabularyReview, updateLearnerSettings, updateLesson } from "./db";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { adminProcedure, protectedProcedure, publicProcedure, router } from "./_core/trpc";
@@ -89,6 +89,21 @@ export const appRouter = router({
       const average = (items: typeof result.partStats) => items.reduce((sum, item) => sum + item.correct, 0) / Math.max(1, items.reduce((sum, item) => sum + item.total, 0)) * 100;
       const xp = calculateXp(result.rawScore, input.elapsedSeconds, result.rawScore >= 80 ? 20 : 0);
       await recordMockTestAttempt({ userId: ctx.user.id, totalQuestions: result.total, correctAnswers: result.correct, rawScore: result.rawScore, durationSeconds: result.elapsedSeconds, partScores: result.partStats, listeningScore: Math.round(average(listening)), readingScore: Math.round(average(reading)), xp });
+      await Promise.all(uniqueAnswers.flatMap(answer => {
+        const question = answerMap.get(answer.questionId)!;
+        if (question.answer === answer.selected) return [];
+        return [recordMistake({
+          userId: ctx.user.id,
+          source: "mock",
+          sourceRef: question.id,
+          skill: question.skill,
+          prompt: `${question.contextLabel}\n${question.transcript ?? question.prompt}`,
+          options: question.choices,
+          correctIndex: question.answer,
+          selectedIndex: answer.selected,
+          explanation: `Trọng tâm là ${question.contextLabel}. Đáp án đúng diễn đạt: ${question.choices[question.answer]}.`,
+        })];
+      }));
       return { ...result, xp };
     }),
     review: protectedProcedure.input(z.object({ vocabularyId: z.string().min(1), quality: z.number().int().min(0).max(3) })).mutation(async ({ ctx, input }) => {
@@ -114,10 +129,18 @@ export const appRouter = router({
       if (!result) return undefined;
       return { ...result, steps: result.steps.map(({ answerIndex: _answerIndex, ...step }) => step) };
     }),
-    checkAnswer: protectedProcedure.input(z.object({ stepId: z.number().int().positive(), selected: z.number().int().min(0).max(3) })).mutation(({ input }) => checkLessonStepAnswer(input.stepId, input.selected)),
+    checkAnswer: protectedProcedure.input(z.object({ stepId: z.number().int().positive(), selected: z.number().int().min(0).max(3) })).mutation(({ ctx, input }) => checkLessonStepAnswer({ userId: ctx.user.id, ...input })),
     saveProgress: protectedProcedure.input(z.object({ lessonId: z.number().int().positive(), currentStep: z.number().int().min(0).max(12), score: z.number().int().min(0).max(100), completed: z.boolean() })).mutation(async ({ ctx, input }) => {
       const result = await saveLessonProgress({ userId: ctx.user.id, ...input });
       if (input.completed && !result.wasCompleted) await recordStudySession({ userId: ctx.user.id, activityType: "guided-lesson", skill: "mixed", score: input.score, xp: calculateXp(input.score, 900, 15), durationSeconds: 900 });
+      return result;
+    }),
+  }),
+  mistakeLab: router({
+    dashboard: protectedProcedure.query(({ ctx }) => getMistakeLab(ctx.user.id)),
+    checkAnswer: protectedProcedure.input(z.object({ mistakeId: z.number().int().positive(), selected: z.number().int().min(0).max(3) })).mutation(async ({ ctx, input }) => {
+      const result = await checkMistakeAnswer({ userId: ctx.user.id, ...input });
+      if (result.mastered) await recordStudySession({ userId: ctx.user.id, activityType: "mistake-lab-repair", skill: "mixed", score: 100, xp: calculateXp(100, 120, 5), durationSeconds: 120 });
       return result;
     }),
   }),

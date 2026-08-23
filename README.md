@@ -40,6 +40,14 @@ Thư viện `/lessons` hiển thị **chỉ các bài đã xuất bản**. Mỗi
 
 Quản trị viên tạo nội dung tại `/admin/lessons`. Nội dung bài học được lưu dạng plain text, không render HTML trực tiếp. Điều này giúp giảm rủi ro XSS khi nhiều admin cùng biên soạn.
 
+Lần khởi tạo thư viện sẽ xuất bản sẵn **10 bài học mẫu** để kiểm tra trải nghiệm, bao phủ ngữ pháp công sở, nghe Part 2, số/ngày/giờ, đọc email–notice, shadowing, tự sửa báo cáo và suy luận Part 7. Các bài mẫu có thể được chỉnh sửa, ẩn hoặc xóa từ Studio như mọi bài học khác.
+
+## Mistake Lab
+
+`/mistake-lab` chỉ nhận lỗi thật của chính học viên từ quiz bài học và thi thử. Một lỗi được ôn lại theo hai lượt khắc phục: trả lời đúng lần đầu sẽ được hẹn lại sau một ngày; trả lời đúng lần hai chuyển lỗi sang `mastered`. API danh sách không trả `correctIndex`; việc chấm và truy vấn lỗi đều ràng buộc bằng `ctx.user.id` ở server. Vì vậy người học không thể xem đáp án trước hoặc đọc dữ liệu lỗi của người khác.
+
+Thiết kế và cơ sở học tập của cơ chế này được ghi tại [`reports/mistake-lab-design.md`](reports/mistake-lab-design.md).
+
 ## Quy tắc an toàn trước khi sửa hệ thống
 
 Mọi thay đổi dữ liệu phải đi theo quy trình schema-first: sửa `drizzle/schema.ts`, sinh SQL, đọc SQL, rồi mới áp dụng migration. Mọi endpoint thay đổi dữ liệu phải dùng Zod để kiểm tra input; endpoint quản trị phải dùng `adminProcedure`; endpoint tiến độ học phải lấy người dùng từ OAuth context.

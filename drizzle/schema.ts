@@ -141,6 +141,29 @@ export const lessonProgress = mysqlTable("lesson_progress", {
   index("lesson_progress_lesson_idx").on(table.lessonId),
 ]);
 
+export const mistakeItems = mysqlTable("mistake_items", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
+  source: mysqlEnum("source", ["lesson", "mock"]).notNull(),
+  sourceRef: varchar("sourceRef", { length: 80 }).notNull(),
+  skill: varchar("skill", { length: 24 }).notNull(),
+  prompt: text("prompt").notNull(),
+  optionsJson: text("optionsJson").notNull(),
+  correctIndex: int("correctIndex").notNull(),
+  selectedIndex: int("selectedIndex").notNull(),
+  explanation: text("explanation").notNull(),
+  status: mysqlEnum("status", ["active", "mastered"]).default("active").notNull(),
+  timesSeen: int("timesSeen").default(1).notNull(),
+  timesCorrect: int("timesCorrect").default(0).notNull(),
+  dueAt: timestamp("dueAt").defaultNow().notNull(),
+  lastAttemptedAt: timestamp("lastAttemptedAt").defaultNow().notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+}, table => [
+  uniqueIndex("mistake_items_user_source_ref_unique").on(table.userId, table.source, table.sourceRef),
+  index("mistake_items_user_status_due_idx").on(table.userId, table.status, table.dueAt),
+]);
+
 export type LearnerProfile = typeof learnerProfiles.$inferSelect;
 export type VocabularyProgress = typeof vocabularyProgress.$inferSelect;
 export type StudySession = typeof studySessions.$inferSelect;
@@ -149,3 +172,4 @@ export type MockTestAttempt = typeof mockTestAttempts.$inferSelect;
 export type Lesson = typeof lessons.$inferSelect;
 export type LessonStep = typeof lessonSteps.$inferSelect;
 export type LessonProgress = typeof lessonProgress.$inferSelect;
+export type MistakeItem = typeof mistakeItems.$inferSelect;

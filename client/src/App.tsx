@@ -23,6 +23,7 @@ import DailyPlan from "./pages/DailyPlan";
 import MockTest from "./pages/MockTest";
 import LessonPlayer from "./pages/LessonPlayer";
 import Lessons from "./pages/Lessons";
+import MistakeLab from "./pages/MistakeLab";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -40,6 +41,7 @@ function Router() {
       <Route path={"/mock-test"} component={MockTest} />
       <Route path={"/lessons"} component={Lessons} />
       <Route path={"/lessons/:slug"} component={LessonPlayer} />
+      <Route path={"/mistake-lab"} component={MistakeLab} />
       <Route path={"/admin/lessons"} component={AdminLessons} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

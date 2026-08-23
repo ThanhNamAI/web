@@ -63,3 +63,8 @@
 - [x] Viết kiểm thử và rà soát bảo mật/UI cho đợt nâng cấp quản trị–bài học.
 - [x] Lưu checkpoint bàn giao cho đợt nâng cấp quản trị–bài học.
 - [x] Rà soát trực quan desktop/mobile các route SRS, kế hoạch 15 phút và mock test sau khi thêm navigation/route bài học.
+- [x] Kiểm toán điểm tích hợp lỗi sai và cấu trúc bài học trước khi thêm 10 nội dung mẫu cùng Mistake Lab.
+- [x] Thiết kế 10 bài học mẫu TOEIC đa chặng và mô hình Mistake Lab cá nhân hóa theo lỗi thật.
+- [x] Triển khai seed 10 bài học xuất bản sẵn, Mistake Lab và liên kết điều hướng với luồng học hiện hữu.
+- [ ] Hoàn tất kiểm thử Mistake Lab có hàng đợi lỗi thật, bao gồm cách ly dữ liệu theo userId và workbench desktop/mobile.
+- [ ] Lưu checkpoint bàn giao cho 10 bài học mẫu và Mistake Lab.
