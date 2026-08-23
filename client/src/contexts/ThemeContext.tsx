@@ -29,19 +29,21 @@ export function ThemeProvider({
     }
     return defaultTheme;
   });
+  const previewTheme = typeof window === "undefined" ? null : new URLSearchParams(window.location.search).get("theme");
+  const activeTheme: Theme = previewTheme === "dark" || previewTheme === "light" ? previewTheme : theme;
 
   useEffect(() => {
     const root = document.documentElement;
-    if (theme === "dark") {
+    if (activeTheme === "dark") {
       root.classList.add("dark");
     } else {
       root.classList.remove("dark");
     }
 
-    if (switchable) {
+    if (switchable && !previewTheme) {
       localStorage.setItem("theme", theme);
     }
-  }, [theme, switchable]);
+  }, [activeTheme, previewTheme, switchable, theme]);
 
   const toggleTheme = switchable
     ? () => {
@@ -50,7 +52,7 @@ export function ThemeProvider({
     : undefined;
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme, switchable }}>
+    <ThemeContext.Provider value={{ theme: activeTheme, toggleTheme, switchable }}>
       {children}
     </ThemeContext.Provider>
   );

@@ -6,6 +6,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import "./dark-mode.css";
 import "./dark-mode-fixes.css";
+import "./dark-mode-unified.css";
 import "./ux-fixes.css";
 import "./pages/plan-test-fixes.css";
 import Games from "./pages/Games";

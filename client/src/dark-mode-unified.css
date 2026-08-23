@@ -1,0 +1,55 @@
+html.dark {
+  color-scheme: dark;
+  --paper: #16201a;
+  --ink: #edf4ee;
+  --muted: #afbeb1;
+  --line: #3b4d40;
+  --surface: #202c25;
+  --surface-raised: #28382f;
+  --surface-soft: #18231d;
+  --text-primary: #f1f7f2;
+  --text-secondary: #bac9bd;
+  --border-dark: #425548;
+}
+
+html.dark, html.dark body, html.dark #root, html.dark .app-shell, html.dark .study-main, html.dark .page-wrap { background: var(--paper); color: var(--text-primary); }
+html.dark :where(input, select, textarea) { color-scheme: dark; background-color: var(--surface-soft); color: var(--text-primary); border-color: var(--border-dark); }
+html.dark :where(input, select, textarea)::placeholder { color: #9dad9f; }
+
+.dark :is(
+  .panel, .roadmap-card, .library-word, .practice-card, .game-board,
+  .profile-guest, .profile-stats article, .study-history, .settings-btn,
+  .modes-grid button, .mode-stage, .plan-total, .plan-block, .plan-card-preview,
+  .mock-blueprint article, .mock-part-nav button, .mock-question, .mock-result,
+  .mock-gate, .diagnostic-list article, .diagnostic-badge, .settings-overlay section,
+  .search-toolbar, .ipa-guide, .review-actions button, .answer-list button,
+  .matching-grid button, .quick-options button, .token-bank button, .diagnostic-options button,
+  .game-selector button
+) { background-color: var(--surface); border-color: var(--border-dark); color: var(--text-primary); }
+
+.dark :is(
+  .page-header h1, .topline h1, .learn-header h1, .section-heading h2,
+  .panel h2, .profile-guest h1, .profile-hero h1, .plan-hero h2,
+  .plan-block h2, .mock-toolbar h1, .mock-question h2, .mock-result h1,
+  .mock-gate h1, .diagnostic-body h2, .mode-content h2, .library-word h2
+) { color: var(--text-primary); }
+
+.dark :is(
+  .page-header p, .topline p, .learn-header p, .roadmap-card p, .word-example,
+  .lesson-summary, .plan-hero p, .plan-block p, .plan-note, .mock-blueprint small,
+  .mock-gate p, .mock-result > p, .mock-transcript-lock, .diagnostic-result > p,
+  .mode-content > p:not(.ipa), .profile-hero p, .profile-guest p, .profile-stats span
+) { color: var(--text-secondary); }
+
+.dark :is(.search-field, .flashcard, .mock-question pre, .reading-passage, .mode-tabs, .mock-session-note, .mock-score-grid article, .diagnostic-result > div) { background-color: var(--surface-soft); border-color: var(--border-dark); color: var(--text-primary); }
+.dark .flashcard { background-image: linear-gradient(135deg, #25342b, #19241e); }
+.dark .hero-panel, .dark .plan-hero { background: #243b2e; }
+.dark .diagnostic-result, .dark .skill-note, .dark .next-session, .dark .mock-recommendation { background: var(--surface-raised); color: var(--text-primary); }
+.dark .plan-note { background: var(--surface-raised); color: var(--text-secondary); }
+.dark .diagnostic-options button.selected, .dark .answer-list button.selected, .dark .mock-question .answer-list button.selected { background: #254a39; color: #d9f4e0; border-color: #6fa384; }
+.dark .mock-timer { background: #382d1d; color: #f4d69b; border-color: #715a36; }
+.dark .mock-timer-alert { background: #4b2d27; color: #ffd6cb; border-color: #a66554; }
+.dark .audio-transcript, .dark [data-sonner-toaster] [data-sonner-toast] { background: var(--surface-raised) !important; color: var(--text-primary) !important; border-color: var(--border-dark) !important; }
+.dark details > summary, .dark option { color: var(--text-primary); }
+.dark .study-sidebar, .dark .mobile-nav { background: #101813; }
+.dark .mobile-nav { border-color: #3b4d40; }
