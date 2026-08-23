@@ -119,4 +119,4 @@
 - [x] Xác nhận commit/deployment sau đồng bộ và cập nhật checklist bàn giao.
 - [x] Tạo commit Git chuyên nghiệp cho thay đổi checklist deployment/GitHub còn chưa commit.
 - [x] Xác minh lại deployment public sau GitHub sync và đối chiếu commit đã push.
-- [ ] Lưu checkpoint bàn giao kiểm tra deployment và đồng bộ GitHub.
+- [x] Lưu checkpoint bàn giao kiểm tra deployment và đồng bộ GitHub.
